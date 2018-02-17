@@ -26,71 +26,62 @@
     <div class="container-fluid">
 
       <header class="text-center">
-        <h1>Welcome to Public Lab!</h1>
+        <h1>Cytoscape Developer Community</h1>
       </header>
 
       <hr />
 
-      <h4 style="text-align:center;font-weight:bold;">We're so happy to meet you! This page is to welcome new contributors. </h4>
+      <h4 style="text-align:center;font-weight:bold;">Join the open source community developing Cytoscape</h4>
 
       <hr />
 
       <div class="row">
-        <div class="col-md-6">
+	<ul>
+		<li>If you're new, and looking to get involved, you're in the right place. Check out <a href="https://github.com/cytoscape/cytoscape/wiki">our developer wiki</a> to get started.</li>
 
-          <p>We especially welcome contributions from people from <b>groups underrepresented</b> in free and open source software!</p>
+          <li>If you're new to GitHub, using branches, or opening pull requests, <a href="https://guides.github.com/activities/hello-world/">read here for an introduction</a>.</li>
 
-          <p>Our community aspires to be a respectful place. Please read and abide by our <a href="https://publiclab.org/conduct">Code of Conduct</a>.</p>
+	  <li>If you have trouble, check out <a href="http://groups.google.com/group/cytoscape-app-dev">our developer forum</a> to ask for help.</li>
+	</ul>
 
-        </div>
-
-        <div class="col-md-6">
-
-          <p>If you're new, and looking to get involved, you're in the right place. Check out <a href="https://github.com/publiclab/plots2/">our README</a> to get started.</p>
-
-          <p>If you're new to GitHub, using branches, or opening pull requests, <a href="https://guides.github.com/activities/hello-world/">read here for an introduction</a>.</p>
-
-          <p>If you have trouble, check out <a href="https://publiclab.org/chat">our chatroom</a> to ask for help, or just <a href="https://github.com/publiclab/plots2/issues/new">open an issue</a> and we'll write back!</p>
-
-        </div>
-
+	<hr />
+	<h3>Sections</h3>
+	<ol>
+		<li><a href="#first">Good first issues</a></li>
+		<li><a href="#all">All issues</a></li>
+		<li><a href="#triage">Issues to triage</a></li>
+		<li><a href="#contributors">Contributors</a></li>
+	</ol>
       </div>
 
       <hr />
 
+      <h2 id="first">Good first issues</h2>
 
-      <h2>First-timers-only issues</h2>
+      <p>Here are a selection of issues we've marked especially for new and part-time contributors. We're here to help, so just ask if one looks interesting, by leaving a comment!</p>
 
-      <p>Here are <a href="https://github.com/publiclab/plots2/labels/first-timers-only">a selection</a> of issues we've <a href="https://publiclab.org/n/13667">made especially for first-timers</a>. We're here to help, so just ask if one looks interesting, by leaving a comment!</p>
+      <div class="row good-first-issue"></div>
 
-      <div class="row first-timers-only"></div>
+      <p>No issues left? Feel free to check other lists, open new issues or check in on <a href="http://groups.google.com/group/cytoscape-app-dev">our developer forum</a>.</p>
 
-      <p>No issues left? See the almost-as-good "candidates" below, or learn how to <a href="">prepare new <b>first-timers-only</b> issues here</a>.</p>
+      <h2 id="all">All issues</h2>
 
+      <div class="row all-issues"></div>
 
-      <h2>Candidates</h2>
+      <p>No issues left? Feel free to check other lists, open new issues or check in on <a href="http://groups.google.com/group/cytoscape-app-dev">our developer forum</a>.</p>
 
-      <p>We put a lot of work into our first-timer-only issues. But if we haven't been able to prepare any recently, here's a set of candidates we haven't yet had time to prepare, but which have most of the needed information:</p>
+      <h2 id="triage">New issues to triage</h2>
 
-      <div class="row candidates"></div>
+      <p>These are issues we haven't looked at yet. We'll vet and label them properly soon. In the meantime, beware!</p> 
 
-      <h2>What's next?</h2>
+      <div class="row unlabeled-issues"></div>
 
-      <p>Once you've completed a <b>first-timers-only</b> issue, there are <a href="https://github.com/publiclab/plots2/labels/help-wanted">plenty of other challenges</a> we'd love to have your help on.</p> 
+      <p>No issues left? Feel free to check other lists, open new issues or check in on <a href="http://groups.google.com/group/cytoscape-app-dev">our developer forum</a>.</p>
 
-      <p>In "Candidates" above, there are some issues we think would make good <b>first-timers-only</b> issues, but haven't finished formatting. They could make a good second-time contribution!</p>
-
-      <h2>You're now an expert on being a newcomer!</h2>
-
-      <p>After finishing a first-timers-only issue, you're uniquely suited to help others make their own first contribution. We'd love to help you welcome another new person into our community! Here are some ways to help:</p>
-
-      <p><a href="https://publiclab.org/n/13667">Create your own first-timers-only issue</a> to welcome others into the project.</p>
-
-      <p>Also consider <a href="https://publiclab.org/n/13687">other ways you can support</a> even without coding!</p>
 
       <hr />
 
-      <h2>Contributors</h2>
+      <h2 id="contributors">Contributors</h2>
 
       <p>This project was made possible by many contributors, including the following GitHub users:</p>
 
@@ -112,34 +103,39 @@
 
       (function() {
 
-        var org = urlHash().getUrlHashParameter('o') || 'publiclab';
-        var repo = urlHash().getUrlHashParameter('r') || 'plots2';
-        var ftoLabel = urlHash().getUrlHashParameter('f') || 'first-timers-only';
-        var candidateLabel = urlHash().getUrlHashParameter('c') || 'fto-candidate';
+        var org = urlHash().getUrlHashParameter('o') || 'cytoscape';
+        var repo = urlHash().getUrlHashParameter('r') || 'all';
+        var urlLabel = urlHash().getUrlHashParameter('l') || '"good first issue"'; // takes 'all', 'nolabel', or any actual label
     
         toolbox = CommunityToolbox(org, repo);
 
 	if (repo === 'all') {
 
-      	  toolbox.getIssuesForOrg(org, { qs: { labels: ftoLabel } })
-                 .then(displayIssues('.first-timers-only'));
+      	  toolbox.getIssuesForOrg(org, { qs: { labels: urlLabel } })
+                 .then(displayIssues('.good-first-issue'));
 
-          toolbox.getIssuesForOrg(org, { qs: { labels: candidateLabel } })
-                 .then(displayIssues('.candidates'));
+          toolbox.getIssuesForOrg(org, { qs: { labels: 'all' } })
+                 .then(displayIssues('.all-issues'));
+
+          toolbox.getIssuesForOrg(org, { qs: { labels: 'nolabel' } })
+                 .then(displayIssues('.unlabeled-issues'));
+
 
 	} else {
 
           toolbox.api.Issues
-                 .getIssuesForRepo(org, repo, { qs: { labels: ftoLabel } })
-                 .then(displayIssues('.first-timers-only'));
+                 .getIssuesForRepo(org, repo, { qs: { labels: urlLabel } })
+                 .then(displayIssues('.good-first-issue'));
 
-          toolbox.api.Issues
-                 .getIssuesForRepo(org, repo, { qs: { labels: candidateLabel } })
-                 .then(displayIssues('.candidates'));
+          toolbox.getIssuesForOrg(org, repo, { qs: { labels: 'all' } })
+                 .then(displayIssues('.all-issues'));
 
-          // compile and display all contributors for given org/repo:
-          toolbox.api.Repositories
-                 .getRepoContributors(org, repo, { qs: { sort: 'pushed', direction: 'desc', per_page: 100 } })
+          toolbox.getIssuesForOrg(org, repo, { qs: { labels: 'nolabel' } })
+                 .then(displayIssues('.unlabeled-issues'));
+	}
+        // compile and display all contributors for given org:
+        toolbox.api.Repositories
+                 .getRepoContributors(org, { qs: { sort: 'pushed', direction: 'desc', per_page: 100 } })
                  .then(function(contributors) {
                    var usernames = contributors.map(function(c) { 
                      return '<a href="https://github.com/' + c.login + '">@' + c.login + '</a>';
@@ -152,7 +148,6 @@
                    $('.contributors').append(avatars.join());
                  });
 
-	}
 
         function displayIssues(selector) {
           return function displayIssues(issues) {

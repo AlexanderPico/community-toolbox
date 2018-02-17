@@ -27,7 +27,14 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
 
   function getIssuesForOrg(_org, _options) {
     _options = _options || options;
-    var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org + "+label%3A" + _options.qs.labels;
+    var _url;
+    if (_options.qs.labels == 'all') {
+	var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org;
+    } else if (_options.qs.labels == 'nolabel') {
+	var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org + "+no%3Alabel";
+    } else {
+        var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org + "+label%3A" + _options.qs.labels;
+    }
     return requestP({ uri: _url });
   }
 

@@ -528,7 +528,7 @@ function getMetaSchemaOptions(self) {
   return metaOpts;
 }
 
-},{"./$data":1,"./cache":3,"./compile":8,"./compile/async":5,"./compile/error_classes":6,"./compile/formats":7,"./compile/resolve":9,"./compile/rules":10,"./compile/schema_obj":11,"./compile/util":13,"./keyword":37,"./patternGroups":38,"./refs/$data.json":39,"./refs/json-schema-draft-06.json":40,"co":105,"json-stable-stringify":41}],3:[function(require,module,exports){
+},{"./$data":1,"./cache":3,"./compile":8,"./compile/async":5,"./compile/error_classes":6,"./compile/formats":7,"./compile/resolve":9,"./compile/rules":10,"./compile/schema_obj":11,"./compile/util":13,"./keyword":37,"./patternGroups":38,"./refs/$data.json":39,"./refs/json-schema-draft-06.json":40,"co":104,"json-stable-stringify":41}],3:[function(require,module,exports){
 'use strict';
 
 
@@ -1235,7 +1235,7 @@ function vars(arr, statement) {
   return code;
 }
 
-},{"../dotjs/validate":36,"./error_classes":6,"./resolve":9,"./util":13,"co":105,"fast-deep-equal":148,"json-stable-stringify":41}],9:[function(require,module,exports){
+},{"../dotjs/validate":36,"./error_classes":6,"./resolve":9,"./util":13,"co":104,"fast-deep-equal":148,"json-stable-stringify":41}],9:[function(require,module,exports){
 'use strict';
 
 var url = require('url')
@@ -1508,7 +1508,7 @@ function resolveIds(schema) {
   return localRefs;
 }
 
-},{"./schema_obj":11,"./util":13,"fast-deep-equal":148,"json-schema-traverse":222,"url":385}],10:[function(require,module,exports){
+},{"./schema_obj":11,"./util":13,"fast-deep-equal":148,"json-schema-traverse":221,"url":384}],10:[function(require,module,exports){
 'use strict';
 
 var ruleModules = require('./_rules')
@@ -5496,7 +5496,7 @@ var objectKeys = Object.keys || function (obj) {
     return keys;
 };
 
-},{"jsonify":225}],42:[function(require,module,exports){
+},{"jsonify":224}],42:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -5570,7 +5570,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":42,"inherits":216,"vm":397}],44:[function(require,module,exports){
+},{"../asn1":42,"inherits":215,"vm":396}],44:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -5688,7 +5688,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":45,"buffer":158,"inherits":216}],45:[function(require,module,exports){
+},{"../base":45,"buffer":169,"inherits":215}],45:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -6332,7 +6332,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 
-},{"../base":45,"minimalistic-assert":235}],47:[function(require,module,exports){
+},{"../base":45,"minimalistic-assert":234}],47:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -6455,7 +6455,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":216}],48:[function(require,module,exports){
+},{"inherits":215}],48:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -6846,7 +6846,7 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":42,"inherits":216}],51:[function(require,module,exports){
+},{"../../asn1":42,"inherits":215}],51:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
@@ -6903,7 +6903,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
   return DERDecoder.prototype.decode.call(this, input, options);
 };
 
-},{"./der":50,"buffer":158,"inherits":216}],53:[function(require,module,exports){
+},{"./der":50,"buffer":169,"inherits":215}],53:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -7200,7 +7200,7 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":42,"buffer":158,"inherits":216}],54:[function(require,module,exports){
+},{"../../asn1":42,"buffer":169,"inherits":215}],54:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
@@ -7229,7 +7229,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
   return out.join('\n');
 };
 
-},{"./der":53,"inherits":216}],56:[function(require,module,exports){
+},{"./der":53,"inherits":215}],56:[function(require,module,exports){
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
 
@@ -7538,7 +7538,7 @@ Reader.prototype._readTag = function(tag) {
 module.exports = Reader;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":56,"./types":59,"assert":154,"buffer":158}],59:[function(require,module,exports){
+},{"./errors":56,"./types":59,"assert":154,"buffer":169}],59:[function(require,module,exports){
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
 
@@ -7896,7 +7896,7 @@ Writer.prototype._ensure = function(len) {
 module.exports = Writer;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":56,"./types":59,"assert":154,"buffer":158}],61:[function(require,module,exports){
+},{"./errors":56,"./types":59,"assert":154,"buffer":169}],61:[function(require,module,exports){
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
 // If you have no idea what ASN.1 or BER is, see this:
@@ -8133,7 +8133,7 @@ function _setExports(ndebug) {
 module.exports = _setExports(process.env.NODE_NDEBUG);
 
 }).call(this,{"isBuffer":require("../is-buffer/index.js")},require('_process'))
-},{"../is-buffer/index.js":218,"_process":252,"assert":154,"stream":369,"util":390}],63:[function(require,module,exports){
+},{"../is-buffer/index.js":217,"_process":251,"assert":154,"stream":368,"util":389}],63:[function(require,module,exports){
 
 /*!
  *  Copyright 2010 LearnBoost <dev@learnboost.com>
@@ -8347,7 +8347,7 @@ function canonicalizeResource (resource) {
 }
 module.exports.canonicalizeResource = canonicalizeResource
 
-},{"crypto":159,"url":385}],64:[function(require,module,exports){
+},{"crypto":113,"url":384}],64:[function(require,module,exports){
 (function (process,Buffer){
 var aws4 = exports,
     url = require('url'),
@@ -8683,7 +8683,7 @@ aws4.sign = function(request, credentials) {
 }
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./lru":65,"_process":252,"buffer":158,"crypto":159,"querystring":262,"url":385}],65:[function(require,module,exports){
+},{"./lru":65,"_process":251,"buffer":169,"crypto":113,"querystring":261,"url":384}],65:[function(require,module,exports){
 module.exports = function(size) {
   return new LruCache(size)
 }
@@ -9455,7 +9455,7 @@ module.exports = {
       pbkdf: bcrypt_pbkdf
 };
 
-},{"tweetnacl":384}],68:[function(require,module,exports){
+},{"tweetnacl":383}],68:[function(require,module,exports){
 (function (process,global){
 /* @preserve
  * The MIT License (MIT)
@@ -14350,7 +14350,7 @@ module.exports = ret;
 },{"./es5.js":14}]},{},[4])(4)
 });                    ;if (typeof window !== 'undefined' && window !== null) {                               window.P = window.Promise;                                                     } else if (typeof self !== 'undefined' && self !== null) {                             self.P = self.Promise;                                                         }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":252}],69:[function(require,module,exports){
+},{"_process":251}],69:[function(require,module,exports){
 (function (module, exports) {
   'use strict';
 
@@ -18078,7 +18078,7 @@ AES.prototype.scrub = function () {
 
 module.exports.AES = AES
 
-},{"safe-buffer":337}],73:[function(require,module,exports){
+},{"safe-buffer":335}],73:[function(require,module,exports){
 var aes = require('./aes')
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('cipher-base')
@@ -18197,7 +18197,7 @@ StreamCipher.prototype.setAAD = function setAAD (buf) {
 
 module.exports = StreamCipher
 
-},{"./aes":72,"./ghash":77,"./incr32":78,"buffer-xor":99,"cipher-base":102,"inherits":216,"safe-buffer":337}],74:[function(require,module,exports){
+},{"./aes":72,"./ghash":77,"./incr32":78,"buffer-xor":99,"cipher-base":102,"inherits":215,"safe-buffer":335}],74:[function(require,module,exports){
 var ciphers = require('./encrypter')
 var deciphers = require('./decrypter')
 var modes = require('./modes/list.json')
@@ -18335,7 +18335,7 @@ function createDecipher (suite, password) {
 exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
-},{"./aes":72,"./authCipher":73,"./modes":85,"./streamCipher":88,"cipher-base":102,"evp_bytestokey":145,"inherits":216,"safe-buffer":337}],76:[function(require,module,exports){
+},{"./aes":72,"./authCipher":73,"./modes":85,"./streamCipher":88,"cipher-base":102,"evp_bytestokey":145,"inherits":215,"safe-buffer":335}],76:[function(require,module,exports){
 var MODES = require('./modes')
 var AuthCipher = require('./authCipher')
 var Buffer = require('safe-buffer').Buffer
@@ -18451,7 +18451,7 @@ function createCipher (suite, password) {
 exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
-},{"./aes":72,"./authCipher":73,"./modes":85,"./streamCipher":88,"cipher-base":102,"evp_bytestokey":145,"inherits":216,"safe-buffer":337}],77:[function(require,module,exports){
+},{"./aes":72,"./authCipher":73,"./modes":85,"./streamCipher":88,"cipher-base":102,"evp_bytestokey":145,"inherits":215,"safe-buffer":335}],77:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var ZEROES = Buffer.alloc(16, 0)
 
@@ -18542,7 +18542,7 @@ GHASH.prototype.final = function (abl, bl) {
 
 module.exports = GHASH
 
-},{"safe-buffer":337}],78:[function(require,module,exports){
+},{"safe-buffer":335}],78:[function(require,module,exports){
 function incr32 (iv) {
   var len = iv.length
   var item
@@ -18613,7 +18613,7 @@ exports.encrypt = function (self, data, decrypt) {
   return out
 }
 
-},{"buffer-xor":99,"safe-buffer":337}],81:[function(require,module,exports){
+},{"buffer-xor":99,"safe-buffer":335}],81:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 
 function encryptByte (self, byteParam, decrypt) {
@@ -18657,7 +18657,7 @@ exports.encrypt = function (self, chunk, decrypt) {
   return out
 }
 
-},{"safe-buffer":337}],82:[function(require,module,exports){
+},{"safe-buffer":335}],82:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -18684,7 +18684,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158}],83:[function(require,module,exports){
+},{"buffer":169}],83:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -18718,7 +18718,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../incr32":78,"buffer":158,"buffer-xor":99}],84:[function(require,module,exports){
+},{"../incr32":78,"buffer":169,"buffer-xor":99}],84:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -18960,7 +18960,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"buffer-xor":99}],88:[function(require,module,exports){
+},{"buffer":169,"buffer-xor":99}],88:[function(require,module,exports){
 var aes = require('./aes')
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('cipher-base')
@@ -18989,7 +18989,7 @@ StreamCipher.prototype._final = function () {
 
 module.exports = StreamCipher
 
-},{"./aes":72,"cipher-base":102,"inherits":216,"safe-buffer":337}],89:[function(require,module,exports){
+},{"./aes":72,"cipher-base":102,"inherits":215,"safe-buffer":335}],89:[function(require,module,exports){
 var ebtk = require('evp_bytestokey')
 var aes = require('browserify-aes/browser')
 var DES = require('browserify-des')
@@ -19111,7 +19111,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"cipher-base":102,"des.js":115,"inherits":216}],91:[function(require,module,exports){
+},{"buffer":169,"cipher-base":102,"des.js":115,"inherits":215}],91:[function(require,module,exports){
 exports['des-ecb'] = {
   key: 8,
   iv: 0
@@ -19181,7 +19181,7 @@ function getr(priv) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":69,"buffer":158,"randombytes":263}],93:[function(require,module,exports){
+},{"bn.js":69,"buffer":169,"randombytes":262}],93:[function(require,module,exports){
 module.exports = require('./browser/algorithms.json')
 
 },{"./browser/algorithms.json":94}],94:[function(require,module,exports){
@@ -19443,7 +19443,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./algorithms.json":94,"./sign":97,"./verify":98,"buffer":158,"create-hash":109,"inherits":216,"stream":369}],97:[function(require,module,exports){
+},{"./algorithms.json":94,"./sign":97,"./verify":98,"buffer":169,"create-hash":108,"inherits":215,"stream":368}],97:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = require('create-hmac')
@@ -19592,7 +19592,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":95,"bn.js":69,"browserify-rsa":92,"buffer":158,"create-hmac":112,"elliptic":128,"parse-asn1":243}],98:[function(require,module,exports){
+},{"./curves.json":95,"bn.js":69,"browserify-rsa":92,"buffer":169,"create-hmac":111,"elliptic":128,"parse-asn1":242}],98:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var BN = require('bn.js')
@@ -19679,7 +19679,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,require("buffer").Buffer)
-},{"./curves.json":95,"bn.js":69,"buffer":158,"elliptic":128,"parse-asn1":243}],99:[function(require,module,exports){
+},{"./curves.json":95,"bn.js":69,"buffer":169,"elliptic":128,"parse-asn1":242}],99:[function(require,module,exports){
 (function (Buffer){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -19693,7 +19693,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158}],100:[function(require,module,exports){
+},{"buffer":169}],100:[function(require,module,exports){
 module.exports = {
   "100": "Continue",
   "101": "Switching Protocols",
@@ -19929,130 +19929,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 
 module.exports = CipherBase
 
-},{"inherits":216,"safe-buffer":337,"stream":369,"string_decoder":172}],103:[function(require,module,exports){
-'use strict'
-
-function isFunction (funktion) {
-  return funktion && {}.toString.call(funktion) === '[object Function]'
-}
-
-// Default to complaining loudly when things don't go according to plan.
-var logger = console.error.bind(console)
-
-// Sets a property on an object, preserving its enumerability.
-// This function assumes that the property is already writable.
-function defineProperty (obj, name, value) {
-  var enumerable = !!obj[name] && obj.propertyIsEnumerable(name)
-  Object.defineProperty(obj, name, {
-    configurable: true,
-    enumerable: enumerable,
-    writable: true,
-    value: value
-  })
-}
-
-// Keep initialization idempotent.
-function shimmer (options) {
-  if (options && options.logger) {
-    if (!isFunction(options.logger)) logger("new logger isn't a function, not replacing")
-    else logger = options.logger
-  }
-}
-
-function wrap (nodule, name, wrapper) {
-  if (!nodule || !nodule[name]) {
-    logger('no original function ' + name + ' to wrap')
-    return
-  }
-
-  if (!wrapper) {
-    logger('no wrapper function')
-    logger((new Error()).stack)
-    return
-  }
-
-  if (!isFunction(nodule[name]) || !isFunction(wrapper)) {
-    logger('original object and wrapper must be functions')
-    return
-  }
-
-  var original = nodule[name]
-  var wrapped = wrapper(original, name)
-
-  defineProperty(wrapped, '__original', original)
-  defineProperty(wrapped, '__unwrap', function () {
-    if (nodule[name] === wrapped) defineProperty(nodule, name, original)
-  })
-  defineProperty(wrapped, '__wrapped', true)
-
-  defineProperty(nodule, name, wrapped)
-  return wrapped
-}
-
-function massWrap (nodules, names, wrapper) {
-  if (!nodules) {
-    logger('must provide one or more modules to patch')
-    logger((new Error()).stack)
-    return
-  } else if (!Array.isArray(nodules)) {
-    nodules = [nodules]
-  }
-
-  if (!(names && Array.isArray(names))) {
-    logger('must provide one or more functions to wrap on modules')
-    return
-  }
-
-  nodules.forEach(function (nodule) {
-    names.forEach(function (name) {
-      wrap(nodule, name, wrapper)
-    })
-  })
-}
-
-function unwrap (nodule, name) {
-  if (!nodule || !nodule[name]) {
-    logger('no function to unwrap.')
-    logger((new Error()).stack)
-    return
-  }
-
-  if (!nodule[name].__unwrap) {
-    logger('no original to unwrap to -- has ' + name + ' already been unwrapped?')
-  } else {
-    return nodule[name].__unwrap()
-  }
-}
-
-function massUnwrap (nodules, names) {
-  if (!nodules) {
-    logger('must provide one or more modules to patch')
-    logger((new Error()).stack)
-    return
-  } else if (!Array.isArray(nodules)) {
-    nodules = [nodules]
-  }
-
-  if (!(names && Array.isArray(names))) {
-    logger('must provide one or more functions to unwrap on modules')
-    return
-  }
-
-  nodules.forEach(function (nodule) {
-    names.forEach(function (name) {
-      unwrap(nodule, name)
-    })
-  })
-}
-
-shimmer.wrap = wrap
-shimmer.massWrap = massWrap
-shimmer.unwrap = unwrap
-shimmer.massUnwrap = massUnwrap
-
-module.exports = shimmer
-
-},{}],104:[function(require,module,exports){
+},{"inherits":215,"safe-buffer":335,"stream":368,"string_decoder":171}],103:[function(require,module,exports){
 'use strict';
 
 var shimmer = require('shimmer'),
@@ -20085,7 +19962,7 @@ module.exports = function patchBluebird(ns, Promise) {
     });
 };
 
-},{"bluebird":68,"is-bluebird":217,"shimmer":103}],105:[function(require,module,exports){
+},{"bluebird":68,"is-bluebird":216,"shimmer":344}],104:[function(require,module,exports){
 
 /**
  * slice() reference.
@@ -20324,7 +20201,7 @@ function isObject(val) {
   return Object == val.constructor;
 }
 
-},{}],106:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 (function (Buffer){
 var util = require('util');
 var Stream = require('stream').Stream;
@@ -20516,7 +20393,7 @@ CombinedStream.prototype._emitError = function(err) {
 };
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":218,"delayed-stream":114,"stream":369,"util":390}],107:[function(require,module,exports){
+},{"../../is-buffer/index.js":217,"delayed-stream":114,"stream":368,"util":389}],106:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -20627,7 +20504,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":218}],108:[function(require,module,exports){
+},{"../../is-buffer/index.js":217}],107:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -20753,7 +20630,7 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":69,"buffer":158,"elliptic":128}],109:[function(require,module,exports){
+},{"bn.js":69,"buffer":169,"elliptic":128}],108:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -20809,7 +20686,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":111,"buffer":158,"cipher-base":102,"inherits":216,"ripemd160":336,"sha.js":339}],110:[function(require,module,exports){
+},{"./md5":110,"buffer":169,"cipher-base":102,"inherits":215,"ripemd160":334,"sha.js":337}],109:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var intSize = 4
@@ -20843,7 +20720,7 @@ module.exports = function hash (buf, fn) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158}],111:[function(require,module,exports){
+},{"buffer":169}],110:[function(require,module,exports){
 'use strict'
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -20996,7 +20873,7 @@ module.exports = function md5 (buf) {
   return makeHash(buf, core_md5)
 }
 
-},{"./make-hash":110}],112:[function(require,module,exports){
+},{"./make-hash":109}],111:[function(require,module,exports){
 'use strict'
 var inherits = require('inherits')
 var Legacy = require('./legacy')
@@ -21060,7 +20937,7 @@ module.exports = function createHmac (alg, key) {
   return new Hmac(alg, key)
 }
 
-},{"./legacy":113,"cipher-base":102,"create-hash/md5":111,"inherits":216,"ripemd160":336,"safe-buffer":337,"sha.js":339}],113:[function(require,module,exports){
+},{"./legacy":112,"cipher-base":102,"create-hash/md5":110,"inherits":215,"ripemd160":334,"safe-buffer":335,"sha.js":337}],112:[function(require,module,exports){
 'use strict'
 var inherits = require('inherits')
 var Buffer = require('safe-buffer').Buffer
@@ -21108,7 +20985,101 @@ Hmac.prototype._final = function () {
 }
 module.exports = Hmac
 
-},{"cipher-base":102,"inherits":216,"safe-buffer":337}],114:[function(require,module,exports){
+},{"cipher-base":102,"inherits":215,"safe-buffer":335}],113:[function(require,module,exports){
+'use strict'
+
+exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
+exports.createHash = exports.Hash = require('create-hash')
+exports.createHmac = exports.Hmac = require('create-hmac')
+
+var algos = require('browserify-sign/algos')
+var algoKeys = Object.keys(algos)
+var hashes = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'].concat(algoKeys)
+exports.getHashes = function () {
+  return hashes
+}
+
+var p = require('pbkdf2')
+exports.pbkdf2 = p.pbkdf2
+exports.pbkdf2Sync = p.pbkdf2Sync
+
+var aes = require('browserify-cipher')
+
+exports.Cipher = aes.Cipher
+exports.createCipher = aes.createCipher
+exports.Cipheriv = aes.Cipheriv
+exports.createCipheriv = aes.createCipheriv
+exports.Decipher = aes.Decipher
+exports.createDecipher = aes.createDecipher
+exports.Decipheriv = aes.Decipheriv
+exports.createDecipheriv = aes.createDecipheriv
+exports.getCiphers = aes.getCiphers
+exports.listCiphers = aes.listCiphers
+
+var dh = require('diffie-hellman')
+
+exports.DiffieHellmanGroup = dh.DiffieHellmanGroup
+exports.createDiffieHellmanGroup = dh.createDiffieHellmanGroup
+exports.getDiffieHellman = dh.getDiffieHellman
+exports.createDiffieHellman = dh.createDiffieHellman
+exports.DiffieHellman = dh.DiffieHellman
+
+var sign = require('browserify-sign')
+
+exports.createSign = sign.createSign
+exports.Sign = sign.Sign
+exports.createVerify = sign.createVerify
+exports.Verify = sign.Verify
+
+exports.createECDH = require('create-ecdh')
+
+var publicEncrypt = require('public-encrypt')
+
+exports.publicEncrypt = publicEncrypt.publicEncrypt
+exports.privateEncrypt = publicEncrypt.privateEncrypt
+exports.publicDecrypt = publicEncrypt.publicDecrypt
+exports.privateDecrypt = publicEncrypt.privateDecrypt
+
+// the least I can do is make error messages for the rest of the node.js/crypto api.
+// ;[
+//   'createCredentials'
+// ].forEach(function (name) {
+//   exports[name] = function () {
+//     throw new Error([
+//       'sorry, ' + name + ' is not implemented yet',
+//       'we accept pull requests',
+//       'https://github.com/crypto-browserify/crypto-browserify'
+//     ].join('\n'))
+//   }
+// })
+
+exports.createCredentials = function () {
+  throw new Error([
+    'sorry, createCredentials is not implemented yet',
+    'we accept pull requests',
+    'https://github.com/crypto-browserify/crypto-browserify'
+  ].join('\n'))
+}
+
+exports.constants = {
+  'DH_CHECK_P_NOT_SAFE_PRIME': 2,
+  'DH_CHECK_P_NOT_PRIME': 1,
+  'DH_UNABLE_TO_CHECK_GENERATOR': 4,
+  'DH_NOT_SUITABLE_GENERATOR': 8,
+  'NPN_ENABLED': 1,
+  'ALPN_ENABLED': 1,
+  'RSA_PKCS1_PADDING': 1,
+  'RSA_SSLV23_PADDING': 2,
+  'RSA_NO_PADDING': 3,
+  'RSA_PKCS1_OAEP_PADDING': 4,
+  'RSA_X931_PADDING': 5,
+  'RSA_PKCS1_PSS_PADDING': 6,
+  'POINT_CONVERSION_COMPRESSED': 2,
+  'POINT_CONVERSION_UNCOMPRESSED': 4,
+  'POINT_CONVERSION_HYBRID': 6
+}
+
+},{"browserify-cipher":89,"browserify-sign":96,"browserify-sign/algos":93,"create-ecdh":107,"create-hash":108,"create-hmac":111,"diffie-hellman":121,"pbkdf2":244,"public-encrypt":252,"randombytes":262}],114:[function(require,module,exports){
 var Stream = require('stream').Stream;
 var util = require('util');
 
@@ -21217,7 +21188,7 @@ DelayedStream.prototype._checkIfMaxDataSizeExceeded = function() {
   this.emit('error', new Error(message));
 };
 
-},{"stream":369,"util":390}],115:[function(require,module,exports){
+},{"stream":368,"util":389}],115:[function(require,module,exports){
 'use strict';
 
 exports.utils = require('./des/utils');
@@ -21293,7 +21264,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
   }
 };
 
-},{"inherits":216,"minimalistic-assert":235}],117:[function(require,module,exports){
+},{"inherits":215,"minimalistic-assert":234}],117:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -21436,7 +21407,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
   return this._unpad(out);
 };
 
-},{"minimalistic-assert":235}],118:[function(require,module,exports){
+},{"minimalistic-assert":234}],118:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -21581,7 +21552,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
   utils.rip(l, r, out, off);
 };
 
-},{"../des":115,"inherits":216,"minimalistic-assert":235}],119:[function(require,module,exports){
+},{"../des":115,"inherits":215,"minimalistic-assert":234}],119:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -21638,7 +21609,7 @@ EDE.prototype._update = function _update(inp, inOff, out, outOff) {
 EDE.prototype._pad = DES.prototype._pad;
 EDE.prototype._unpad = DES.prototype._unpad;
 
-},{"../des":115,"inherits":216,"minimalistic-assert":235}],120:[function(require,module,exports){
+},{"../des":115,"inherits":215,"minimalistic-assert":234}],120:[function(require,module,exports){
 'use strict';
 
 exports.readUInt32BE = function readUInt32BE(bytes, off) {
@@ -21942,7 +21913,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/dh":122,"./lib/generatePrime":123,"./lib/primes.json":124,"buffer":158}],122:[function(require,module,exports){
+},{"./lib/dh":122,"./lib/generatePrime":123,"./lib/primes.json":124,"buffer":169}],122:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -22110,7 +22081,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":123,"bn.js":69,"buffer":158,"miller-rabin":231,"randombytes":263}],123:[function(require,module,exports){
+},{"./generatePrime":123,"bn.js":69,"buffer":169,"miller-rabin":230,"randombytes":262}],123:[function(require,module,exports){
 var randomBytes = require('randombytes');
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -22217,7 +22188,7 @@ function findPrime(bits, gen) {
 
 }
 
-},{"bn.js":69,"miller-rabin":231,"randombytes":263}],124:[function(require,module,exports){
+},{"bn.js":69,"miller-rabin":230,"randombytes":262}],124:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -22313,7 +22284,7 @@ exports.ECKey = function(curve, key, isPublic)
 
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/ec.js":126,"./lib/sec.js":127,"buffer":158,"crypto":159,"jsbn":221}],126:[function(require,module,exports){
+},{"./lib/ec.js":126,"./lib/sec.js":127,"buffer":169,"crypto":113,"jsbn":220}],126:[function(require,module,exports){
 // Basic Javascript Elliptic Curve implementation
 // Ported loosely from BouncyCastle's Java EC code
 // Only Fp curves implemented for now
@@ -22876,7 +22847,7 @@ var exports = {
 
 module.exports = exports
 
-},{"jsbn":221}],127:[function(require,module,exports){
+},{"jsbn":220}],127:[function(require,module,exports){
 // Named EC curves
 
 // Requires ec.js, jsbn.js, and jsbn2.js
@@ -23048,7 +23019,7 @@ module.exports = {
   "secp256r1":secp256r1
 }
 
-},{"./ec.js":126,"jsbn":221}],128:[function(require,module,exports){
+},{"./ec.js":126,"jsbn":220}],128:[function(require,module,exports){
 'use strict';
 
 var elliptic = exports;
@@ -23875,7 +23846,7 @@ Point.prototype.eqXToP = function eqXToP(x) {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":128,"../curve":131,"bn.js":69,"inherits":216}],131:[function(require,module,exports){
+},{"../../elliptic":128,"../curve":131,"bn.js":69,"inherits":215}],131:[function(require,module,exports){
 'use strict';
 
 var curve = exports;
@@ -24067,7 +24038,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":128,"../curve":131,"bn.js":69,"inherits":216}],133:[function(require,module,exports){
+},{"../../elliptic":128,"../curve":131,"bn.js":69,"inherits":215}],133:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -25007,7 +24978,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":128,"../curve":131,"bn.js":69,"inherits":216}],134:[function(require,module,exports){
+},{"../../elliptic":128,"../curve":131,"bn.js":69,"inherits":215}],134:[function(require,module,exports){
 'use strict';
 
 var curves = exports;
@@ -25214,7 +25185,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":128,"./precomputed/secp256k1":141,"hash.js":195}],135:[function(require,module,exports){
+},{"../elliptic":128,"./precomputed/secp256k1":141,"hash.js":194}],135:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -25456,7 +25427,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
   throw new Error('Unable to find valid recovery factor');
 };
 
-},{"../../elliptic":128,"./key":136,"./signature":137,"bn.js":69,"hmac-drbg":208}],136:[function(require,module,exports){
+},{"../../elliptic":128,"./key":136,"./signature":137,"bn.js":69,"hmac-drbg":207}],136:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -25834,7 +25805,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
   return val instanceof this.pointClass;
 };
 
-},{"../../elliptic":128,"./key":139,"./signature":140,"hash.js":195}],139:[function(require,module,exports){
+},{"../../elliptic":128,"./key":139,"./signature":140,"hash.js":194}],139:[function(require,module,exports){
 'use strict';
 
 var elliptic = require('../../elliptic');
@@ -26904,7 +26875,7 @@ function intFromLE(bytes) {
 utils.intFromLE = intFromLE;
 
 
-},{"bn.js":69,"minimalistic-assert":235,"minimalistic-crypto-utils":236}],143:[function(require,module,exports){
+},{"bn.js":69,"minimalistic-assert":234,"minimalistic-crypto-utils":235}],143:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -27379,7 +27350,7 @@ function EVP_BytesToKey (password, salt, keyBits, ivLen) {
 
 module.exports = EVP_BytesToKey
 
-},{"md5.js":229,"safe-buffer":337}],146:[function(require,module,exports){
+},{"md5.js":228,"safe-buffer":335}],146:[function(require,module,exports){
 'use strict';
 
 var hasOwn = Object.prototype.hasOwnProperty;
@@ -27654,7 +27625,7 @@ function dumpException(ex)
 }
 
 }).call(this,require('_process'))
-},{"_process":252,"assert":154,"util":390}],148:[function(require,module,exports){
+},{"_process":251,"assert":154,"util":389}],148:[function(require,module,exports){
 'use strict';
 
 module.exports = function equal(a, b) {
@@ -27839,7 +27810,7 @@ function createConnectionSSL (port, host, options) {
   return tls.connect(options);
 }
 
-},{"http":370,"https":160,"net":157,"tls":157,"util":390}],150:[function(require,module,exports){
+},{"http":369,"https":170,"net":155,"tls":155,"util":389}],150:[function(require,module,exports){
 /* eslint-env browser */
 module.exports = typeof self == 'object' ? self.FormData : window.FormData;
 
@@ -28005,7 +27976,7 @@ let GithubService = function(options) {
 
 exports = module.exports = GithubService;
 
-},{"./assets/routes.json":151,"./package":153,"extend":146,"path":244,"request-promise":281}],153:[function(require,module,exports){
+},{"./assets/routes.json":151,"./package":153,"extend":146,"path":243,"request-promise":279}],153:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -28594,14 +28565,12 @@ var objectKeys = Object.keys || function (obj) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"util/":390}],155:[function(require,module,exports){
+},{"util/":389}],155:[function(require,module,exports){
+arguments[4][71][0].apply(exports,arguments)
+},{"dup":71}],156:[function(require,module,exports){
 (function (process,Buffer){
-'use strict';
-/* eslint camelcase: "off" */
-
-var assert = require('assert');
-
-var Zstream = require('pako/lib/zlib/zstream');
+var msg = require('pako/lib/zlib/messages');
+var zstream = require('pako/lib/zlib/zstream');
 var zlib_deflate = require('pako/lib/zlib/deflate.js');
 var zlib_inflate = require('pako/lib/zlib/inflate.js');
 var constants = require('pako/lib/zlib/constants');
@@ -28620,403 +28589,252 @@ exports.DEFLATERAW = 5;
 exports.INFLATERAW = 6;
 exports.UNZIP = 7;
 
-var GZIP_HEADER_ID1 = 0x1f;
-var GZIP_HEADER_ID2 = 0x8b;
-
 /**
  * Emulate Node's zlib C++ layer for use by the JS layer in index.js
  */
 function Zlib(mode) {
-  if (typeof mode !== 'number' || mode < exports.DEFLATE || mode > exports.UNZIP) {
-    throw new TypeError('Bad argument');
-  }
-
-  this.dictionary = null;
-  this.err = 0;
-  this.flush = 0;
+  if (mode < exports.DEFLATE || mode > exports.UNZIP)
+    throw new TypeError("Bad argument");
+    
+  this.mode = mode;
   this.init_done = false;
+  this.write_in_progress = false;
+  this.pending_close = false;
+  this.windowBits = 0;
   this.level = 0;
   this.memLevel = 0;
-  this.mode = mode;
   this.strategy = 0;
-  this.windowBits = 0;
-  this.write_in_progress = false;
-  this.pending_close = false;
-  this.gzip_id_bytes_read = 0;
+  this.dictionary = null;
 }
 
-Zlib.prototype.close = function () {
-  if (this.write_in_progress) {
-    this.pending_close = true;
-    return;
-  }
-
-  this.pending_close = false;
-
-  assert(this.init_done, 'close before init');
-  assert(this.mode <= exports.UNZIP);
-
-  if (this.mode === exports.DEFLATE || this.mode === exports.GZIP || this.mode === exports.DEFLATERAW) {
-    zlib_deflate.deflateEnd(this.strm);
-  } else if (this.mode === exports.INFLATE || this.mode === exports.GUNZIP || this.mode === exports.INFLATERAW || this.mode === exports.UNZIP) {
-    zlib_inflate.inflateEnd(this.strm);
-  }
-
-  this.mode = exports.NONE;
-
-  this.dictionary = null;
-};
-
-Zlib.prototype.write = function (flush, input, in_off, in_len, out, out_off, out_len) {
-  return this._write(true, flush, input, in_off, in_len, out, out_off, out_len);
-};
-
-Zlib.prototype.writeSync = function (flush, input, in_off, in_len, out, out_off, out_len) {
-  return this._write(false, flush, input, in_off, in_len, out, out_off, out_len);
-};
-
-Zlib.prototype._write = function (async, flush, input, in_off, in_len, out, out_off, out_len) {
-  assert.equal(arguments.length, 8);
-
-  assert(this.init_done, 'write before init');
-  assert(this.mode !== exports.NONE, 'already finalized');
-  assert.equal(false, this.write_in_progress, 'write already in progress');
-  assert.equal(false, this.pending_close, 'close is pending');
-
-  this.write_in_progress = true;
-
-  assert.equal(false, flush === undefined, 'must provide flush value');
-
-  this.write_in_progress = true;
-
-  if (flush !== exports.Z_NO_FLUSH && flush !== exports.Z_PARTIAL_FLUSH && flush !== exports.Z_SYNC_FLUSH && flush !== exports.Z_FULL_FLUSH && flush !== exports.Z_FINISH && flush !== exports.Z_BLOCK) {
-    throw new Error('Invalid flush value');
-  }
-
-  if (input == null) {
-    input = Buffer.alloc(0);
-    in_len = 0;
-    in_off = 0;
-  }
-
-  this.strm.avail_in = in_len;
-  this.strm.input = input;
-  this.strm.next_in = in_off;
-  this.strm.avail_out = out_len;
-  this.strm.output = out;
-  this.strm.next_out = out_off;
-  this.flush = flush;
-
-  if (!async) {
-    // sync version
-    this._process();
-
-    if (this._checkError()) {
-      return this._afterSync();
-    }
-    return;
-  }
-
-  // async version
-  var self = this;
-  process.nextTick(function () {
-    self._process();
-    self._after();
-  });
-
-  return this;
-};
-
-Zlib.prototype._afterSync = function () {
-  var avail_out = this.strm.avail_out;
-  var avail_in = this.strm.avail_in;
-
-  this.write_in_progress = false;
-
-  return [avail_in, avail_out];
-};
-
-Zlib.prototype._process = function () {
-  var next_expected_header_byte = null;
-
-  // If the avail_out is left at 0, then it means that it ran out
-  // of room.  If there was avail_out left over, then it means
-  // that all of the input was consumed.
-  switch (this.mode) {
-    case exports.DEFLATE:
-    case exports.GZIP:
-    case exports.DEFLATERAW:
-      this.err = zlib_deflate.deflate(this.strm, this.flush);
-      break;
-    case exports.UNZIP:
-      if (this.strm.avail_in > 0) {
-        next_expected_header_byte = this.strm.next_in;
-      }
-
-      switch (this.gzip_id_bytes_read) {
-        case 0:
-          if (next_expected_header_byte === null) {
-            break;
-          }
-
-          if (this.strm.input[next_expected_header_byte] === GZIP_HEADER_ID1) {
-            this.gzip_id_bytes_read = 1;
-            next_expected_header_byte++;
-
-            if (this.strm.avail_in === 1) {
-              // The only available byte was already read.
-              break;
-            }
-          } else {
-            this.mode = exports.INFLATE;
-            break;
-          }
-
-        // fallthrough
-        case 1:
-          if (next_expected_header_byte === null) {
-            break;
-          }
-
-          if (this.strm.input[next_expected_header_byte] === GZIP_HEADER_ID2) {
-            this.gzip_id_bytes_read = 2;
-            this.mode = exports.GUNZIP;
-          } else {
-            // There is no actual difference between INFLATE and INFLATERAW
-            // (after initialization).
-            this.mode = exports.INFLATE;
-          }
-
-          break;
-        default:
-          throw new Error('invalid number of gzip magic number bytes read');
-      }
-
-    // fallthrough
-    case exports.INFLATE:
-    case exports.GUNZIP:
-    case exports.INFLATERAW:
-      this.err = zlib_inflate.inflate(this.strm, this.flush
-
-      // If data was encoded with dictionary
-      );if (this.err === exports.Z_NEED_DICT && this.dictionary) {
-        // Load it
-        this.err = zlib_inflate.inflateSetDictionary(this.strm, this.dictionary);
-        if (this.err === exports.Z_OK) {
-          // And try to decode again
-          this.err = zlib_inflate.inflate(this.strm, this.flush);
-        } else if (this.err === exports.Z_DATA_ERROR) {
-          // Both inflateSetDictionary() and inflate() return Z_DATA_ERROR.
-          // Make it possible for After() to tell a bad dictionary from bad
-          // input.
-          this.err = exports.Z_NEED_DICT;
-        }
-      }
-      while (this.strm.avail_in > 0 && this.mode === exports.GUNZIP && this.err === exports.Z_STREAM_END && this.strm.next_in[0] !== 0x00) {
-        // Bytes remain in input buffer. Perhaps this is another compressed
-        // member in the same archive, or just trailing garbage.
-        // Trailing zero bytes are okay, though, since they are frequently
-        // used for padding.
-
-        this.reset();
-        this.err = zlib_inflate.inflate(this.strm, this.flush);
-      }
-      break;
-    default:
-      throw new Error('Unknown mode ' + this.mode);
-  }
-};
-
-Zlib.prototype._checkError = function () {
-  // Acceptable error states depend on the type of zlib stream.
-  switch (this.err) {
-    case exports.Z_OK:
-    case exports.Z_BUF_ERROR:
-      if (this.strm.avail_out !== 0 && this.flush === exports.Z_FINISH) {
-        this._error('unexpected end of file');
-        return false;
-      }
-      break;
-    case exports.Z_STREAM_END:
-      // normal statuses, not fatal
-      break;
-    case exports.Z_NEED_DICT:
-      if (this.dictionary == null) {
-        this._error('Missing dictionary');
-      } else {
-        this._error('Bad dictionary');
-      }
-      return false;
-    default:
-      // something else.
-      this._error('Zlib error');
-      return false;
-  }
-
-  return true;
-};
-
-Zlib.prototype._after = function () {
-  if (!this._checkError()) {
-    return;
-  }
-
-  var avail_out = this.strm.avail_out;
-  var avail_in = this.strm.avail_in;
-
-  this.write_in_progress = false;
-
-  // call the write() cb
-  this.callback(avail_in, avail_out);
-
-  if (this.pending_close) {
-    this.close();
-  }
-};
-
-Zlib.prototype._error = function (message) {
-  if (this.strm.msg) {
-    message = this.strm.msg;
-  }
-  this.onerror(message, this.err
-
-  // no hope of rescue.
-  );this.write_in_progress = false;
-  if (this.pending_close) {
-    this.close();
-  }
-};
-
-Zlib.prototype.init = function (windowBits, level, memLevel, strategy, dictionary) {
-  assert(arguments.length === 4 || arguments.length === 5, 'init(windowBits, level, memLevel, strategy, [dictionary])');
-
-  assert(windowBits >= 8 && windowBits <= 15, 'invalid windowBits');
-  assert(level >= -1 && level <= 9, 'invalid compression level');
-
-  assert(memLevel >= 1 && memLevel <= 9, 'invalid memlevel');
-
-  assert(strategy === exports.Z_FILTERED || strategy === exports.Z_HUFFMAN_ONLY || strategy === exports.Z_RLE || strategy === exports.Z_FIXED || strategy === exports.Z_DEFAULT_STRATEGY, 'invalid strategy');
-
-  this._init(level, windowBits, memLevel, strategy, dictionary);
-  this._setDictionary();
-};
-
-Zlib.prototype.params = function () {
-  throw new Error('deflateParams Not supported');
-};
-
-Zlib.prototype.reset = function () {
-  this._reset();
-  this._setDictionary();
-};
-
-Zlib.prototype._init = function (level, windowBits, memLevel, strategy, dictionary) {
-  this.level = level;
+Zlib.prototype.init = function(windowBits, level, memLevel, strategy, dictionary) {
   this.windowBits = windowBits;
+  this.level = level;
   this.memLevel = memLevel;
   this.strategy = strategy;
-
-  this.flush = exports.Z_NO_FLUSH;
-
-  this.err = exports.Z_OK;
-
-  if (this.mode === exports.GZIP || this.mode === exports.GUNZIP) {
+  // dictionary not supported.
+  
+  if (this.mode === exports.GZIP || this.mode === exports.GUNZIP)
     this.windowBits += 16;
-  }
-
-  if (this.mode === exports.UNZIP) {
+    
+  if (this.mode === exports.UNZIP)
     this.windowBits += 32;
-  }
-
-  if (this.mode === exports.DEFLATERAW || this.mode === exports.INFLATERAW) {
-    this.windowBits = -1 * this.windowBits;
-  }
-
-  this.strm = new Zstream();
-
+    
+  if (this.mode === exports.DEFLATERAW || this.mode === exports.INFLATERAW)
+    this.windowBits = -this.windowBits;
+    
+  this.strm = new zstream();
+  
   switch (this.mode) {
     case exports.DEFLATE:
     case exports.GZIP:
     case exports.DEFLATERAW:
-      this.err = zlib_deflate.deflateInit2(this.strm, this.level, exports.Z_DEFLATED, this.windowBits, this.memLevel, this.strategy);
+      var status = zlib_deflate.deflateInit2(
+        this.strm,
+        this.level,
+        exports.Z_DEFLATED,
+        this.windowBits,
+        this.memLevel,
+        this.strategy
+      );
       break;
     case exports.INFLATE:
     case exports.GUNZIP:
     case exports.INFLATERAW:
     case exports.UNZIP:
-      this.err = zlib_inflate.inflateInit2(this.strm, this.windowBits);
+      var status  = zlib_inflate.inflateInit2(
+        this.strm,
+        this.windowBits
+      );
       break;
     default:
-      throw new Error('Unknown mode ' + this.mode);
+      throw new Error("Unknown mode " + this.mode);
   }
-
-  if (this.err !== exports.Z_OK) {
-    this._error('Init error');
+  
+  if (status !== exports.Z_OK) {
+    this._error(status);
+    return;
   }
-
-  this.dictionary = dictionary;
-
+  
   this.write_in_progress = false;
   this.init_done = true;
 };
 
-Zlib.prototype._setDictionary = function () {
-  if (this.dictionary == null) {
-    return;
-  }
-
-  this.err = exports.Z_OK;
-
-  switch (this.mode) {
-    case exports.DEFLATE:
-    case exports.DEFLATERAW:
-      this.err = zlib_deflate.deflateSetDictionary(this.strm, this.dictionary);
-      break;
-    default:
-      break;
-  }
-
-  if (this.err !== exports.Z_OK) {
-    this._error('Failed to set dictionary');
-  }
+Zlib.prototype.params = function() {
+  throw new Error("deflateParams Not supported");
 };
 
-Zlib.prototype._reset = function () {
-  this.err = exports.Z_OK;
+Zlib.prototype._writeCheck = function() {
+  if (!this.init_done)
+    throw new Error("write before init");
+    
+  if (this.mode === exports.NONE)
+    throw new Error("already finalized");
+    
+  if (this.write_in_progress)
+    throw new Error("write already in progress");
+    
+  if (this.pending_close)
+    throw new Error("close is pending");
+};
 
+Zlib.prototype.write = function(flush, input, in_off, in_len, out, out_off, out_len) {    
+  this._writeCheck();
+  this.write_in_progress = true;
+  
+  var self = this;
+  process.nextTick(function() {
+    self.write_in_progress = false;
+    var res = self._write(flush, input, in_off, in_len, out, out_off, out_len);
+    self.callback(res[0], res[1]);
+    
+    if (self.pending_close)
+      self.close();
+  });
+  
+  return this;
+};
+
+// set method for Node buffers, used by pako
+function bufferSet(data, offset) {
+  for (var i = 0; i < data.length; i++) {
+    this[offset + i] = data[i];
+  }
+}
+
+Zlib.prototype.writeSync = function(flush, input, in_off, in_len, out, out_off, out_len) {
+  this._writeCheck();
+  return this._write(flush, input, in_off, in_len, out, out_off, out_len);
+};
+
+Zlib.prototype._write = function(flush, input, in_off, in_len, out, out_off, out_len) {
+  this.write_in_progress = true;
+  
+  if (flush !== exports.Z_NO_FLUSH &&
+      flush !== exports.Z_PARTIAL_FLUSH &&
+      flush !== exports.Z_SYNC_FLUSH &&
+      flush !== exports.Z_FULL_FLUSH &&
+      flush !== exports.Z_FINISH &&
+      flush !== exports.Z_BLOCK) {
+    throw new Error("Invalid flush value");
+  }
+  
+  if (input == null) {
+    input = new Buffer(0);
+    in_len = 0;
+    in_off = 0;
+  }
+  
+  if (out._set)
+    out.set = out._set;
+  else
+    out.set = bufferSet;
+  
+  var strm = this.strm;
+  strm.avail_in = in_len;
+  strm.input = input;
+  strm.next_in = in_off;
+  strm.avail_out = out_len;
+  strm.output = out;
+  strm.next_out = out_off;
+  
+  switch (this.mode) {
+    case exports.DEFLATE:
+    case exports.GZIP:
+    case exports.DEFLATERAW:
+      var status = zlib_deflate.deflate(strm, flush);
+      break;
+    case exports.UNZIP:
+    case exports.INFLATE:
+    case exports.GUNZIP:
+    case exports.INFLATERAW:
+      var status = zlib_inflate.inflate(strm, flush);
+      break;
+    default:
+      throw new Error("Unknown mode " + this.mode);
+  }
+  
+  if (status !== exports.Z_STREAM_END && status !== exports.Z_OK) {
+    this._error(status);
+  }
+  
+  this.write_in_progress = false;
+  return [strm.avail_in, strm.avail_out];
+};
+
+Zlib.prototype.close = function() {
+  if (this.write_in_progress) {
+    this.pending_close = true;
+    return;
+  }
+  
+  this.pending_close = false;
+  
+  if (this.mode === exports.DEFLATE || this.mode === exports.GZIP || this.mode === exports.DEFLATERAW) {
+    zlib_deflate.deflateEnd(this.strm);
+  } else {
+    zlib_inflate.inflateEnd(this.strm);
+  }
+  
+  this.mode = exports.NONE;
+};
+
+Zlib.prototype.reset = function() {
   switch (this.mode) {
     case exports.DEFLATE:
     case exports.DEFLATERAW:
-    case exports.GZIP:
-      this.err = zlib_deflate.deflateReset(this.strm);
+      var status = zlib_deflate.deflateReset(this.strm);
       break;
     case exports.INFLATE:
     case exports.INFLATERAW:
-    case exports.GUNZIP:
-      this.err = zlib_inflate.inflateReset(this.strm);
-      break;
-    default:
+      var status = zlib_inflate.inflateReset(this.strm);
       break;
   }
-
-  if (this.err !== exports.Z_OK) {
-    this._error('Failed to reset stream');
+  
+  if (status !== exports.Z_OK) {
+    this._error(status);
   }
 };
 
-exports.Zlib = Zlib;
-}).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":252,"assert":154,"buffer":158,"pako/lib/zlib/constants":163,"pako/lib/zlib/deflate.js":165,"pako/lib/zlib/inflate.js":167,"pako/lib/zlib/zstream":171}],156:[function(require,module,exports){
-(function (process){
-'use strict';
+Zlib.prototype._error = function(status) {
+  this.onerror(msg[status] + ': ' + this.strm.msg, status);
+  
+  this.write_in_progress = false;
+  if (this.pending_close)
+    this.close();
+};
 
-var Buffer = require('buffer').Buffer;
-var Transform = require('stream').Transform;
+exports.Zlib = Zlib;
+
+}).call(this,require('_process'),require("buffer").Buffer)
+},{"_process":251,"buffer":169,"pako/lib/zlib/constants":160,"pako/lib/zlib/deflate.js":162,"pako/lib/zlib/inflate.js":164,"pako/lib/zlib/messages":166,"pako/lib/zlib/zstream":168}],157:[function(require,module,exports){
+(function (process,Buffer){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+var Transform = require('_stream_transform');
+
 var binding = require('./binding');
 var util = require('util');
 var assert = require('assert').ok;
-var kMaxLength = require('buffer').kMaxLength;
-var kRangeErrorMessage = 'Cannot create final Buffer. It would be larger ' + 'than 0x' + kMaxLength.toString(16) + ' bytes';
 
 // zlib doesn't provide these, so kludge them in following the same
 // const naming scheme zlib uses.
@@ -29029,7 +28847,7 @@ binding.Z_DEFAULT_WINDOWBITS = 15;
 // is absurdly low.  Usually a MB or more is best.
 binding.Z_MIN_CHUNK = 64;
 binding.Z_MAX_CHUNK = Infinity;
-binding.Z_DEFAULT_CHUNK = 16 * 1024;
+binding.Z_DEFAULT_CHUNK = (16 * 1024);
 
 binding.Z_MIN_MEMLEVEL = 1;
 binding.Z_MAX_MEMLEVEL = 9;
@@ -29040,18 +28858,12 @@ binding.Z_MAX_LEVEL = 9;
 binding.Z_DEFAULT_LEVEL = binding.Z_DEFAULT_COMPRESSION;
 
 // expose all the zlib constants
-var bkeys = Object.keys(binding);
-for (var bk = 0; bk < bkeys.length; bk++) {
-  var bkey = bkeys[bk];
-  if (bkey.match(/^Z/)) {
-    Object.defineProperty(exports, bkey, {
-      enumerable: true, value: binding[bkey], writable: false
-    });
-  }
-}
+Object.keys(binding).forEach(function(k) {
+  if (k.match(/^Z/)) exports[k] = binding[k];
+});
 
 // translation table for return codes.
-var codes = {
+exports.codes = {
   Z_OK: binding.Z_OK,
   Z_STREAM_END: binding.Z_STREAM_END,
   Z_NEED_DICT: binding.Z_NEED_DICT,
@@ -29063,14 +28875,8 @@ var codes = {
   Z_VERSION_ERROR: binding.Z_VERSION_ERROR
 };
 
-var ckeys = Object.keys(codes);
-for (var ck = 0; ck < ckeys.length; ck++) {
-  var ckey = ckeys[ck];
-  codes[codes[ckey]] = ckey;
-}
-
-Object.defineProperty(exports, 'codes', {
-  enumerable: true, value: Object.freeze(codes), writable: false
+Object.keys(exports.codes).forEach(function(k) {
+  exports.codes[exports.codes[k]] = k;
 });
 
 exports.Deflate = Deflate;
@@ -29081,37 +28887,38 @@ exports.DeflateRaw = DeflateRaw;
 exports.InflateRaw = InflateRaw;
 exports.Unzip = Unzip;
 
-exports.createDeflate = function (o) {
+exports.createDeflate = function(o) {
   return new Deflate(o);
 };
 
-exports.createInflate = function (o) {
+exports.createInflate = function(o) {
   return new Inflate(o);
 };
 
-exports.createDeflateRaw = function (o) {
+exports.createDeflateRaw = function(o) {
   return new DeflateRaw(o);
 };
 
-exports.createInflateRaw = function (o) {
+exports.createInflateRaw = function(o) {
   return new InflateRaw(o);
 };
 
-exports.createGzip = function (o) {
+exports.createGzip = function(o) {
   return new Gzip(o);
 };
 
-exports.createGunzip = function (o) {
+exports.createGunzip = function(o) {
   return new Gunzip(o);
 };
 
-exports.createUnzip = function (o) {
+exports.createUnzip = function(o) {
   return new Unzip(o);
 };
 
+
 // Convenience methods.
 // compress/decompress a string or buffer in one step.
-exports.deflate = function (buffer, opts, callback) {
+exports.deflate = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29119,11 +28926,11 @@ exports.deflate = function (buffer, opts, callback) {
   return zlibBuffer(new Deflate(opts), buffer, callback);
 };
 
-exports.deflateSync = function (buffer, opts) {
+exports.deflateSync = function(buffer, opts) {
   return zlibBufferSync(new Deflate(opts), buffer);
 };
 
-exports.gzip = function (buffer, opts, callback) {
+exports.gzip = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29131,11 +28938,11 @@ exports.gzip = function (buffer, opts, callback) {
   return zlibBuffer(new Gzip(opts), buffer, callback);
 };
 
-exports.gzipSync = function (buffer, opts) {
+exports.gzipSync = function(buffer, opts) {
   return zlibBufferSync(new Gzip(opts), buffer);
 };
 
-exports.deflateRaw = function (buffer, opts, callback) {
+exports.deflateRaw = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29143,11 +28950,11 @@ exports.deflateRaw = function (buffer, opts, callback) {
   return zlibBuffer(new DeflateRaw(opts), buffer, callback);
 };
 
-exports.deflateRawSync = function (buffer, opts) {
+exports.deflateRawSync = function(buffer, opts) {
   return zlibBufferSync(new DeflateRaw(opts), buffer);
 };
 
-exports.unzip = function (buffer, opts, callback) {
+exports.unzip = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29155,11 +28962,11 @@ exports.unzip = function (buffer, opts, callback) {
   return zlibBuffer(new Unzip(opts), buffer, callback);
 };
 
-exports.unzipSync = function (buffer, opts) {
+exports.unzipSync = function(buffer, opts) {
   return zlibBufferSync(new Unzip(opts), buffer);
 };
 
-exports.inflate = function (buffer, opts, callback) {
+exports.inflate = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29167,11 +28974,11 @@ exports.inflate = function (buffer, opts, callback) {
   return zlibBuffer(new Inflate(opts), buffer, callback);
 };
 
-exports.inflateSync = function (buffer, opts) {
+exports.inflateSync = function(buffer, opts) {
   return zlibBufferSync(new Inflate(opts), buffer);
 };
 
-exports.gunzip = function (buffer, opts, callback) {
+exports.gunzip = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29179,11 +28986,11 @@ exports.gunzip = function (buffer, opts, callback) {
   return zlibBuffer(new Gunzip(opts), buffer, callback);
 };
 
-exports.gunzipSync = function (buffer, opts) {
+exports.gunzipSync = function(buffer, opts) {
   return zlibBufferSync(new Gunzip(opts), buffer);
 };
 
-exports.inflateRaw = function (buffer, opts, callback) {
+exports.inflateRaw = function(buffer, opts, callback) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -29191,7 +28998,7 @@ exports.inflateRaw = function (buffer, opts, callback) {
   return zlibBuffer(new InflateRaw(opts), buffer, callback);
 };
 
-exports.inflateRawSync = function (buffer, opts) {
+exports.inflateRawSync = function(buffer, opts) {
   return zlibBufferSync(new InflateRaw(opts), buffer);
 };
 
@@ -29221,27 +29028,20 @@ function zlibBuffer(engine, buffer, callback) {
   }
 
   function onEnd() {
-    var buf;
-    var err = null;
-
-    if (nread >= kMaxLength) {
-      err = new RangeError(kRangeErrorMessage);
-    } else {
-      buf = Buffer.concat(buffers, nread);
-    }
-
+    var buf = Buffer.concat(buffers, nread);
     buffers = [];
+    callback(null, buf);
     engine.close();
-    callback(err, buf);
   }
 }
 
 function zlibBufferSync(engine, buffer) {
-  if (typeof buffer === 'string') buffer = Buffer.from(buffer);
+  if (typeof buffer === 'string')
+    buffer = new Buffer(buffer);
+  if (!Buffer.isBuffer(buffer))
+    throw new TypeError('Not a string or buffer');
 
-  if (!Buffer.isBuffer(buffer)) throw new TypeError('Not a string or buffer');
-
-  var flushFlag = engine._finishFlushFlag;
+  var flushFlag = binding.Z_FINISH;
 
   return engine._processChunk(buffer, flushFlag);
 }
@@ -29258,6 +29058,8 @@ function Inflate(opts) {
   Zlib.call(this, opts, binding.INFLATE);
 }
 
+
+
 // gzip - bigger header, same deflate compression
 function Gzip(opts) {
   if (!(this instanceof Gzip)) return new Gzip(opts);
@@ -29268,6 +29070,8 @@ function Gunzip(opts) {
   if (!(this instanceof Gunzip)) return new Gunzip(opts);
   Zlib.call(this, opts, binding.GUNZIP);
 }
+
+
 
 // raw - no header
 function DeflateRaw(opts) {
@@ -29280,15 +29084,13 @@ function InflateRaw(opts) {
   Zlib.call(this, opts, binding.INFLATERAW);
 }
 
+
 // auto-detect header.
 function Unzip(opts) {
   if (!(this instanceof Unzip)) return new Unzip(opts);
   Zlib.call(this, opts, binding.UNZIP);
 }
 
-function isValidFlushFlag(flag) {
-  return flag === binding.Z_NO_FLUSH || flag === binding.Z_PARTIAL_FLUSH || flag === binding.Z_SYNC_FLUSH || flag === binding.Z_FULL_FLUSH || flag === binding.Z_FINISH || flag === binding.Z_BLOCK;
-}
 
 // the Zlib class they all inherit from
 // This thing manages the queue of requests, and returns
@@ -29296,49 +29098,57 @@ function isValidFlushFlag(flag) {
 // you call the .write() method.
 
 function Zlib(opts, mode) {
-  var _this = this;
-
   this._opts = opts = opts || {};
   this._chunkSize = opts.chunkSize || exports.Z_DEFAULT_CHUNK;
 
   Transform.call(this, opts);
 
-  if (opts.flush && !isValidFlushFlag(opts.flush)) {
-    throw new Error('Invalid flush flag: ' + opts.flush);
+  if (opts.flush) {
+    if (opts.flush !== binding.Z_NO_FLUSH &&
+        opts.flush !== binding.Z_PARTIAL_FLUSH &&
+        opts.flush !== binding.Z_SYNC_FLUSH &&
+        opts.flush !== binding.Z_FULL_FLUSH &&
+        opts.flush !== binding.Z_FINISH &&
+        opts.flush !== binding.Z_BLOCK) {
+      throw new Error('Invalid flush flag: ' + opts.flush);
+    }
   }
-  if (opts.finishFlush && !isValidFlushFlag(opts.finishFlush)) {
-    throw new Error('Invalid flush flag: ' + opts.finishFlush);
-  }
-
   this._flushFlag = opts.flush || binding.Z_NO_FLUSH;
-  this._finishFlushFlag = typeof opts.finishFlush !== 'undefined' ? opts.finishFlush : binding.Z_FINISH;
 
   if (opts.chunkSize) {
-    if (opts.chunkSize < exports.Z_MIN_CHUNK || opts.chunkSize > exports.Z_MAX_CHUNK) {
+    if (opts.chunkSize < exports.Z_MIN_CHUNK ||
+        opts.chunkSize > exports.Z_MAX_CHUNK) {
       throw new Error('Invalid chunk size: ' + opts.chunkSize);
     }
   }
 
   if (opts.windowBits) {
-    if (opts.windowBits < exports.Z_MIN_WINDOWBITS || opts.windowBits > exports.Z_MAX_WINDOWBITS) {
+    if (opts.windowBits < exports.Z_MIN_WINDOWBITS ||
+        opts.windowBits > exports.Z_MAX_WINDOWBITS) {
       throw new Error('Invalid windowBits: ' + opts.windowBits);
     }
   }
 
   if (opts.level) {
-    if (opts.level < exports.Z_MIN_LEVEL || opts.level > exports.Z_MAX_LEVEL) {
+    if (opts.level < exports.Z_MIN_LEVEL ||
+        opts.level > exports.Z_MAX_LEVEL) {
       throw new Error('Invalid compression level: ' + opts.level);
     }
   }
 
   if (opts.memLevel) {
-    if (opts.memLevel < exports.Z_MIN_MEMLEVEL || opts.memLevel > exports.Z_MAX_MEMLEVEL) {
+    if (opts.memLevel < exports.Z_MIN_MEMLEVEL ||
+        opts.memLevel > exports.Z_MAX_MEMLEVEL) {
       throw new Error('Invalid memLevel: ' + opts.memLevel);
     }
   }
 
   if (opts.strategy) {
-    if (opts.strategy != exports.Z_FILTERED && opts.strategy != exports.Z_HUFFMAN_ONLY && opts.strategy != exports.Z_RLE && opts.strategy != exports.Z_FIXED && opts.strategy != exports.Z_DEFAULT_STRATEGY) {
+    if (opts.strategy != exports.Z_FILTERED &&
+        opts.strategy != exports.Z_HUFFMAN_ONLY &&
+        opts.strategy != exports.Z_RLE &&
+        opts.strategy != exports.Z_FIXED &&
+        opts.strategy != exports.Z_DEFAULT_STRATEGY) {
       throw new Error('Invalid strategy: ' + opts.strategy);
     }
   }
@@ -29349,14 +29159,14 @@ function Zlib(opts, mode) {
     }
   }
 
-  this._handle = new binding.Zlib(mode);
+  this._binding = new binding.Zlib(mode);
 
   var self = this;
   this._hadError = false;
-  this._handle.onerror = function (message, errno) {
+  this._binding.onerror = function(message, errno) {
     // there is no way to cleanly recover.
     // continuing only obscures problems.
-    _close(self);
+    self._binding = null;
     self._hadError = true;
 
     var error = new Error(message);
@@ -29371,39 +29181,40 @@ function Zlib(opts, mode) {
   var strategy = exports.Z_DEFAULT_STRATEGY;
   if (typeof opts.strategy === 'number') strategy = opts.strategy;
 
-  this._handle.init(opts.windowBits || exports.Z_DEFAULT_WINDOWBITS, level, opts.memLevel || exports.Z_DEFAULT_MEMLEVEL, strategy, opts.dictionary);
+  this._binding.init(opts.windowBits || exports.Z_DEFAULT_WINDOWBITS,
+                     level,
+                     opts.memLevel || exports.Z_DEFAULT_MEMLEVEL,
+                     strategy,
+                     opts.dictionary);
 
-  this._buffer = Buffer.allocUnsafe(this._chunkSize);
+  this._buffer = new Buffer(this._chunkSize);
   this._offset = 0;
+  this._closed = false;
   this._level = level;
   this._strategy = strategy;
 
   this.once('end', this.close);
-
-  Object.defineProperty(this, '_closed', {
-    get: function () {
-      return !_this._handle;
-    },
-    configurable: true,
-    enumerable: true
-  });
 }
 
 util.inherits(Zlib, Transform);
 
-Zlib.prototype.params = function (level, strategy, callback) {
-  if (level < exports.Z_MIN_LEVEL || level > exports.Z_MAX_LEVEL) {
+Zlib.prototype.params = function(level, strategy, callback) {
+  if (level < exports.Z_MIN_LEVEL ||
+      level > exports.Z_MAX_LEVEL) {
     throw new RangeError('Invalid compression level: ' + level);
   }
-  if (strategy != exports.Z_FILTERED && strategy != exports.Z_HUFFMAN_ONLY && strategy != exports.Z_RLE && strategy != exports.Z_FIXED && strategy != exports.Z_DEFAULT_STRATEGY) {
+  if (strategy != exports.Z_FILTERED &&
+      strategy != exports.Z_HUFFMAN_ONLY &&
+      strategy != exports.Z_RLE &&
+      strategy != exports.Z_FIXED &&
+      strategy != exports.Z_DEFAULT_STRATEGY) {
     throw new TypeError('Invalid strategy: ' + strategy);
   }
 
   if (this._level !== level || this._strategy !== strategy) {
     var self = this;
-    this.flush(binding.Z_SYNC_FLUSH, function () {
-      assert(self._handle, 'zlib binding closed');
-      self._handle.params(level, strategy);
+    this.flush(binding.Z_SYNC_FLUSH, function() {
+      self._binding.params(level, strategy);
       if (!self._hadError) {
         self._level = level;
         self._strategy = strategy;
@@ -29415,78 +29226,74 @@ Zlib.prototype.params = function (level, strategy, callback) {
   }
 };
 
-Zlib.prototype.reset = function () {
-  assert(this._handle, 'zlib binding closed');
-  return this._handle.reset();
+Zlib.prototype.reset = function() {
+  return this._binding.reset();
 };
 
 // This is the _flush function called by the transform class,
 // internally, when the last chunk has been written.
-Zlib.prototype._flush = function (callback) {
-  this._transform(Buffer.alloc(0), '', callback);
+Zlib.prototype._flush = function(callback) {
+  this._transform(new Buffer(0), '', callback);
 };
 
-Zlib.prototype.flush = function (kind, callback) {
-  var _this2 = this;
-
+Zlib.prototype.flush = function(kind, callback) {
   var ws = this._writableState;
 
-  if (typeof kind === 'function' || kind === undefined && !callback) {
+  if (typeof kind === 'function' || (kind === void 0 && !callback)) {
     callback = kind;
     kind = binding.Z_FULL_FLUSH;
   }
 
   if (ws.ended) {
-    if (callback) process.nextTick(callback);
+    if (callback)
+      process.nextTick(callback);
   } else if (ws.ending) {
-    if (callback) this.once('end', callback);
+    if (callback)
+      this.once('end', callback);
   } else if (ws.needDrain) {
-    if (callback) {
-      this.once('drain', function () {
-        return _this2.flush(kind, callback);
-      });
-    }
+    var self = this;
+    this.once('drain', function() {
+      self.flush(callback);
+    });
   } else {
     this._flushFlag = kind;
-    this.write(Buffer.alloc(0), '', callback);
+    this.write(new Buffer(0), '', callback);
   }
 };
 
-Zlib.prototype.close = function (callback) {
-  _close(this, callback);
-  process.nextTick(emitCloseNT, this);
+Zlib.prototype.close = function(callback) {
+  if (callback)
+    process.nextTick(callback);
+
+  if (this._closed)
+    return;
+
+  this._closed = true;
+
+  this._binding.close();
+
+  var self = this;
+  process.nextTick(function() {
+    self.emit('close');
+  });
 };
 
-function _close(engine, callback) {
-  if (callback) process.nextTick(callback);
-
-  // Caller may invoke .close after a zlib error (which will null _handle).
-  if (!engine._handle) return;
-
-  engine._handle.close();
-  engine._handle = null;
-}
-
-function emitCloseNT(self) {
-  self.emit('close');
-}
-
-Zlib.prototype._transform = function (chunk, encoding, cb) {
+Zlib.prototype._transform = function(chunk, encoding, cb) {
   var flushFlag;
   var ws = this._writableState;
   var ending = ws.ending || ws.ended;
   var last = ending && (!chunk || ws.length === chunk.length);
 
-  if (chunk !== null && !Buffer.isBuffer(chunk)) return cb(new Error('invalid input'));
+  if (!chunk === null && !Buffer.isBuffer(chunk))
+    return cb(new Error('invalid input'));
 
-  if (!this._handle) return cb(new Error('zlib binding closed'));
-
-  // If it's the last chunk, or a final flush, we use the Z_FINISH flush flag
-  // (or whatever flag was provided using opts.finishFlush).
+  // If it's the last chunk, or a final flush, we use the Z_FINISH flush flag.
   // If it's explicitly flushing at some other time, then we use
   // Z_FULL_FLUSH. Otherwise, use Z_NO_FLUSH for maximum compression
   // goodness.
-  if (last) flushFlag = this._finishFlushFlag;else {
+  if (last)
+    flushFlag = binding.Z_FINISH;
+  else {
     flushFlag = this._flushFlag;
     // once we've flushed the last of the queue, stop flushing and
     // go back to the normal behavior.
@@ -29495,10 +29302,11 @@ Zlib.prototype._transform = function (chunk, encoding, cb) {
     }
   }
 
+  var self = this;
   this._processChunk(chunk, flushFlag, cb);
 };
 
-Zlib.prototype._processChunk = function (chunk, flushFlag, cb) {
+Zlib.prototype._processChunk = function(chunk, flushFlag, cb) {
   var availInBefore = chunk && chunk.length;
   var availOutBefore = this._chunkSize - this._offset;
   var inOff = 0;
@@ -29512,58 +29320,44 @@ Zlib.prototype._processChunk = function (chunk, flushFlag, cb) {
     var nread = 0;
 
     var error;
-    this.on('error', function (er) {
+    this.on('error', function(er) {
       error = er;
     });
 
-    assert(this._handle, 'zlib binding closed');
     do {
-      var res = this._handle.writeSync(flushFlag, chunk, // in
-      inOff, // in_off
-      availInBefore, // in_len
-      this._buffer, // out
-      this._offset, //out_off
-      availOutBefore); // out_len
+      var res = this._binding.writeSync(flushFlag,
+                                        chunk, // in
+                                        inOff, // in_off
+                                        availInBefore, // in_len
+                                        this._buffer, // out
+                                        this._offset, //out_off
+                                        availOutBefore); // out_len
     } while (!this._hadError && callback(res[0], res[1]));
 
     if (this._hadError) {
       throw error;
     }
 
-    if (nread >= kMaxLength) {
-      _close(this);
-      throw new RangeError(kRangeErrorMessage);
-    }
-
     var buf = Buffer.concat(buffers, nread);
-    _close(this);
+    this.close();
 
     return buf;
   }
 
-  assert(this._handle, 'zlib binding closed');
-  var req = this._handle.write(flushFlag, chunk, // in
-  inOff, // in_off
-  availInBefore, // in_len
-  this._buffer, // out
-  this._offset, //out_off
-  availOutBefore); // out_len
+  var req = this._binding.write(flushFlag,
+                                chunk, // in
+                                inOff, // in_off
+                                availInBefore, // in_len
+                                this._buffer, // out
+                                this._offset, //out_off
+                                availOutBefore); // out_len
 
   req.buffer = chunk;
   req.callback = callback;
 
   function callback(availInAfter, availOutAfter) {
-    // When the callback is used in an async write, the callback's
-    // context is the `req` object that was created. The req object
-    // is === this._handle, and that's why it's important to null
-    // out the values after they are done being used. `this._handle`
-    // can stay in memory longer than the callback and buffer are needed.
-    if (this) {
-      this.buffer = null;
-      this.callback = null;
-    }
-
-    if (self._hadError) return;
+    if (self._hadError)
+      return;
 
     var have = availOutBefore - availOutAfter;
     assert(have >= 0, 'have should not go down');
@@ -29584,7 +29378,7 @@ Zlib.prototype._processChunk = function (chunk, flushFlag, cb) {
     if (availOutAfter === 0 || self._offset >= self._chunkSize) {
       availOutBefore = self._chunkSize;
       self._offset = 0;
-      self._buffer = Buffer.allocUnsafe(self._chunkSize);
+      self._buffer = new Buffer(self._chunkSize);
     }
 
     if (availOutAfter === 0) {
@@ -29592,18 +29386,26 @@ Zlib.prototype._processChunk = function (chunk, flushFlag, cb) {
       // Also, update the availInBefore to the availInAfter value,
       // so that if we have to hit it a third (fourth, etc.) time,
       // it'll have the correct byte counts.
-      inOff += availInBefore - availInAfter;
+      inOff += (availInBefore - availInAfter);
       availInBefore = availInAfter;
 
-      if (!async) return true;
+      if (!async)
+        return true;
 
-      var newReq = self._handle.write(flushFlag, chunk, inOff, availInBefore, self._buffer, self._offset, self._chunkSize);
+      var newReq = self._binding.write(flushFlag,
+                                       chunk,
+                                       inOff,
+                                       availInBefore,
+                                       self._buffer,
+                                       self._offset,
+                                       self._chunkSize);
       newReq.callback = callback; // this same function
       newReq.buffer = chunk;
       return;
     }
 
-    if (!async) return false;
+    if (!async)
+      return false;
 
     // finished with the chunk.
     cb();
@@ -29617,1858 +29419,9 @@ util.inherits(Gunzip, Zlib);
 util.inherits(DeflateRaw, Zlib);
 util.inherits(InflateRaw, Zlib);
 util.inherits(Unzip, Zlib);
-}).call(this,require('_process'))
-},{"./binding":155,"_process":252,"assert":154,"buffer":158,"stream":369,"util":390}],157:[function(require,module,exports){
-arguments[4][71][0].apply(exports,arguments)
-},{"dup":71}],158:[function(require,module,exports){
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-/* eslint-disable no-proto */
 
-'use strict'
-
-var base64 = require('base64-js')
-var ieee754 = require('ieee754')
-
-exports.Buffer = Buffer
-exports.SlowBuffer = SlowBuffer
-exports.INSPECT_MAX_BYTES = 50
-
-var K_MAX_LENGTH = 0x7fffffff
-exports.kMaxLength = K_MAX_LENGTH
-
-/**
- * If `Buffer.TYPED_ARRAY_SUPPORT`:
- *   === true    Use Uint8Array implementation (fastest)
- *   === false   Print warning and recommend using `buffer` v4.x which has an Object
- *               implementation (most compatible, even IE6)
- *
- * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
- * Opera 11.6+, iOS 4.2+.
- *
- * We report that the browser does not support typed arrays if the are not subclassable
- * using __proto__. Firefox 4-29 lacks support for adding new properties to `Uint8Array`
- * (See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438). IE 10 lacks support
- * for __proto__ and has a buggy typed array implementation.
- */
-Buffer.TYPED_ARRAY_SUPPORT = typedArraySupport()
-
-if (!Buffer.TYPED_ARRAY_SUPPORT && typeof console !== 'undefined' &&
-    typeof console.error === 'function') {
-  console.error(
-    'This browser lacks typed array (Uint8Array) support which is required by ' +
-    '`buffer` v5.x. Use `buffer` v4.x if you require old browser support.'
-  )
-}
-
-function typedArraySupport () {
-  // Can typed array instances can be augmented?
-  try {
-    var arr = new Uint8Array(1)
-    arr.__proto__ = {__proto__: Uint8Array.prototype, foo: function () { return 42 }}
-    return arr.foo() === 42
-  } catch (e) {
-    return false
-  }
-}
-
-function createBuffer (length) {
-  if (length > K_MAX_LENGTH) {
-    throw new RangeError('Invalid typed array length')
-  }
-  // Return an augmented `Uint8Array` instance
-  var buf = new Uint8Array(length)
-  buf.__proto__ = Buffer.prototype
-  return buf
-}
-
-/**
- * The Buffer constructor returns instances of `Uint8Array` that have their
- * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
- * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
- * and the `Uint8Array` methods. Square bracket notation works as expected -- it
- * returns a single octet.
- *
- * The `Uint8Array` prototype remains unmodified.
- */
-
-function Buffer (arg, encodingOrOffset, length) {
-  // Common case.
-  if (typeof arg === 'number') {
-    if (typeof encodingOrOffset === 'string') {
-      throw new Error(
-        'If encoding is specified then the first argument must be a string'
-      )
-    }
-    return allocUnsafe(arg)
-  }
-  return from(arg, encodingOrOffset, length)
-}
-
-// Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
-if (typeof Symbol !== 'undefined' && Symbol.species &&
-    Buffer[Symbol.species] === Buffer) {
-  Object.defineProperty(Buffer, Symbol.species, {
-    value: null,
-    configurable: true,
-    enumerable: false,
-    writable: false
-  })
-}
-
-Buffer.poolSize = 8192 // not used by this implementation
-
-function from (value, encodingOrOffset, length) {
-  if (typeof value === 'number') {
-    throw new TypeError('"value" argument must not be a number')
-  }
-
-  if (isArrayBuffer(value)) {
-    return fromArrayBuffer(value, encodingOrOffset, length)
-  }
-
-  if (typeof value === 'string') {
-    return fromString(value, encodingOrOffset)
-  }
-
-  return fromObject(value)
-}
-
-/**
- * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
- * if value is a number.
- * Buffer.from(str[, encoding])
- * Buffer.from(array)
- * Buffer.from(buffer)
- * Buffer.from(arrayBuffer[, byteOffset[, length]])
- **/
-Buffer.from = function (value, encodingOrOffset, length) {
-  return from(value, encodingOrOffset, length)
-}
-
-// Note: Change prototype *after* Buffer.from is defined to workaround Chrome bug:
-// https://github.com/feross/buffer/pull/148
-Buffer.prototype.__proto__ = Uint8Array.prototype
-Buffer.__proto__ = Uint8Array
-
-function assertSize (size) {
-  if (typeof size !== 'number') {
-    throw new TypeError('"size" argument must be a number')
-  } else if (size < 0) {
-    throw new RangeError('"size" argument must not be negative')
-  }
-}
-
-function alloc (size, fill, encoding) {
-  assertSize(size)
-  if (size <= 0) {
-    return createBuffer(size)
-  }
-  if (fill !== undefined) {
-    // Only pay attention to encoding if it's a string. This
-    // prevents accidentally sending in a number that would
-    // be interpretted as a start offset.
-    return typeof encoding === 'string'
-      ? createBuffer(size).fill(fill, encoding)
-      : createBuffer(size).fill(fill)
-  }
-  return createBuffer(size)
-}
-
-/**
- * Creates a new filled Buffer instance.
- * alloc(size[, fill[, encoding]])
- **/
-Buffer.alloc = function (size, fill, encoding) {
-  return alloc(size, fill, encoding)
-}
-
-function allocUnsafe (size) {
-  assertSize(size)
-  return createBuffer(size < 0 ? 0 : checked(size) | 0)
-}
-
-/**
- * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
- * */
-Buffer.allocUnsafe = function (size) {
-  return allocUnsafe(size)
-}
-/**
- * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
- */
-Buffer.allocUnsafeSlow = function (size) {
-  return allocUnsafe(size)
-}
-
-function fromString (string, encoding) {
-  if (typeof encoding !== 'string' || encoding === '') {
-    encoding = 'utf8'
-  }
-
-  if (!Buffer.isEncoding(encoding)) {
-    throw new TypeError('"encoding" must be a valid string encoding')
-  }
-
-  var length = byteLength(string, encoding) | 0
-  var buf = createBuffer(length)
-
-  var actual = buf.write(string, encoding)
-
-  if (actual !== length) {
-    // Writing a hex string, for example, that contains invalid characters will
-    // cause everything after the first invalid character to be ignored. (e.g.
-    // 'abxxcd' will be treated as 'ab')
-    buf = buf.slice(0, actual)
-  }
-
-  return buf
-}
-
-function fromArrayLike (array) {
-  var length = array.length < 0 ? 0 : checked(array.length) | 0
-  var buf = createBuffer(length)
-  for (var i = 0; i < length; i += 1) {
-    buf[i] = array[i] & 255
-  }
-  return buf
-}
-
-function fromArrayBuffer (array, byteOffset, length) {
-  if (byteOffset < 0 || array.byteLength < byteOffset) {
-    throw new RangeError('\'offset\' is out of bounds')
-  }
-
-  if (array.byteLength < byteOffset + (length || 0)) {
-    throw new RangeError('\'length\' is out of bounds')
-  }
-
-  var buf
-  if (byteOffset === undefined && length === undefined) {
-    buf = new Uint8Array(array)
-  } else if (length === undefined) {
-    buf = new Uint8Array(array, byteOffset)
-  } else {
-    buf = new Uint8Array(array, byteOffset, length)
-  }
-
-  // Return an augmented `Uint8Array` instance
-  buf.__proto__ = Buffer.prototype
-  return buf
-}
-
-function fromObject (obj) {
-  if (Buffer.isBuffer(obj)) {
-    var len = checked(obj.length) | 0
-    var buf = createBuffer(len)
-
-    if (buf.length === 0) {
-      return buf
-    }
-
-    obj.copy(buf, 0, 0, len)
-    return buf
-  }
-
-  if (obj) {
-    if (isArrayBufferView(obj) || 'length' in obj) {
-      if (typeof obj.length !== 'number' || numberIsNaN(obj.length)) {
-        return createBuffer(0)
-      }
-      return fromArrayLike(obj)
-    }
-
-    if (obj.type === 'Buffer' && Array.isArray(obj.data)) {
-      return fromArrayLike(obj.data)
-    }
-  }
-
-  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
-}
-
-function checked (length) {
-  // Note: cannot use `length < K_MAX_LENGTH` here because that fails when
-  // length is NaN (which is otherwise coerced to zero.)
-  if (length >= K_MAX_LENGTH) {
-    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-                         'size: 0x' + K_MAX_LENGTH.toString(16) + ' bytes')
-  }
-  return length | 0
-}
-
-function SlowBuffer (length) {
-  if (+length != length) { // eslint-disable-line eqeqeq
-    length = 0
-  }
-  return Buffer.alloc(+length)
-}
-
-Buffer.isBuffer = function isBuffer (b) {
-  return b != null && b._isBuffer === true
-}
-
-Buffer.compare = function compare (a, b) {
-  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
-    throw new TypeError('Arguments must be Buffers')
-  }
-
-  if (a === b) return 0
-
-  var x = a.length
-  var y = b.length
-
-  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
-    if (a[i] !== b[i]) {
-      x = a[i]
-      y = b[i]
-      break
-    }
-  }
-
-  if (x < y) return -1
-  if (y < x) return 1
-  return 0
-}
-
-Buffer.isEncoding = function isEncoding (encoding) {
-  switch (String(encoding).toLowerCase()) {
-    case 'hex':
-    case 'utf8':
-    case 'utf-8':
-    case 'ascii':
-    case 'latin1':
-    case 'binary':
-    case 'base64':
-    case 'ucs2':
-    case 'ucs-2':
-    case 'utf16le':
-    case 'utf-16le':
-      return true
-    default:
-      return false
-  }
-}
-
-Buffer.concat = function concat (list, length) {
-  if (!Array.isArray(list)) {
-    throw new TypeError('"list" argument must be an Array of Buffers')
-  }
-
-  if (list.length === 0) {
-    return Buffer.alloc(0)
-  }
-
-  var i
-  if (length === undefined) {
-    length = 0
-    for (i = 0; i < list.length; ++i) {
-      length += list[i].length
-    }
-  }
-
-  var buffer = Buffer.allocUnsafe(length)
-  var pos = 0
-  for (i = 0; i < list.length; ++i) {
-    var buf = list[i]
-    if (!Buffer.isBuffer(buf)) {
-      throw new TypeError('"list" argument must be an Array of Buffers')
-    }
-    buf.copy(buffer, pos)
-    pos += buf.length
-  }
-  return buffer
-}
-
-function byteLength (string, encoding) {
-  if (Buffer.isBuffer(string)) {
-    return string.length
-  }
-  if (isArrayBufferView(string) || isArrayBuffer(string)) {
-    return string.byteLength
-  }
-  if (typeof string !== 'string') {
-    string = '' + string
-  }
-
-  var len = string.length
-  if (len === 0) return 0
-
-  // Use a for loop to avoid recursion
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'ascii':
-      case 'latin1':
-      case 'binary':
-        return len
-      case 'utf8':
-      case 'utf-8':
-      case undefined:
-        return utf8ToBytes(string).length
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return len * 2
-      case 'hex':
-        return len >>> 1
-      case 'base64':
-        return base64ToBytes(string).length
-      default:
-        if (loweredCase) return utf8ToBytes(string).length // assume utf8
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-Buffer.byteLength = byteLength
-
-function slowToString (encoding, start, end) {
-  var loweredCase = false
-
-  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
-  // property of a typed array.
-
-  // This behaves neither like String nor Uint8Array in that we set start/end
-  // to their upper/lower bounds if the value passed is out of range.
-  // undefined is handled specially as per ECMA-262 6th Edition,
-  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
-  if (start === undefined || start < 0) {
-    start = 0
-  }
-  // Return early if start > this.length. Done here to prevent potential uint32
-  // coercion fail below.
-  if (start > this.length) {
-    return ''
-  }
-
-  if (end === undefined || end > this.length) {
-    end = this.length
-  }
-
-  if (end <= 0) {
-    return ''
-  }
-
-  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
-  end >>>= 0
-  start >>>= 0
-
-  if (end <= start) {
-    return ''
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  while (true) {
-    switch (encoding) {
-      case 'hex':
-        return hexSlice(this, start, end)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Slice(this, start, end)
-
-      case 'ascii':
-        return asciiSlice(this, start, end)
-
-      case 'latin1':
-      case 'binary':
-        return latin1Slice(this, start, end)
-
-      case 'base64':
-        return base64Slice(this, start, end)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return utf16leSlice(this, start, end)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = (encoding + '').toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-
-// This property is used by `Buffer.isBuffer` (and the `is-buffer` npm package)
-// to detect a Buffer instance. It's not possible to use `instanceof Buffer`
-// reliably in a browserify context because there could be multiple different
-// copies of the 'buffer' package in use. This method works even for Buffer
-// instances that were created from another copy of the `buffer` package.
-// See: https://github.com/feross/buffer/issues/154
-Buffer.prototype._isBuffer = true
-
-function swap (b, n, m) {
-  var i = b[n]
-  b[n] = b[m]
-  b[m] = i
-}
-
-Buffer.prototype.swap16 = function swap16 () {
-  var len = this.length
-  if (len % 2 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 16-bits')
-  }
-  for (var i = 0; i < len; i += 2) {
-    swap(this, i, i + 1)
-  }
-  return this
-}
-
-Buffer.prototype.swap32 = function swap32 () {
-  var len = this.length
-  if (len % 4 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 32-bits')
-  }
-  for (var i = 0; i < len; i += 4) {
-    swap(this, i, i + 3)
-    swap(this, i + 1, i + 2)
-  }
-  return this
-}
-
-Buffer.prototype.swap64 = function swap64 () {
-  var len = this.length
-  if (len % 8 !== 0) {
-    throw new RangeError('Buffer size must be a multiple of 64-bits')
-  }
-  for (var i = 0; i < len; i += 8) {
-    swap(this, i, i + 7)
-    swap(this, i + 1, i + 6)
-    swap(this, i + 2, i + 5)
-    swap(this, i + 3, i + 4)
-  }
-  return this
-}
-
-Buffer.prototype.toString = function toString () {
-  var length = this.length
-  if (length === 0) return ''
-  if (arguments.length === 0) return utf8Slice(this, 0, length)
-  return slowToString.apply(this, arguments)
-}
-
-Buffer.prototype.equals = function equals (b) {
-  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-  if (this === b) return true
-  return Buffer.compare(this, b) === 0
-}
-
-Buffer.prototype.inspect = function inspect () {
-  var str = ''
-  var max = exports.INSPECT_MAX_BYTES
-  if (this.length > 0) {
-    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
-    if (this.length > max) str += ' ... '
-  }
-  return '<Buffer ' + str + '>'
-}
-
-Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
-  if (!Buffer.isBuffer(target)) {
-    throw new TypeError('Argument must be a Buffer')
-  }
-
-  if (start === undefined) {
-    start = 0
-  }
-  if (end === undefined) {
-    end = target ? target.length : 0
-  }
-  if (thisStart === undefined) {
-    thisStart = 0
-  }
-  if (thisEnd === undefined) {
-    thisEnd = this.length
-  }
-
-  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
-    throw new RangeError('out of range index')
-  }
-
-  if (thisStart >= thisEnd && start >= end) {
-    return 0
-  }
-  if (thisStart >= thisEnd) {
-    return -1
-  }
-  if (start >= end) {
-    return 1
-  }
-
-  start >>>= 0
-  end >>>= 0
-  thisStart >>>= 0
-  thisEnd >>>= 0
-
-  if (this === target) return 0
-
-  var x = thisEnd - thisStart
-  var y = end - start
-  var len = Math.min(x, y)
-
-  var thisCopy = this.slice(thisStart, thisEnd)
-  var targetCopy = target.slice(start, end)
-
-  for (var i = 0; i < len; ++i) {
-    if (thisCopy[i] !== targetCopy[i]) {
-      x = thisCopy[i]
-      y = targetCopy[i]
-      break
-    }
-  }
-
-  if (x < y) return -1
-  if (y < x) return 1
-  return 0
-}
-
-// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
-// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
-//
-// Arguments:
-// - buffer - a Buffer to search
-// - val - a string, Buffer, or number
-// - byteOffset - an index into `buffer`; will be clamped to an int32
-// - encoding - an optional encoding, relevant is val is a string
-// - dir - true for indexOf, false for lastIndexOf
-function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
-  // Empty buffer means no match
-  if (buffer.length === 0) return -1
-
-  // Normalize byteOffset
-  if (typeof byteOffset === 'string') {
-    encoding = byteOffset
-    byteOffset = 0
-  } else if (byteOffset > 0x7fffffff) {
-    byteOffset = 0x7fffffff
-  } else if (byteOffset < -0x80000000) {
-    byteOffset = -0x80000000
-  }
-  byteOffset = +byteOffset  // Coerce to Number.
-  if (numberIsNaN(byteOffset)) {
-    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
-    byteOffset = dir ? 0 : (buffer.length - 1)
-  }
-
-  // Normalize byteOffset: negative offsets start from the end of the buffer
-  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
-  if (byteOffset >= buffer.length) {
-    if (dir) return -1
-    else byteOffset = buffer.length - 1
-  } else if (byteOffset < 0) {
-    if (dir) byteOffset = 0
-    else return -1
-  }
-
-  // Normalize val
-  if (typeof val === 'string') {
-    val = Buffer.from(val, encoding)
-  }
-
-  // Finally, search either indexOf (if dir is true) or lastIndexOf
-  if (Buffer.isBuffer(val)) {
-    // Special case: looking for empty string/buffer always fails
-    if (val.length === 0) {
-      return -1
-    }
-    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
-  } else if (typeof val === 'number') {
-    val = val & 0xFF // Search for a byte value [0-255]
-    if (typeof Uint8Array.prototype.indexOf === 'function') {
-      if (dir) {
-        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
-      } else {
-        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
-      }
-    }
-    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
-  }
-
-  throw new TypeError('val must be string, number or Buffer')
-}
-
-function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
-  var indexSize = 1
-  var arrLength = arr.length
-  var valLength = val.length
-
-  if (encoding !== undefined) {
-    encoding = String(encoding).toLowerCase()
-    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
-        encoding === 'utf16le' || encoding === 'utf-16le') {
-      if (arr.length < 2 || val.length < 2) {
-        return -1
-      }
-      indexSize = 2
-      arrLength /= 2
-      valLength /= 2
-      byteOffset /= 2
-    }
-  }
-
-  function read (buf, i) {
-    if (indexSize === 1) {
-      return buf[i]
-    } else {
-      return buf.readUInt16BE(i * indexSize)
-    }
-  }
-
-  var i
-  if (dir) {
-    var foundIndex = -1
-    for (i = byteOffset; i < arrLength; i++) {
-      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
-        if (foundIndex === -1) foundIndex = i
-        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
-      } else {
-        if (foundIndex !== -1) i -= i - foundIndex
-        foundIndex = -1
-      }
-    }
-  } else {
-    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
-    for (i = byteOffset; i >= 0; i--) {
-      var found = true
-      for (var j = 0; j < valLength; j++) {
-        if (read(arr, i + j) !== read(val, j)) {
-          found = false
-          break
-        }
-      }
-      if (found) return i
-    }
-  }
-
-  return -1
-}
-
-Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
-  return this.indexOf(val, byteOffset, encoding) !== -1
-}
-
-Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
-  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
-}
-
-Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
-  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
-}
-
-function hexWrite (buf, string, offset, length) {
-  offset = Number(offset) || 0
-  var remaining = buf.length - offset
-  if (!length) {
-    length = remaining
-  } else {
-    length = Number(length)
-    if (length > remaining) {
-      length = remaining
-    }
-  }
-
-  // must be an even number of digits
-  var strLen = string.length
-  if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
-
-  if (length > strLen / 2) {
-    length = strLen / 2
-  }
-  for (var i = 0; i < length; ++i) {
-    var parsed = parseInt(string.substr(i * 2, 2), 16)
-    if (numberIsNaN(parsed)) return i
-    buf[offset + i] = parsed
-  }
-  return i
-}
-
-function utf8Write (buf, string, offset, length) {
-  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
-}
-
-function asciiWrite (buf, string, offset, length) {
-  return blitBuffer(asciiToBytes(string), buf, offset, length)
-}
-
-function latin1Write (buf, string, offset, length) {
-  return asciiWrite(buf, string, offset, length)
-}
-
-function base64Write (buf, string, offset, length) {
-  return blitBuffer(base64ToBytes(string), buf, offset, length)
-}
-
-function ucs2Write (buf, string, offset, length) {
-  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
-}
-
-Buffer.prototype.write = function write (string, offset, length, encoding) {
-  // Buffer#write(string)
-  if (offset === undefined) {
-    encoding = 'utf8'
-    length = this.length
-    offset = 0
-  // Buffer#write(string, encoding)
-  } else if (length === undefined && typeof offset === 'string') {
-    encoding = offset
-    length = this.length
-    offset = 0
-  // Buffer#write(string, offset[, length][, encoding])
-  } else if (isFinite(offset)) {
-    offset = offset >>> 0
-    if (isFinite(length)) {
-      length = length >>> 0
-      if (encoding === undefined) encoding = 'utf8'
-    } else {
-      encoding = length
-      length = undefined
-    }
-  } else {
-    throw new Error(
-      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
-    )
-  }
-
-  var remaining = this.length - offset
-  if (length === undefined || length > remaining) length = remaining
-
-  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
-    throw new RangeError('Attempt to write outside buffer bounds')
-  }
-
-  if (!encoding) encoding = 'utf8'
-
-  var loweredCase = false
-  for (;;) {
-    switch (encoding) {
-      case 'hex':
-        return hexWrite(this, string, offset, length)
-
-      case 'utf8':
-      case 'utf-8':
-        return utf8Write(this, string, offset, length)
-
-      case 'ascii':
-        return asciiWrite(this, string, offset, length)
-
-      case 'latin1':
-      case 'binary':
-        return latin1Write(this, string, offset, length)
-
-      case 'base64':
-        // Warning: maxLength not taken into account in base64Write
-        return base64Write(this, string, offset, length)
-
-      case 'ucs2':
-      case 'ucs-2':
-      case 'utf16le':
-      case 'utf-16le':
-        return ucs2Write(this, string, offset, length)
-
-      default:
-        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-        encoding = ('' + encoding).toLowerCase()
-        loweredCase = true
-    }
-  }
-}
-
-Buffer.prototype.toJSON = function toJSON () {
-  return {
-    type: 'Buffer',
-    data: Array.prototype.slice.call(this._arr || this, 0)
-  }
-}
-
-function base64Slice (buf, start, end) {
-  if (start === 0 && end === buf.length) {
-    return base64.fromByteArray(buf)
-  } else {
-    return base64.fromByteArray(buf.slice(start, end))
-  }
-}
-
-function utf8Slice (buf, start, end) {
-  end = Math.min(buf.length, end)
-  var res = []
-
-  var i = start
-  while (i < end) {
-    var firstByte = buf[i]
-    var codePoint = null
-    var bytesPerSequence = (firstByte > 0xEF) ? 4
-      : (firstByte > 0xDF) ? 3
-      : (firstByte > 0xBF) ? 2
-      : 1
-
-    if (i + bytesPerSequence <= end) {
-      var secondByte, thirdByte, fourthByte, tempCodePoint
-
-      switch (bytesPerSequence) {
-        case 1:
-          if (firstByte < 0x80) {
-            codePoint = firstByte
-          }
-          break
-        case 2:
-          secondByte = buf[i + 1]
-          if ((secondByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
-            if (tempCodePoint > 0x7F) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 3:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
-            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
-              codePoint = tempCodePoint
-            }
-          }
-          break
-        case 4:
-          secondByte = buf[i + 1]
-          thirdByte = buf[i + 2]
-          fourthByte = buf[i + 3]
-          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
-            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
-            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
-              codePoint = tempCodePoint
-            }
-          }
-      }
-    }
-
-    if (codePoint === null) {
-      // we did not generate a valid codePoint so insert a
-      // replacement char (U+FFFD) and advance only 1 byte
-      codePoint = 0xFFFD
-      bytesPerSequence = 1
-    } else if (codePoint > 0xFFFF) {
-      // encode to utf16 (surrogate pair dance)
-      codePoint -= 0x10000
-      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
-      codePoint = 0xDC00 | codePoint & 0x3FF
-    }
-
-    res.push(codePoint)
-    i += bytesPerSequence
-  }
-
-  return decodeCodePointsArray(res)
-}
-
-// Based on http://stackoverflow.com/a/22747272/680742, the browser with
-// the lowest limit is Chrome, with 0x10000 args.
-// We go 1 magnitude less, for safety
-var MAX_ARGUMENTS_LENGTH = 0x1000
-
-function decodeCodePointsArray (codePoints) {
-  var len = codePoints.length
-  if (len <= MAX_ARGUMENTS_LENGTH) {
-    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
-  }
-
-  // Decode in chunks to avoid "call stack size exceeded".
-  var res = ''
-  var i = 0
-  while (i < len) {
-    res += String.fromCharCode.apply(
-      String,
-      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
-    )
-  }
-  return res
-}
-
-function asciiSlice (buf, start, end) {
-  var ret = ''
-  end = Math.min(buf.length, end)
-
-  for (var i = start; i < end; ++i) {
-    ret += String.fromCharCode(buf[i] & 0x7F)
-  }
-  return ret
-}
-
-function latin1Slice (buf, start, end) {
-  var ret = ''
-  end = Math.min(buf.length, end)
-
-  for (var i = start; i < end; ++i) {
-    ret += String.fromCharCode(buf[i])
-  }
-  return ret
-}
-
-function hexSlice (buf, start, end) {
-  var len = buf.length
-
-  if (!start || start < 0) start = 0
-  if (!end || end < 0 || end > len) end = len
-
-  var out = ''
-  for (var i = start; i < end; ++i) {
-    out += toHex(buf[i])
-  }
-  return out
-}
-
-function utf16leSlice (buf, start, end) {
-  var bytes = buf.slice(start, end)
-  var res = ''
-  for (var i = 0; i < bytes.length; i += 2) {
-    res += String.fromCharCode(bytes[i] + (bytes[i + 1] * 256))
-  }
-  return res
-}
-
-Buffer.prototype.slice = function slice (start, end) {
-  var len = this.length
-  start = ~~start
-  end = end === undefined ? len : ~~end
-
-  if (start < 0) {
-    start += len
-    if (start < 0) start = 0
-  } else if (start > len) {
-    start = len
-  }
-
-  if (end < 0) {
-    end += len
-    if (end < 0) end = 0
-  } else if (end > len) {
-    end = len
-  }
-
-  if (end < start) end = start
-
-  var newBuf = this.subarray(start, end)
-  // Return an augmented `Uint8Array` instance
-  newBuf.__proto__ = Buffer.prototype
-  return newBuf
-}
-
-/*
- * Need to make sure that buffer isn't trying to write out of bounds.
- */
-function checkOffset (offset, ext, length) {
-  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
-  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
-}
-
-Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var val = this[offset]
-  var mul = 1
-  var i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    checkOffset(offset, byteLength, this.length)
-  }
-
-  var val = this[offset + --byteLength]
-  var mul = 1
-  while (byteLength > 0 && (mul *= 0x100)) {
-    val += this[offset + --byteLength] * mul
-  }
-
-  return val
-}
-
-Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  return this[offset]
-}
-
-Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  return this[offset] | (this[offset + 1] << 8)
-}
-
-Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  return (this[offset] << 8) | this[offset + 1]
-}
-
-Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return ((this[offset]) |
-      (this[offset + 1] << 8) |
-      (this[offset + 2] << 16)) +
-      (this[offset + 3] * 0x1000000)
-}
-
-Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset] * 0x1000000) +
-    ((this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    this[offset + 3])
-}
-
-Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var val = this[offset]
-  var mul = 1
-  var i = 0
-  while (++i < byteLength && (mul *= 0x100)) {
-    val += this[offset + i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) checkOffset(offset, byteLength, this.length)
-
-  var i = byteLength
-  var mul = 1
-  var val = this[offset + --i]
-  while (i > 0 && (mul *= 0x100)) {
-    val += this[offset + --i] * mul
-  }
-  mul *= 0x80
-
-  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
-
-  return val
-}
-
-Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 1, this.length)
-  if (!(this[offset] & 0x80)) return (this[offset])
-  return ((0xff - this[offset] + 1) * -1)
-}
-
-Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  var val = this[offset] | (this[offset + 1] << 8)
-  return (val & 0x8000) ? val | 0xFFFF0000 : val
-}
-
-Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 2, this.length)
-  var val = this[offset + 1] | (this[offset] << 8)
-  return (val & 0x8000) ? val | 0xFFFF0000 : val
-}
-
-Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset]) |
-    (this[offset + 1] << 8) |
-    (this[offset + 2] << 16) |
-    (this[offset + 3] << 24)
-}
-
-Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-
-  return (this[offset] << 24) |
-    (this[offset + 1] << 16) |
-    (this[offset + 2] << 8) |
-    (this[offset + 3])
-}
-
-Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-  return ieee754.read(this, offset, true, 23, 4)
-}
-
-Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 4, this.length)
-  return ieee754.read(this, offset, false, 23, 4)
-}
-
-Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 8, this.length)
-  return ieee754.read(this, offset, true, 52, 8)
-}
-
-Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
-  offset = offset >>> 0
-  if (!noAssert) checkOffset(offset, 8, this.length)
-  return ieee754.read(this, offset, false, 52, 8)
-}
-
-function checkInt (buf, value, offset, ext, max, min) {
-  if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
-  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
-  if (offset + ext > buf.length) throw new RangeError('Index out of range')
-}
-
-Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    var maxBytes = Math.pow(2, 8 * byteLength) - 1
-    checkInt(this, value, offset, byteLength, maxBytes, 0)
-  }
-
-  var mul = 1
-  var i = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  byteLength = byteLength >>> 0
-  if (!noAssert) {
-    var maxBytes = Math.pow(2, 8 * byteLength) - 1
-    checkInt(this, value, offset, byteLength, maxBytes, 0)
-  }
-
-  var i = byteLength - 1
-  var mul = 1
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    this[offset + i] = (value / mul) & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
-  this[offset] = (value & 0xff)
-  return offset + 1
-}
-
-Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  return offset + 2
-}
-
-Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
-  this[offset] = (value >>> 8)
-  this[offset + 1] = (value & 0xff)
-  return offset + 2
-}
-
-Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  this[offset + 3] = (value >>> 24)
-  this[offset + 2] = (value >>> 16)
-  this[offset + 1] = (value >>> 8)
-  this[offset] = (value & 0xff)
-  return offset + 4
-}
-
-Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
-  this[offset] = (value >>> 24)
-  this[offset + 1] = (value >>> 16)
-  this[offset + 2] = (value >>> 8)
-  this[offset + 3] = (value & 0xff)
-  return offset + 4
-}
-
-Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    var limit = Math.pow(2, (8 * byteLength) - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  var i = 0
-  var mul = 1
-  var sub = 0
-  this[offset] = value & 0xFF
-  while (++i < byteLength && (mul *= 0x100)) {
-    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
-      sub = 1
-    }
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    var limit = Math.pow(2, (8 * byteLength) - 1)
-
-    checkInt(this, value, offset, byteLength, limit - 1, -limit)
-  }
-
-  var i = byteLength - 1
-  var mul = 1
-  var sub = 0
-  this[offset + i] = value & 0xFF
-  while (--i >= 0 && (mul *= 0x100)) {
-    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
-      sub = 1
-    }
-    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
-  }
-
-  return offset + byteLength
-}
-
-Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
-  if (value < 0) value = 0xff + value + 1
-  this[offset] = (value & 0xff)
-  return offset + 1
-}
-
-Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  return offset + 2
-}
-
-Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
-  this[offset] = (value >>> 8)
-  this[offset + 1] = (value & 0xff)
-  return offset + 2
-}
-
-Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  this[offset] = (value & 0xff)
-  this[offset + 1] = (value >>> 8)
-  this[offset + 2] = (value >>> 16)
-  this[offset + 3] = (value >>> 24)
-  return offset + 4
-}
-
-Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
-  if (value < 0) value = 0xffffffff + value + 1
-  this[offset] = (value >>> 24)
-  this[offset + 1] = (value >>> 16)
-  this[offset + 2] = (value >>> 8)
-  this[offset + 3] = (value & 0xff)
-  return offset + 4
-}
-
-function checkIEEE754 (buf, value, offset, ext, max, min) {
-  if (offset + ext > buf.length) throw new RangeError('Index out of range')
-  if (offset < 0) throw new RangeError('Index out of range')
-}
-
-function writeFloat (buf, value, offset, littleEndian, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
-  }
-  ieee754.write(buf, value, offset, littleEndian, 23, 4)
-  return offset + 4
-}
-
-Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
-  return writeFloat(this, value, offset, true, noAssert)
-}
-
-Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
-  return writeFloat(this, value, offset, false, noAssert)
-}
-
-function writeDouble (buf, value, offset, littleEndian, noAssert) {
-  value = +value
-  offset = offset >>> 0
-  if (!noAssert) {
-    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
-  }
-  ieee754.write(buf, value, offset, littleEndian, 52, 8)
-  return offset + 8
-}
-
-Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
-  return writeDouble(this, value, offset, true, noAssert)
-}
-
-Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
-  return writeDouble(this, value, offset, false, noAssert)
-}
-
-// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-Buffer.prototype.copy = function copy (target, targetStart, start, end) {
-  if (!start) start = 0
-  if (!end && end !== 0) end = this.length
-  if (targetStart >= target.length) targetStart = target.length
-  if (!targetStart) targetStart = 0
-  if (end > 0 && end < start) end = start
-
-  // Copy 0 bytes; we're done
-  if (end === start) return 0
-  if (target.length === 0 || this.length === 0) return 0
-
-  // Fatal error conditions
-  if (targetStart < 0) {
-    throw new RangeError('targetStart out of bounds')
-  }
-  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
-  if (end < 0) throw new RangeError('sourceEnd out of bounds')
-
-  // Are we oob?
-  if (end > this.length) end = this.length
-  if (target.length - targetStart < end - start) {
-    end = target.length - targetStart + start
-  }
-
-  var len = end - start
-  var i
-
-  if (this === target && start < targetStart && targetStart < end) {
-    // descending copy from end
-    for (i = len - 1; i >= 0; --i) {
-      target[i + targetStart] = this[i + start]
-    }
-  } else if (len < 1000) {
-    // ascending copy from start
-    for (i = 0; i < len; ++i) {
-      target[i + targetStart] = this[i + start]
-    }
-  } else {
-    Uint8Array.prototype.set.call(
-      target,
-      this.subarray(start, start + len),
-      targetStart
-    )
-  }
-
-  return len
-}
-
-// Usage:
-//    buffer.fill(number[, offset[, end]])
-//    buffer.fill(buffer[, offset[, end]])
-//    buffer.fill(string[, offset[, end]][, encoding])
-Buffer.prototype.fill = function fill (val, start, end, encoding) {
-  // Handle string cases:
-  if (typeof val === 'string') {
-    if (typeof start === 'string') {
-      encoding = start
-      start = 0
-      end = this.length
-    } else if (typeof end === 'string') {
-      encoding = end
-      end = this.length
-    }
-    if (val.length === 1) {
-      var code = val.charCodeAt(0)
-      if (code < 256) {
-        val = code
-      }
-    }
-    if (encoding !== undefined && typeof encoding !== 'string') {
-      throw new TypeError('encoding must be a string')
-    }
-    if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
-      throw new TypeError('Unknown encoding: ' + encoding)
-    }
-  } else if (typeof val === 'number') {
-    val = val & 255
-  }
-
-  // Invalid ranges are not set to a default, so can range check early.
-  if (start < 0 || this.length < start || this.length < end) {
-    throw new RangeError('Out of range index')
-  }
-
-  if (end <= start) {
-    return this
-  }
-
-  start = start >>> 0
-  end = end === undefined ? this.length : end >>> 0
-
-  if (!val) val = 0
-
-  var i
-  if (typeof val === 'number') {
-    for (i = start; i < end; ++i) {
-      this[i] = val
-    }
-  } else {
-    var bytes = Buffer.isBuffer(val)
-      ? val
-      : new Buffer(val, encoding)
-    var len = bytes.length
-    for (i = 0; i < end - start; ++i) {
-      this[i + start] = bytes[i % len]
-    }
-  }
-
-  return this
-}
-
-// HELPER FUNCTIONS
-// ================
-
-var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g
-
-function base64clean (str) {
-  // Node strips out invalid characters like \n and \t from the string, base64-js does not
-  str = str.trim().replace(INVALID_BASE64_RE, '')
-  // Node converts strings with length < 2 to ''
-  if (str.length < 2) return ''
-  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
-  while (str.length % 4 !== 0) {
-    str = str + '='
-  }
-  return str
-}
-
-function toHex (n) {
-  if (n < 16) return '0' + n.toString(16)
-  return n.toString(16)
-}
-
-function utf8ToBytes (string, units) {
-  units = units || Infinity
-  var codePoint
-  var length = string.length
-  var leadSurrogate = null
-  var bytes = []
-
-  for (var i = 0; i < length; ++i) {
-    codePoint = string.charCodeAt(i)
-
-    // is surrogate component
-    if (codePoint > 0xD7FF && codePoint < 0xE000) {
-      // last char was a lead
-      if (!leadSurrogate) {
-        // no lead yet
-        if (codePoint > 0xDBFF) {
-          // unexpected trail
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        } else if (i + 1 === length) {
-          // unpaired lead
-          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-          continue
-        }
-
-        // valid lead
-        leadSurrogate = codePoint
-
-        continue
-      }
-
-      // 2 leads in a row
-      if (codePoint < 0xDC00) {
-        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-        leadSurrogate = codePoint
-        continue
-      }
-
-      // valid surrogate pair
-      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
-    } else if (leadSurrogate) {
-      // valid bmp char, but last char was a lead
-      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
-    }
-
-    leadSurrogate = null
-
-    // encode utf8
-    if (codePoint < 0x80) {
-      if ((units -= 1) < 0) break
-      bytes.push(codePoint)
-    } else if (codePoint < 0x800) {
-      if ((units -= 2) < 0) break
-      bytes.push(
-        codePoint >> 0x6 | 0xC0,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x10000) {
-      if ((units -= 3) < 0) break
-      bytes.push(
-        codePoint >> 0xC | 0xE0,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else if (codePoint < 0x110000) {
-      if ((units -= 4) < 0) break
-      bytes.push(
-        codePoint >> 0x12 | 0xF0,
-        codePoint >> 0xC & 0x3F | 0x80,
-        codePoint >> 0x6 & 0x3F | 0x80,
-        codePoint & 0x3F | 0x80
-      )
-    } else {
-      throw new Error('Invalid code point')
-    }
-  }
-
-  return bytes
-}
-
-function asciiToBytes (str) {
-  var byteArray = []
-  for (var i = 0; i < str.length; ++i) {
-    // Node's code seems to be doing this and not & 0x7F..
-    byteArray.push(str.charCodeAt(i) & 0xFF)
-  }
-  return byteArray
-}
-
-function utf16leToBytes (str, units) {
-  var c, hi, lo
-  var byteArray = []
-  for (var i = 0; i < str.length; ++i) {
-    if ((units -= 2) < 0) break
-
-    c = str.charCodeAt(i)
-    hi = c >> 8
-    lo = c % 256
-    byteArray.push(lo)
-    byteArray.push(hi)
-  }
-
-  return byteArray
-}
-
-function base64ToBytes (str) {
-  return base64.toByteArray(base64clean(str))
-}
-
-function blitBuffer (src, dst, offset, length) {
-  for (var i = 0; i < length; ++i) {
-    if ((i + offset >= dst.length) || (i >= src.length)) break
-    dst[i + offset] = src[i]
-  }
-  return i
-}
-
-// ArrayBuffers from another context (i.e. an iframe) do not pass the `instanceof` check
-// but they should be treated as valid. See: https://github.com/feross/buffer/issues/166
-function isArrayBuffer (obj) {
-  return obj instanceof ArrayBuffer ||
-    (obj != null && obj.constructor != null && obj.constructor.name === 'ArrayBuffer' &&
-      typeof obj.byteLength === 'number')
-}
-
-// Node 0.10 supports `ArrayBuffer` but lacks `ArrayBuffer.isView`
-function isArrayBufferView (obj) {
-  return (typeof ArrayBuffer.isView === 'function') && ArrayBuffer.isView(obj)
-}
-
-function numberIsNaN (obj) {
-  return obj !== obj // eslint-disable-line no-self-compare
-}
-
-},{"base64-js":66,"ieee754":214}],159:[function(require,module,exports){
-'use strict'
-
-exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
-exports.createHash = exports.Hash = require('create-hash')
-exports.createHmac = exports.Hmac = require('create-hmac')
-
-var algos = require('browserify-sign/algos')
-var algoKeys = Object.keys(algos)
-var hashes = ['sha1', 'sha224', 'sha256', 'sha384', 'sha512', 'md5', 'rmd160'].concat(algoKeys)
-exports.getHashes = function () {
-  return hashes
-}
-
-var p = require('pbkdf2')
-exports.pbkdf2 = p.pbkdf2
-exports.pbkdf2Sync = p.pbkdf2Sync
-
-var aes = require('browserify-cipher')
-
-exports.Cipher = aes.Cipher
-exports.createCipher = aes.createCipher
-exports.Cipheriv = aes.Cipheriv
-exports.createCipheriv = aes.createCipheriv
-exports.Decipher = aes.Decipher
-exports.createDecipher = aes.createDecipher
-exports.Decipheriv = aes.Decipheriv
-exports.createDecipheriv = aes.createDecipheriv
-exports.getCiphers = aes.getCiphers
-exports.listCiphers = aes.listCiphers
-
-var dh = require('diffie-hellman')
-
-exports.DiffieHellmanGroup = dh.DiffieHellmanGroup
-exports.createDiffieHellmanGroup = dh.createDiffieHellmanGroup
-exports.getDiffieHellman = dh.getDiffieHellman
-exports.createDiffieHellman = dh.createDiffieHellman
-exports.DiffieHellman = dh.DiffieHellman
-
-var sign = require('browserify-sign')
-
-exports.createSign = sign.createSign
-exports.Sign = sign.Sign
-exports.createVerify = sign.createVerify
-exports.Verify = sign.Verify
-
-exports.createECDH = require('create-ecdh')
-
-var publicEncrypt = require('public-encrypt')
-
-exports.publicEncrypt = publicEncrypt.publicEncrypt
-exports.privateEncrypt = publicEncrypt.privateEncrypt
-exports.publicDecrypt = publicEncrypt.publicDecrypt
-exports.privateDecrypt = publicEncrypt.privateDecrypt
-
-// the least I can do is make error messages for the rest of the node.js/crypto api.
-// ;[
-//   'createCredentials'
-// ].forEach(function (name) {
-//   exports[name] = function () {
-//     throw new Error([
-//       'sorry, ' + name + ' is not implemented yet',
-//       'we accept pull requests',
-//       'https://github.com/crypto-browserify/crypto-browserify'
-//     ].join('\n'))
-//   }
-// })
-
-var rf = require('randomfill')
-
-exports.randomFill = rf.randomFill
-exports.randomFillSync = rf.randomFillSync
-
-exports.createCredentials = function () {
-  throw new Error([
-    'sorry, createCredentials is not implemented yet',
-    'we accept pull requests',
-    'https://github.com/crypto-browserify/crypto-browserify'
-  ].join('\n'))
-}
-
-exports.constants = {
-  'DH_CHECK_P_NOT_SAFE_PRIME': 2,
-  'DH_CHECK_P_NOT_PRIME': 1,
-  'DH_UNABLE_TO_CHECK_GENERATOR': 4,
-  'DH_NOT_SUITABLE_GENERATOR': 8,
-  'NPN_ENABLED': 1,
-  'ALPN_ENABLED': 1,
-  'RSA_PKCS1_PADDING': 1,
-  'RSA_SSLV23_PADDING': 2,
-  'RSA_NO_PADDING': 3,
-  'RSA_PKCS1_OAEP_PADDING': 4,
-  'RSA_X931_PADDING': 5,
-  'RSA_PKCS1_PSS_PADDING': 6,
-  'POINT_CONVERSION_COMPRESSED': 2,
-  'POINT_CONVERSION_UNCOMPRESSED': 4,
-  'POINT_CONVERSION_HYBRID': 6
-}
-
-},{"browserify-cipher":89,"browserify-sign":96,"browserify-sign/algos":93,"create-ecdh":108,"create-hash":109,"create-hmac":112,"diffie-hellman":121,"pbkdf2":245,"public-encrypt":253,"randombytes":263,"randomfill":264}],160:[function(require,module,exports){
-var http = require('http')
-var url = require('url')
-
-var https = module.exports
-
-for (var key in http) {
-  if (http.hasOwnProperty(key)) https[key] = http[key]
-}
-
-https.request = function (params, cb) {
-  params = validateParams(params)
-  return http.request.call(this, params, cb)
-}
-
-https.get = function (params, cb) {
-  params = validateParams(params)
-  return http.get.call(this, params, cb)
-}
-
-function validateParams (params) {
-  if (typeof params === 'string') {
-    params = url.parse(params)
-  }
-  if (!params.protocol) {
-    params.protocol = 'https:'
-  }
-  if (params.protocol !== 'https:') {
-    throw new Error('Protocol "' + params.protocol + '" not supported. Expected "https:"')
-  }
-  return params
-}
-
-},{"http":370,"url":385}],161:[function(require,module,exports){
+}).call(this,require('_process'),require("buffer").Buffer)
+},{"./binding":156,"_process":251,"_stream_transform":276,"assert":154,"buffer":169,"util":389}],158:[function(require,module,exports){
 'use strict';
 
 
@@ -31476,9 +29429,6 @@ var TYPED_OK =  (typeof Uint8Array !== 'undefined') &&
                 (typeof Uint16Array !== 'undefined') &&
                 (typeof Int32Array !== 'undefined');
 
-function _has(obj, key) {
-  return Object.prototype.hasOwnProperty.call(obj, key);
-}
 
 exports.assign = function (obj /*from1, from2, from3, ...*/) {
   var sources = Array.prototype.slice.call(arguments, 1);
@@ -31491,7 +29441,7 @@ exports.assign = function (obj /*from1, from2, from3, ...*/) {
     }
 
     for (var p in source) {
-      if (_has(source, p)) {
+      if (source.hasOwnProperty(p)) {
         obj[p] = source[p];
       }
     }
@@ -31575,31 +29525,12 @@ exports.setTyped = function (on) {
 
 exports.setTyped(TYPED_OK);
 
-},{}],162:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 'use strict';
 
 // Note: adler32 takes 12% for level 0 and 2% for level 6.
-// It isn't worth it to make additional optimizations as in original.
+// It doesn't worth to make additional optimizationa as in original.
 // Small size is preferable.
-
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 function adler32(adler, buf, len, pos) {
   var s1 = (adler & 0xffff) |0,
@@ -31628,27 +29559,9 @@ function adler32(adler, buf, len, pos) {
 
 module.exports = adler32;
 
-},{}],163:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 'use strict';
 
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 module.exports = {
 
@@ -31698,31 +29611,13 @@ module.exports = {
   //Z_NULL:                 null // Use -1 or null inline, depending on var type
 };
 
-},{}],164:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 'use strict';
 
 // Note: we can't get significant speed boost here.
 // So write code to minimize size - no pregenerated tables
 // and array tools dependencies.
 
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 // Use ordinary array, since untyped makes no boost here
 function makeTable() {
@@ -31759,27 +29654,8 @@ function crc32(crc, buf, len, pos) {
 
 module.exports = crc32;
 
-},{}],165:[function(require,module,exports){
+},{}],162:[function(require,module,exports){
 'use strict';
-
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 var utils   = require('../utils/common');
 var trees   = require('./trees');
@@ -33635,27 +31511,8 @@ exports.deflatePrime = deflatePrime;
 exports.deflateTune = deflateTune;
 */
 
-},{"../utils/common":161,"./adler32":162,"./crc32":164,"./messages":169,"./trees":170}],166:[function(require,module,exports){
+},{"../utils/common":158,"./adler32":159,"./crc32":161,"./messages":166,"./trees":167}],163:[function(require,module,exports){
 'use strict';
-
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 // See state defs from inflate.js
 var BAD = 30;       /* got a data error -- remain here until reset */
@@ -33839,7 +31696,7 @@ module.exports = function inflate_fast(strm, start) {
                   break top;
                 }
 
-// (!) This block is disabled in zlib defaults,
+// (!) This block is disabled in zlib defailts,
 // don't enable it for binary compatibility
 //#ifdef INFLATE_ALLOW_INVALID_DISTANCE_TOOFAR_ARRR
 //                if (len <= op - whave) {
@@ -33982,27 +31839,9 @@ module.exports = function inflate_fast(strm, start) {
   return;
 };
 
-},{}],167:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 'use strict';
 
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 var utils         = require('../utils/common');
 var adler32       = require('./adler32');
@@ -34417,72 +32256,162 @@ function inflate(strm, flush) {
   inf_leave: // goto emulation
   for (;;) {
     switch (state.mode) {
-      case HEAD:
-        if (state.wrap === 0) {
-          state.mode = TYPEDO;
-          break;
-        }
-        //=== NEEDBITS(16);
-        while (bits < 16) {
-          if (have === 0) { break inf_leave; }
-          have--;
-          hold += input[next++] << bits;
-          bits += 8;
-        }
-        //===//
-        if ((state.wrap & 2) && hold === 0x8b1f) {  /* gzip header */
-          state.check = 0/*crc32(0L, Z_NULL, 0)*/;
-          //=== CRC2(state.check, hold);
-          hbuf[0] = hold & 0xff;
-          hbuf[1] = (hold >>> 8) & 0xff;
-          state.check = crc32(state.check, hbuf, 2, 0);
-          //===//
-
-          //=== INITBITS();
-          hold = 0;
-          bits = 0;
-          //===//
-          state.mode = FLAGS;
-          break;
-        }
-        state.flags = 0;           /* expect zlib header */
-        if (state.head) {
-          state.head.done = false;
-        }
-        if (!(state.wrap & 1) ||   /* check if zlib header allowed */
-          (((hold & 0xff)/*BITS(8)*/ << 8) + (hold >> 8)) % 31) {
-          strm.msg = 'incorrect header check';
-          state.mode = BAD;
-          break;
-        }
-        if ((hold & 0x0f)/*BITS(4)*/ !== Z_DEFLATED) {
-          strm.msg = 'unknown compression method';
-          state.mode = BAD;
-          break;
-        }
-        //--- DROPBITS(4) ---//
-        hold >>>= 4;
-        bits -= 4;
-        //---//
-        len = (hold & 0x0f)/*BITS(4)*/ + 8;
-        if (state.wbits === 0) {
-          state.wbits = len;
-        }
-        else if (len > state.wbits) {
-          strm.msg = 'invalid window size';
-          state.mode = BAD;
-          break;
-        }
-        state.dmax = 1 << len;
-        //Tracev((stderr, "inflate:   zlib header ok\n"));
-        strm.adler = state.check = 1/*adler32(0L, Z_NULL, 0)*/;
-        state.mode = hold & 0x200 ? DICTID : TYPE;
-        //=== INITBITS();
-        hold = 0;
-        bits = 0;
-        //===//
+    case HEAD:
+      if (state.wrap === 0) {
+        state.mode = TYPEDO;
         break;
-      case FLAGS:
+      }
+      //=== NEEDBITS(16);
+      while (bits < 16) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      if ((state.wrap & 2) && hold === 0x8b1f) {  /* gzip header */
+        state.check = 0/*crc32(0L, Z_NULL, 0)*/;
+        //=== CRC2(state.check, hold);
+        hbuf[0] = hold & 0xff;
+        hbuf[1] = (hold >>> 8) & 0xff;
+        state.check = crc32(state.check, hbuf, 2, 0);
+        //===//
+
+        //=== INITBITS();
+        hold = 0;
+        bits = 0;
+        //===//
+        state.mode = FLAGS;
+        break;
+      }
+      state.flags = 0;           /* expect zlib header */
+      if (state.head) {
+        state.head.done = false;
+      }
+      if (!(state.wrap & 1) ||   /* check if zlib header allowed */
+        (((hold & 0xff)/*BITS(8)*/ << 8) + (hold >> 8)) % 31) {
+        strm.msg = 'incorrect header check';
+        state.mode = BAD;
+        break;
+      }
+      if ((hold & 0x0f)/*BITS(4)*/ !== Z_DEFLATED) {
+        strm.msg = 'unknown compression method';
+        state.mode = BAD;
+        break;
+      }
+      //--- DROPBITS(4) ---//
+      hold >>>= 4;
+      bits -= 4;
+      //---//
+      len = (hold & 0x0f)/*BITS(4)*/ + 8;
+      if (state.wbits === 0) {
+        state.wbits = len;
+      }
+      else if (len > state.wbits) {
+        strm.msg = 'invalid window size';
+        state.mode = BAD;
+        break;
+      }
+      state.dmax = 1 << len;
+      //Tracev((stderr, "inflate:   zlib header ok\n"));
+      strm.adler = state.check = 1/*adler32(0L, Z_NULL, 0)*/;
+      state.mode = hold & 0x200 ? DICTID : TYPE;
+      //=== INITBITS();
+      hold = 0;
+      bits = 0;
+      //===//
+      break;
+    case FLAGS:
+      //=== NEEDBITS(16); */
+      while (bits < 16) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      state.flags = hold;
+      if ((state.flags & 0xff) !== Z_DEFLATED) {
+        strm.msg = 'unknown compression method';
+        state.mode = BAD;
+        break;
+      }
+      if (state.flags & 0xe000) {
+        strm.msg = 'unknown header flags set';
+        state.mode = BAD;
+        break;
+      }
+      if (state.head) {
+        state.head.text = ((hold >> 8) & 1);
+      }
+      if (state.flags & 0x0200) {
+        //=== CRC2(state.check, hold);
+        hbuf[0] = hold & 0xff;
+        hbuf[1] = (hold >>> 8) & 0xff;
+        state.check = crc32(state.check, hbuf, 2, 0);
+        //===//
+      }
+      //=== INITBITS();
+      hold = 0;
+      bits = 0;
+      //===//
+      state.mode = TIME;
+      /* falls through */
+    case TIME:
+      //=== NEEDBITS(32); */
+      while (bits < 32) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      if (state.head) {
+        state.head.time = hold;
+      }
+      if (state.flags & 0x0200) {
+        //=== CRC4(state.check, hold)
+        hbuf[0] = hold & 0xff;
+        hbuf[1] = (hold >>> 8) & 0xff;
+        hbuf[2] = (hold >>> 16) & 0xff;
+        hbuf[3] = (hold >>> 24) & 0xff;
+        state.check = crc32(state.check, hbuf, 4, 0);
+        //===
+      }
+      //=== INITBITS();
+      hold = 0;
+      bits = 0;
+      //===//
+      state.mode = OS;
+      /* falls through */
+    case OS:
+      //=== NEEDBITS(16); */
+      while (bits < 16) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      if (state.head) {
+        state.head.xflags = (hold & 0xff);
+        state.head.os = (hold >> 8);
+      }
+      if (state.flags & 0x0200) {
+        //=== CRC2(state.check, hold);
+        hbuf[0] = hold & 0xff;
+        hbuf[1] = (hold >>> 8) & 0xff;
+        state.check = crc32(state.check, hbuf, 2, 0);
+        //===//
+      }
+      //=== INITBITS();
+      hold = 0;
+      bits = 0;
+      //===//
+      state.mode = EXLEN;
+      /* falls through */
+    case EXLEN:
+      if (state.flags & 0x0400) {
         //=== NEEDBITS(16); */
         while (bits < 16) {
           if (have === 0) { break inf_leave; }
@@ -34491,19 +32420,9 @@ function inflate(strm, flush) {
           bits += 8;
         }
         //===//
-        state.flags = hold;
-        if ((state.flags & 0xff) !== Z_DEFLATED) {
-          strm.msg = 'unknown compression method';
-          state.mode = BAD;
-          break;
-        }
-        if (state.flags & 0xe000) {
-          strm.msg = 'unknown header flags set';
-          state.mode = BAD;
-          break;
-        }
+        state.length = hold;
         if (state.head) {
-          state.head.text = ((hold >> 8) & 1);
+          state.head.extra_len = hold;
         }
         if (state.flags & 0x0200) {
           //=== CRC2(state.check, hold);
@@ -34516,251 +32435,305 @@ function inflate(strm, flush) {
         hold = 0;
         bits = 0;
         //===//
-        state.mode = TIME;
-        /* falls through */
-      case TIME:
-        //=== NEEDBITS(32); */
-        while (bits < 32) {
-          if (have === 0) { break inf_leave; }
-          have--;
-          hold += input[next++] << bits;
-          bits += 8;
-        }
-        //===//
-        if (state.head) {
-          state.head.time = hold;
-        }
-        if (state.flags & 0x0200) {
-          //=== CRC4(state.check, hold)
-          hbuf[0] = hold & 0xff;
-          hbuf[1] = (hold >>> 8) & 0xff;
-          hbuf[2] = (hold >>> 16) & 0xff;
-          hbuf[3] = (hold >>> 24) & 0xff;
-          state.check = crc32(state.check, hbuf, 4, 0);
-          //===
-        }
-        //=== INITBITS();
-        hold = 0;
-        bits = 0;
-        //===//
-        state.mode = OS;
-        /* falls through */
-      case OS:
-        //=== NEEDBITS(16); */
-        while (bits < 16) {
-          if (have === 0) { break inf_leave; }
-          have--;
-          hold += input[next++] << bits;
-          bits += 8;
-        }
-        //===//
-        if (state.head) {
-          state.head.xflags = (hold & 0xff);
-          state.head.os = (hold >> 8);
-        }
-        if (state.flags & 0x0200) {
-          //=== CRC2(state.check, hold);
-          hbuf[0] = hold & 0xff;
-          hbuf[1] = (hold >>> 8) & 0xff;
-          state.check = crc32(state.check, hbuf, 2, 0);
-          //===//
-        }
-        //=== INITBITS();
-        hold = 0;
-        bits = 0;
-        //===//
-        state.mode = EXLEN;
-        /* falls through */
-      case EXLEN:
-        if (state.flags & 0x0400) {
-          //=== NEEDBITS(16); */
-          while (bits < 16) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          state.length = hold;
+      }
+      else if (state.head) {
+        state.head.extra = null/*Z_NULL*/;
+      }
+      state.mode = EXTRA;
+      /* falls through */
+    case EXTRA:
+      if (state.flags & 0x0400) {
+        copy = state.length;
+        if (copy > have) { copy = have; }
+        if (copy) {
           if (state.head) {
-            state.head.extra_len = hold;
+            len = state.head.extra_len - state.length;
+            if (!state.head.extra) {
+              // Use untyped array for more conveniend processing later
+              state.head.extra = new Array(state.head.extra_len);
+            }
+            utils.arraySet(
+              state.head.extra,
+              input,
+              next,
+              // extra field is limited to 65536 bytes
+              // - no need for additional size check
+              copy,
+              /*len + copy > state.head.extra_max - len ? state.head.extra_max : copy,*/
+              len
+            );
+            //zmemcpy(state.head.extra + len, next,
+            //        len + copy > state.head.extra_max ?
+            //        state.head.extra_max - len : copy);
           }
           if (state.flags & 0x0200) {
-            //=== CRC2(state.check, hold);
-            hbuf[0] = hold & 0xff;
-            hbuf[1] = (hold >>> 8) & 0xff;
-            state.check = crc32(state.check, hbuf, 2, 0);
-            //===//
+            state.check = crc32(state.check, input, copy, next);
           }
-          //=== INITBITS();
-          hold = 0;
-          bits = 0;
-          //===//
+          have -= copy;
+          next += copy;
+          state.length -= copy;
         }
-        else if (state.head) {
-          state.head.extra = null/*Z_NULL*/;
-        }
-        state.mode = EXTRA;
-        /* falls through */
-      case EXTRA:
-        if (state.flags & 0x0400) {
-          copy = state.length;
-          if (copy > have) { copy = have; }
-          if (copy) {
-            if (state.head) {
-              len = state.head.extra_len - state.length;
-              if (!state.head.extra) {
-                // Use untyped array for more convenient processing later
-                state.head.extra = new Array(state.head.extra_len);
-              }
-              utils.arraySet(
-                state.head.extra,
-                input,
-                next,
-                // extra field is limited to 65536 bytes
-                // - no need for additional size check
-                copy,
-                /*len + copy > state.head.extra_max - len ? state.head.extra_max : copy,*/
-                len
-              );
-              //zmemcpy(state.head.extra + len, next,
-              //        len + copy > state.head.extra_max ?
-              //        state.head.extra_max - len : copy);
-            }
-            if (state.flags & 0x0200) {
-              state.check = crc32(state.check, input, copy, next);
-            }
-            have -= copy;
-            next += copy;
-            state.length -= copy;
+        if (state.length) { break inf_leave; }
+      }
+      state.length = 0;
+      state.mode = NAME;
+      /* falls through */
+    case NAME:
+      if (state.flags & 0x0800) {
+        if (have === 0) { break inf_leave; }
+        copy = 0;
+        do {
+          // TODO: 2 or 1 bytes?
+          len = input[next + copy++];
+          /* use constant limit because in js we should not preallocate memory */
+          if (state.head && len &&
+              (state.length < 65536 /*state.head.name_max*/)) {
+            state.head.name += String.fromCharCode(len);
           }
-          if (state.length) { break inf_leave; }
-        }
-        state.length = 0;
-        state.mode = NAME;
-        /* falls through */
-      case NAME:
-        if (state.flags & 0x0800) {
-          if (have === 0) { break inf_leave; }
-          copy = 0;
-          do {
-            // TODO: 2 or 1 bytes?
-            len = input[next + copy++];
-            /* use constant limit because in js we should not preallocate memory */
-            if (state.head && len &&
-                (state.length < 65536 /*state.head.name_max*/)) {
-              state.head.name += String.fromCharCode(len);
-            }
-          } while (len && copy < have);
+        } while (len && copy < have);
 
-          if (state.flags & 0x0200) {
-            state.check = crc32(state.check, input, copy, next);
-          }
-          have -= copy;
-          next += copy;
-          if (len) { break inf_leave; }
-        }
-        else if (state.head) {
-          state.head.name = null;
-        }
-        state.length = 0;
-        state.mode = COMMENT;
-        /* falls through */
-      case COMMENT:
-        if (state.flags & 0x1000) {
-          if (have === 0) { break inf_leave; }
-          copy = 0;
-          do {
-            len = input[next + copy++];
-            /* use constant limit because in js we should not preallocate memory */
-            if (state.head && len &&
-                (state.length < 65536 /*state.head.comm_max*/)) {
-              state.head.comment += String.fromCharCode(len);
-            }
-          } while (len && copy < have);
-          if (state.flags & 0x0200) {
-            state.check = crc32(state.check, input, copy, next);
-          }
-          have -= copy;
-          next += copy;
-          if (len) { break inf_leave; }
-        }
-        else if (state.head) {
-          state.head.comment = null;
-        }
-        state.mode = HCRC;
-        /* falls through */
-      case HCRC:
         if (state.flags & 0x0200) {
-          //=== NEEDBITS(16); */
-          while (bits < 16) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          if (hold !== (state.check & 0xffff)) {
-            strm.msg = 'header crc mismatch';
-            state.mode = BAD;
-            break;
-          }
-          //=== INITBITS();
-          hold = 0;
-          bits = 0;
-          //===//
+          state.check = crc32(state.check, input, copy, next);
         }
-        if (state.head) {
-          state.head.hcrc = ((state.flags >> 9) & 1);
-          state.head.done = true;
+        have -= copy;
+        next += copy;
+        if (len) { break inf_leave; }
+      }
+      else if (state.head) {
+        state.head.name = null;
+      }
+      state.length = 0;
+      state.mode = COMMENT;
+      /* falls through */
+    case COMMENT:
+      if (state.flags & 0x1000) {
+        if (have === 0) { break inf_leave; }
+        copy = 0;
+        do {
+          len = input[next + copy++];
+          /* use constant limit because in js we should not preallocate memory */
+          if (state.head && len &&
+              (state.length < 65536 /*state.head.comm_max*/)) {
+            state.head.comment += String.fromCharCode(len);
+          }
+        } while (len && copy < have);
+        if (state.flags & 0x0200) {
+          state.check = crc32(state.check, input, copy, next);
         }
-        strm.adler = state.check = 0;
-        state.mode = TYPE;
-        break;
-      case DICTID:
-        //=== NEEDBITS(32); */
-        while (bits < 32) {
+        have -= copy;
+        next += copy;
+        if (len) { break inf_leave; }
+      }
+      else if (state.head) {
+        state.head.comment = null;
+      }
+      state.mode = HCRC;
+      /* falls through */
+    case HCRC:
+      if (state.flags & 0x0200) {
+        //=== NEEDBITS(16); */
+        while (bits < 16) {
           if (have === 0) { break inf_leave; }
           have--;
           hold += input[next++] << bits;
           bits += 8;
         }
         //===//
-        strm.adler = state.check = zswap32(hold);
+        if (hold !== (state.check & 0xffff)) {
+          strm.msg = 'header crc mismatch';
+          state.mode = BAD;
+          break;
+        }
         //=== INITBITS();
         hold = 0;
         bits = 0;
         //===//
-        state.mode = DICT;
-        /* falls through */
-      case DICT:
-        if (state.havedict === 0) {
-          //--- RESTORE() ---
-          strm.next_out = put;
-          strm.avail_out = left;
-          strm.next_in = next;
-          strm.avail_in = have;
-          state.hold = hold;
-          state.bits = bits;
-          //---
-          return Z_NEED_DICT;
-        }
-        strm.adler = state.check = 1/*adler32(0L, Z_NULL, 0)*/;
-        state.mode = TYPE;
-        /* falls through */
-      case TYPE:
-        if (flush === Z_BLOCK || flush === Z_TREES) { break inf_leave; }
-        /* falls through */
-      case TYPEDO:
-        if (state.last) {
-          //--- BYTEBITS() ---//
-          hold >>>= bits & 7;
-          bits -= bits & 7;
+      }
+      if (state.head) {
+        state.head.hcrc = ((state.flags >> 9) & 1);
+        state.head.done = true;
+      }
+      strm.adler = state.check = 0;
+      state.mode = TYPE;
+      break;
+    case DICTID:
+      //=== NEEDBITS(32); */
+      while (bits < 32) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      strm.adler = state.check = zswap32(hold);
+      //=== INITBITS();
+      hold = 0;
+      bits = 0;
+      //===//
+      state.mode = DICT;
+      /* falls through */
+    case DICT:
+      if (state.havedict === 0) {
+        //--- RESTORE() ---
+        strm.next_out = put;
+        strm.avail_out = left;
+        strm.next_in = next;
+        strm.avail_in = have;
+        state.hold = hold;
+        state.bits = bits;
+        //---
+        return Z_NEED_DICT;
+      }
+      strm.adler = state.check = 1/*adler32(0L, Z_NULL, 0)*/;
+      state.mode = TYPE;
+      /* falls through */
+    case TYPE:
+      if (flush === Z_BLOCK || flush === Z_TREES) { break inf_leave; }
+      /* falls through */
+    case TYPEDO:
+      if (state.last) {
+        //--- BYTEBITS() ---//
+        hold >>>= bits & 7;
+        bits -= bits & 7;
+        //---//
+        state.mode = CHECK;
+        break;
+      }
+      //=== NEEDBITS(3); */
+      while (bits < 3) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      state.last = (hold & 0x01)/*BITS(1)*/;
+      //--- DROPBITS(1) ---//
+      hold >>>= 1;
+      bits -= 1;
+      //---//
+
+      switch ((hold & 0x03)/*BITS(2)*/) {
+      case 0:                             /* stored block */
+        //Tracev((stderr, "inflate:     stored block%s\n",
+        //        state.last ? " (last)" : ""));
+        state.mode = STORED;
+        break;
+      case 1:                             /* fixed block */
+        fixedtables(state);
+        //Tracev((stderr, "inflate:     fixed codes block%s\n",
+        //        state.last ? " (last)" : ""));
+        state.mode = LEN_;             /* decode codes */
+        if (flush === Z_TREES) {
+          //--- DROPBITS(2) ---//
+          hold >>>= 2;
+          bits -= 2;
           //---//
-          state.mode = CHECK;
-          break;
+          break inf_leave;
         }
-        //=== NEEDBITS(3); */
+        break;
+      case 2:                             /* dynamic block */
+        //Tracev((stderr, "inflate:     dynamic codes block%s\n",
+        //        state.last ? " (last)" : ""));
+        state.mode = TABLE;
+        break;
+      case 3:
+        strm.msg = 'invalid block type';
+        state.mode = BAD;
+      }
+      //--- DROPBITS(2) ---//
+      hold >>>= 2;
+      bits -= 2;
+      //---//
+      break;
+    case STORED:
+      //--- BYTEBITS() ---// /* go to byte boundary */
+      hold >>>= bits & 7;
+      bits -= bits & 7;
+      //---//
+      //=== NEEDBITS(32); */
+      while (bits < 32) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      if ((hold & 0xffff) !== ((hold >>> 16) ^ 0xffff)) {
+        strm.msg = 'invalid stored block lengths';
+        state.mode = BAD;
+        break;
+      }
+      state.length = hold & 0xffff;
+      //Tracev((stderr, "inflate:       stored length %u\n",
+      //        state.length));
+      //=== INITBITS();
+      hold = 0;
+      bits = 0;
+      //===//
+      state.mode = COPY_;
+      if (flush === Z_TREES) { break inf_leave; }
+      /* falls through */
+    case COPY_:
+      state.mode = COPY;
+      /* falls through */
+    case COPY:
+      copy = state.length;
+      if (copy) {
+        if (copy > have) { copy = have; }
+        if (copy > left) { copy = left; }
+        if (copy === 0) { break inf_leave; }
+        //--- zmemcpy(put, next, copy); ---
+        utils.arraySet(output, input, next, copy, put);
+        //---//
+        have -= copy;
+        next += copy;
+        left -= copy;
+        put += copy;
+        state.length -= copy;
+        break;
+      }
+      //Tracev((stderr, "inflate:       stored end\n"));
+      state.mode = TYPE;
+      break;
+    case TABLE:
+      //=== NEEDBITS(14); */
+      while (bits < 14) {
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+      }
+      //===//
+      state.nlen = (hold & 0x1f)/*BITS(5)*/ + 257;
+      //--- DROPBITS(5) ---//
+      hold >>>= 5;
+      bits -= 5;
+      //---//
+      state.ndist = (hold & 0x1f)/*BITS(5)*/ + 1;
+      //--- DROPBITS(5) ---//
+      hold >>>= 5;
+      bits -= 5;
+      //---//
+      state.ncode = (hold & 0x0f)/*BITS(4)*/ + 4;
+      //--- DROPBITS(4) ---//
+      hold >>>= 4;
+      bits -= 4;
+      //---//
+//#ifndef PKZIP_BUG_WORKAROUND
+      if (state.nlen > 286 || state.ndist > 30) {
+        strm.msg = 'too many length or distance symbols';
+        state.mode = BAD;
+        break;
+      }
+//#endif
+      //Tracev((stderr, "inflate:       table sizes ok\n"));
+      state.have = 0;
+      state.mode = LENLENS;
+      /* falls through */
+    case LENLENS:
+      while (state.have < state.ncode) {
+        //=== NEEDBITS(3);
         while (bits < 3) {
           if (have === 0) { break inf_leave; }
           have--;
@@ -34768,442 +32741,39 @@ function inflate(strm, flush) {
           bits += 8;
         }
         //===//
-        state.last = (hold & 0x01)/*BITS(1)*/;
-        //--- DROPBITS(1) ---//
-        hold >>>= 1;
-        bits -= 1;
+        state.lens[order[state.have++]] = (hold & 0x07);//BITS(3);
+        //--- DROPBITS(3) ---//
+        hold >>>= 3;
+        bits -= 3;
         //---//
+      }
+      while (state.have < 19) {
+        state.lens[order[state.have++]] = 0;
+      }
+      // We have separate tables & no pointers. 2 commented lines below not needed.
+      //state.next = state.codes;
+      //state.lencode = state.next;
+      // Switch to use dynamic table
+      state.lencode = state.lendyn;
+      state.lenbits = 7;
 
-        switch ((hold & 0x03)/*BITS(2)*/) {
-          case 0:                             /* stored block */
-            //Tracev((stderr, "inflate:     stored block%s\n",
-            //        state.last ? " (last)" : ""));
-            state.mode = STORED;
-            break;
-          case 1:                             /* fixed block */
-            fixedtables(state);
-            //Tracev((stderr, "inflate:     fixed codes block%s\n",
-            //        state.last ? " (last)" : ""));
-            state.mode = LEN_;             /* decode codes */
-            if (flush === Z_TREES) {
-              //--- DROPBITS(2) ---//
-              hold >>>= 2;
-              bits -= 2;
-              //---//
-              break inf_leave;
-            }
-            break;
-          case 2:                             /* dynamic block */
-            //Tracev((stderr, "inflate:     dynamic codes block%s\n",
-            //        state.last ? " (last)" : ""));
-            state.mode = TABLE;
-            break;
-          case 3:
-            strm.msg = 'invalid block type';
-            state.mode = BAD;
-        }
-        //--- DROPBITS(2) ---//
-        hold >>>= 2;
-        bits -= 2;
-        //---//
+      opts = { bits: state.lenbits };
+      ret = inflate_table(CODES, state.lens, 0, 19, state.lencode, 0, state.work, opts);
+      state.lenbits = opts.bits;
+
+      if (ret) {
+        strm.msg = 'invalid code lengths set';
+        state.mode = BAD;
         break;
-      case STORED:
-        //--- BYTEBITS() ---// /* go to byte boundary */
-        hold >>>= bits & 7;
-        bits -= bits & 7;
-        //---//
-        //=== NEEDBITS(32); */
-        while (bits < 32) {
-          if (have === 0) { break inf_leave; }
-          have--;
-          hold += input[next++] << bits;
-          bits += 8;
-        }
-        //===//
-        if ((hold & 0xffff) !== ((hold >>> 16) ^ 0xffff)) {
-          strm.msg = 'invalid stored block lengths';
-          state.mode = BAD;
-          break;
-        }
-        state.length = hold & 0xffff;
-        //Tracev((stderr, "inflate:       stored length %u\n",
-        //        state.length));
-        //=== INITBITS();
-        hold = 0;
-        bits = 0;
-        //===//
-        state.mode = COPY_;
-        if (flush === Z_TREES) { break inf_leave; }
-        /* falls through */
-      case COPY_:
-        state.mode = COPY;
-        /* falls through */
-      case COPY:
-        copy = state.length;
-        if (copy) {
-          if (copy > have) { copy = have; }
-          if (copy > left) { copy = left; }
-          if (copy === 0) { break inf_leave; }
-          //--- zmemcpy(put, next, copy); ---
-          utils.arraySet(output, input, next, copy, put);
-          //---//
-          have -= copy;
-          next += copy;
-          left -= copy;
-          put += copy;
-          state.length -= copy;
-          break;
-        }
-        //Tracev((stderr, "inflate:       stored end\n"));
-        state.mode = TYPE;
-        break;
-      case TABLE:
-        //=== NEEDBITS(14); */
-        while (bits < 14) {
-          if (have === 0) { break inf_leave; }
-          have--;
-          hold += input[next++] << bits;
-          bits += 8;
-        }
-        //===//
-        state.nlen = (hold & 0x1f)/*BITS(5)*/ + 257;
-        //--- DROPBITS(5) ---//
-        hold >>>= 5;
-        bits -= 5;
-        //---//
-        state.ndist = (hold & 0x1f)/*BITS(5)*/ + 1;
-        //--- DROPBITS(5) ---//
-        hold >>>= 5;
-        bits -= 5;
-        //---//
-        state.ncode = (hold & 0x0f)/*BITS(4)*/ + 4;
-        //--- DROPBITS(4) ---//
-        hold >>>= 4;
-        bits -= 4;
-        //---//
-//#ifndef PKZIP_BUG_WORKAROUND
-        if (state.nlen > 286 || state.ndist > 30) {
-          strm.msg = 'too many length or distance symbols';
-          state.mode = BAD;
-          break;
-        }
-//#endif
-        //Tracev((stderr, "inflate:       table sizes ok\n"));
-        state.have = 0;
-        state.mode = LENLENS;
-        /* falls through */
-      case LENLENS:
-        while (state.have < state.ncode) {
-          //=== NEEDBITS(3);
-          while (bits < 3) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          state.lens[order[state.have++]] = (hold & 0x07);//BITS(3);
-          //--- DROPBITS(3) ---//
-          hold >>>= 3;
-          bits -= 3;
-          //---//
-        }
-        while (state.have < 19) {
-          state.lens[order[state.have++]] = 0;
-        }
-        // We have separate tables & no pointers. 2 commented lines below not needed.
-        //state.next = state.codes;
-        //state.lencode = state.next;
-        // Switch to use dynamic table
-        state.lencode = state.lendyn;
-        state.lenbits = 7;
-
-        opts = { bits: state.lenbits };
-        ret = inflate_table(CODES, state.lens, 0, 19, state.lencode, 0, state.work, opts);
-        state.lenbits = opts.bits;
-
-        if (ret) {
-          strm.msg = 'invalid code lengths set';
-          state.mode = BAD;
-          break;
-        }
-        //Tracev((stderr, "inflate:       code lengths ok\n"));
-        state.have = 0;
-        state.mode = CODELENS;
-        /* falls through */
-      case CODELENS:
-        while (state.have < state.nlen + state.ndist) {
-          for (;;) {
-            here = state.lencode[hold & ((1 << state.lenbits) - 1)];/*BITS(state.lenbits)*/
-            here_bits = here >>> 24;
-            here_op = (here >>> 16) & 0xff;
-            here_val = here & 0xffff;
-
-            if ((here_bits) <= bits) { break; }
-            //--- PULLBYTE() ---//
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-            //---//
-          }
-          if (here_val < 16) {
-            //--- DROPBITS(here.bits) ---//
-            hold >>>= here_bits;
-            bits -= here_bits;
-            //---//
-            state.lens[state.have++] = here_val;
-          }
-          else {
-            if (here_val === 16) {
-              //=== NEEDBITS(here.bits + 2);
-              n = here_bits + 2;
-              while (bits < n) {
-                if (have === 0) { break inf_leave; }
-                have--;
-                hold += input[next++] << bits;
-                bits += 8;
-              }
-              //===//
-              //--- DROPBITS(here.bits) ---//
-              hold >>>= here_bits;
-              bits -= here_bits;
-              //---//
-              if (state.have === 0) {
-                strm.msg = 'invalid bit length repeat';
-                state.mode = BAD;
-                break;
-              }
-              len = state.lens[state.have - 1];
-              copy = 3 + (hold & 0x03);//BITS(2);
-              //--- DROPBITS(2) ---//
-              hold >>>= 2;
-              bits -= 2;
-              //---//
-            }
-            else if (here_val === 17) {
-              //=== NEEDBITS(here.bits + 3);
-              n = here_bits + 3;
-              while (bits < n) {
-                if (have === 0) { break inf_leave; }
-                have--;
-                hold += input[next++] << bits;
-                bits += 8;
-              }
-              //===//
-              //--- DROPBITS(here.bits) ---//
-              hold >>>= here_bits;
-              bits -= here_bits;
-              //---//
-              len = 0;
-              copy = 3 + (hold & 0x07);//BITS(3);
-              //--- DROPBITS(3) ---//
-              hold >>>= 3;
-              bits -= 3;
-              //---//
-            }
-            else {
-              //=== NEEDBITS(here.bits + 7);
-              n = here_bits + 7;
-              while (bits < n) {
-                if (have === 0) { break inf_leave; }
-                have--;
-                hold += input[next++] << bits;
-                bits += 8;
-              }
-              //===//
-              //--- DROPBITS(here.bits) ---//
-              hold >>>= here_bits;
-              bits -= here_bits;
-              //---//
-              len = 0;
-              copy = 11 + (hold & 0x7f);//BITS(7);
-              //--- DROPBITS(7) ---//
-              hold >>>= 7;
-              bits -= 7;
-              //---//
-            }
-            if (state.have + copy > state.nlen + state.ndist) {
-              strm.msg = 'invalid bit length repeat';
-              state.mode = BAD;
-              break;
-            }
-            while (copy--) {
-              state.lens[state.have++] = len;
-            }
-          }
-        }
-
-        /* handle error breaks in while */
-        if (state.mode === BAD) { break; }
-
-        /* check for end-of-block code (better have one) */
-        if (state.lens[256] === 0) {
-          strm.msg = 'invalid code -- missing end-of-block';
-          state.mode = BAD;
-          break;
-        }
-
-        /* build code tables -- note: do not change the lenbits or distbits
-           values here (9 and 6) without reading the comments in inftrees.h
-           concerning the ENOUGH constants, which depend on those values */
-        state.lenbits = 9;
-
-        opts = { bits: state.lenbits };
-        ret = inflate_table(LENS, state.lens, 0, state.nlen, state.lencode, 0, state.work, opts);
-        // We have separate tables & no pointers. 2 commented lines below not needed.
-        // state.next_index = opts.table_index;
-        state.lenbits = opts.bits;
-        // state.lencode = state.next;
-
-        if (ret) {
-          strm.msg = 'invalid literal/lengths set';
-          state.mode = BAD;
-          break;
-        }
-
-        state.distbits = 6;
-        //state.distcode.copy(state.codes);
-        // Switch to use dynamic table
-        state.distcode = state.distdyn;
-        opts = { bits: state.distbits };
-        ret = inflate_table(DISTS, state.lens, state.nlen, state.ndist, state.distcode, 0, state.work, opts);
-        // We have separate tables & no pointers. 2 commented lines below not needed.
-        // state.next_index = opts.table_index;
-        state.distbits = opts.bits;
-        // state.distcode = state.next;
-
-        if (ret) {
-          strm.msg = 'invalid distances set';
-          state.mode = BAD;
-          break;
-        }
-        //Tracev((stderr, 'inflate:       codes ok\n'));
-        state.mode = LEN_;
-        if (flush === Z_TREES) { break inf_leave; }
-        /* falls through */
-      case LEN_:
-        state.mode = LEN;
-        /* falls through */
-      case LEN:
-        if (have >= 6 && left >= 258) {
-          //--- RESTORE() ---
-          strm.next_out = put;
-          strm.avail_out = left;
-          strm.next_in = next;
-          strm.avail_in = have;
-          state.hold = hold;
-          state.bits = bits;
-          //---
-          inflate_fast(strm, _out);
-          //--- LOAD() ---
-          put = strm.next_out;
-          output = strm.output;
-          left = strm.avail_out;
-          next = strm.next_in;
-          input = strm.input;
-          have = strm.avail_in;
-          hold = state.hold;
-          bits = state.bits;
-          //---
-
-          if (state.mode === TYPE) {
-            state.back = -1;
-          }
-          break;
-        }
-        state.back = 0;
+      }
+      //Tracev((stderr, "inflate:       code lengths ok\n"));
+      state.have = 0;
+      state.mode = CODELENS;
+      /* falls through */
+    case CODELENS:
+      while (state.have < state.nlen + state.ndist) {
         for (;;) {
-          here = state.lencode[hold & ((1 << state.lenbits) - 1)];  /*BITS(state.lenbits)*/
-          here_bits = here >>> 24;
-          here_op = (here >>> 16) & 0xff;
-          here_val = here & 0xffff;
-
-          if (here_bits <= bits) { break; }
-          //--- PULLBYTE() ---//
-          if (have === 0) { break inf_leave; }
-          have--;
-          hold += input[next++] << bits;
-          bits += 8;
-          //---//
-        }
-        if (here_op && (here_op & 0xf0) === 0) {
-          last_bits = here_bits;
-          last_op = here_op;
-          last_val = here_val;
-          for (;;) {
-            here = state.lencode[last_val +
-                    ((hold & ((1 << (last_bits + last_op)) - 1))/*BITS(last.bits + last.op)*/ >> last_bits)];
-            here_bits = here >>> 24;
-            here_op = (here >>> 16) & 0xff;
-            here_val = here & 0xffff;
-
-            if ((last_bits + here_bits) <= bits) { break; }
-            //--- PULLBYTE() ---//
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-            //---//
-          }
-          //--- DROPBITS(last.bits) ---//
-          hold >>>= last_bits;
-          bits -= last_bits;
-          //---//
-          state.back += last_bits;
-        }
-        //--- DROPBITS(here.bits) ---//
-        hold >>>= here_bits;
-        bits -= here_bits;
-        //---//
-        state.back += here_bits;
-        state.length = here_val;
-        if (here_op === 0) {
-          //Tracevv((stderr, here.val >= 0x20 && here.val < 0x7f ?
-          //        "inflate:         literal '%c'\n" :
-          //        "inflate:         literal 0x%02x\n", here.val));
-          state.mode = LIT;
-          break;
-        }
-        if (here_op & 32) {
-          //Tracevv((stderr, "inflate:         end of block\n"));
-          state.back = -1;
-          state.mode = TYPE;
-          break;
-        }
-        if (here_op & 64) {
-          strm.msg = 'invalid literal/length code';
-          state.mode = BAD;
-          break;
-        }
-        state.extra = here_op & 15;
-        state.mode = LENEXT;
-        /* falls through */
-      case LENEXT:
-        if (state.extra) {
-          //=== NEEDBITS(state.extra);
-          n = state.extra;
-          while (bits < n) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          state.length += hold & ((1 << state.extra) - 1)/*BITS(state.extra)*/;
-          //--- DROPBITS(state.extra) ---//
-          hold >>>= state.extra;
-          bits -= state.extra;
-          //---//
-          state.back += state.extra;
-        }
-        //Tracevv((stderr, "inflate:         length %u\n", state.length));
-        state.was = state.length;
-        state.mode = DIST;
-        /* falls through */
-      case DIST:
-        for (;;) {
-          here = state.distcode[hold & ((1 << state.distbits) - 1)];/*BITS(state.distbits)*/
+          here = state.lencode[hold & ((1 << state.lenbits) - 1)];/*BITS(state.lenbits)*/
           here_bits = here >>> 24;
           here_op = (here >>> 16) & 0xff;
           here_val = here & 0xffff;
@@ -35216,85 +32786,354 @@ function inflate(strm, flush) {
           bits += 8;
           //---//
         }
-        if ((here_op & 0xf0) === 0) {
-          last_bits = here_bits;
-          last_op = here_op;
-          last_val = here_val;
-          for (;;) {
-            here = state.distcode[last_val +
-                    ((hold & ((1 << (last_bits + last_op)) - 1))/*BITS(last.bits + last.op)*/ >> last_bits)];
-            here_bits = here >>> 24;
-            here_op = (here >>> 16) & 0xff;
-            here_val = here & 0xffff;
-
-            if ((last_bits + here_bits) <= bits) { break; }
-            //--- PULLBYTE() ---//
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
+        if (here_val < 16) {
+          //--- DROPBITS(here.bits) ---//
+          hold >>>= here_bits;
+          bits -= here_bits;
+          //---//
+          state.lens[state.have++] = here_val;
+        }
+        else {
+          if (here_val === 16) {
+            //=== NEEDBITS(here.bits + 2);
+            n = here_bits + 2;
+            while (bits < n) {
+              if (have === 0) { break inf_leave; }
+              have--;
+              hold += input[next++] << bits;
+              bits += 8;
+            }
+            //===//
+            //--- DROPBITS(here.bits) ---//
+            hold >>>= here_bits;
+            bits -= here_bits;
             //---//
-          }
-          //--- DROPBITS(last.bits) ---//
-          hold >>>= last_bits;
-          bits -= last_bits;
-          //---//
-          state.back += last_bits;
-        }
-        //--- DROPBITS(here.bits) ---//
-        hold >>>= here_bits;
-        bits -= here_bits;
-        //---//
-        state.back += here_bits;
-        if (here_op & 64) {
-          strm.msg = 'invalid distance code';
-          state.mode = BAD;
-          break;
-        }
-        state.offset = here_val;
-        state.extra = (here_op) & 15;
-        state.mode = DISTEXT;
-        /* falls through */
-      case DISTEXT:
-        if (state.extra) {
-          //=== NEEDBITS(state.extra);
-          n = state.extra;
-          while (bits < n) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          state.offset += hold & ((1 << state.extra) - 1)/*BITS(state.extra)*/;
-          //--- DROPBITS(state.extra) ---//
-          hold >>>= state.extra;
-          bits -= state.extra;
-          //---//
-          state.back += state.extra;
-        }
-//#ifdef INFLATE_STRICT
-        if (state.offset > state.dmax) {
-          strm.msg = 'invalid distance too far back';
-          state.mode = BAD;
-          break;
-        }
-//#endif
-        //Tracevv((stderr, "inflate:         distance %u\n", state.offset));
-        state.mode = MATCH;
-        /* falls through */
-      case MATCH:
-        if (left === 0) { break inf_leave; }
-        copy = _out - left;
-        if (state.offset > copy) {         /* copy from window */
-          copy = state.offset - copy;
-          if (copy > state.whave) {
-            if (state.sane) {
-              strm.msg = 'invalid distance too far back';
+            if (state.have === 0) {
+              strm.msg = 'invalid bit length repeat';
               state.mode = BAD;
               break;
             }
-// (!) This block is disabled in zlib defaults,
+            len = state.lens[state.have - 1];
+            copy = 3 + (hold & 0x03);//BITS(2);
+            //--- DROPBITS(2) ---//
+            hold >>>= 2;
+            bits -= 2;
+            //---//
+          }
+          else if (here_val === 17) {
+            //=== NEEDBITS(here.bits + 3);
+            n = here_bits + 3;
+            while (bits < n) {
+              if (have === 0) { break inf_leave; }
+              have--;
+              hold += input[next++] << bits;
+              bits += 8;
+            }
+            //===//
+            //--- DROPBITS(here.bits) ---//
+            hold >>>= here_bits;
+            bits -= here_bits;
+            //---//
+            len = 0;
+            copy = 3 + (hold & 0x07);//BITS(3);
+            //--- DROPBITS(3) ---//
+            hold >>>= 3;
+            bits -= 3;
+            //---//
+          }
+          else {
+            //=== NEEDBITS(here.bits + 7);
+            n = here_bits + 7;
+            while (bits < n) {
+              if (have === 0) { break inf_leave; }
+              have--;
+              hold += input[next++] << bits;
+              bits += 8;
+            }
+            //===//
+            //--- DROPBITS(here.bits) ---//
+            hold >>>= here_bits;
+            bits -= here_bits;
+            //---//
+            len = 0;
+            copy = 11 + (hold & 0x7f);//BITS(7);
+            //--- DROPBITS(7) ---//
+            hold >>>= 7;
+            bits -= 7;
+            //---//
+          }
+          if (state.have + copy > state.nlen + state.ndist) {
+            strm.msg = 'invalid bit length repeat';
+            state.mode = BAD;
+            break;
+          }
+          while (copy--) {
+            state.lens[state.have++] = len;
+          }
+        }
+      }
+
+      /* handle error breaks in while */
+      if (state.mode === BAD) { break; }
+
+      /* check for end-of-block code (better have one) */
+      if (state.lens[256] === 0) {
+        strm.msg = 'invalid code -- missing end-of-block';
+        state.mode = BAD;
+        break;
+      }
+
+      /* build code tables -- note: do not change the lenbits or distbits
+         values here (9 and 6) without reading the comments in inftrees.h
+         concerning the ENOUGH constants, which depend on those values */
+      state.lenbits = 9;
+
+      opts = { bits: state.lenbits };
+      ret = inflate_table(LENS, state.lens, 0, state.nlen, state.lencode, 0, state.work, opts);
+      // We have separate tables & no pointers. 2 commented lines below not needed.
+      // state.next_index = opts.table_index;
+      state.lenbits = opts.bits;
+      // state.lencode = state.next;
+
+      if (ret) {
+        strm.msg = 'invalid literal/lengths set';
+        state.mode = BAD;
+        break;
+      }
+
+      state.distbits = 6;
+      //state.distcode.copy(state.codes);
+      // Switch to use dynamic table
+      state.distcode = state.distdyn;
+      opts = { bits: state.distbits };
+      ret = inflate_table(DISTS, state.lens, state.nlen, state.ndist, state.distcode, 0, state.work, opts);
+      // We have separate tables & no pointers. 2 commented lines below not needed.
+      // state.next_index = opts.table_index;
+      state.distbits = opts.bits;
+      // state.distcode = state.next;
+
+      if (ret) {
+        strm.msg = 'invalid distances set';
+        state.mode = BAD;
+        break;
+      }
+      //Tracev((stderr, 'inflate:       codes ok\n'));
+      state.mode = LEN_;
+      if (flush === Z_TREES) { break inf_leave; }
+      /* falls through */
+    case LEN_:
+      state.mode = LEN;
+      /* falls through */
+    case LEN:
+      if (have >= 6 && left >= 258) {
+        //--- RESTORE() ---
+        strm.next_out = put;
+        strm.avail_out = left;
+        strm.next_in = next;
+        strm.avail_in = have;
+        state.hold = hold;
+        state.bits = bits;
+        //---
+        inflate_fast(strm, _out);
+        //--- LOAD() ---
+        put = strm.next_out;
+        output = strm.output;
+        left = strm.avail_out;
+        next = strm.next_in;
+        input = strm.input;
+        have = strm.avail_in;
+        hold = state.hold;
+        bits = state.bits;
+        //---
+
+        if (state.mode === TYPE) {
+          state.back = -1;
+        }
+        break;
+      }
+      state.back = 0;
+      for (;;) {
+        here = state.lencode[hold & ((1 << state.lenbits) - 1)];  /*BITS(state.lenbits)*/
+        here_bits = here >>> 24;
+        here_op = (here >>> 16) & 0xff;
+        here_val = here & 0xffff;
+
+        if (here_bits <= bits) { break; }
+        //--- PULLBYTE() ---//
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+        //---//
+      }
+      if (here_op && (here_op & 0xf0) === 0) {
+        last_bits = here_bits;
+        last_op = here_op;
+        last_val = here_val;
+        for (;;) {
+          here = state.lencode[last_val +
+                  ((hold & ((1 << (last_bits + last_op)) - 1))/*BITS(last.bits + last.op)*/ >> last_bits)];
+          here_bits = here >>> 24;
+          here_op = (here >>> 16) & 0xff;
+          here_val = here & 0xffff;
+
+          if ((last_bits + here_bits) <= bits) { break; }
+          //--- PULLBYTE() ---//
+          if (have === 0) { break inf_leave; }
+          have--;
+          hold += input[next++] << bits;
+          bits += 8;
+          //---//
+        }
+        //--- DROPBITS(last.bits) ---//
+        hold >>>= last_bits;
+        bits -= last_bits;
+        //---//
+        state.back += last_bits;
+      }
+      //--- DROPBITS(here.bits) ---//
+      hold >>>= here_bits;
+      bits -= here_bits;
+      //---//
+      state.back += here_bits;
+      state.length = here_val;
+      if (here_op === 0) {
+        //Tracevv((stderr, here.val >= 0x20 && here.val < 0x7f ?
+        //        "inflate:         literal '%c'\n" :
+        //        "inflate:         literal 0x%02x\n", here.val));
+        state.mode = LIT;
+        break;
+      }
+      if (here_op & 32) {
+        //Tracevv((stderr, "inflate:         end of block\n"));
+        state.back = -1;
+        state.mode = TYPE;
+        break;
+      }
+      if (here_op & 64) {
+        strm.msg = 'invalid literal/length code';
+        state.mode = BAD;
+        break;
+      }
+      state.extra = here_op & 15;
+      state.mode = LENEXT;
+      /* falls through */
+    case LENEXT:
+      if (state.extra) {
+        //=== NEEDBITS(state.extra);
+        n = state.extra;
+        while (bits < n) {
+          if (have === 0) { break inf_leave; }
+          have--;
+          hold += input[next++] << bits;
+          bits += 8;
+        }
+        //===//
+        state.length += hold & ((1 << state.extra) - 1)/*BITS(state.extra)*/;
+        //--- DROPBITS(state.extra) ---//
+        hold >>>= state.extra;
+        bits -= state.extra;
+        //---//
+        state.back += state.extra;
+      }
+      //Tracevv((stderr, "inflate:         length %u\n", state.length));
+      state.was = state.length;
+      state.mode = DIST;
+      /* falls through */
+    case DIST:
+      for (;;) {
+        here = state.distcode[hold & ((1 << state.distbits) - 1)];/*BITS(state.distbits)*/
+        here_bits = here >>> 24;
+        here_op = (here >>> 16) & 0xff;
+        here_val = here & 0xffff;
+
+        if ((here_bits) <= bits) { break; }
+        //--- PULLBYTE() ---//
+        if (have === 0) { break inf_leave; }
+        have--;
+        hold += input[next++] << bits;
+        bits += 8;
+        //---//
+      }
+      if ((here_op & 0xf0) === 0) {
+        last_bits = here_bits;
+        last_op = here_op;
+        last_val = here_val;
+        for (;;) {
+          here = state.distcode[last_val +
+                  ((hold & ((1 << (last_bits + last_op)) - 1))/*BITS(last.bits + last.op)*/ >> last_bits)];
+          here_bits = here >>> 24;
+          here_op = (here >>> 16) & 0xff;
+          here_val = here & 0xffff;
+
+          if ((last_bits + here_bits) <= bits) { break; }
+          //--- PULLBYTE() ---//
+          if (have === 0) { break inf_leave; }
+          have--;
+          hold += input[next++] << bits;
+          bits += 8;
+          //---//
+        }
+        //--- DROPBITS(last.bits) ---//
+        hold >>>= last_bits;
+        bits -= last_bits;
+        //---//
+        state.back += last_bits;
+      }
+      //--- DROPBITS(here.bits) ---//
+      hold >>>= here_bits;
+      bits -= here_bits;
+      //---//
+      state.back += here_bits;
+      if (here_op & 64) {
+        strm.msg = 'invalid distance code';
+        state.mode = BAD;
+        break;
+      }
+      state.offset = here_val;
+      state.extra = (here_op) & 15;
+      state.mode = DISTEXT;
+      /* falls through */
+    case DISTEXT:
+      if (state.extra) {
+        //=== NEEDBITS(state.extra);
+        n = state.extra;
+        while (bits < n) {
+          if (have === 0) { break inf_leave; }
+          have--;
+          hold += input[next++] << bits;
+          bits += 8;
+        }
+        //===//
+        state.offset += hold & ((1 << state.extra) - 1)/*BITS(state.extra)*/;
+        //--- DROPBITS(state.extra) ---//
+        hold >>>= state.extra;
+        bits -= state.extra;
+        //---//
+        state.back += state.extra;
+      }
+//#ifdef INFLATE_STRICT
+      if (state.offset > state.dmax) {
+        strm.msg = 'invalid distance too far back';
+        state.mode = BAD;
+        break;
+      }
+//#endif
+      //Tracevv((stderr, "inflate:         distance %u\n", state.offset));
+      state.mode = MATCH;
+      /* falls through */
+    case MATCH:
+      if (left === 0) { break inf_leave; }
+      copy = _out - left;
+      if (state.offset > copy) {         /* copy from window */
+        copy = state.offset - copy;
+        if (copy > state.whave) {
+          if (state.sane) {
+            strm.msg = 'invalid distance too far back';
+            state.mode = BAD;
+            break;
+          }
+// (!) This block is disabled in zlib defailts,
 // don't enable it for binary compatibility
 //#ifdef INFLATE_ALLOW_INVALID_DISTANCE_TOOFAR_ARRR
 //          Trace((stderr, "inflate.c too far\n"));
@@ -35309,106 +33148,106 @@ function inflate(strm, flush) {
 //          if (state.length === 0) { state.mode = LEN; }
 //          break;
 //#endif
-          }
-          if (copy > state.wnext) {
-            copy -= state.wnext;
-            from = state.wsize - copy;
-          }
-          else {
-            from = state.wnext - copy;
-          }
-          if (copy > state.length) { copy = state.length; }
-          from_source = state.window;
         }
-        else {                              /* copy from output */
-          from_source = output;
-          from = put - state.offset;
-          copy = state.length;
+        if (copy > state.wnext) {
+          copy -= state.wnext;
+          from = state.wsize - copy;
         }
-        if (copy > left) { copy = left; }
-        left -= copy;
-        state.length -= copy;
-        do {
-          output[put++] = from_source[from++];
-        } while (--copy);
-        if (state.length === 0) { state.mode = LEN; }
-        break;
-      case LIT:
-        if (left === 0) { break inf_leave; }
-        output[put++] = state.length;
-        left--;
-        state.mode = LEN;
-        break;
-      case CHECK:
-        if (state.wrap) {
-          //=== NEEDBITS(32);
-          while (bits < 32) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            // Use '|' instead of '+' to make sure that result is signed
-            hold |= input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          _out -= left;
-          strm.total_out += _out;
-          state.total += _out;
-          if (_out) {
-            strm.adler = state.check =
-                /*UPDATE(state.check, put - _out, _out);*/
-                (state.flags ? crc32(state.check, output, _out, put - _out) : adler32(state.check, output, _out, put - _out));
+        else {
+          from = state.wnext - copy;
+        }
+        if (copy > state.length) { copy = state.length; }
+        from_source = state.window;
+      }
+      else {                              /* copy from output */
+        from_source = output;
+        from = put - state.offset;
+        copy = state.length;
+      }
+      if (copy > left) { copy = left; }
+      left -= copy;
+      state.length -= copy;
+      do {
+        output[put++] = from_source[from++];
+      } while (--copy);
+      if (state.length === 0) { state.mode = LEN; }
+      break;
+    case LIT:
+      if (left === 0) { break inf_leave; }
+      output[put++] = state.length;
+      left--;
+      state.mode = LEN;
+      break;
+    case CHECK:
+      if (state.wrap) {
+        //=== NEEDBITS(32);
+        while (bits < 32) {
+          if (have === 0) { break inf_leave; }
+          have--;
+          // Use '|' insdead of '+' to make sure that result is signed
+          hold |= input[next++] << bits;
+          bits += 8;
+        }
+        //===//
+        _out -= left;
+        strm.total_out += _out;
+        state.total += _out;
+        if (_out) {
+          strm.adler = state.check =
+              /*UPDATE(state.check, put - _out, _out);*/
+              (state.flags ? crc32(state.check, output, _out, put - _out) : adler32(state.check, output, _out, put - _out));
 
-          }
-          _out = left;
-          // NB: crc32 stored as signed 32-bit int, zswap32 returns signed too
-          if ((state.flags ? hold : zswap32(hold)) !== state.check) {
-            strm.msg = 'incorrect data check';
-            state.mode = BAD;
-            break;
-          }
-          //=== INITBITS();
-          hold = 0;
-          bits = 0;
-          //===//
-          //Tracev((stderr, "inflate:   check matches trailer\n"));
         }
-        state.mode = LENGTH;
-        /* falls through */
-      case LENGTH:
-        if (state.wrap && state.flags) {
-          //=== NEEDBITS(32);
-          while (bits < 32) {
-            if (have === 0) { break inf_leave; }
-            have--;
-            hold += input[next++] << bits;
-            bits += 8;
-          }
-          //===//
-          if (hold !== (state.total & 0xffffffff)) {
-            strm.msg = 'incorrect length check';
-            state.mode = BAD;
-            break;
-          }
-          //=== INITBITS();
-          hold = 0;
-          bits = 0;
-          //===//
-          //Tracev((stderr, "inflate:   length matches trailer\n"));
+        _out = left;
+        // NB: crc32 stored as signed 32-bit int, zswap32 returns signed too
+        if ((state.flags ? hold : zswap32(hold)) !== state.check) {
+          strm.msg = 'incorrect data check';
+          state.mode = BAD;
+          break;
         }
-        state.mode = DONE;
-        /* falls through */
-      case DONE:
-        ret = Z_STREAM_END;
-        break inf_leave;
-      case BAD:
-        ret = Z_DATA_ERROR;
-        break inf_leave;
-      case MEM:
-        return Z_MEM_ERROR;
-      case SYNC:
-        /* falls through */
-      default:
-        return Z_STREAM_ERROR;
+        //=== INITBITS();
+        hold = 0;
+        bits = 0;
+        //===//
+        //Tracev((stderr, "inflate:   check matches trailer\n"));
+      }
+      state.mode = LENGTH;
+      /* falls through */
+    case LENGTH:
+      if (state.wrap && state.flags) {
+        //=== NEEDBITS(32);
+        while (bits < 32) {
+          if (have === 0) { break inf_leave; }
+          have--;
+          hold += input[next++] << bits;
+          bits += 8;
+        }
+        //===//
+        if (hold !== (state.total & 0xffffffff)) {
+          strm.msg = 'incorrect length check';
+          state.mode = BAD;
+          break;
+        }
+        //=== INITBITS();
+        hold = 0;
+        bits = 0;
+        //===//
+        //Tracev((stderr, "inflate:   length matches trailer\n"));
+      }
+      state.mode = DONE;
+      /* falls through */
+    case DONE:
+      ret = Z_STREAM_END;
+      break inf_leave;
+    case BAD:
+      ret = Z_DATA_ERROR;
+      break inf_leave;
+    case MEM:
+      return Z_MEM_ERROR;
+    case SYNC:
+      /* falls through */
+    default:
+      return Z_STREAM_ERROR;
     }
   }
 
@@ -35540,27 +33379,9 @@ exports.inflateSyncPoint = inflateSyncPoint;
 exports.inflateUndermine = inflateUndermine;
 */
 
-},{"../utils/common":161,"./adler32":162,"./crc32":164,"./inffast":166,"./inftrees":168}],168:[function(require,module,exports){
+},{"../utils/common":158,"./adler32":159,"./crc32":161,"./inffast":163,"./inftrees":165}],165:[function(require,module,exports){
 'use strict';
 
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 var utils = require('../utils/common');
 
@@ -35788,8 +33609,10 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
     return 1;
   }
 
+  var i = 0;
   /* process all codes and make table entries */
   for (;;) {
+    i++;
     /* create table entry */
     here_bits = len - drop;
     if (work[sym] < end) {
@@ -35885,27 +33708,8 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
   return 0;
 };
 
-},{"../utils/common":161}],169:[function(require,module,exports){
+},{"../utils/common":158}],166:[function(require,module,exports){
 'use strict';
-
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 module.exports = {
   2:      'need dictionary',     /* Z_NEED_DICT       2  */
@@ -35919,27 +33723,9 @@ module.exports = {
   '-6':   'incompatible version' /* Z_VERSION_ERROR (-6) */
 };
 
-},{}],170:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 'use strict';
 
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 var utils = require('../utils/common');
 
@@ -36050,7 +33836,7 @@ var bl_order =
 
 var DIST_CODE_LEN = 512; /* see definition of array dist_code below */
 
-// !!!! Use flat array instead of structure, Freq = i*2, Len = i*2+1
+// !!!! Use flat array insdead of structure, Freq = i*2, Len = i*2+1
 var static_ltree  = new Array((L_CODES + 2) * 2);
 zero(static_ltree);
 /* The static literal tree. Since the bit lengths are imposed, there is no
@@ -37105,7 +34891,7 @@ function _tr_tally(s, dist, lc)
     s.dyn_dtree[d_code(dist) * 2]/*.Freq*/++;
   }
 
-// (!) This block is disabled in zlib defaults,
+// (!) This block is disabled in zlib defailts,
 // don't enable it for binary compatibility
 
 //#ifdef TRUNCATE_BLOCK
@@ -37141,27 +34927,9 @@ exports._tr_flush_block  = _tr_flush_block;
 exports._tr_tally = _tr_tally;
 exports._tr_align = _tr_align;
 
-},{"../utils/common":161}],171:[function(require,module,exports){
+},{"../utils/common":158}],168:[function(require,module,exports){
 'use strict';
 
-// (C) 1995-2013 Jean-loup Gailly and Mark Adler
-// (C) 2014-2017 Vitaly Puzrin and Andrey Tupitsin
-//
-// This software is provided 'as-is', without any express or implied
-// warranty. In no event will the authors be held liable for any damages
-// arising from the use of this software.
-//
-// Permission is granted to anyone to use this software for any purpose,
-// including commercial applications, and to alter it and redistribute it
-// freely, subject to the following restrictions:
-//
-// 1. The origin of this software must not be misrepresented; you must not
-//   claim that you wrote the original software. If you use this software
-//   in a product, an acknowledgment in the product documentation would be
-//   appreciated but is not required.
-// 2. Altered source versions must be plainly marked as such, and must not be
-//   misrepresented as being the original software.
-// 3. This notice may not be removed or altered from any source distribution.
 
 function ZStream() {
   /* next input byte */
@@ -37190,7 +34958,1756 @@ function ZStream() {
 
 module.exports = ZStream;
 
-},{}],172:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+/* eslint-disable no-proto */
+
+'use strict'
+
+var base64 = require('base64-js')
+var ieee754 = require('ieee754')
+
+exports.Buffer = Buffer
+exports.SlowBuffer = SlowBuffer
+exports.INSPECT_MAX_BYTES = 50
+
+var K_MAX_LENGTH = 0x7fffffff
+exports.kMaxLength = K_MAX_LENGTH
+
+/**
+ * If `Buffer.TYPED_ARRAY_SUPPORT`:
+ *   === true    Use Uint8Array implementation (fastest)
+ *   === false   Print warning and recommend using `buffer` v4.x which has an Object
+ *               implementation (most compatible, even IE6)
+ *
+ * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
+ * Opera 11.6+, iOS 4.2+.
+ *
+ * We report that the browser does not support typed arrays if the are not subclassable
+ * using __proto__. Firefox 4-29 lacks support for adding new properties to `Uint8Array`
+ * (See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438). IE 10 lacks support
+ * for __proto__ and has a buggy typed array implementation.
+ */
+Buffer.TYPED_ARRAY_SUPPORT = typedArraySupport()
+
+if (!Buffer.TYPED_ARRAY_SUPPORT && typeof console !== 'undefined' &&
+    typeof console.error === 'function') {
+  console.error(
+    'This browser lacks typed array (Uint8Array) support which is required by ' +
+    '`buffer` v5.x. Use `buffer` v4.x if you require old browser support.'
+  )
+}
+
+function typedArraySupport () {
+  // Can typed array instances can be augmented?
+  try {
+    var arr = new Uint8Array(1)
+    arr.__proto__ = {__proto__: Uint8Array.prototype, foo: function () { return 42 }}
+    return arr.foo() === 42
+  } catch (e) {
+    return false
+  }
+}
+
+function createBuffer (length) {
+  if (length > K_MAX_LENGTH) {
+    throw new RangeError('Invalid typed array length')
+  }
+  // Return an augmented `Uint8Array` instance
+  var buf = new Uint8Array(length)
+  buf.__proto__ = Buffer.prototype
+  return buf
+}
+
+/**
+ * The Buffer constructor returns instances of `Uint8Array` that have their
+ * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
+ * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
+ * and the `Uint8Array` methods. Square bracket notation works as expected -- it
+ * returns a single octet.
+ *
+ * The `Uint8Array` prototype remains unmodified.
+ */
+
+function Buffer (arg, encodingOrOffset, length) {
+  // Common case.
+  if (typeof arg === 'number') {
+    if (typeof encodingOrOffset === 'string') {
+      throw new Error(
+        'If encoding is specified then the first argument must be a string'
+      )
+    }
+    return allocUnsafe(arg)
+  }
+  return from(arg, encodingOrOffset, length)
+}
+
+// Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
+if (typeof Symbol !== 'undefined' && Symbol.species &&
+    Buffer[Symbol.species] === Buffer) {
+  Object.defineProperty(Buffer, Symbol.species, {
+    value: null,
+    configurable: true,
+    enumerable: false,
+    writable: false
+  })
+}
+
+Buffer.poolSize = 8192 // not used by this implementation
+
+function from (value, encodingOrOffset, length) {
+  if (typeof value === 'number') {
+    throw new TypeError('"value" argument must not be a number')
+  }
+
+  if (isArrayBuffer(value)) {
+    return fromArrayBuffer(value, encodingOrOffset, length)
+  }
+
+  if (typeof value === 'string') {
+    return fromString(value, encodingOrOffset)
+  }
+
+  return fromObject(value)
+}
+
+/**
+ * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
+ * if value is a number.
+ * Buffer.from(str[, encoding])
+ * Buffer.from(array)
+ * Buffer.from(buffer)
+ * Buffer.from(arrayBuffer[, byteOffset[, length]])
+ **/
+Buffer.from = function (value, encodingOrOffset, length) {
+  return from(value, encodingOrOffset, length)
+}
+
+// Note: Change prototype *after* Buffer.from is defined to workaround Chrome bug:
+// https://github.com/feross/buffer/pull/148
+Buffer.prototype.__proto__ = Uint8Array.prototype
+Buffer.__proto__ = Uint8Array
+
+function assertSize (size) {
+  if (typeof size !== 'number') {
+    throw new TypeError('"size" argument must be a number')
+  } else if (size < 0) {
+    throw new RangeError('"size" argument must not be negative')
+  }
+}
+
+function alloc (size, fill, encoding) {
+  assertSize(size)
+  if (size <= 0) {
+    return createBuffer(size)
+  }
+  if (fill !== undefined) {
+    // Only pay attention to encoding if it's a string. This
+    // prevents accidentally sending in a number that would
+    // be interpretted as a start offset.
+    return typeof encoding === 'string'
+      ? createBuffer(size).fill(fill, encoding)
+      : createBuffer(size).fill(fill)
+  }
+  return createBuffer(size)
+}
+
+/**
+ * Creates a new filled Buffer instance.
+ * alloc(size[, fill[, encoding]])
+ **/
+Buffer.alloc = function (size, fill, encoding) {
+  return alloc(size, fill, encoding)
+}
+
+function allocUnsafe (size) {
+  assertSize(size)
+  return createBuffer(size < 0 ? 0 : checked(size) | 0)
+}
+
+/**
+ * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
+ * */
+Buffer.allocUnsafe = function (size) {
+  return allocUnsafe(size)
+}
+/**
+ * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
+ */
+Buffer.allocUnsafeSlow = function (size) {
+  return allocUnsafe(size)
+}
+
+function fromString (string, encoding) {
+  if (typeof encoding !== 'string' || encoding === '') {
+    encoding = 'utf8'
+  }
+
+  if (!Buffer.isEncoding(encoding)) {
+    throw new TypeError('"encoding" must be a valid string encoding')
+  }
+
+  var length = byteLength(string, encoding) | 0
+  var buf = createBuffer(length)
+
+  var actual = buf.write(string, encoding)
+
+  if (actual !== length) {
+    // Writing a hex string, for example, that contains invalid characters will
+    // cause everything after the first invalid character to be ignored. (e.g.
+    // 'abxxcd' will be treated as 'ab')
+    buf = buf.slice(0, actual)
+  }
+
+  return buf
+}
+
+function fromArrayLike (array) {
+  var length = array.length < 0 ? 0 : checked(array.length) | 0
+  var buf = createBuffer(length)
+  for (var i = 0; i < length; i += 1) {
+    buf[i] = array[i] & 255
+  }
+  return buf
+}
+
+function fromArrayBuffer (array, byteOffset, length) {
+  if (byteOffset < 0 || array.byteLength < byteOffset) {
+    throw new RangeError('\'offset\' is out of bounds')
+  }
+
+  if (array.byteLength < byteOffset + (length || 0)) {
+    throw new RangeError('\'length\' is out of bounds')
+  }
+
+  var buf
+  if (byteOffset === undefined && length === undefined) {
+    buf = new Uint8Array(array)
+  } else if (length === undefined) {
+    buf = new Uint8Array(array, byteOffset)
+  } else {
+    buf = new Uint8Array(array, byteOffset, length)
+  }
+
+  // Return an augmented `Uint8Array` instance
+  buf.__proto__ = Buffer.prototype
+  return buf
+}
+
+function fromObject (obj) {
+  if (Buffer.isBuffer(obj)) {
+    var len = checked(obj.length) | 0
+    var buf = createBuffer(len)
+
+    if (buf.length === 0) {
+      return buf
+    }
+
+    obj.copy(buf, 0, 0, len)
+    return buf
+  }
+
+  if (obj) {
+    if (isArrayBufferView(obj) || 'length' in obj) {
+      if (typeof obj.length !== 'number' || numberIsNaN(obj.length)) {
+        return createBuffer(0)
+      }
+      return fromArrayLike(obj)
+    }
+
+    if (obj.type === 'Buffer' && Array.isArray(obj.data)) {
+      return fromArrayLike(obj.data)
+    }
+  }
+
+  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
+}
+
+function checked (length) {
+  // Note: cannot use `length < K_MAX_LENGTH` here because that fails when
+  // length is NaN (which is otherwise coerced to zero.)
+  if (length >= K_MAX_LENGTH) {
+    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
+                         'size: 0x' + K_MAX_LENGTH.toString(16) + ' bytes')
+  }
+  return length | 0
+}
+
+function SlowBuffer (length) {
+  if (+length != length) { // eslint-disable-line eqeqeq
+    length = 0
+  }
+  return Buffer.alloc(+length)
+}
+
+Buffer.isBuffer = function isBuffer (b) {
+  return b != null && b._isBuffer === true
+}
+
+Buffer.compare = function compare (a, b) {
+  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
+    throw new TypeError('Arguments must be Buffers')
+  }
+
+  if (a === b) return 0
+
+  var x = a.length
+  var y = b.length
+
+  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
+    if (a[i] !== b[i]) {
+      x = a[i]
+      y = b[i]
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+}
+
+Buffer.isEncoding = function isEncoding (encoding) {
+  switch (String(encoding).toLowerCase()) {
+    case 'hex':
+    case 'utf8':
+    case 'utf-8':
+    case 'ascii':
+    case 'latin1':
+    case 'binary':
+    case 'base64':
+    case 'ucs2':
+    case 'ucs-2':
+    case 'utf16le':
+    case 'utf-16le':
+      return true
+    default:
+      return false
+  }
+}
+
+Buffer.concat = function concat (list, length) {
+  if (!Array.isArray(list)) {
+    throw new TypeError('"list" argument must be an Array of Buffers')
+  }
+
+  if (list.length === 0) {
+    return Buffer.alloc(0)
+  }
+
+  var i
+  if (length === undefined) {
+    length = 0
+    for (i = 0; i < list.length; ++i) {
+      length += list[i].length
+    }
+  }
+
+  var buffer = Buffer.allocUnsafe(length)
+  var pos = 0
+  for (i = 0; i < list.length; ++i) {
+    var buf = list[i]
+    if (!Buffer.isBuffer(buf)) {
+      throw new TypeError('"list" argument must be an Array of Buffers')
+    }
+    buf.copy(buffer, pos)
+    pos += buf.length
+  }
+  return buffer
+}
+
+function byteLength (string, encoding) {
+  if (Buffer.isBuffer(string)) {
+    return string.length
+  }
+  if (isArrayBufferView(string) || isArrayBuffer(string)) {
+    return string.byteLength
+  }
+  if (typeof string !== 'string') {
+    string = '' + string
+  }
+
+  var len = string.length
+  if (len === 0) return 0
+
+  // Use a for loop to avoid recursion
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'ascii':
+      case 'latin1':
+      case 'binary':
+        return len
+      case 'utf8':
+      case 'utf-8':
+      case undefined:
+        return utf8ToBytes(string).length
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return len * 2
+      case 'hex':
+        return len >>> 1
+      case 'base64':
+        return base64ToBytes(string).length
+      default:
+        if (loweredCase) return utf8ToBytes(string).length // assume utf8
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+Buffer.byteLength = byteLength
+
+function slowToString (encoding, start, end) {
+  var loweredCase = false
+
+  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
+  // property of a typed array.
+
+  // This behaves neither like String nor Uint8Array in that we set start/end
+  // to their upper/lower bounds if the value passed is out of range.
+  // undefined is handled specially as per ECMA-262 6th Edition,
+  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
+  if (start === undefined || start < 0) {
+    start = 0
+  }
+  // Return early if start > this.length. Done here to prevent potential uint32
+  // coercion fail below.
+  if (start > this.length) {
+    return ''
+  }
+
+  if (end === undefined || end > this.length) {
+    end = this.length
+  }
+
+  if (end <= 0) {
+    return ''
+  }
+
+  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
+  end >>>= 0
+  start >>>= 0
+
+  if (end <= start) {
+    return ''
+  }
+
+  if (!encoding) encoding = 'utf8'
+
+  while (true) {
+    switch (encoding) {
+      case 'hex':
+        return hexSlice(this, start, end)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Slice(this, start, end)
+
+      case 'ascii':
+        return asciiSlice(this, start, end)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Slice(this, start, end)
+
+      case 'base64':
+        return base64Slice(this, start, end)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return utf16leSlice(this, start, end)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = (encoding + '').toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+
+// This property is used by `Buffer.isBuffer` (and the `is-buffer` npm package)
+// to detect a Buffer instance. It's not possible to use `instanceof Buffer`
+// reliably in a browserify context because there could be multiple different
+// copies of the 'buffer' package in use. This method works even for Buffer
+// instances that were created from another copy of the `buffer` package.
+// See: https://github.com/feross/buffer/issues/154
+Buffer.prototype._isBuffer = true
+
+function swap (b, n, m) {
+  var i = b[n]
+  b[n] = b[m]
+  b[m] = i
+}
+
+Buffer.prototype.swap16 = function swap16 () {
+  var len = this.length
+  if (len % 2 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 16-bits')
+  }
+  for (var i = 0; i < len; i += 2) {
+    swap(this, i, i + 1)
+  }
+  return this
+}
+
+Buffer.prototype.swap32 = function swap32 () {
+  var len = this.length
+  if (len % 4 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 32-bits')
+  }
+  for (var i = 0; i < len; i += 4) {
+    swap(this, i, i + 3)
+    swap(this, i + 1, i + 2)
+  }
+  return this
+}
+
+Buffer.prototype.swap64 = function swap64 () {
+  var len = this.length
+  if (len % 8 !== 0) {
+    throw new RangeError('Buffer size must be a multiple of 64-bits')
+  }
+  for (var i = 0; i < len; i += 8) {
+    swap(this, i, i + 7)
+    swap(this, i + 1, i + 6)
+    swap(this, i + 2, i + 5)
+    swap(this, i + 3, i + 4)
+  }
+  return this
+}
+
+Buffer.prototype.toString = function toString () {
+  var length = this.length
+  if (length === 0) return ''
+  if (arguments.length === 0) return utf8Slice(this, 0, length)
+  return slowToString.apply(this, arguments)
+}
+
+Buffer.prototype.equals = function equals (b) {
+  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
+  if (this === b) return true
+  return Buffer.compare(this, b) === 0
+}
+
+Buffer.prototype.inspect = function inspect () {
+  var str = ''
+  var max = exports.INSPECT_MAX_BYTES
+  if (this.length > 0) {
+    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
+    if (this.length > max) str += ' ... '
+  }
+  return '<Buffer ' + str + '>'
+}
+
+Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
+  if (!Buffer.isBuffer(target)) {
+    throw new TypeError('Argument must be a Buffer')
+  }
+
+  if (start === undefined) {
+    start = 0
+  }
+  if (end === undefined) {
+    end = target ? target.length : 0
+  }
+  if (thisStart === undefined) {
+    thisStart = 0
+  }
+  if (thisEnd === undefined) {
+    thisEnd = this.length
+  }
+
+  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
+    throw new RangeError('out of range index')
+  }
+
+  if (thisStart >= thisEnd && start >= end) {
+    return 0
+  }
+  if (thisStart >= thisEnd) {
+    return -1
+  }
+  if (start >= end) {
+    return 1
+  }
+
+  start >>>= 0
+  end >>>= 0
+  thisStart >>>= 0
+  thisEnd >>>= 0
+
+  if (this === target) return 0
+
+  var x = thisEnd - thisStart
+  var y = end - start
+  var len = Math.min(x, y)
+
+  var thisCopy = this.slice(thisStart, thisEnd)
+  var targetCopy = target.slice(start, end)
+
+  for (var i = 0; i < len; ++i) {
+    if (thisCopy[i] !== targetCopy[i]) {
+      x = thisCopy[i]
+      y = targetCopy[i]
+      break
+    }
+  }
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
+}
+
+// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
+// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
+//
+// Arguments:
+// - buffer - a Buffer to search
+// - val - a string, Buffer, or number
+// - byteOffset - an index into `buffer`; will be clamped to an int32
+// - encoding - an optional encoding, relevant is val is a string
+// - dir - true for indexOf, false for lastIndexOf
+function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
+  // Empty buffer means no match
+  if (buffer.length === 0) return -1
+
+  // Normalize byteOffset
+  if (typeof byteOffset === 'string') {
+    encoding = byteOffset
+    byteOffset = 0
+  } else if (byteOffset > 0x7fffffff) {
+    byteOffset = 0x7fffffff
+  } else if (byteOffset < -0x80000000) {
+    byteOffset = -0x80000000
+  }
+  byteOffset = +byteOffset  // Coerce to Number.
+  if (numberIsNaN(byteOffset)) {
+    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
+    byteOffset = dir ? 0 : (buffer.length - 1)
+  }
+
+  // Normalize byteOffset: negative offsets start from the end of the buffer
+  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
+  if (byteOffset >= buffer.length) {
+    if (dir) return -1
+    else byteOffset = buffer.length - 1
+  } else if (byteOffset < 0) {
+    if (dir) byteOffset = 0
+    else return -1
+  }
+
+  // Normalize val
+  if (typeof val === 'string') {
+    val = Buffer.from(val, encoding)
+  }
+
+  // Finally, search either indexOf (if dir is true) or lastIndexOf
+  if (Buffer.isBuffer(val)) {
+    // Special case: looking for empty string/buffer always fails
+    if (val.length === 0) {
+      return -1
+    }
+    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
+  } else if (typeof val === 'number') {
+    val = val & 0xFF // Search for a byte value [0-255]
+    if (typeof Uint8Array.prototype.indexOf === 'function') {
+      if (dir) {
+        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
+      } else {
+        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
+      }
+    }
+    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
+  }
+
+  throw new TypeError('val must be string, number or Buffer')
+}
+
+function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
+  var indexSize = 1
+  var arrLength = arr.length
+  var valLength = val.length
+
+  if (encoding !== undefined) {
+    encoding = String(encoding).toLowerCase()
+    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
+        encoding === 'utf16le' || encoding === 'utf-16le') {
+      if (arr.length < 2 || val.length < 2) {
+        return -1
+      }
+      indexSize = 2
+      arrLength /= 2
+      valLength /= 2
+      byteOffset /= 2
+    }
+  }
+
+  function read (buf, i) {
+    if (indexSize === 1) {
+      return buf[i]
+    } else {
+      return buf.readUInt16BE(i * indexSize)
+    }
+  }
+
+  var i
+  if (dir) {
+    var foundIndex = -1
+    for (i = byteOffset; i < arrLength; i++) {
+      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
+        if (foundIndex === -1) foundIndex = i
+        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
+      } else {
+        if (foundIndex !== -1) i -= i - foundIndex
+        foundIndex = -1
+      }
+    }
+  } else {
+    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
+    for (i = byteOffset; i >= 0; i--) {
+      var found = true
+      for (var j = 0; j < valLength; j++) {
+        if (read(arr, i + j) !== read(val, j)) {
+          found = false
+          break
+        }
+      }
+      if (found) return i
+    }
+  }
+
+  return -1
+}
+
+Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
+  return this.indexOf(val, byteOffset, encoding) !== -1
+}
+
+Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
+}
+
+Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
+  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
+}
+
+function hexWrite (buf, string, offset, length) {
+  offset = Number(offset) || 0
+  var remaining = buf.length - offset
+  if (!length) {
+    length = remaining
+  } else {
+    length = Number(length)
+    if (length > remaining) {
+      length = remaining
+    }
+  }
+
+  // must be an even number of digits
+  var strLen = string.length
+  if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
+
+  if (length > strLen / 2) {
+    length = strLen / 2
+  }
+  for (var i = 0; i < length; ++i) {
+    var parsed = parseInt(string.substr(i * 2, 2), 16)
+    if (numberIsNaN(parsed)) return i
+    buf[offset + i] = parsed
+  }
+  return i
+}
+
+function utf8Write (buf, string, offset, length) {
+  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+function asciiWrite (buf, string, offset, length) {
+  return blitBuffer(asciiToBytes(string), buf, offset, length)
+}
+
+function latin1Write (buf, string, offset, length) {
+  return asciiWrite(buf, string, offset, length)
+}
+
+function base64Write (buf, string, offset, length) {
+  return blitBuffer(base64ToBytes(string), buf, offset, length)
+}
+
+function ucs2Write (buf, string, offset, length) {
+  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
+}
+
+Buffer.prototype.write = function write (string, offset, length, encoding) {
+  // Buffer#write(string)
+  if (offset === undefined) {
+    encoding = 'utf8'
+    length = this.length
+    offset = 0
+  // Buffer#write(string, encoding)
+  } else if (length === undefined && typeof offset === 'string') {
+    encoding = offset
+    length = this.length
+    offset = 0
+  // Buffer#write(string, offset[, length][, encoding])
+  } else if (isFinite(offset)) {
+    offset = offset >>> 0
+    if (isFinite(length)) {
+      length = length >>> 0
+      if (encoding === undefined) encoding = 'utf8'
+    } else {
+      encoding = length
+      length = undefined
+    }
+  } else {
+    throw new Error(
+      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
+    )
+  }
+
+  var remaining = this.length - offset
+  if (length === undefined || length > remaining) length = remaining
+
+  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
+    throw new RangeError('Attempt to write outside buffer bounds')
+  }
+
+  if (!encoding) encoding = 'utf8'
+
+  var loweredCase = false
+  for (;;) {
+    switch (encoding) {
+      case 'hex':
+        return hexWrite(this, string, offset, length)
+
+      case 'utf8':
+      case 'utf-8':
+        return utf8Write(this, string, offset, length)
+
+      case 'ascii':
+        return asciiWrite(this, string, offset, length)
+
+      case 'latin1':
+      case 'binary':
+        return latin1Write(this, string, offset, length)
+
+      case 'base64':
+        // Warning: maxLength not taken into account in base64Write
+        return base64Write(this, string, offset, length)
+
+      case 'ucs2':
+      case 'ucs-2':
+      case 'utf16le':
+      case 'utf-16le':
+        return ucs2Write(this, string, offset, length)
+
+      default:
+        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
+        encoding = ('' + encoding).toLowerCase()
+        loweredCase = true
+    }
+  }
+}
+
+Buffer.prototype.toJSON = function toJSON () {
+  return {
+    type: 'Buffer',
+    data: Array.prototype.slice.call(this._arr || this, 0)
+  }
+}
+
+function base64Slice (buf, start, end) {
+  if (start === 0 && end === buf.length) {
+    return base64.fromByteArray(buf)
+  } else {
+    return base64.fromByteArray(buf.slice(start, end))
+  }
+}
+
+function utf8Slice (buf, start, end) {
+  end = Math.min(buf.length, end)
+  var res = []
+
+  var i = start
+  while (i < end) {
+    var firstByte = buf[i]
+    var codePoint = null
+    var bytesPerSequence = (firstByte > 0xEF) ? 4
+      : (firstByte > 0xDF) ? 3
+      : (firstByte > 0xBF) ? 2
+      : 1
+
+    if (i + bytesPerSequence <= end) {
+      var secondByte, thirdByte, fourthByte, tempCodePoint
+
+      switch (bytesPerSequence) {
+        case 1:
+          if (firstByte < 0x80) {
+            codePoint = firstByte
+          }
+          break
+        case 2:
+          secondByte = buf[i + 1]
+          if ((secondByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0x1F) << 0x6 | (secondByte & 0x3F)
+            if (tempCodePoint > 0x7F) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 3:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0xC | (secondByte & 0x3F) << 0x6 | (thirdByte & 0x3F)
+            if (tempCodePoint > 0x7FF && (tempCodePoint < 0xD800 || tempCodePoint > 0xDFFF)) {
+              codePoint = tempCodePoint
+            }
+          }
+          break
+        case 4:
+          secondByte = buf[i + 1]
+          thirdByte = buf[i + 2]
+          fourthByte = buf[i + 3]
+          if ((secondByte & 0xC0) === 0x80 && (thirdByte & 0xC0) === 0x80 && (fourthByte & 0xC0) === 0x80) {
+            tempCodePoint = (firstByte & 0xF) << 0x12 | (secondByte & 0x3F) << 0xC | (thirdByte & 0x3F) << 0x6 | (fourthByte & 0x3F)
+            if (tempCodePoint > 0xFFFF && tempCodePoint < 0x110000) {
+              codePoint = tempCodePoint
+            }
+          }
+      }
+    }
+
+    if (codePoint === null) {
+      // we did not generate a valid codePoint so insert a
+      // replacement char (U+FFFD) and advance only 1 byte
+      codePoint = 0xFFFD
+      bytesPerSequence = 1
+    } else if (codePoint > 0xFFFF) {
+      // encode to utf16 (surrogate pair dance)
+      codePoint -= 0x10000
+      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
+      codePoint = 0xDC00 | codePoint & 0x3FF
+    }
+
+    res.push(codePoint)
+    i += bytesPerSequence
+  }
+
+  return decodeCodePointsArray(res)
+}
+
+// Based on http://stackoverflow.com/a/22747272/680742, the browser with
+// the lowest limit is Chrome, with 0x10000 args.
+// We go 1 magnitude less, for safety
+var MAX_ARGUMENTS_LENGTH = 0x1000
+
+function decodeCodePointsArray (codePoints) {
+  var len = codePoints.length
+  if (len <= MAX_ARGUMENTS_LENGTH) {
+    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
+  }
+
+  // Decode in chunks to avoid "call stack size exceeded".
+  var res = ''
+  var i = 0
+  while (i < len) {
+    res += String.fromCharCode.apply(
+      String,
+      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
+    )
+  }
+  return res
+}
+
+function asciiSlice (buf, start, end) {
+  var ret = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i] & 0x7F)
+  }
+  return ret
+}
+
+function latin1Slice (buf, start, end) {
+  var ret = ''
+  end = Math.min(buf.length, end)
+
+  for (var i = start; i < end; ++i) {
+    ret += String.fromCharCode(buf[i])
+  }
+  return ret
+}
+
+function hexSlice (buf, start, end) {
+  var len = buf.length
+
+  if (!start || start < 0) start = 0
+  if (!end || end < 0 || end > len) end = len
+
+  var out = ''
+  for (var i = start; i < end; ++i) {
+    out += toHex(buf[i])
+  }
+  return out
+}
+
+function utf16leSlice (buf, start, end) {
+  var bytes = buf.slice(start, end)
+  var res = ''
+  for (var i = 0; i < bytes.length; i += 2) {
+    res += String.fromCharCode(bytes[i] + (bytes[i + 1] * 256))
+  }
+  return res
+}
+
+Buffer.prototype.slice = function slice (start, end) {
+  var len = this.length
+  start = ~~start
+  end = end === undefined ? len : ~~end
+
+  if (start < 0) {
+    start += len
+    if (start < 0) start = 0
+  } else if (start > len) {
+    start = len
+  }
+
+  if (end < 0) {
+    end += len
+    if (end < 0) end = 0
+  } else if (end > len) {
+    end = len
+  }
+
+  if (end < start) end = start
+
+  var newBuf = this.subarray(start, end)
+  // Return an augmented `Uint8Array` instance
+  newBuf.__proto__ = Buffer.prototype
+  return newBuf
+}
+
+/*
+ * Need to make sure that buffer isn't trying to write out of bounds.
+ */
+function checkOffset (offset, ext, length) {
+  if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
+  if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
+}
+
+Buffer.prototype.readUIntLE = function readUIntLE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var val = this[offset]
+  var mul = 1
+  var i = 0
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul
+  }
+
+  return val
+}
+
+Buffer.prototype.readUIntBE = function readUIntBE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) {
+    checkOffset(offset, byteLength, this.length)
+  }
+
+  var val = this[offset + --byteLength]
+  var mul = 1
+  while (byteLength > 0 && (mul *= 0x100)) {
+    val += this[offset + --byteLength] * mul
+  }
+
+  return val
+}
+
+Buffer.prototype.readUInt8 = function readUInt8 (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 1, this.length)
+  return this[offset]
+}
+
+Buffer.prototype.readUInt16LE = function readUInt16LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  return this[offset] | (this[offset + 1] << 8)
+}
+
+Buffer.prototype.readUInt16BE = function readUInt16BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  return (this[offset] << 8) | this[offset + 1]
+}
+
+Buffer.prototype.readUInt32LE = function readUInt32LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return ((this[offset]) |
+      (this[offset + 1] << 8) |
+      (this[offset + 2] << 16)) +
+      (this[offset + 3] * 0x1000000)
+}
+
+Buffer.prototype.readUInt32BE = function readUInt32BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset] * 0x1000000) +
+    ((this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    this[offset + 3])
+}
+
+Buffer.prototype.readIntLE = function readIntLE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var val = this[offset]
+  var mul = 1
+  var i = 0
+  while (++i < byteLength && (mul *= 0x100)) {
+    val += this[offset + i] * mul
+  }
+  mul *= 0x80
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
+
+  return val
+}
+
+Buffer.prototype.readIntBE = function readIntBE (offset, byteLength, noAssert) {
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) checkOffset(offset, byteLength, this.length)
+
+  var i = byteLength
+  var mul = 1
+  var val = this[offset + --i]
+  while (i > 0 && (mul *= 0x100)) {
+    val += this[offset + --i] * mul
+  }
+  mul *= 0x80
+
+  if (val >= mul) val -= Math.pow(2, 8 * byteLength)
+
+  return val
+}
+
+Buffer.prototype.readInt8 = function readInt8 (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 1, this.length)
+  if (!(this[offset] & 0x80)) return (this[offset])
+  return ((0xff - this[offset] + 1) * -1)
+}
+
+Buffer.prototype.readInt16LE = function readInt16LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  var val = this[offset] | (this[offset + 1] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
+Buffer.prototype.readInt16BE = function readInt16BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 2, this.length)
+  var val = this[offset + 1] | (this[offset] << 8)
+  return (val & 0x8000) ? val | 0xFFFF0000 : val
+}
+
+Buffer.prototype.readInt32LE = function readInt32LE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset]) |
+    (this[offset + 1] << 8) |
+    (this[offset + 2] << 16) |
+    (this[offset + 3] << 24)
+}
+
+Buffer.prototype.readInt32BE = function readInt32BE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+
+  return (this[offset] << 24) |
+    (this[offset + 1] << 16) |
+    (this[offset + 2] << 8) |
+    (this[offset + 3])
+}
+
+Buffer.prototype.readFloatLE = function readFloatLE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+  return ieee754.read(this, offset, true, 23, 4)
+}
+
+Buffer.prototype.readFloatBE = function readFloatBE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 4, this.length)
+  return ieee754.read(this, offset, false, 23, 4)
+}
+
+Buffer.prototype.readDoubleLE = function readDoubleLE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 8, this.length)
+  return ieee754.read(this, offset, true, 52, 8)
+}
+
+Buffer.prototype.readDoubleBE = function readDoubleBE (offset, noAssert) {
+  offset = offset >>> 0
+  if (!noAssert) checkOffset(offset, 8, this.length)
+  return ieee754.read(this, offset, false, 52, 8)
+}
+
+function checkInt (buf, value, offset, ext, max, min) {
+  if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
+  if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+}
+
+Buffer.prototype.writeUIntLE = function writeUIntLE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1
+    checkInt(this, value, offset, byteLength, maxBytes, 0)
+  }
+
+  var mul = 1
+  var i = 0
+  this[offset] = value & 0xFF
+  while (++i < byteLength && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeUIntBE = function writeUIntBE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  byteLength = byteLength >>> 0
+  if (!noAssert) {
+    var maxBytes = Math.pow(2, 8 * byteLength) - 1
+    checkInt(this, value, offset, byteLength, maxBytes, 0)
+  }
+
+  var i = byteLength - 1
+  var mul = 1
+  this[offset + i] = value & 0xFF
+  while (--i >= 0 && (mul *= 0x100)) {
+    this[offset + i] = (value / mul) & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeUInt8 = function writeUInt8 (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 1, 0xff, 0)
+  this[offset] = (value & 0xff)
+  return offset + 1
+}
+
+Buffer.prototype.writeUInt16LE = function writeUInt16LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  return offset + 2
+}
+
+Buffer.prototype.writeUInt16BE = function writeUInt16BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
+  this[offset] = (value >>> 8)
+  this[offset + 1] = (value & 0xff)
+  return offset + 2
+}
+
+Buffer.prototype.writeUInt32LE = function writeUInt32LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  this[offset + 3] = (value >>> 24)
+  this[offset + 2] = (value >>> 16)
+  this[offset + 1] = (value >>> 8)
+  this[offset] = (value & 0xff)
+  return offset + 4
+}
+
+Buffer.prototype.writeUInt32BE = function writeUInt32BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0xffffffff, 0)
+  this[offset] = (value >>> 24)
+  this[offset + 1] = (value >>> 16)
+  this[offset + 2] = (value >>> 8)
+  this[offset + 3] = (value & 0xff)
+  return offset + 4
+}
+
+Buffer.prototype.writeIntLE = function writeIntLE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    var limit = Math.pow(2, (8 * byteLength) - 1)
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit)
+  }
+
+  var i = 0
+  var mul = 1
+  var sub = 0
+  this[offset] = value & 0xFF
+  while (++i < byteLength && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i - 1] !== 0) {
+      sub = 1
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeIntBE = function writeIntBE (value, offset, byteLength, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    var limit = Math.pow(2, (8 * byteLength) - 1)
+
+    checkInt(this, value, offset, byteLength, limit - 1, -limit)
+  }
+
+  var i = byteLength - 1
+  var mul = 1
+  var sub = 0
+  this[offset + i] = value & 0xFF
+  while (--i >= 0 && (mul *= 0x100)) {
+    if (value < 0 && sub === 0 && this[offset + i + 1] !== 0) {
+      sub = 1
+    }
+    this[offset + i] = ((value / mul) >> 0) - sub & 0xFF
+  }
+
+  return offset + byteLength
+}
+
+Buffer.prototype.writeInt8 = function writeInt8 (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 1, 0x7f, -0x80)
+  if (value < 0) value = 0xff + value + 1
+  this[offset] = (value & 0xff)
+  return offset + 1
+}
+
+Buffer.prototype.writeInt16LE = function writeInt16LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  return offset + 2
+}
+
+Buffer.prototype.writeInt16BE = function writeInt16BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
+  this[offset] = (value >>> 8)
+  this[offset + 1] = (value & 0xff)
+  return offset + 2
+}
+
+Buffer.prototype.writeInt32LE = function writeInt32LE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  this[offset] = (value & 0xff)
+  this[offset + 1] = (value >>> 8)
+  this[offset + 2] = (value >>> 16)
+  this[offset + 3] = (value >>> 24)
+  return offset + 4
+}
+
+Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
+  if (value < 0) value = 0xffffffff + value + 1
+  this[offset] = (value >>> 24)
+  this[offset + 1] = (value >>> 16)
+  this[offset + 2] = (value >>> 8)
+  this[offset + 3] = (value & 0xff)
+  return offset + 4
+}
+
+function checkIEEE754 (buf, value, offset, ext, max, min) {
+  if (offset + ext > buf.length) throw new RangeError('Index out of range')
+  if (offset < 0) throw new RangeError('Index out of range')
+}
+
+function writeFloat (buf, value, offset, littleEndian, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
+  }
+  ieee754.write(buf, value, offset, littleEndian, 23, 4)
+  return offset + 4
+}
+
+Buffer.prototype.writeFloatLE = function writeFloatLE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, true, noAssert)
+}
+
+Buffer.prototype.writeFloatBE = function writeFloatBE (value, offset, noAssert) {
+  return writeFloat(this, value, offset, false, noAssert)
+}
+
+function writeDouble (buf, value, offset, littleEndian, noAssert) {
+  value = +value
+  offset = offset >>> 0
+  if (!noAssert) {
+    checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
+  }
+  ieee754.write(buf, value, offset, littleEndian, 52, 8)
+  return offset + 8
+}
+
+Buffer.prototype.writeDoubleLE = function writeDoubleLE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, true, noAssert)
+}
+
+Buffer.prototype.writeDoubleBE = function writeDoubleBE (value, offset, noAssert) {
+  return writeDouble(this, value, offset, false, noAssert)
+}
+
+// copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
+Buffer.prototype.copy = function copy (target, targetStart, start, end) {
+  if (!start) start = 0
+  if (!end && end !== 0) end = this.length
+  if (targetStart >= target.length) targetStart = target.length
+  if (!targetStart) targetStart = 0
+  if (end > 0 && end < start) end = start
+
+  // Copy 0 bytes; we're done
+  if (end === start) return 0
+  if (target.length === 0 || this.length === 0) return 0
+
+  // Fatal error conditions
+  if (targetStart < 0) {
+    throw new RangeError('targetStart out of bounds')
+  }
+  if (start < 0 || start >= this.length) throw new RangeError('sourceStart out of bounds')
+  if (end < 0) throw new RangeError('sourceEnd out of bounds')
+
+  // Are we oob?
+  if (end > this.length) end = this.length
+  if (target.length - targetStart < end - start) {
+    end = target.length - targetStart + start
+  }
+
+  var len = end - start
+  var i
+
+  if (this === target && start < targetStart && targetStart < end) {
+    // descending copy from end
+    for (i = len - 1; i >= 0; --i) {
+      target[i + targetStart] = this[i + start]
+    }
+  } else if (len < 1000) {
+    // ascending copy from start
+    for (i = 0; i < len; ++i) {
+      target[i + targetStart] = this[i + start]
+    }
+  } else {
+    Uint8Array.prototype.set.call(
+      target,
+      this.subarray(start, start + len),
+      targetStart
+    )
+  }
+
+  return len
+}
+
+// Usage:
+//    buffer.fill(number[, offset[, end]])
+//    buffer.fill(buffer[, offset[, end]])
+//    buffer.fill(string[, offset[, end]][, encoding])
+Buffer.prototype.fill = function fill (val, start, end, encoding) {
+  // Handle string cases:
+  if (typeof val === 'string') {
+    if (typeof start === 'string') {
+      encoding = start
+      start = 0
+      end = this.length
+    } else if (typeof end === 'string') {
+      encoding = end
+      end = this.length
+    }
+    if (val.length === 1) {
+      var code = val.charCodeAt(0)
+      if (code < 256) {
+        val = code
+      }
+    }
+    if (encoding !== undefined && typeof encoding !== 'string') {
+      throw new TypeError('encoding must be a string')
+    }
+    if (typeof encoding === 'string' && !Buffer.isEncoding(encoding)) {
+      throw new TypeError('Unknown encoding: ' + encoding)
+    }
+  } else if (typeof val === 'number') {
+    val = val & 255
+  }
+
+  // Invalid ranges are not set to a default, so can range check early.
+  if (start < 0 || this.length < start || this.length < end) {
+    throw new RangeError('Out of range index')
+  }
+
+  if (end <= start) {
+    return this
+  }
+
+  start = start >>> 0
+  end = end === undefined ? this.length : end >>> 0
+
+  if (!val) val = 0
+
+  var i
+  if (typeof val === 'number') {
+    for (i = start; i < end; ++i) {
+      this[i] = val
+    }
+  } else {
+    var bytes = Buffer.isBuffer(val)
+      ? val
+      : new Buffer(val, encoding)
+    var len = bytes.length
+    for (i = 0; i < end - start; ++i) {
+      this[i + start] = bytes[i % len]
+    }
+  }
+
+  return this
+}
+
+// HELPER FUNCTIONS
+// ================
+
+var INVALID_BASE64_RE = /[^+/0-9A-Za-z-_]/g
+
+function base64clean (str) {
+  // Node strips out invalid characters like \n and \t from the string, base64-js does not
+  str = str.trim().replace(INVALID_BASE64_RE, '')
+  // Node converts strings with length < 2 to ''
+  if (str.length < 2) return ''
+  // Node allows for non-padded base64 strings (missing trailing ===), base64-js does not
+  while (str.length % 4 !== 0) {
+    str = str + '='
+  }
+  return str
+}
+
+function toHex (n) {
+  if (n < 16) return '0' + n.toString(16)
+  return n.toString(16)
+}
+
+function utf8ToBytes (string, units) {
+  units = units || Infinity
+  var codePoint
+  var length = string.length
+  var leadSurrogate = null
+  var bytes = []
+
+  for (var i = 0; i < length; ++i) {
+    codePoint = string.charCodeAt(i)
+
+    // is surrogate component
+    if (codePoint > 0xD7FF && codePoint < 0xE000) {
+      // last char was a lead
+      if (!leadSurrogate) {
+        // no lead yet
+        if (codePoint > 0xDBFF) {
+          // unexpected trail
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+          continue
+        } else if (i + 1 === length) {
+          // unpaired lead
+          if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+          continue
+        }
+
+        // valid lead
+        leadSurrogate = codePoint
+
+        continue
+      }
+
+      // 2 leads in a row
+      if (codePoint < 0xDC00) {
+        if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+        leadSurrogate = codePoint
+        continue
+      }
+
+      // valid surrogate pair
+      codePoint = (leadSurrogate - 0xD800 << 10 | codePoint - 0xDC00) + 0x10000
+    } else if (leadSurrogate) {
+      // valid bmp char, but last char was a lead
+      if ((units -= 3) > -1) bytes.push(0xEF, 0xBF, 0xBD)
+    }
+
+    leadSurrogate = null
+
+    // encode utf8
+    if (codePoint < 0x80) {
+      if ((units -= 1) < 0) break
+      bytes.push(codePoint)
+    } else if (codePoint < 0x800) {
+      if ((units -= 2) < 0) break
+      bytes.push(
+        codePoint >> 0x6 | 0xC0,
+        codePoint & 0x3F | 0x80
+      )
+    } else if (codePoint < 0x10000) {
+      if ((units -= 3) < 0) break
+      bytes.push(
+        codePoint >> 0xC | 0xE0,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      )
+    } else if (codePoint < 0x110000) {
+      if ((units -= 4) < 0) break
+      bytes.push(
+        codePoint >> 0x12 | 0xF0,
+        codePoint >> 0xC & 0x3F | 0x80,
+        codePoint >> 0x6 & 0x3F | 0x80,
+        codePoint & 0x3F | 0x80
+      )
+    } else {
+      throw new Error('Invalid code point')
+    }
+  }
+
+  return bytes
+}
+
+function asciiToBytes (str) {
+  var byteArray = []
+  for (var i = 0; i < str.length; ++i) {
+    // Node's code seems to be doing this and not & 0x7F..
+    byteArray.push(str.charCodeAt(i) & 0xFF)
+  }
+  return byteArray
+}
+
+function utf16leToBytes (str, units) {
+  var c, hi, lo
+  var byteArray = []
+  for (var i = 0; i < str.length; ++i) {
+    if ((units -= 2) < 0) break
+
+    c = str.charCodeAt(i)
+    hi = c >> 8
+    lo = c % 256
+    byteArray.push(lo)
+    byteArray.push(hi)
+  }
+
+  return byteArray
+}
+
+function base64ToBytes (str) {
+  return base64.toByteArray(base64clean(str))
+}
+
+function blitBuffer (src, dst, offset, length) {
+  for (var i = 0; i < length; ++i) {
+    if ((i + offset >= dst.length) || (i >= src.length)) break
+    dst[i + offset] = src[i]
+  }
+  return i
+}
+
+// ArrayBuffers from another context (i.e. an iframe) do not pass the `instanceof` check
+// but they should be treated as valid. See: https://github.com/feross/buffer/issues/166
+function isArrayBuffer (obj) {
+  return obj instanceof ArrayBuffer ||
+    (obj != null && obj.constructor != null && obj.constructor.name === 'ArrayBuffer' &&
+      typeof obj.byteLength === 'number')
+}
+
+// Node 0.10 supports `ArrayBuffer` but lacks `ArrayBuffer.isView`
+function isArrayBufferView (obj) {
+  return (typeof ArrayBuffer.isView === 'function') && ArrayBuffer.isView(obj)
+}
+
+function numberIsNaN (obj) {
+  return obj !== obj // eslint-disable-line no-self-compare
+}
+
+},{"base64-js":66,"ieee754":213}],170:[function(require,module,exports){
+var http = require('http')
+var url = require('url')
+
+var https = module.exports
+
+for (var key in http) {
+  if (http.hasOwnProperty(key)) https[key] = http[key]
+}
+
+https.request = function (params, cb) {
+  params = validateParams(params)
+  return http.request.call(this, params, cb)
+}
+
+https.get = function (params, cb) {
+  params = validateParams(params)
+  return http.get.call(this, params, cb)
+}
+
+function validateParams (params) {
+  if (typeof params === 'string') {
+    params = url.parse(params)
+  }
+  if (!params.protocol) {
+    params.protocol = 'https:'
+  }
+  if (params.protocol !== 'https:') {
+    throw new Error('Protocol "' + params.protocol + '" not supported. Expected "https:"')
+  }
+  return params
+}
+
+},{"http":369,"url":384}],171:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('safe-buffer').Buffer;
@@ -37463,7 +36980,7 @@ function simpleWrite(buf) {
 function simpleEnd(buf) {
   return buf && buf.length ? this.write(buf) : '';
 }
-},{"safe-buffer":337}],173:[function(require,module,exports){
+},{"safe-buffer":335}],172:[function(require,module,exports){
 module.exports={
   "$id": "afterRequest.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37495,7 +37012,7 @@ module.exports={
   }
 }
 
-},{}],174:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 module.exports={
   "$id": "beforeRequest.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37527,7 +37044,7 @@ module.exports={
   }
 }
 
-},{}],175:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 module.exports={
   "$id": "browser.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37549,7 +37066,7 @@ module.exports={
   }
 }
 
-},{}],176:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 module.exports={
   "$id": "cache.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37572,7 +37089,7 @@ module.exports={
   }
 }
 
-},{}],177:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 module.exports={
   "$id": "content.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37603,7 +37120,7 @@ module.exports={
   }
 }
 
-},{}],178:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 module.exports={
   "$id": "cookie.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37641,7 +37158,7 @@ module.exports={
   }
 }
 
-},{}],179:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 module.exports={
   "$id": "creator.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37663,7 +37180,7 @@ module.exports={
   }
 }
 
-},{}],180:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 module.exports={
   "$id": "entry.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37718,7 +37235,7 @@ module.exports={
   }
 }
 
-},{}],181:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 module.exports={
   "$id": "har.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37733,7 +37250,7 @@ module.exports={
   }
 }
 
-},{}],182:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 module.exports={
   "$id": "header.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37755,7 +37272,7 @@ module.exports={
   }
 }
 
-},{}],183:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 'use strict'
 
 module.exports = {
@@ -37779,7 +37296,7 @@ module.exports = {
   timings: require('./timings.json')
 }
 
-},{"./afterRequest.json":173,"./beforeRequest.json":174,"./browser.json":175,"./cache.json":176,"./content.json":177,"./cookie.json":178,"./creator.json":179,"./entry.json":180,"./har.json":181,"./header.json":182,"./log.json":184,"./page.json":185,"./pageTimings.json":186,"./postData.json":187,"./query.json":188,"./request.json":189,"./response.json":190,"./timings.json":191}],184:[function(require,module,exports){
+},{"./afterRequest.json":172,"./beforeRequest.json":173,"./browser.json":174,"./cache.json":175,"./content.json":176,"./cookie.json":177,"./creator.json":178,"./entry.json":179,"./har.json":180,"./header.json":181,"./log.json":183,"./page.json":184,"./pageTimings.json":185,"./postData.json":186,"./query.json":187,"./request.json":188,"./response.json":189,"./timings.json":190}],183:[function(require,module,exports){
 module.exports={
   "$id": "log.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37817,7 +37334,7 @@ module.exports={
   }
 }
 
-},{}],185:[function(require,module,exports){
+},{}],184:[function(require,module,exports){
 module.exports={
   "$id": "page.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37851,7 +37368,7 @@ module.exports={
   }
 }
 
-},{}],186:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 module.exports={
   "$id": "pageTimings.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37871,7 +37388,7 @@ module.exports={
   }
 }
 
-},{}],187:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 module.exports={
   "$id": "postData.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37916,7 +37433,7 @@ module.exports={
   }
 }
 
-},{}],188:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 module.exports={
   "$id": "query.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37938,7 +37455,7 @@ module.exports={
   }
 }
 
-},{}],189:[function(require,module,exports){
+},{}],188:[function(require,module,exports){
 module.exports={
   "$id": "request.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -37997,7 +37514,7 @@ module.exports={
   }
 }
 
-},{}],190:[function(require,module,exports){
+},{}],189:[function(require,module,exports){
 module.exports={
   "$id": "response.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -38053,7 +37570,7 @@ module.exports={
   }
 }
 
-},{}],191:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 module.exports={
   "$id": "timings.json#",
   "$schema": "http://json-schema.org/draft-06/schema#",
@@ -38097,7 +37614,7 @@ module.exports={
   }
 }
 
-},{}],192:[function(require,module,exports){
+},{}],191:[function(require,module,exports){
 function HARError (errors) {
   var message = 'validation failed'
 
@@ -38116,7 +37633,7 @@ HARError.prototype = Error.prototype
 
 module.exports = HARError
 
-},{}],193:[function(require,module,exports){
+},{}],192:[function(require,module,exports){
 var Ajv = require('ajv')
 var HARError = require('./error')
 var schemas = require('har-schema')
@@ -38213,7 +37730,7 @@ exports.timings = function (data) {
   return validate('timings', data)
 }
 
-},{"./error":192,"ajv":2,"har-schema":183}],194:[function(require,module,exports){
+},{"./error":191,"ajv":2,"har-schema":182}],193:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var Transform = require('stream').Transform
@@ -38300,7 +37817,7 @@ HashBase.prototype._digest = function () {
 module.exports = HashBase
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"inherits":216,"stream":369}],195:[function(require,module,exports){
+},{"buffer":169,"inherits":215,"stream":368}],194:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -38317,7 +37834,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":196,"./hash/hmac":197,"./hash/ripemd":198,"./hash/sha":199,"./hash/utils":206}],196:[function(require,module,exports){
+},{"./hash/common":195,"./hash/hmac":196,"./hash/ripemd":197,"./hash/sha":198,"./hash/utils":205}],195:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -38411,7 +37928,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"./utils":206,"minimalistic-assert":235}],197:[function(require,module,exports){
+},{"./utils":205,"minimalistic-assert":234}],196:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -38460,7 +37977,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"./utils":206,"minimalistic-assert":235}],198:[function(require,module,exports){
+},{"./utils":205,"minimalistic-assert":234}],197:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -38608,7 +38125,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"./common":196,"./utils":206}],199:[function(require,module,exports){
+},{"./common":195,"./utils":205}],198:[function(require,module,exports){
 'use strict';
 
 exports.sha1 = require('./sha/1');
@@ -38617,7 +38134,7 @@ exports.sha256 = require('./sha/256');
 exports.sha384 = require('./sha/384');
 exports.sha512 = require('./sha/512');
 
-},{"./sha/1":200,"./sha/224":201,"./sha/256":202,"./sha/384":203,"./sha/512":204}],200:[function(require,module,exports){
+},{"./sha/1":199,"./sha/224":200,"./sha/256":201,"./sha/384":202,"./sha/512":203}],199:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -38693,7 +38210,7 @@ SHA1.prototype._digest = function digest(enc) {
     return utils.split32(this.h, 'big');
 };
 
-},{"../common":196,"../utils":206,"./common":205}],201:[function(require,module,exports){
+},{"../common":195,"../utils":205,"./common":204}],200:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -38725,7 +38242,7 @@ SHA224.prototype._digest = function digest(enc) {
 };
 
 
-},{"../utils":206,"./256":202}],202:[function(require,module,exports){
+},{"../utils":205,"./256":201}],201:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -38832,7 +38349,7 @@ SHA256.prototype._digest = function digest(enc) {
     return utils.split32(this.h, 'big');
 };
 
-},{"../common":196,"../utils":206,"./common":205,"minimalistic-assert":235}],203:[function(require,module,exports){
+},{"../common":195,"../utils":205,"./common":204,"minimalistic-assert":234}],202:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -38869,7 +38386,7 @@ SHA384.prototype._digest = function digest(enc) {
     return utils.split32(this.h.slice(0, 12), 'big');
 };
 
-},{"../utils":206,"./512":204}],204:[function(require,module,exports){
+},{"../utils":205,"./512":203}],203:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -39201,7 +38718,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../common":196,"../utils":206,"minimalistic-assert":235}],205:[function(require,module,exports){
+},{"../common":195,"../utils":205,"minimalistic-assert":234}],204:[function(require,module,exports){
 'use strict';
 
 var utils = require('../utils');
@@ -39252,7 +38769,7 @@ function g1_256(x) {
 }
 exports.g1_256 = g1_256;
 
-},{"../utils":206}],206:[function(require,module,exports){
+},{"../utils":205}],205:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -39507,7 +39024,7 @@ function shr64_lo(ah, al, num) {
 }
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":216,"minimalistic-assert":235}],207:[function(require,module,exports){
+},{"inherits":215,"minimalistic-assert":234}],206:[function(require,module,exports){
 'use strict';
 
 /*
@@ -40302,7 +39819,7 @@ if (typeof module !== 'undefined' && module.exports) {
 /* eslint-enable */
 // $lab:coverage:on$
 
-},{}],208:[function(require,module,exports){
+},{}],207:[function(require,module,exports){
 'use strict';
 
 var hash = require('hash.js');
@@ -40417,7 +39934,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"hash.js":195,"minimalistic-assert":235,"minimalistic-crypto-utils":236}],209:[function(require,module,exports){
+},{"hash.js":194,"minimalistic-assert":234,"minimalistic-crypto-utils":235}],208:[function(require,module,exports){
 // Copyright 2015 Joyent, Inc.
 
 var parser = require('./parser');
@@ -40448,7 +39965,7 @@ module.exports = {
   verifyHMAC: verify.verifyHMAC
 };
 
-},{"./parser":210,"./signer":211,"./utils":212,"./verify":213}],210:[function(require,module,exports){
+},{"./parser":209,"./signer":210,"./utils":211,"./verify":212}],209:[function(require,module,exports){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
 var assert = require('assert-plus');
@@ -40765,7 +40282,7 @@ module.exports = {
 
 };
 
-},{"./utils":212,"assert-plus":62,"util":390}],211:[function(require,module,exports){
+},{"./utils":211,"assert-plus":62,"util":389}],210:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
@@ -41170,7 +40687,7 @@ module.exports = {
 };
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":218,"./utils":212,"assert-plus":62,"crypto":159,"http":370,"jsprim":228,"sshpk":363,"util":390}],212:[function(require,module,exports){
+},{"../../is-buffer/index.js":217,"./utils":211,"assert-plus":62,"crypto":113,"http":369,"jsprim":227,"sshpk":362,"util":389}],211:[function(require,module,exports){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
 var assert = require('assert-plus');
@@ -41284,7 +40801,7 @@ module.exports = {
   }
 };
 
-},{"assert-plus":62,"sshpk":363,"util":390}],213:[function(require,module,exports){
+},{"assert-plus":62,"sshpk":362,"util":389}],212:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -41376,7 +40893,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./utils":212,"assert-plus":62,"buffer":158,"crypto":159,"sshpk":363}],214:[function(require,module,exports){
+},{"./utils":211,"assert-plus":62,"buffer":169,"crypto":113,"sshpk":362}],213:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -41462,7 +40979,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],215:[function(require,module,exports){
+},{}],214:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -41473,7 +40990,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],216:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -41498,7 +41015,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],217:[function(require,module,exports){
+},{}],216:[function(require,module,exports){
 // --------------------
 // is-bluebird module
 // --------------------
@@ -41579,7 +41096,7 @@ function isObject(obj) {
 // export isBluebird
 module.exports = isBluebird;
 
-},{}],218:[function(require,module,exports){
+},{}],217:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -41602,7 +41119,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],219:[function(require,module,exports){
+},{}],218:[function(require,module,exports){
 module.exports      = isTypedArray
 isTypedArray.strict = isStrictTypedArray
 isTypedArray.loose  = isLooseTypedArray
@@ -41645,7 +41162,7 @@ function isLooseTypedArray(arr) {
   return names[toString.call(arr)]
 }
 
-},{}],220:[function(require,module,exports){
+},{}],219:[function(require,module,exports){
 var stream = require('stream')
 
 
@@ -41674,7 +41191,7 @@ module.exports.isReadable = isReadable
 module.exports.isWritable = isWritable
 module.exports.isDuplex   = isDuplex
 
-},{"stream":369}],221:[function(require,module,exports){
+},{"stream":368}],220:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -43033,7 +42550,7 @@ module.exports.isDuplex   = isDuplex
 
 }).call(this);
 
-},{}],222:[function(require,module,exports){
+},{}],221:[function(require,module,exports){
 'use strict';
 
 var traverse = module.exports = function (schema, opts, cb) {
@@ -43116,7 +42633,7 @@ function escapeJsonPtr(str) {
   return str.replace(/~/g, '~0').replace(/\//g, '~1');
 }
 
-},{}],223:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 /**
  * JSONSchema Validator - Validates JavaScript objects using JSON Schemas
  *	(http://www.json.com/json-schema-proposal/)
@@ -43391,7 +42908,7 @@ exports.mustBeValid = function(result){
 return exports;
 }));
 
-},{}],224:[function(require,module,exports){
+},{}],223:[function(require,module,exports){
 exports = module.exports = stringify
 exports.getSerialize = serializer
 
@@ -43420,11 +42937,11 @@ function serializer(replacer, cycleReplacer) {
   }
 }
 
-},{}],225:[function(require,module,exports){
+},{}],224:[function(require,module,exports){
 exports.parse = require('./lib/parse');
 exports.stringify = require('./lib/stringify');
 
-},{"./lib/parse":226,"./lib/stringify":227}],226:[function(require,module,exports){
+},{"./lib/parse":225,"./lib/stringify":226}],225:[function(require,module,exports){
 var at, // The index of the current character
     ch, // The current character
     escapee = {
@@ -43699,7 +43216,7 @@ module.exports = function (source, reviver) {
     }({'': result}, '')) : result;
 };
 
-},{}],227:[function(require,module,exports){
+},{}],226:[function(require,module,exports){
 var cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,
     escapable = /[\\\"\x00-\x1f\x7f-\x9f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g,
     gap,
@@ -43855,7 +43372,7 @@ module.exports = function (value, replacer, space) {
     return str('', {'': value});
 };
 
-},{}],228:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 /*
  * lib/jsprim.js: utilities for primitive JavaScript types
  */
@@ -44592,7 +44109,7 @@ function mergeObjects(provided, overrides, defaults)
 	return (rv);
 }
 
-},{"assert-plus":62,"extsprintf":147,"json-schema":223,"util":390,"verror":396}],229:[function(require,module,exports){
+},{"assert-plus":62,"extsprintf":147,"json-schema":222,"util":389,"verror":395}],228:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -44741,7 +44258,7 @@ function fnI (a, b, c, d, m, k, s) {
 module.exports = MD5
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"hash-base":230,"inherits":216}],230:[function(require,module,exports){
+},{"buffer":169,"hash-base":229,"inherits":215}],229:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
@@ -44838,7 +44355,7 @@ HashBase.prototype._digest = function () {
 
 module.exports = HashBase
 
-},{"inherits":216,"safe-buffer":337,"stream":369}],231:[function(require,module,exports){
+},{"inherits":215,"safe-buffer":335,"stream":368}],230:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -44955,7 +44472,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":69,"brorand":70}],232:[function(require,module,exports){
+},{"bn.js":69,"brorand":70}],231:[function(require,module,exports){
 module.exports={
   "application/1d-interleaved-parityfec": {
     "source": "iana"
@@ -51923,7 +51440,7 @@ module.exports={
   }
 }
 
-},{}],233:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 /*!
  * mime-db
  * Copyright(c) 2014 Jonathan Ong
@@ -51936,7 +51453,7 @@ module.exports={
 
 module.exports = require('./db.json')
 
-},{"./db.json":232}],234:[function(require,module,exports){
+},{"./db.json":231}],233:[function(require,module,exports){
 /*!
  * mime-types
  * Copyright(c) 2014 Jonathan Ong
@@ -52126,7 +51643,7 @@ function populateMaps (extensions, types) {
   })
 }
 
-},{"mime-db":233,"path":244}],235:[function(require,module,exports){
+},{"mime-db":232,"path":243}],234:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -52139,7 +51656,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],236:[function(require,module,exports){
+},{}],235:[function(require,module,exports){
 'use strict';
 
 var utils = exports;
@@ -52199,3380 +51716,2016 @@ utils.encode = function encode(arr, enc) {
     return arr;
 };
 
-},{}],237:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 //! moment.js
-//! version : 2.18.1
+//! version : 2.10.6
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
 
-;(function (global, factory) {
+(function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
     global.moment = factory()
-}(this, (function () { 'use strict';
+}(this, function () { 'use strict';
 
-var hookCallback;
+    var hookCallback;
 
-function hooks () {
-    return hookCallback.apply(null, arguments);
-}
-
-// This is done to register the method called with moment()
-// without creating circular dependencies.
-function setHookCallback (callback) {
-    hookCallback = callback;
-}
-
-function isArray(input) {
-    return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
-}
-
-function isObject(input) {
-    // IE8 will treat undefined and null as object if it wasn't for
-    // input != null
-    return input != null && Object.prototype.toString.call(input) === '[object Object]';
-}
-
-function isObjectEmpty(obj) {
-    var k;
-    for (k in obj) {
-        // even if its not own property I'd still call it non-empty
-        return false;
-    }
-    return true;
-}
-
-function isUndefined(input) {
-    return input === void 0;
-}
-
-function isNumber(input) {
-    return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
-}
-
-function isDate(input) {
-    return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
-}
-
-function map(arr, fn) {
-    var res = [], i;
-    for (i = 0; i < arr.length; ++i) {
-        res.push(fn(arr[i], i));
-    }
-    return res;
-}
-
-function hasOwnProp(a, b) {
-    return Object.prototype.hasOwnProperty.call(a, b);
-}
-
-function extend(a, b) {
-    for (var i in b) {
-        if (hasOwnProp(b, i)) {
-            a[i] = b[i];
-        }
+    function utils_hooks__hooks () {
+        return hookCallback.apply(null, arguments);
     }
 
-    if (hasOwnProp(b, 'toString')) {
-        a.toString = b.toString;
+    // This is done to register the method called with moment()
+    // without creating circular dependencies.
+    function setHookCallback (callback) {
+        hookCallback = callback;
     }
 
-    if (hasOwnProp(b, 'valueOf')) {
-        a.valueOf = b.valueOf;
+    function isArray(input) {
+        return Object.prototype.toString.call(input) === '[object Array]';
     }
 
-    return a;
-}
-
-function createUTC (input, format, locale, strict) {
-    return createLocalOrUTC(input, format, locale, strict, true).utc();
-}
-
-function defaultParsingFlags() {
-    // We need to deep clone this object.
-    return {
-        empty           : false,
-        unusedTokens    : [],
-        unusedInput     : [],
-        overflow        : -2,
-        charsLeftOver   : 0,
-        nullInput       : false,
-        invalidMonth    : null,
-        invalidFormat   : false,
-        userInvalidated : false,
-        iso             : false,
-        parsedDateParts : [],
-        meridiem        : null,
-        rfc2822         : false,
-        weekdayMismatch : false
-    };
-}
-
-function getParsingFlags(m) {
-    if (m._pf == null) {
-        m._pf = defaultParsingFlags();
-    }
-    return m._pf;
-}
-
-var some;
-if (Array.prototype.some) {
-    some = Array.prototype.some;
-} else {
-    some = function (fun) {
-        var t = Object(this);
-        var len = t.length >>> 0;
-
-        for (var i = 0; i < len; i++) {
-            if (i in t && fun.call(this, t[i], i, t)) {
-                return true;
-            }
-        }
-
-        return false;
-    };
-}
-
-var some$1 = some;
-
-function isValid(m) {
-    if (m._isValid == null) {
-        var flags = getParsingFlags(m);
-        var parsedParts = some$1.call(flags.parsedDateParts, function (i) {
-            return i != null;
-        });
-        var isNowValid = !isNaN(m._d.getTime()) &&
-            flags.overflow < 0 &&
-            !flags.empty &&
-            !flags.invalidMonth &&
-            !flags.invalidWeekday &&
-            !flags.nullInput &&
-            !flags.invalidFormat &&
-            !flags.userInvalidated &&
-            (!flags.meridiem || (flags.meridiem && parsedParts));
-
-        if (m._strict) {
-            isNowValid = isNowValid &&
-                flags.charsLeftOver === 0 &&
-                flags.unusedTokens.length === 0 &&
-                flags.bigHour === undefined;
-        }
-
-        if (Object.isFrozen == null || !Object.isFrozen(m)) {
-            m._isValid = isNowValid;
-        }
-        else {
-            return isNowValid;
-        }
-    }
-    return m._isValid;
-}
-
-function createInvalid (flags) {
-    var m = createUTC(NaN);
-    if (flags != null) {
-        extend(getParsingFlags(m), flags);
-    }
-    else {
-        getParsingFlags(m).userInvalidated = true;
+    function isDate(input) {
+        return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
     }
 
-    return m;
-}
-
-// Plugins that add properties should also add the key here (null value),
-// so we can properly clone ourselves.
-var momentProperties = hooks.momentProperties = [];
-
-function copyConfig(to, from) {
-    var i, prop, val;
-
-    if (!isUndefined(from._isAMomentObject)) {
-        to._isAMomentObject = from._isAMomentObject;
-    }
-    if (!isUndefined(from._i)) {
-        to._i = from._i;
-    }
-    if (!isUndefined(from._f)) {
-        to._f = from._f;
-    }
-    if (!isUndefined(from._l)) {
-        to._l = from._l;
-    }
-    if (!isUndefined(from._strict)) {
-        to._strict = from._strict;
-    }
-    if (!isUndefined(from._tzm)) {
-        to._tzm = from._tzm;
-    }
-    if (!isUndefined(from._isUTC)) {
-        to._isUTC = from._isUTC;
-    }
-    if (!isUndefined(from._offset)) {
-        to._offset = from._offset;
-    }
-    if (!isUndefined(from._pf)) {
-        to._pf = getParsingFlags(from);
-    }
-    if (!isUndefined(from._locale)) {
-        to._locale = from._locale;
-    }
-
-    if (momentProperties.length > 0) {
-        for (i = 0; i < momentProperties.length; i++) {
-            prop = momentProperties[i];
-            val = from[prop];
-            if (!isUndefined(val)) {
-                to[prop] = val;
-            }
-        }
-    }
-
-    return to;
-}
-
-var updateInProgress = false;
-
-// Moment prototype object
-function Moment(config) {
-    copyConfig(this, config);
-    this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-    if (!this.isValid()) {
-        this._d = new Date(NaN);
-    }
-    // Prevent infinite loop in case updateOffset creates new moment
-    // objects.
-    if (updateInProgress === false) {
-        updateInProgress = true;
-        hooks.updateOffset(this);
-        updateInProgress = false;
-    }
-}
-
-function isMoment (obj) {
-    return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
-}
-
-function absFloor (number) {
-    if (number < 0) {
-        // -0 -> 0
-        return Math.ceil(number) || 0;
-    } else {
-        return Math.floor(number);
-    }
-}
-
-function toInt(argumentForCoercion) {
-    var coercedNumber = +argumentForCoercion,
-        value = 0;
-
-    if (coercedNumber !== 0 && isFinite(coercedNumber)) {
-        value = absFloor(coercedNumber);
-    }
-
-    return value;
-}
-
-// compare two arrays, return the number of differences
-function compareArrays(array1, array2, dontConvert) {
-    var len = Math.min(array1.length, array2.length),
-        lengthDiff = Math.abs(array1.length - array2.length),
-        diffs = 0,
-        i;
-    for (i = 0; i < len; i++) {
-        if ((dontConvert && array1[i] !== array2[i]) ||
-            (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
-            diffs++;
-        }
-    }
-    return diffs + lengthDiff;
-}
-
-function warn(msg) {
-    if (hooks.suppressDeprecationWarnings === false &&
-            (typeof console !==  'undefined') && console.warn) {
-        console.warn('Deprecation warning: ' + msg);
-    }
-}
-
-function deprecate(msg, fn) {
-    var firstTime = true;
-
-    return extend(function () {
-        if (hooks.deprecationHandler != null) {
-            hooks.deprecationHandler(null, msg);
-        }
-        if (firstTime) {
-            var args = [];
-            var arg;
-            for (var i = 0; i < arguments.length; i++) {
-                arg = '';
-                if (typeof arguments[i] === 'object') {
-                    arg += '\n[' + i + '] ';
-                    for (var key in arguments[0]) {
-                        arg += key + ': ' + arguments[0][key] + ', ';
-                    }
-                    arg = arg.slice(0, -2); // Remove trailing comma and space
-                } else {
-                    arg = arguments[i];
-                }
-                args.push(arg);
-            }
-            warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + (new Error()).stack);
-            firstTime = false;
-        }
-        return fn.apply(this, arguments);
-    }, fn);
-}
-
-var deprecations = {};
-
-function deprecateSimple(name, msg) {
-    if (hooks.deprecationHandler != null) {
-        hooks.deprecationHandler(name, msg);
-    }
-    if (!deprecations[name]) {
-        warn(msg);
-        deprecations[name] = true;
-    }
-}
-
-hooks.suppressDeprecationWarnings = false;
-hooks.deprecationHandler = null;
-
-function isFunction(input) {
-    return input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
-}
-
-function set (config) {
-    var prop, i;
-    for (i in config) {
-        prop = config[i];
-        if (isFunction(prop)) {
-            this[i] = prop;
-        } else {
-            this['_' + i] = prop;
-        }
-    }
-    this._config = config;
-    // Lenient ordinal parsing accepts just a number in addition to
-    // number + (possibly) stuff coming from _dayOfMonthOrdinalParse.
-    // TODO: Remove "ordinalParse" fallback in next major release.
-    this._dayOfMonthOrdinalParseLenient = new RegExp(
-        (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) +
-            '|' + (/\d{1,2}/).source);
-}
-
-function mergeConfigs(parentConfig, childConfig) {
-    var res = extend({}, parentConfig), prop;
-    for (prop in childConfig) {
-        if (hasOwnProp(childConfig, prop)) {
-            if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
-                res[prop] = {};
-                extend(res[prop], parentConfig[prop]);
-                extend(res[prop], childConfig[prop]);
-            } else if (childConfig[prop] != null) {
-                res[prop] = childConfig[prop];
-            } else {
-                delete res[prop];
-            }
-        }
-    }
-    for (prop in parentConfig) {
-        if (hasOwnProp(parentConfig, prop) &&
-                !hasOwnProp(childConfig, prop) &&
-                isObject(parentConfig[prop])) {
-            // make sure changes to properties don't modify parent config
-            res[prop] = extend({}, res[prop]);
-        }
-    }
-    return res;
-}
-
-function Locale(config) {
-    if (config != null) {
-        this.set(config);
-    }
-}
-
-var keys;
-
-if (Object.keys) {
-    keys = Object.keys;
-} else {
-    keys = function (obj) {
-        var i, res = [];
-        for (i in obj) {
-            if (hasOwnProp(obj, i)) {
-                res.push(i);
-            }
+    function map(arr, fn) {
+        var res = [], i;
+        for (i = 0; i < arr.length; ++i) {
+            res.push(fn(arr[i], i));
         }
         return res;
-    };
-}
-
-var keys$1 = keys;
-
-var defaultCalendar = {
-    sameDay : '[Today at] LT',
-    nextDay : '[Tomorrow at] LT',
-    nextWeek : 'dddd [at] LT',
-    lastDay : '[Yesterday at] LT',
-    lastWeek : '[Last] dddd [at] LT',
-    sameElse : 'L'
-};
-
-function calendar (key, mom, now) {
-    var output = this._calendar[key] || this._calendar['sameElse'];
-    return isFunction(output) ? output.call(mom, now) : output;
-}
-
-var defaultLongDateFormat = {
-    LTS  : 'h:mm:ss A',
-    LT   : 'h:mm A',
-    L    : 'MM/DD/YYYY',
-    LL   : 'MMMM D, YYYY',
-    LLL  : 'MMMM D, YYYY h:mm A',
-    LLLL : 'dddd, MMMM D, YYYY h:mm A'
-};
-
-function longDateFormat (key) {
-    var format = this._longDateFormat[key],
-        formatUpper = this._longDateFormat[key.toUpperCase()];
-
-    if (format || !formatUpper) {
-        return format;
     }
 
-    this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
-        return val.slice(1);
-    });
+    function hasOwnProp(a, b) {
+        return Object.prototype.hasOwnProperty.call(a, b);
+    }
 
-    return this._longDateFormat[key];
-}
-
-var defaultInvalidDate = 'Invalid date';
-
-function invalidDate () {
-    return this._invalidDate;
-}
-
-var defaultOrdinal = '%d';
-var defaultDayOfMonthOrdinalParse = /\d{1,2}/;
-
-function ordinal (number) {
-    return this._ordinal.replace('%d', number);
-}
-
-var defaultRelativeTime = {
-    future : 'in %s',
-    past   : '%s ago',
-    s  : 'a few seconds',
-    ss : '%d seconds',
-    m  : 'a minute',
-    mm : '%d minutes',
-    h  : 'an hour',
-    hh : '%d hours',
-    d  : 'a day',
-    dd : '%d days',
-    M  : 'a month',
-    MM : '%d months',
-    y  : 'a year',
-    yy : '%d years'
-};
-
-function relativeTime (number, withoutSuffix, string, isFuture) {
-    var output = this._relativeTime[string];
-    return (isFunction(output)) ?
-        output(number, withoutSuffix, string, isFuture) :
-        output.replace(/%d/i, number);
-}
-
-function pastFuture (diff, output) {
-    var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
-    return isFunction(format) ? format(output) : format.replace(/%s/i, output);
-}
-
-var aliases = {};
-
-function addUnitAlias (unit, shorthand) {
-    var lowerCase = unit.toLowerCase();
-    aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
-}
-
-function normalizeUnits(units) {
-    return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
-}
-
-function normalizeObjectUnits(inputObject) {
-    var normalizedInput = {},
-        normalizedProp,
-        prop;
-
-    for (prop in inputObject) {
-        if (hasOwnProp(inputObject, prop)) {
-            normalizedProp = normalizeUnits(prop);
-            if (normalizedProp) {
-                normalizedInput[normalizedProp] = inputObject[prop];
+    function extend(a, b) {
+        for (var i in b) {
+            if (hasOwnProp(b, i)) {
+                a[i] = b[i];
             }
         }
-    }
 
-    return normalizedInput;
-}
-
-var priorities = {};
-
-function addUnitPriority(unit, priority) {
-    priorities[unit] = priority;
-}
-
-function getPrioritizedUnits(unitsObj) {
-    var units = [];
-    for (var u in unitsObj) {
-        units.push({unit: u, priority: priorities[u]});
-    }
-    units.sort(function (a, b) {
-        return a.priority - b.priority;
-    });
-    return units;
-}
-
-function makeGetSet (unit, keepTime) {
-    return function (value) {
-        if (value != null) {
-            set$1(this, unit, value);
-            hooks.updateOffset(this, keepTime);
-            return this;
-        } else {
-            return get(this, unit);
+        if (hasOwnProp(b, 'toString')) {
+            a.toString = b.toString;
         }
-    };
-}
 
-function get (mom, unit) {
-    return mom.isValid() ?
-        mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
-}
-
-function set$1 (mom, unit, value) {
-    if (mom.isValid()) {
-        mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
-    }
-}
-
-// MOMENTS
-
-function stringGet (units) {
-    units = normalizeUnits(units);
-    if (isFunction(this[units])) {
-        return this[units]();
-    }
-    return this;
-}
-
-
-function stringSet (units, value) {
-    if (typeof units === 'object') {
-        units = normalizeObjectUnits(units);
-        var prioritized = getPrioritizedUnits(units);
-        for (var i = 0; i < prioritized.length; i++) {
-            this[prioritized[i].unit](units[prioritized[i].unit]);
+        if (hasOwnProp(b, 'valueOf')) {
+            a.valueOf = b.valueOf;
         }
-    } else {
-        units = normalizeUnits(units);
-        if (isFunction(this[units])) {
-            return this[units](value);
-        }
+
+        return a;
     }
-    return this;
-}
 
-function zeroFill(number, targetLength, forceSign) {
-    var absNumber = '' + Math.abs(number),
-        zerosToFill = targetLength - absNumber.length,
-        sign = number >= 0;
-    return (sign ? (forceSign ? '+' : '') : '-') +
-        Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
-}
+    function create_utc__createUTC (input, format, locale, strict) {
+        return createLocalOrUTC(input, format, locale, strict, true).utc();
+    }
 
-var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
-
-var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-
-var formatFunctions = {};
-
-var formatTokenFunctions = {};
-
-// token:    'M'
-// padded:   ['MM', 2]
-// ordinal:  'Mo'
-// callback: function () { this.month() + 1 }
-function addFormatToken (token, padded, ordinal, callback) {
-    var func = callback;
-    if (typeof callback === 'string') {
-        func = function () {
-            return this[callback]();
+    function defaultParsingFlags() {
+        // We need to deep clone this object.
+        return {
+            empty           : false,
+            unusedTokens    : [],
+            unusedInput     : [],
+            overflow        : -2,
+            charsLeftOver   : 0,
+            nullInput       : false,
+            invalidMonth    : null,
+            invalidFormat   : false,
+            userInvalidated : false,
+            iso             : false
         };
     }
-    if (token) {
-        formatTokenFunctions[token] = func;
-    }
-    if (padded) {
-        formatTokenFunctions[padded[0]] = function () {
-            return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
-        };
-    }
-    if (ordinal) {
-        formatTokenFunctions[ordinal] = function () {
-            return this.localeData().ordinal(func.apply(this, arguments), token);
-        };
-    }
-}
 
-function removeFormattingTokens(input) {
-    if (input.match(/\[[\s\S]/)) {
-        return input.replace(/^\[|\]$/g, '');
-    }
-    return input.replace(/\\/g, '');
-}
-
-function makeFormatFunction(format) {
-    var array = format.match(formattingTokens), i, length;
-
-    for (i = 0, length = array.length; i < length; i++) {
-        if (formatTokenFunctions[array[i]]) {
-            array[i] = formatTokenFunctions[array[i]];
-        } else {
-            array[i] = removeFormattingTokens(array[i]);
+    function getParsingFlags(m) {
+        if (m._pf == null) {
+            m._pf = defaultParsingFlags();
         }
+        return m._pf;
     }
 
-    return function (mom) {
-        var output = '', i;
-        for (i = 0; i < length; i++) {
-            output += isFunction(array[i]) ? array[i].call(mom, format) : array[i];
-        }
-        return output;
-    };
-}
+    function valid__isValid(m) {
+        if (m._isValid == null) {
+            var flags = getParsingFlags(m);
+            m._isValid = !isNaN(m._d.getTime()) &&
+                flags.overflow < 0 &&
+                !flags.empty &&
+                !flags.invalidMonth &&
+                !flags.invalidWeekday &&
+                !flags.nullInput &&
+                !flags.invalidFormat &&
+                !flags.userInvalidated;
 
-// format date using native date object
-function formatMoment(m, format) {
-    if (!m.isValid()) {
-        return m.localeData().invalidDate();
-    }
-
-    format = expandFormat(format, m.localeData());
-    formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
-
-    return formatFunctions[format](m);
-}
-
-function expandFormat(format, locale) {
-    var i = 5;
-
-    function replaceLongDateFormatTokens(input) {
-        return locale.longDateFormat(input) || input;
-    }
-
-    localFormattingTokens.lastIndex = 0;
-    while (i >= 0 && localFormattingTokens.test(format)) {
-        format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
-        localFormattingTokens.lastIndex = 0;
-        i -= 1;
-    }
-
-    return format;
-}
-
-var match1         = /\d/;            //       0 - 9
-var match2         = /\d\d/;          //      00 - 99
-var match3         = /\d{3}/;         //     000 - 999
-var match4         = /\d{4}/;         //    0000 - 9999
-var match6         = /[+-]?\d{6}/;    // -999999 - 999999
-var match1to2      = /\d\d?/;         //       0 - 99
-var match3to4      = /\d\d\d\d?/;     //     999 - 9999
-var match5to6      = /\d\d\d\d\d\d?/; //   99999 - 999999
-var match1to3      = /\d{1,3}/;       //       0 - 999
-var match1to4      = /\d{1,4}/;       //       0 - 9999
-var match1to6      = /[+-]?\d{1,6}/;  // -999999 - 999999
-
-var matchUnsigned  = /\d+/;           //       0 - inf
-var matchSigned    = /[+-]?\d+/;      //    -inf - inf
-
-var matchOffset    = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
-var matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi; // +00 -00 +00:00 -00:00 +0000 -0000 or Z
-
-var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
-
-// any word (or two) characters or numbers including two/three word month in arabic.
-// includes scottish gaelic two word and hyphenated months
-var matchWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i;
-
-
-var regexes = {};
-
-function addRegexToken (token, regex, strictRegex) {
-    regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
-        return (isStrict && strictRegex) ? strictRegex : regex;
-    };
-}
-
-function getParseRegexForToken (token, config) {
-    if (!hasOwnProp(regexes, token)) {
-        return new RegExp(unescapeFormat(token));
-    }
-
-    return regexes[token](config._strict, config._locale);
-}
-
-// Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
-function unescapeFormat(s) {
-    return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
-        return p1 || p2 || p3 || p4;
-    }));
-}
-
-function regexEscape(s) {
-    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-}
-
-var tokens = {};
-
-function addParseToken (token, callback) {
-    var i, func = callback;
-    if (typeof token === 'string') {
-        token = [token];
-    }
-    if (isNumber(callback)) {
-        func = function (input, array) {
-            array[callback] = toInt(input);
-        };
-    }
-    for (i = 0; i < token.length; i++) {
-        tokens[token[i]] = func;
-    }
-}
-
-function addWeekParseToken (token, callback) {
-    addParseToken(token, function (input, array, config, token) {
-        config._w = config._w || {};
-        callback(input, config._w, config, token);
-    });
-}
-
-function addTimeToArrayFromToken(token, input, config) {
-    if (input != null && hasOwnProp(tokens, token)) {
-        tokens[token](input, config._a, config, token);
-    }
-}
-
-var YEAR = 0;
-var MONTH = 1;
-var DATE = 2;
-var HOUR = 3;
-var MINUTE = 4;
-var SECOND = 5;
-var MILLISECOND = 6;
-var WEEK = 7;
-var WEEKDAY = 8;
-
-var indexOf;
-
-if (Array.prototype.indexOf) {
-    indexOf = Array.prototype.indexOf;
-} else {
-    indexOf = function (o) {
-        // I know
-        var i;
-        for (i = 0; i < this.length; ++i) {
-            if (this[i] === o) {
-                return i;
+            if (m._strict) {
+                m._isValid = m._isValid &&
+                    flags.charsLeftOver === 0 &&
+                    flags.unusedTokens.length === 0 &&
+                    flags.bigHour === undefined;
             }
         }
-        return -1;
-    };
-}
-
-var indexOf$1 = indexOf;
-
-function daysInMonth(year, month) {
-    return new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
-}
-
-// FORMATTING
-
-addFormatToken('M', ['MM', 2], 'Mo', function () {
-    return this.month() + 1;
-});
-
-addFormatToken('MMM', 0, 0, function (format) {
-    return this.localeData().monthsShort(this, format);
-});
-
-addFormatToken('MMMM', 0, 0, function (format) {
-    return this.localeData().months(this, format);
-});
-
-// ALIASES
-
-addUnitAlias('month', 'M');
-
-// PRIORITY
-
-addUnitPriority('month', 8);
-
-// PARSING
-
-addRegexToken('M',    match1to2);
-addRegexToken('MM',   match1to2, match2);
-addRegexToken('MMM',  function (isStrict, locale) {
-    return locale.monthsShortRegex(isStrict);
-});
-addRegexToken('MMMM', function (isStrict, locale) {
-    return locale.monthsRegex(isStrict);
-});
-
-addParseToken(['M', 'MM'], function (input, array) {
-    array[MONTH] = toInt(input) - 1;
-});
-
-addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
-    var month = config._locale.monthsParse(input, token, config._strict);
-    // if we didn't find a month name, mark the date as invalid.
-    if (month != null) {
-        array[MONTH] = month;
-    } else {
-        getParsingFlags(config).invalidMonth = input;
+        return m._isValid;
     }
-});
 
-// LOCALES
-
-var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
-var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
-function localeMonths (m, format) {
-    if (!m) {
-        return isArray(this._months) ? this._months :
-            this._months['standalone'];
-    }
-    return isArray(this._months) ? this._months[m.month()] :
-        this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
-}
-
-var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
-function localeMonthsShort (m, format) {
-    if (!m) {
-        return isArray(this._monthsShort) ? this._monthsShort :
-            this._monthsShort['standalone'];
-    }
-    return isArray(this._monthsShort) ? this._monthsShort[m.month()] :
-        this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
-}
-
-function handleStrictParse(monthName, format, strict) {
-    var i, ii, mom, llc = monthName.toLocaleLowerCase();
-    if (!this._monthsParse) {
-        // this is not used
-        this._monthsParse = [];
-        this._longMonthsParse = [];
-        this._shortMonthsParse = [];
-        for (i = 0; i < 12; ++i) {
-            mom = createUTC([2000, i]);
-            this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
-            this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
+    function valid__createInvalid (flags) {
+        var m = create_utc__createUTC(NaN);
+        if (flags != null) {
+            extend(getParsingFlags(m), flags);
         }
-    }
-
-    if (strict) {
-        if (format === 'MMM') {
-            ii = indexOf$1.call(this._shortMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf$1.call(this._longMonthsParse, llc);
-            return ii !== -1 ? ii : null;
+        else {
+            getParsingFlags(m).userInvalidated = true;
         }
-    } else {
-        if (format === 'MMM') {
-            ii = indexOf$1.call(this._shortMonthsParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf$1.call(this._longMonthsParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf$1.call(this._longMonthsParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf$1.call(this._shortMonthsParse, llc);
-            return ii !== -1 ? ii : null;
+
+        return m;
+    }
+
+    var momentProperties = utils_hooks__hooks.momentProperties = [];
+
+    function copyConfig(to, from) {
+        var i, prop, val;
+
+        if (typeof from._isAMomentObject !== 'undefined') {
+            to._isAMomentObject = from._isAMomentObject;
         }
-    }
-}
-
-function localeMonthsParse (monthName, format, strict) {
-    var i, mom, regex;
-
-    if (this._monthsParseExact) {
-        return handleStrictParse.call(this, monthName, format, strict);
-    }
-
-    if (!this._monthsParse) {
-        this._monthsParse = [];
-        this._longMonthsParse = [];
-        this._shortMonthsParse = [];
-    }
-
-    // TODO: add sorting
-    // Sorting makes sure if one month (or abbr) is a prefix of another
-    // see sorting in computeMonthsParse
-    for (i = 0; i < 12; i++) {
-        // make the regex if we don't have it already
-        mom = createUTC([2000, i]);
-        if (strict && !this._longMonthsParse[i]) {
-            this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
-            this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
+        if (typeof from._i !== 'undefined') {
+            to._i = from._i;
         }
-        if (!strict && !this._monthsParse[i]) {
-            regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
-            this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
+        if (typeof from._f !== 'undefined') {
+            to._f = from._f;
         }
-        // test the regex
-        if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
-            return i;
-        } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
-            return i;
-        } else if (!strict && this._monthsParse[i].test(monthName)) {
-            return i;
+        if (typeof from._l !== 'undefined') {
+            to._l = from._l;
         }
-    }
-}
+        if (typeof from._strict !== 'undefined') {
+            to._strict = from._strict;
+        }
+        if (typeof from._tzm !== 'undefined') {
+            to._tzm = from._tzm;
+        }
+        if (typeof from._isUTC !== 'undefined') {
+            to._isUTC = from._isUTC;
+        }
+        if (typeof from._offset !== 'undefined') {
+            to._offset = from._offset;
+        }
+        if (typeof from._pf !== 'undefined') {
+            to._pf = getParsingFlags(from);
+        }
+        if (typeof from._locale !== 'undefined') {
+            to._locale = from._locale;
+        }
 
-// MOMENTS
-
-function setMonth (mom, value) {
-    var dayOfMonth;
-
-    if (!mom.isValid()) {
-        // No op
-        return mom;
-    }
-
-    if (typeof value === 'string') {
-        if (/^\d+$/.test(value)) {
-            value = toInt(value);
-        } else {
-            value = mom.localeData().monthsParse(value);
-            // TODO: Another silent failure?
-            if (!isNumber(value)) {
-                return mom;
+        if (momentProperties.length > 0) {
+            for (i in momentProperties) {
+                prop = momentProperties[i];
+                val = from[prop];
+                if (typeof val !== 'undefined') {
+                    to[prop] = val;
+                }
             }
         }
+
+        return to;
     }
 
-    dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
-    mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
-    return mom;
-}
+    var updateInProgress = false;
 
-function getSetMonth (value) {
-    if (value != null) {
-        setMonth(this, value);
-        hooks.updateOffset(this, true);
-        return this;
-    } else {
-        return get(this, 'Month');
-    }
-}
-
-function getDaysInMonth () {
-    return daysInMonth(this.year(), this.month());
-}
-
-var defaultMonthsShortRegex = matchWord;
-function monthsShortRegex (isStrict) {
-    if (this._monthsParseExact) {
-        if (!hasOwnProp(this, '_monthsRegex')) {
-            computeMonthsParse.call(this);
+    // Moment prototype object
+    function Moment(config) {
+        copyConfig(this, config);
+        this._d = new Date(config._d != null ? config._d.getTime() : NaN);
+        // Prevent infinite loop in case updateOffset creates new moment
+        // objects.
+        if (updateInProgress === false) {
+            updateInProgress = true;
+            utils_hooks__hooks.updateOffset(this);
+            updateInProgress = false;
         }
-        if (isStrict) {
-            return this._monthsShortStrictRegex;
+    }
+
+    function isMoment (obj) {
+        return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
+    }
+
+    function absFloor (number) {
+        if (number < 0) {
+            return Math.ceil(number);
         } else {
-            return this._monthsShortRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_monthsShortRegex')) {
-            this._monthsShortRegex = defaultMonthsShortRegex;
-        }
-        return this._monthsShortStrictRegex && isStrict ?
-            this._monthsShortStrictRegex : this._monthsShortRegex;
-    }
-}
-
-var defaultMonthsRegex = matchWord;
-function monthsRegex (isStrict) {
-    if (this._monthsParseExact) {
-        if (!hasOwnProp(this, '_monthsRegex')) {
-            computeMonthsParse.call(this);
-        }
-        if (isStrict) {
-            return this._monthsStrictRegex;
-        } else {
-            return this._monthsRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_monthsRegex')) {
-            this._monthsRegex = defaultMonthsRegex;
-        }
-        return this._monthsStrictRegex && isStrict ?
-            this._monthsStrictRegex : this._monthsRegex;
-    }
-}
-
-function computeMonthsParse () {
-    function cmpLenRev(a, b) {
-        return b.length - a.length;
-    }
-
-    var shortPieces = [], longPieces = [], mixedPieces = [],
-        i, mom;
-    for (i = 0; i < 12; i++) {
-        // make the regex if we don't have it already
-        mom = createUTC([2000, i]);
-        shortPieces.push(this.monthsShort(mom, ''));
-        longPieces.push(this.months(mom, ''));
-        mixedPieces.push(this.months(mom, ''));
-        mixedPieces.push(this.monthsShort(mom, ''));
-    }
-    // Sorting makes sure if one month (or abbr) is a prefix of another it
-    // will match the longer piece.
-    shortPieces.sort(cmpLenRev);
-    longPieces.sort(cmpLenRev);
-    mixedPieces.sort(cmpLenRev);
-    for (i = 0; i < 12; i++) {
-        shortPieces[i] = regexEscape(shortPieces[i]);
-        longPieces[i] = regexEscape(longPieces[i]);
-    }
-    for (i = 0; i < 24; i++) {
-        mixedPieces[i] = regexEscape(mixedPieces[i]);
-    }
-
-    this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-    this._monthsShortRegex = this._monthsRegex;
-    this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-    this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-}
-
-// FORMATTING
-
-addFormatToken('Y', 0, 0, function () {
-    var y = this.year();
-    return y <= 9999 ? '' + y : '+' + y;
-});
-
-addFormatToken(0, ['YY', 2], 0, function () {
-    return this.year() % 100;
-});
-
-addFormatToken(0, ['YYYY',   4],       0, 'year');
-addFormatToken(0, ['YYYYY',  5],       0, 'year');
-addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
-
-// ALIASES
-
-addUnitAlias('year', 'y');
-
-// PRIORITIES
-
-addUnitPriority('year', 1);
-
-// PARSING
-
-addRegexToken('Y',      matchSigned);
-addRegexToken('YY',     match1to2, match2);
-addRegexToken('YYYY',   match1to4, match4);
-addRegexToken('YYYYY',  match1to6, match6);
-addRegexToken('YYYYYY', match1to6, match6);
-
-addParseToken(['YYYYY', 'YYYYYY'], YEAR);
-addParseToken('YYYY', function (input, array) {
-    array[YEAR] = input.length === 2 ? hooks.parseTwoDigitYear(input) : toInt(input);
-});
-addParseToken('YY', function (input, array) {
-    array[YEAR] = hooks.parseTwoDigitYear(input);
-});
-addParseToken('Y', function (input, array) {
-    array[YEAR] = parseInt(input, 10);
-});
-
-// HELPERS
-
-function daysInYear(year) {
-    return isLeapYear(year) ? 366 : 365;
-}
-
-function isLeapYear(year) {
-    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
-
-// HOOKS
-
-hooks.parseTwoDigitYear = function (input) {
-    return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-};
-
-// MOMENTS
-
-var getSetYear = makeGetSet('FullYear', true);
-
-function getIsLeapYear () {
-    return isLeapYear(this.year());
-}
-
-function createDate (y, m, d, h, M, s, ms) {
-    // can't just apply() to create a date:
-    // https://stackoverflow.com/q/181348
-    var date = new Date(y, m, d, h, M, s, ms);
-
-    // the date constructor remaps years 0-99 to 1900-1999
-    if (y < 100 && y >= 0 && isFinite(date.getFullYear())) {
-        date.setFullYear(y);
-    }
-    return date;
-}
-
-function createUTCDate (y) {
-    var date = new Date(Date.UTC.apply(null, arguments));
-
-    // the Date.UTC function remaps years 0-99 to 1900-1999
-    if (y < 100 && y >= 0 && isFinite(date.getUTCFullYear())) {
-        date.setUTCFullYear(y);
-    }
-    return date;
-}
-
-// start-of-first-week - start-of-year
-function firstWeekOffset(year, dow, doy) {
-    var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
-        fwd = 7 + dow - doy,
-        // first-week day local weekday -- which local weekday is fwd
-        fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
-
-    return -fwdlw + fwd - 1;
-}
-
-// https://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
-function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
-    var localWeekday = (7 + weekday - dow) % 7,
-        weekOffset = firstWeekOffset(year, dow, doy),
-        dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset,
-        resYear, resDayOfYear;
-
-    if (dayOfYear <= 0) {
-        resYear = year - 1;
-        resDayOfYear = daysInYear(resYear) + dayOfYear;
-    } else if (dayOfYear > daysInYear(year)) {
-        resYear = year + 1;
-        resDayOfYear = dayOfYear - daysInYear(year);
-    } else {
-        resYear = year;
-        resDayOfYear = dayOfYear;
-    }
-
-    return {
-        year: resYear,
-        dayOfYear: resDayOfYear
-    };
-}
-
-function weekOfYear(mom, dow, doy) {
-    var weekOffset = firstWeekOffset(mom.year(), dow, doy),
-        week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1,
-        resWeek, resYear;
-
-    if (week < 1) {
-        resYear = mom.year() - 1;
-        resWeek = week + weeksInYear(resYear, dow, doy);
-    } else if (week > weeksInYear(mom.year(), dow, doy)) {
-        resWeek = week - weeksInYear(mom.year(), dow, doy);
-        resYear = mom.year() + 1;
-    } else {
-        resYear = mom.year();
-        resWeek = week;
-    }
-
-    return {
-        week: resWeek,
-        year: resYear
-    };
-}
-
-function weeksInYear(year, dow, doy) {
-    var weekOffset = firstWeekOffset(year, dow, doy),
-        weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
-    return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
-}
-
-// FORMATTING
-
-addFormatToken('w', ['ww', 2], 'wo', 'week');
-addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
-
-// ALIASES
-
-addUnitAlias('week', 'w');
-addUnitAlias('isoWeek', 'W');
-
-// PRIORITIES
-
-addUnitPriority('week', 5);
-addUnitPriority('isoWeek', 5);
-
-// PARSING
-
-addRegexToken('w',  match1to2);
-addRegexToken('ww', match1to2, match2);
-addRegexToken('W',  match1to2);
-addRegexToken('WW', match1to2, match2);
-
-addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
-    week[token.substr(0, 1)] = toInt(input);
-});
-
-// HELPERS
-
-// LOCALES
-
-function localeWeek (mom) {
-    return weekOfYear(mom, this._week.dow, this._week.doy).week;
-}
-
-var defaultLocaleWeek = {
-    dow : 0, // Sunday is the first day of the week.
-    doy : 6  // The week that contains Jan 1st is the first week of the year.
-};
-
-function localeFirstDayOfWeek () {
-    return this._week.dow;
-}
-
-function localeFirstDayOfYear () {
-    return this._week.doy;
-}
-
-// MOMENTS
-
-function getSetWeek (input) {
-    var week = this.localeData().week(this);
-    return input == null ? week : this.add((input - week) * 7, 'd');
-}
-
-function getSetISOWeek (input) {
-    var week = weekOfYear(this, 1, 4).week;
-    return input == null ? week : this.add((input - week) * 7, 'd');
-}
-
-// FORMATTING
-
-addFormatToken('d', 0, 'do', 'day');
-
-addFormatToken('dd', 0, 0, function (format) {
-    return this.localeData().weekdaysMin(this, format);
-});
-
-addFormatToken('ddd', 0, 0, function (format) {
-    return this.localeData().weekdaysShort(this, format);
-});
-
-addFormatToken('dddd', 0, 0, function (format) {
-    return this.localeData().weekdays(this, format);
-});
-
-addFormatToken('e', 0, 0, 'weekday');
-addFormatToken('E', 0, 0, 'isoWeekday');
-
-// ALIASES
-
-addUnitAlias('day', 'd');
-addUnitAlias('weekday', 'e');
-addUnitAlias('isoWeekday', 'E');
-
-// PRIORITY
-addUnitPriority('day', 11);
-addUnitPriority('weekday', 11);
-addUnitPriority('isoWeekday', 11);
-
-// PARSING
-
-addRegexToken('d',    match1to2);
-addRegexToken('e',    match1to2);
-addRegexToken('E',    match1to2);
-addRegexToken('dd',   function (isStrict, locale) {
-    return locale.weekdaysMinRegex(isStrict);
-});
-addRegexToken('ddd',   function (isStrict, locale) {
-    return locale.weekdaysShortRegex(isStrict);
-});
-addRegexToken('dddd',   function (isStrict, locale) {
-    return locale.weekdaysRegex(isStrict);
-});
-
-addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
-    var weekday = config._locale.weekdaysParse(input, token, config._strict);
-    // if we didn't get a weekday name, mark the date as invalid
-    if (weekday != null) {
-        week.d = weekday;
-    } else {
-        getParsingFlags(config).invalidWeekday = input;
-    }
-});
-
-addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
-    week[token] = toInt(input);
-});
-
-// HELPERS
-
-function parseWeekday(input, locale) {
-    if (typeof input !== 'string') {
-        return input;
-    }
-
-    if (!isNaN(input)) {
-        return parseInt(input, 10);
-    }
-
-    input = locale.weekdaysParse(input);
-    if (typeof input === 'number') {
-        return input;
-    }
-
-    return null;
-}
-
-function parseIsoWeekday(input, locale) {
-    if (typeof input === 'string') {
-        return locale.weekdaysParse(input) % 7 || 7;
-    }
-    return isNaN(input) ? null : input;
-}
-
-// LOCALES
-
-var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
-function localeWeekdays (m, format) {
-    if (!m) {
-        return isArray(this._weekdays) ? this._weekdays :
-            this._weekdays['standalone'];
-    }
-    return isArray(this._weekdays) ? this._weekdays[m.day()] :
-        this._weekdays[this._weekdays.isFormat.test(format) ? 'format' : 'standalone'][m.day()];
-}
-
-var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
-function localeWeekdaysShort (m) {
-    return (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
-}
-
-var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
-function localeWeekdaysMin (m) {
-    return (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
-}
-
-function handleStrictParse$1(weekdayName, format, strict) {
-    var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
-    if (!this._weekdaysParse) {
-        this._weekdaysParse = [];
-        this._shortWeekdaysParse = [];
-        this._minWeekdaysParse = [];
-
-        for (i = 0; i < 7; ++i) {
-            mom = createUTC([2000, 1]).day(i);
-            this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
-            this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
-            this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
+            return Math.floor(number);
         }
     }
 
-    if (strict) {
-        if (format === 'dddd') {
-            ii = indexOf$1.call(this._weekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else if (format === 'ddd') {
-            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else {
-            ii = indexOf$1.call(this._minWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
+    function toInt(argumentForCoercion) {
+        var coercedNumber = +argumentForCoercion,
+            value = 0;
+
+        if (coercedNumber !== 0 && isFinite(coercedNumber)) {
+            value = absFloor(coercedNumber);
         }
-    } else {
-        if (format === 'dddd') {
-            ii = indexOf$1.call(this._weekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
+
+        return value;
+    }
+
+    function compareArrays(array1, array2, dontConvert) {
+        var len = Math.min(array1.length, array2.length),
+            lengthDiff = Math.abs(array1.length - array2.length),
+            diffs = 0,
+            i;
+        for (i = 0; i < len; i++) {
+            if ((dontConvert && array1[i] !== array2[i]) ||
+                (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
+                diffs++;
             }
-            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
+        }
+        return diffs + lengthDiff;
+    }
+
+    function Locale() {
+    }
+
+    var locales = {};
+    var globalLocale;
+
+    function normalizeLocale(key) {
+        return key ? key.toLowerCase().replace('_', '-') : key;
+    }
+
+    // pick the locale from the array
+    // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
+    // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
+    function chooseLocale(names) {
+        var i = 0, j, next, locale, split;
+
+        while (i < names.length) {
+            split = normalizeLocale(names[i]).split('-');
+            j = split.length;
+            next = normalizeLocale(names[i + 1]);
+            next = next ? next.split('-') : null;
+            while (j > 0) {
+                locale = loadLocale(split.slice(0, j).join('-'));
+                if (locale) {
+                    return locale;
+                }
+                if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
+                    //the next array item is better than a shallower substring of this one
+                    break;
+                }
+                j--;
             }
-            ii = indexOf$1.call(this._minWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
-        } else if (format === 'ddd') {
-            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
+            i++;
+        }
+        return null;
+    }
+
+    function loadLocale(name) {
+        var oldLocale = null;
+        // TODO: Find a better way to register and load all the locales in Node
+        if (!locales[name] && typeof module !== 'undefined' &&
+                module && module.exports) {
+            try {
+                oldLocale = globalLocale._abbr;
+                require('./locale/' + name);
+                // because defineLocale currently also sets the global locale, we
+                // want to undo that for lazy loaded locales
+                locale_locales__getSetGlobalLocale(oldLocale);
+            } catch (e) { }
+        }
+        return locales[name];
+    }
+
+    // This function will load locale and then set the global locale.  If
+    // no arguments are passed in, it will simply return the current global
+    // locale key.
+    function locale_locales__getSetGlobalLocale (key, values) {
+        var data;
+        if (key) {
+            if (typeof values === 'undefined') {
+                data = locale_locales__getLocale(key);
             }
-            ii = indexOf$1.call(this._weekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
+            else {
+                data = defineLocale(key, values);
             }
-            ii = indexOf$1.call(this._minWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
+
+            if (data) {
+                // moment.duration._locale = moment._locale = data;
+                globalLocale = data;
+            }
+        }
+
+        return globalLocale._abbr;
+    }
+
+    function defineLocale (name, values) {
+        if (values !== null) {
+            values.abbr = name;
+            locales[name] = locales[name] || new Locale();
+            locales[name].set(values);
+
+            // backwards compat for now: also set the locale
+            locale_locales__getSetGlobalLocale(name);
+
+            return locales[name];
         } else {
-            ii = indexOf$1.call(this._minWeekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf$1.call(this._weekdaysParse, llc);
-            if (ii !== -1) {
-                return ii;
-            }
-            ii = indexOf$1.call(this._shortWeekdaysParse, llc);
-            return ii !== -1 ? ii : null;
+            // useful for testing
+            delete locales[name];
+            return null;
         }
     }
-}
 
-function localeWeekdaysParse (weekdayName, format, strict) {
-    var i, mom, regex;
+    // returns locale data
+    function locale_locales__getLocale (key) {
+        var locale;
 
-    if (this._weekdaysParseExact) {
-        return handleStrictParse$1.call(this, weekdayName, format, strict);
-    }
-
-    if (!this._weekdaysParse) {
-        this._weekdaysParse = [];
-        this._minWeekdaysParse = [];
-        this._shortWeekdaysParse = [];
-        this._fullWeekdaysParse = [];
-    }
-
-    for (i = 0; i < 7; i++) {
-        // make the regex if we don't have it already
-
-        mom = createUTC([2000, 1]).day(i);
-        if (strict && !this._fullWeekdaysParse[i]) {
-            this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\.?') + '$', 'i');
-            this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\.?') + '$', 'i');
-            this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\.?') + '$', 'i');
+        if (key && key._locale && key._locale._abbr) {
+            key = key._locale._abbr;
         }
-        if (!this._weekdaysParse[i]) {
-            regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
-            this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
+
+        if (!key) {
+            return globalLocale;
         }
-        // test the regex
-        if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
-            return i;
-        } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
-            return i;
-        } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
-            return i;
-        } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
-            return i;
-        }
-    }
-}
 
-// MOMENTS
-
-function getSetDayOfWeek (input) {
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-    var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
-    if (input != null) {
-        input = parseWeekday(input, this.localeData());
-        return this.add(input - day, 'd');
-    } else {
-        return day;
-    }
-}
-
-function getSetLocaleDayOfWeek (input) {
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-    var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
-    return input == null ? weekday : this.add(input - weekday, 'd');
-}
-
-function getSetISODayOfWeek (input) {
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-
-    // behaves the same as moment#day except
-    // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
-    // as a setter, sunday should belong to the previous week.
-
-    if (input != null) {
-        var weekday = parseIsoWeekday(input, this.localeData());
-        return this.day(this.day() % 7 ? weekday : weekday - 7);
-    } else {
-        return this.day() || 7;
-    }
-}
-
-var defaultWeekdaysRegex = matchWord;
-function weekdaysRegex (isStrict) {
-    if (this._weekdaysParseExact) {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            computeWeekdaysParse.call(this);
-        }
-        if (isStrict) {
-            return this._weekdaysStrictRegex;
-        } else {
-            return this._weekdaysRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            this._weekdaysRegex = defaultWeekdaysRegex;
-        }
-        return this._weekdaysStrictRegex && isStrict ?
-            this._weekdaysStrictRegex : this._weekdaysRegex;
-    }
-}
-
-var defaultWeekdaysShortRegex = matchWord;
-function weekdaysShortRegex (isStrict) {
-    if (this._weekdaysParseExact) {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            computeWeekdaysParse.call(this);
-        }
-        if (isStrict) {
-            return this._weekdaysShortStrictRegex;
-        } else {
-            return this._weekdaysShortRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_weekdaysShortRegex')) {
-            this._weekdaysShortRegex = defaultWeekdaysShortRegex;
-        }
-        return this._weekdaysShortStrictRegex && isStrict ?
-            this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
-    }
-}
-
-var defaultWeekdaysMinRegex = matchWord;
-function weekdaysMinRegex (isStrict) {
-    if (this._weekdaysParseExact) {
-        if (!hasOwnProp(this, '_weekdaysRegex')) {
-            computeWeekdaysParse.call(this);
-        }
-        if (isStrict) {
-            return this._weekdaysMinStrictRegex;
-        } else {
-            return this._weekdaysMinRegex;
-        }
-    } else {
-        if (!hasOwnProp(this, '_weekdaysMinRegex')) {
-            this._weekdaysMinRegex = defaultWeekdaysMinRegex;
-        }
-        return this._weekdaysMinStrictRegex && isStrict ?
-            this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
-    }
-}
-
-
-function computeWeekdaysParse () {
-    function cmpLenRev(a, b) {
-        return b.length - a.length;
-    }
-
-    var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [],
-        i, mom, minp, shortp, longp;
-    for (i = 0; i < 7; i++) {
-        // make the regex if we don't have it already
-        mom = createUTC([2000, 1]).day(i);
-        minp = this.weekdaysMin(mom, '');
-        shortp = this.weekdaysShort(mom, '');
-        longp = this.weekdays(mom, '');
-        minPieces.push(minp);
-        shortPieces.push(shortp);
-        longPieces.push(longp);
-        mixedPieces.push(minp);
-        mixedPieces.push(shortp);
-        mixedPieces.push(longp);
-    }
-    // Sorting makes sure if one weekday (or abbr) is a prefix of another it
-    // will match the longer piece.
-    minPieces.sort(cmpLenRev);
-    shortPieces.sort(cmpLenRev);
-    longPieces.sort(cmpLenRev);
-    mixedPieces.sort(cmpLenRev);
-    for (i = 0; i < 7; i++) {
-        shortPieces[i] = regexEscape(shortPieces[i]);
-        longPieces[i] = regexEscape(longPieces[i]);
-        mixedPieces[i] = regexEscape(mixedPieces[i]);
-    }
-
-    this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-    this._weekdaysShortRegex = this._weekdaysRegex;
-    this._weekdaysMinRegex = this._weekdaysRegex;
-
-    this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-    this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-    this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
-}
-
-// FORMATTING
-
-function hFormat() {
-    return this.hours() % 12 || 12;
-}
-
-function kFormat() {
-    return this.hours() || 24;
-}
-
-addFormatToken('H', ['HH', 2], 0, 'hour');
-addFormatToken('h', ['hh', 2], 0, hFormat);
-addFormatToken('k', ['kk', 2], 0, kFormat);
-
-addFormatToken('hmm', 0, 0, function () {
-    return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
-});
-
-addFormatToken('hmmss', 0, 0, function () {
-    return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) +
-        zeroFill(this.seconds(), 2);
-});
-
-addFormatToken('Hmm', 0, 0, function () {
-    return '' + this.hours() + zeroFill(this.minutes(), 2);
-});
-
-addFormatToken('Hmmss', 0, 0, function () {
-    return '' + this.hours() + zeroFill(this.minutes(), 2) +
-        zeroFill(this.seconds(), 2);
-});
-
-function meridiem (token, lowercase) {
-    addFormatToken(token, 0, 0, function () {
-        return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
-    });
-}
-
-meridiem('a', true);
-meridiem('A', false);
-
-// ALIASES
-
-addUnitAlias('hour', 'h');
-
-// PRIORITY
-addUnitPriority('hour', 13);
-
-// PARSING
-
-function matchMeridiem (isStrict, locale) {
-    return locale._meridiemParse;
-}
-
-addRegexToken('a',  matchMeridiem);
-addRegexToken('A',  matchMeridiem);
-addRegexToken('H',  match1to2);
-addRegexToken('h',  match1to2);
-addRegexToken('k',  match1to2);
-addRegexToken('HH', match1to2, match2);
-addRegexToken('hh', match1to2, match2);
-addRegexToken('kk', match1to2, match2);
-
-addRegexToken('hmm', match3to4);
-addRegexToken('hmmss', match5to6);
-addRegexToken('Hmm', match3to4);
-addRegexToken('Hmmss', match5to6);
-
-addParseToken(['H', 'HH'], HOUR);
-addParseToken(['k', 'kk'], function (input, array, config) {
-    var kInput = toInt(input);
-    array[HOUR] = kInput === 24 ? 0 : kInput;
-});
-addParseToken(['a', 'A'], function (input, array, config) {
-    config._isPm = config._locale.isPM(input);
-    config._meridiem = input;
-});
-addParseToken(['h', 'hh'], function (input, array, config) {
-    array[HOUR] = toInt(input);
-    getParsingFlags(config).bigHour = true;
-});
-addParseToken('hmm', function (input, array, config) {
-    var pos = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos));
-    array[MINUTE] = toInt(input.substr(pos));
-    getParsingFlags(config).bigHour = true;
-});
-addParseToken('hmmss', function (input, array, config) {
-    var pos1 = input.length - 4;
-    var pos2 = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos1));
-    array[MINUTE] = toInt(input.substr(pos1, 2));
-    array[SECOND] = toInt(input.substr(pos2));
-    getParsingFlags(config).bigHour = true;
-});
-addParseToken('Hmm', function (input, array, config) {
-    var pos = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos));
-    array[MINUTE] = toInt(input.substr(pos));
-});
-addParseToken('Hmmss', function (input, array, config) {
-    var pos1 = input.length - 4;
-    var pos2 = input.length - 2;
-    array[HOUR] = toInt(input.substr(0, pos1));
-    array[MINUTE] = toInt(input.substr(pos1, 2));
-    array[SECOND] = toInt(input.substr(pos2));
-});
-
-// LOCALES
-
-function localeIsPM (input) {
-    // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
-    // Using charAt should be more compatible.
-    return ((input + '').toLowerCase().charAt(0) === 'p');
-}
-
-var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
-function localeMeridiem (hours, minutes, isLower) {
-    if (hours > 11) {
-        return isLower ? 'pm' : 'PM';
-    } else {
-        return isLower ? 'am' : 'AM';
-    }
-}
-
-
-// MOMENTS
-
-// Setting the hour should keep the time, because the user explicitly
-// specified which hour he wants. So trying to maintain the same hour (in
-// a new timezone) makes sense. Adding/subtracting hours does not follow
-// this rule.
-var getSetHour = makeGetSet('Hours', true);
-
-// months
-// week
-// weekdays
-// meridiem
-var baseConfig = {
-    calendar: defaultCalendar,
-    longDateFormat: defaultLongDateFormat,
-    invalidDate: defaultInvalidDate,
-    ordinal: defaultOrdinal,
-    dayOfMonthOrdinalParse: defaultDayOfMonthOrdinalParse,
-    relativeTime: defaultRelativeTime,
-
-    months: defaultLocaleMonths,
-    monthsShort: defaultLocaleMonthsShort,
-
-    week: defaultLocaleWeek,
-
-    weekdays: defaultLocaleWeekdays,
-    weekdaysMin: defaultLocaleWeekdaysMin,
-    weekdaysShort: defaultLocaleWeekdaysShort,
-
-    meridiemParse: defaultLocaleMeridiemParse
-};
-
-// internal storage for locale config files
-var locales = {};
-var localeFamilies = {};
-var globalLocale;
-
-function normalizeLocale(key) {
-    return key ? key.toLowerCase().replace('_', '-') : key;
-}
-
-// pick the locale from the array
-// try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-// substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
-function chooseLocale(names) {
-    var i = 0, j, next, locale, split;
-
-    while (i < names.length) {
-        split = normalizeLocale(names[i]).split('-');
-        j = split.length;
-        next = normalizeLocale(names[i + 1]);
-        next = next ? next.split('-') : null;
-        while (j > 0) {
-            locale = loadLocale(split.slice(0, j).join('-'));
+        if (!isArray(key)) {
+            //short-circuit everything else
+            locale = loadLocale(key);
             if (locale) {
                 return locale;
             }
-            if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
-                //the next array item is better than a shallower substring of this one
-                break;
-            }
-            j--;
-        }
-        i++;
-    }
-    return null;
-}
-
-function loadLocale(name) {
-    var oldLocale = null;
-    // TODO: Find a better way to register and load all the locales in Node
-    if (!locales[name] && (typeof module !== 'undefined') &&
-            module && module.exports) {
-        try {
-            oldLocale = globalLocale._abbr;
-            require('./locale/' + name);
-            // because defineLocale currently also sets the global locale, we
-            // want to undo that for lazy loaded locales
-            getSetGlobalLocale(oldLocale);
-        } catch (e) { }
-    }
-    return locales[name];
-}
-
-// This function will load locale and then set the global locale.  If
-// no arguments are passed in, it will simply return the current global
-// locale key.
-function getSetGlobalLocale (key, values) {
-    var data;
-    if (key) {
-        if (isUndefined(values)) {
-            data = getLocale(key);
-        }
-        else {
-            data = defineLocale(key, values);
+            key = [key];
         }
 
-        if (data) {
-            // moment.duration._locale = moment._locale = data;
-            globalLocale = data;
-        }
+        return chooseLocale(key);
     }
 
-    return globalLocale._abbr;
-}
+    var aliases = {};
 
-function defineLocale (name, config) {
-    if (config !== null) {
-        var parentConfig = baseConfig;
-        config.abbr = name;
-        if (locales[name] != null) {
-            deprecateSimple('defineLocaleOverride',
-                    'use moment.updateLocale(localeName, config) to change ' +
-                    'an existing locale. moment.defineLocale(localeName, ' +
-                    'config) should only be used for creating a new locale ' +
-                    'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
-            parentConfig = locales[name]._config;
-        } else if (config.parentLocale != null) {
-            if (locales[config.parentLocale] != null) {
-                parentConfig = locales[config.parentLocale]._config;
-            } else {
-                if (!localeFamilies[config.parentLocale]) {
-                    localeFamilies[config.parentLocale] = [];
+    function addUnitAlias (unit, shorthand) {
+        var lowerCase = unit.toLowerCase();
+        aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
+    }
+
+    function normalizeUnits(units) {
+        return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
+    }
+
+    function normalizeObjectUnits(inputObject) {
+        var normalizedInput = {},
+            normalizedProp,
+            prop;
+
+        for (prop in inputObject) {
+            if (hasOwnProp(inputObject, prop)) {
+                normalizedProp = normalizeUnits(prop);
+                if (normalizedProp) {
+                    normalizedInput[normalizedProp] = inputObject[prop];
                 }
-                localeFamilies[config.parentLocale].push({
-                    name: name,
-                    config: config
-                });
-                return null;
             }
         }
-        locales[name] = new Locale(mergeConfigs(parentConfig, config));
 
-        if (localeFamilies[name]) {
-            localeFamilies[name].forEach(function (x) {
-                defineLocale(x.name, x.config);
-            });
-        }
-
-        // backwards compat for now: also set the locale
-        // make sure we set the locale AFTER all child locales have been
-        // created, so we won't end up with the child locale set.
-        getSetGlobalLocale(name);
-
-
-        return locales[name];
-    } else {
-        // useful for testing
-        delete locales[name];
-        return null;
+        return normalizedInput;
     }
-}
 
-function updateLocale(name, config) {
-    if (config != null) {
-        var locale, parentConfig = baseConfig;
-        // MERGE
-        if (locales[name] != null) {
-            parentConfig = locales[name]._config;
+    function makeGetSet (unit, keepTime) {
+        return function (value) {
+            if (value != null) {
+                get_set__set(this, unit, value);
+                utils_hooks__hooks.updateOffset(this, keepTime);
+                return this;
+            } else {
+                return get_set__get(this, unit);
+            }
+        };
+    }
+
+    function get_set__get (mom, unit) {
+        return mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]();
+    }
+
+    function get_set__set (mom, unit, value) {
+        return mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
+    }
+
+    // MOMENTS
+
+    function getSet (units, value) {
+        var unit;
+        if (typeof units === 'object') {
+            for (unit in units) {
+                this.set(unit, units[unit]);
+            }
+        } else {
+            units = normalizeUnits(units);
+            if (typeof this[units] === 'function') {
+                return this[units](value);
+            }
         }
-        config = mergeConfigs(parentConfig, config);
-        locale = new Locale(config);
-        locale.parentLocale = locales[name];
-        locales[name] = locale;
+        return this;
+    }
 
-        // backwards compat for now: also set the locale
-        getSetGlobalLocale(name);
-    } else {
-        // pass null for config to unupdate, useful for tests
-        if (locales[name] != null) {
-            if (locales[name].parentLocale != null) {
-                locales[name] = locales[name].parentLocale;
-            } else if (locales[name] != null) {
-                delete locales[name];
+    function zeroFill(number, targetLength, forceSign) {
+        var absNumber = '' + Math.abs(number),
+            zerosToFill = targetLength - absNumber.length,
+            sign = number >= 0;
+        return (sign ? (forceSign ? '+' : '') : '-') +
+            Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
+    }
+
+    var formattingTokens = /(\[[^\[]*\])|(\\)?(Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Q|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
+
+    var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
+
+    var formatFunctions = {};
+
+    var formatTokenFunctions = {};
+
+    // token:    'M'
+    // padded:   ['MM', 2]
+    // ordinal:  'Mo'
+    // callback: function () { this.month() + 1 }
+    function addFormatToken (token, padded, ordinal, callback) {
+        var func = callback;
+        if (typeof callback === 'string') {
+            func = function () {
+                return this[callback]();
+            };
+        }
+        if (token) {
+            formatTokenFunctions[token] = func;
+        }
+        if (padded) {
+            formatTokenFunctions[padded[0]] = function () {
+                return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
+            };
+        }
+        if (ordinal) {
+            formatTokenFunctions[ordinal] = function () {
+                return this.localeData().ordinal(func.apply(this, arguments), token);
+            };
+        }
+    }
+
+    function removeFormattingTokens(input) {
+        if (input.match(/\[[\s\S]/)) {
+            return input.replace(/^\[|\]$/g, '');
+        }
+        return input.replace(/\\/g, '');
+    }
+
+    function makeFormatFunction(format) {
+        var array = format.match(formattingTokens), i, length;
+
+        for (i = 0, length = array.length; i < length; i++) {
+            if (formatTokenFunctions[array[i]]) {
+                array[i] = formatTokenFunctions[array[i]];
+            } else {
+                array[i] = removeFormattingTokens(array[i]);
+            }
+        }
+
+        return function (mom) {
+            var output = '';
+            for (i = 0; i < length; i++) {
+                output += array[i] instanceof Function ? array[i].call(mom, format) : array[i];
+            }
+            return output;
+        };
+    }
+
+    // format date using native date object
+    function formatMoment(m, format) {
+        if (!m.isValid()) {
+            return m.localeData().invalidDate();
+        }
+
+        format = expandFormat(format, m.localeData());
+        formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
+
+        return formatFunctions[format](m);
+    }
+
+    function expandFormat(format, locale) {
+        var i = 5;
+
+        function replaceLongDateFormatTokens(input) {
+            return locale.longDateFormat(input) || input;
+        }
+
+        localFormattingTokens.lastIndex = 0;
+        while (i >= 0 && localFormattingTokens.test(format)) {
+            format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
+            localFormattingTokens.lastIndex = 0;
+            i -= 1;
+        }
+
+        return format;
+    }
+
+    var match1         = /\d/;            //       0 - 9
+    var match2         = /\d\d/;          //      00 - 99
+    var match3         = /\d{3}/;         //     000 - 999
+    var match4         = /\d{4}/;         //    0000 - 9999
+    var match6         = /[+-]?\d{6}/;    // -999999 - 999999
+    var match1to2      = /\d\d?/;         //       0 - 99
+    var match1to3      = /\d{1,3}/;       //       0 - 999
+    var match1to4      = /\d{1,4}/;       //       0 - 9999
+    var match1to6      = /[+-]?\d{1,6}/;  // -999999 - 999999
+
+    var matchUnsigned  = /\d+/;           //       0 - inf
+    var matchSigned    = /[+-]?\d+/;      //    -inf - inf
+
+    var matchOffset    = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
+
+    var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
+
+    // any word (or two) characters or numbers including two/three word month in arabic.
+    var matchWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i;
+
+    var regexes = {};
+
+    function isFunction (sth) {
+        // https://github.com/moment/moment/issues/2325
+        return typeof sth === 'function' &&
+            Object.prototype.toString.call(sth) === '[object Function]';
+    }
+
+
+    function addRegexToken (token, regex, strictRegex) {
+        regexes[token] = isFunction(regex) ? regex : function (isStrict) {
+            return (isStrict && strictRegex) ? strictRegex : regex;
+        };
+    }
+
+    function getParseRegexForToken (token, config) {
+        if (!hasOwnProp(regexes, token)) {
+            return new RegExp(unescapeFormat(token));
+        }
+
+        return regexes[token](config._strict, config._locale);
+    }
+
+    // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+    function unescapeFormat(s) {
+        return s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
+            return p1 || p2 || p3 || p4;
+        }).replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    }
+
+    var tokens = {};
+
+    function addParseToken (token, callback) {
+        var i, func = callback;
+        if (typeof token === 'string') {
+            token = [token];
+        }
+        if (typeof callback === 'number') {
+            func = function (input, array) {
+                array[callback] = toInt(input);
+            };
+        }
+        for (i = 0; i < token.length; i++) {
+            tokens[token[i]] = func;
+        }
+    }
+
+    function addWeekParseToken (token, callback) {
+        addParseToken(token, function (input, array, config, token) {
+            config._w = config._w || {};
+            callback(input, config._w, config, token);
+        });
+    }
+
+    function addTimeToArrayFromToken(token, input, config) {
+        if (input != null && hasOwnProp(tokens, token)) {
+            tokens[token](input, config._a, config, token);
+        }
+    }
+
+    var YEAR = 0;
+    var MONTH = 1;
+    var DATE = 2;
+    var HOUR = 3;
+    var MINUTE = 4;
+    var SECOND = 5;
+    var MILLISECOND = 6;
+
+    function daysInMonth(year, month) {
+        return new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
+    }
+
+    // FORMATTING
+
+    addFormatToken('M', ['MM', 2], 'Mo', function () {
+        return this.month() + 1;
+    });
+
+    addFormatToken('MMM', 0, 0, function (format) {
+        return this.localeData().monthsShort(this, format);
+    });
+
+    addFormatToken('MMMM', 0, 0, function (format) {
+        return this.localeData().months(this, format);
+    });
+
+    // ALIASES
+
+    addUnitAlias('month', 'M');
+
+    // PARSING
+
+    addRegexToken('M',    match1to2);
+    addRegexToken('MM',   match1to2, match2);
+    addRegexToken('MMM',  matchWord);
+    addRegexToken('MMMM', matchWord);
+
+    addParseToken(['M', 'MM'], function (input, array) {
+        array[MONTH] = toInt(input) - 1;
+    });
+
+    addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
+        var month = config._locale.monthsParse(input, token, config._strict);
+        // if we didn't find a month name, mark the date as invalid.
+        if (month != null) {
+            array[MONTH] = month;
+        } else {
+            getParsingFlags(config).invalidMonth = input;
+        }
+    });
+
+    // LOCALES
+
+    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
+    function localeMonths (m) {
+        return this._months[m.month()];
+    }
+
+    var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
+    function localeMonthsShort (m) {
+        return this._monthsShort[m.month()];
+    }
+
+    function localeMonthsParse (monthName, format, strict) {
+        var i, mom, regex;
+
+        if (!this._monthsParse) {
+            this._monthsParse = [];
+            this._longMonthsParse = [];
+            this._shortMonthsParse = [];
+        }
+
+        for (i = 0; i < 12; i++) {
+            // make the regex if we don't have it already
+            mom = create_utc__createUTC([2000, i]);
+            if (strict && !this._longMonthsParse[i]) {
+                this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
+                this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
+            }
+            if (!strict && !this._monthsParse[i]) {
+                regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
+                this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
+            }
+            // test the regex
+            if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
+                return i;
+            } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
+                return i;
+            } else if (!strict && this._monthsParse[i].test(monthName)) {
+                return i;
             }
         }
     }
-    return locales[name];
-}
 
-// returns locale data
-function getLocale (key) {
-    var locale;
+    // MOMENTS
 
-    if (key && key._locale && key._locale._abbr) {
-        key = key._locale._abbr;
-    }
+    function setMonth (mom, value) {
+        var dayOfMonth;
 
-    if (!key) {
-        return globalLocale;
-    }
-
-    if (!isArray(key)) {
-        //short-circuit everything else
-        locale = loadLocale(key);
-        if (locale) {
-            return locale;
-        }
-        key = [key];
-    }
-
-    return chooseLocale(key);
-}
-
-function listLocales() {
-    return keys$1(locales);
-}
-
-function checkOverflow (m) {
-    var overflow;
-    var a = m._a;
-
-    if (a && getParsingFlags(m).overflow === -2) {
-        overflow =
-            a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
-            a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
-            a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
-            a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
-            a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
-            a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
-            -1;
-
-        if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
-            overflow = DATE;
-        }
-        if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
-            overflow = WEEK;
-        }
-        if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
-            overflow = WEEKDAY;
-        }
-
-        getParsingFlags(m).overflow = overflow;
-    }
-
-    return m;
-}
-
-// iso 8601 regex
-// 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
-var basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
-
-var tzRegex = /Z|[+-]\d\d(?::?\d\d)?/;
-
-var isoDates = [
-    ['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/],
-    ['YYYY-MM-DD', /\d{4}-\d\d-\d\d/],
-    ['GGGG-[W]WW-E', /\d{4}-W\d\d-\d/],
-    ['GGGG-[W]WW', /\d{4}-W\d\d/, false],
-    ['YYYY-DDD', /\d{4}-\d{3}/],
-    ['YYYY-MM', /\d{4}-\d\d/, false],
-    ['YYYYYYMMDD', /[+-]\d{10}/],
-    ['YYYYMMDD', /\d{8}/],
-    // YYYYMM is NOT allowed by the standard
-    ['GGGG[W]WWE', /\d{4}W\d{3}/],
-    ['GGGG[W]WW', /\d{4}W\d{2}/, false],
-    ['YYYYDDD', /\d{7}/]
-];
-
-// iso time formats and regexes
-var isoTimes = [
-    ['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/],
-    ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/],
-    ['HH:mm:ss', /\d\d:\d\d:\d\d/],
-    ['HH:mm', /\d\d:\d\d/],
-    ['HHmmss.SSSS', /\d\d\d\d\d\d\.\d+/],
-    ['HHmmss,SSSS', /\d\d\d\d\d\d,\d+/],
-    ['HHmmss', /\d\d\d\d\d\d/],
-    ['HHmm', /\d\d\d\d/],
-    ['HH', /\d\d/]
-];
-
-var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
-
-// date from iso format
-function configFromISO(config) {
-    var i, l,
-        string = config._i,
-        match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string),
-        allowTime, dateFormat, timeFormat, tzFormat;
-
-    if (match) {
-        getParsingFlags(config).iso = true;
-
-        for (i = 0, l = isoDates.length; i < l; i++) {
-            if (isoDates[i][1].exec(match[1])) {
-                dateFormat = isoDates[i][0];
-                allowTime = isoDates[i][2] !== false;
-                break;
+        // TODO: Move this out of here!
+        if (typeof value === 'string') {
+            value = mom.localeData().monthsParse(value);
+            // TODO: Another silent failure?
+            if (typeof value !== 'number') {
+                return mom;
             }
         }
-        if (dateFormat == null) {
-            config._isValid = false;
-            return;
+
+        dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
+        mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
+        return mom;
+    }
+
+    function getSetMonth (value) {
+        if (value != null) {
+            setMonth(this, value);
+            utils_hooks__hooks.updateOffset(this, true);
+            return this;
+        } else {
+            return get_set__get(this, 'Month');
         }
-        if (match[3]) {
-            for (i = 0, l = isoTimes.length; i < l; i++) {
-                if (isoTimes[i][1].exec(match[3])) {
-                    // match[2] should be 'T' or space
-                    timeFormat = (match[2] || ' ') + isoTimes[i][0];
+    }
+
+    function getDaysInMonth () {
+        return daysInMonth(this.year(), this.month());
+    }
+
+    function checkOverflow (m) {
+        var overflow;
+        var a = m._a;
+
+        if (a && getParsingFlags(m).overflow === -2) {
+            overflow =
+                a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
+                a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
+                a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
+                a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
+                a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
+                a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
+                -1;
+
+            if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
+                overflow = DATE;
+            }
+
+            getParsingFlags(m).overflow = overflow;
+        }
+
+        return m;
+    }
+
+    function warn(msg) {
+        if (utils_hooks__hooks.suppressDeprecationWarnings === false && typeof console !== 'undefined' && console.warn) {
+            console.warn('Deprecation warning: ' + msg);
+        }
+    }
+
+    function deprecate(msg, fn) {
+        var firstTime = true;
+
+        return extend(function () {
+            if (firstTime) {
+                warn(msg + '\n' + (new Error()).stack);
+                firstTime = false;
+            }
+            return fn.apply(this, arguments);
+        }, fn);
+    }
+
+    var deprecations = {};
+
+    function deprecateSimple(name, msg) {
+        if (!deprecations[name]) {
+            warn(msg);
+            deprecations[name] = true;
+        }
+    }
+
+    utils_hooks__hooks.suppressDeprecationWarnings = false;
+
+    var from_string__isoRegex = /^\s*(?:[+-]\d{6}|\d{4})-(?:(\d\d-\d\d)|(W\d\d$)|(W\d\d-\d)|(\d\d\d))((T| )(\d\d(:\d\d(:\d\d(\.\d+)?)?)?)?([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?$/;
+
+    var isoDates = [
+        ['YYYYYY-MM-DD', /[+-]\d{6}-\d{2}-\d{2}/],
+        ['YYYY-MM-DD', /\d{4}-\d{2}-\d{2}/],
+        ['GGGG-[W]WW-E', /\d{4}-W\d{2}-\d/],
+        ['GGGG-[W]WW', /\d{4}-W\d{2}/],
+        ['YYYY-DDD', /\d{4}-\d{3}/]
+    ];
+
+    // iso time formats and regexes
+    var isoTimes = [
+        ['HH:mm:ss.SSSS', /(T| )\d\d:\d\d:\d\d\.\d+/],
+        ['HH:mm:ss', /(T| )\d\d:\d\d:\d\d/],
+        ['HH:mm', /(T| )\d\d:\d\d/],
+        ['HH', /(T| )\d\d/]
+    ];
+
+    var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
+
+    // date from iso format
+    function configFromISO(config) {
+        var i, l,
+            string = config._i,
+            match = from_string__isoRegex.exec(string);
+
+        if (match) {
+            getParsingFlags(config).iso = true;
+            for (i = 0, l = isoDates.length; i < l; i++) {
+                if (isoDates[i][1].exec(string)) {
+                    config._f = isoDates[i][0];
                     break;
                 }
             }
-            if (timeFormat == null) {
-                config._isValid = false;
-                return;
+            for (i = 0, l = isoTimes.length; i < l; i++) {
+                if (isoTimes[i][1].exec(string)) {
+                    // match[6] should be 'T' or space
+                    config._f += (match[6] || ' ') + isoTimes[i][0];
+                    break;
+                }
             }
-        }
-        if (!allowTime && timeFormat != null) {
+            if (string.match(matchOffset)) {
+                config._f += 'Z';
+            }
+            configFromStringAndFormat(config);
+        } else {
             config._isValid = false;
+        }
+    }
+
+    // date from iso format or fallback
+    function configFromString(config) {
+        var matched = aspNetJsonRegex.exec(config._i);
+
+        if (matched !== null) {
+            config._d = new Date(+matched[1]);
             return;
         }
-        if (match[4]) {
-            if (tzRegex.exec(match[4])) {
-                tzFormat = 'Z';
-            } else {
-                config._isValid = false;
-                return;
-            }
+
+        configFromISO(config);
+        if (config._isValid === false) {
+            delete config._isValid;
+            utils_hooks__hooks.createFromInputFallback(config);
         }
-        config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
-        configFromStringAndFormat(config);
-    } else {
-        config._isValid = false;
     }
-}
 
-// RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-var basicRfcRegex = /^((?:Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d?\d\s(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(?:\d\d)?\d\d\s)(\d\d:\d\d)(\:\d\d)?(\s(?:UT|GMT|[ECMP][SD]T|[A-IK-Za-ik-z]|[+-]\d{4}))$/;
+    utils_hooks__hooks.createFromInputFallback = deprecate(
+        'moment construction falls back to js Date. This is ' +
+        'discouraged and will be removed in upcoming major ' +
+        'release. Please refer to ' +
+        'https://github.com/moment/moment/issues/1407 for more info.',
+        function (config) {
+            config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
+        }
+    );
 
-// date and time from ref 2822 format
-function configFromRFC2822(config) {
-    var string, match, dayFormat,
-        dateFormat, timeFormat, tzFormat;
-    var timezones = {
-        ' GMT': ' +0000',
-        ' EDT': ' -0400',
-        ' EST': ' -0500',
-        ' CDT': ' -0500',
-        ' CST': ' -0600',
-        ' MDT': ' -0600',
-        ' MST': ' -0700',
-        ' PDT': ' -0700',
-        ' PST': ' -0800'
+    function createDate (y, m, d, h, M, s, ms) {
+        //can't just apply() to create a date:
+        //http://stackoverflow.com/questions/181348/instantiating-a-javascript-object-by-calling-prototype-constructor-apply
+        var date = new Date(y, m, d, h, M, s, ms);
+
+        //the date constructor doesn't accept years < 1970
+        if (y < 1970) {
+            date.setFullYear(y);
+        }
+        return date;
+    }
+
+    function createUTCDate (y) {
+        var date = new Date(Date.UTC.apply(null, arguments));
+        if (y < 1970) {
+            date.setUTCFullYear(y);
+        }
+        return date;
+    }
+
+    addFormatToken(0, ['YY', 2], 0, function () {
+        return this.year() % 100;
+    });
+
+    addFormatToken(0, ['YYYY',   4],       0, 'year');
+    addFormatToken(0, ['YYYYY',  5],       0, 'year');
+    addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
+
+    // ALIASES
+
+    addUnitAlias('year', 'y');
+
+    // PARSING
+
+    addRegexToken('Y',      matchSigned);
+    addRegexToken('YY',     match1to2, match2);
+    addRegexToken('YYYY',   match1to4, match4);
+    addRegexToken('YYYYY',  match1to6, match6);
+    addRegexToken('YYYYYY', match1to6, match6);
+
+    addParseToken(['YYYYY', 'YYYYYY'], YEAR);
+    addParseToken('YYYY', function (input, array) {
+        array[YEAR] = input.length === 2 ? utils_hooks__hooks.parseTwoDigitYear(input) : toInt(input);
+    });
+    addParseToken('YY', function (input, array) {
+        array[YEAR] = utils_hooks__hooks.parseTwoDigitYear(input);
+    });
+
+    // HELPERS
+
+    function daysInYear(year) {
+        return isLeapYear(year) ? 366 : 365;
+    }
+
+    function isLeapYear(year) {
+        return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+    }
+
+    // HOOKS
+
+    utils_hooks__hooks.parseTwoDigitYear = function (input) {
+        return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
     };
-    var military = 'YXWVUTSRQPONZABCDEFGHIKLM';
-    var timezone, timezoneIndex;
 
-    string = config._i
-        .replace(/\([^\)]*\)|[\n\t]/g, ' ') // Remove comments and folding whitespace
-        .replace(/(\s\s+)/g, ' ') // Replace multiple-spaces with a single space
-        .replace(/^\s|\s$/g, ''); // Remove leading and trailing spaces
-    match = basicRfcRegex.exec(string);
+    // MOMENTS
 
-    if (match) {
-        dayFormat = match[1] ? 'ddd' + ((match[1].length === 5) ? ', ' : ' ') : '';
-        dateFormat = 'D MMM ' + ((match[2].length > 10) ? 'YYYY ' : 'YY ');
-        timeFormat = 'HH:mm' + (match[4] ? ':ss' : '');
+    var getSetYear = makeGetSet('FullYear', false);
 
-        // TODO: Replace the vanilla JS Date object with an indepentent day-of-week check.
-        if (match[1]) { // day of week given
-            var momentDate = new Date(match[2]);
-            var momentDay = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][momentDate.getDay()];
+    function getIsLeapYear () {
+        return isLeapYear(this.year());
+    }
 
-            if (match[1].substr(0,3) !== momentDay) {
-                getParsingFlags(config).weekdayMismatch = true;
-                config._isValid = false;
-                return;
+    addFormatToken('w', ['ww', 2], 'wo', 'week');
+    addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
+
+    // ALIASES
+
+    addUnitAlias('week', 'w');
+    addUnitAlias('isoWeek', 'W');
+
+    // PARSING
+
+    addRegexToken('w',  match1to2);
+    addRegexToken('ww', match1to2, match2);
+    addRegexToken('W',  match1to2);
+    addRegexToken('WW', match1to2, match2);
+
+    addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
+        week[token.substr(0, 1)] = toInt(input);
+    });
+
+    // HELPERS
+
+    // firstDayOfWeek       0 = sun, 6 = sat
+    //                      the day of the week that starts the week
+    //                      (usually sunday or monday)
+    // firstDayOfWeekOfYear 0 = sun, 6 = sat
+    //                      the first week is the week that contains the first
+    //                      of this day of the week
+    //                      (eg. ISO weeks use thursday (4))
+    function weekOfYear(mom, firstDayOfWeek, firstDayOfWeekOfYear) {
+        var end = firstDayOfWeekOfYear - firstDayOfWeek,
+            daysToDayOfWeek = firstDayOfWeekOfYear - mom.day(),
+            adjustedMoment;
+
+
+        if (daysToDayOfWeek > end) {
+            daysToDayOfWeek -= 7;
+        }
+
+        if (daysToDayOfWeek < end - 7) {
+            daysToDayOfWeek += 7;
+        }
+
+        adjustedMoment = local__createLocal(mom).add(daysToDayOfWeek, 'd');
+        return {
+            week: Math.ceil(adjustedMoment.dayOfYear() / 7),
+            year: adjustedMoment.year()
+        };
+    }
+
+    // LOCALES
+
+    function localeWeek (mom) {
+        return weekOfYear(mom, this._week.dow, this._week.doy).week;
+    }
+
+    var defaultLocaleWeek = {
+        dow : 0, // Sunday is the first day of the week.
+        doy : 6  // The week that contains Jan 1st is the first week of the year.
+    };
+
+    function localeFirstDayOfWeek () {
+        return this._week.dow;
+    }
+
+    function localeFirstDayOfYear () {
+        return this._week.doy;
+    }
+
+    // MOMENTS
+
+    function getSetWeek (input) {
+        var week = this.localeData().week(this);
+        return input == null ? week : this.add((input - week) * 7, 'd');
+    }
+
+    function getSetISOWeek (input) {
+        var week = weekOfYear(this, 1, 4).week;
+        return input == null ? week : this.add((input - week) * 7, 'd');
+    }
+
+    addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
+
+    // ALIASES
+
+    addUnitAlias('dayOfYear', 'DDD');
+
+    // PARSING
+
+    addRegexToken('DDD',  match1to3);
+    addRegexToken('DDDD', match3);
+    addParseToken(['DDD', 'DDDD'], function (input, array, config) {
+        config._dayOfYear = toInt(input);
+    });
+
+    // HELPERS
+
+    //http://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
+    function dayOfYearFromWeeks(year, week, weekday, firstDayOfWeekOfYear, firstDayOfWeek) {
+        var week1Jan = 6 + firstDayOfWeek - firstDayOfWeekOfYear, janX = createUTCDate(year, 0, 1 + week1Jan), d = janX.getUTCDay(), dayOfYear;
+        if (d < firstDayOfWeek) {
+            d += 7;
+        }
+
+        weekday = weekday != null ? 1 * weekday : firstDayOfWeek;
+
+        dayOfYear = 1 + week1Jan + 7 * (week - 1) - d + weekday;
+
+        return {
+            year: dayOfYear > 0 ? year : year - 1,
+            dayOfYear: dayOfYear > 0 ?  dayOfYear : daysInYear(year - 1) + dayOfYear
+        };
+    }
+
+    // MOMENTS
+
+    function getSetDayOfYear (input) {
+        var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
+        return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
+    }
+
+    // Pick the first defined of two or three arguments.
+    function defaults(a, b, c) {
+        if (a != null) {
+            return a;
+        }
+        if (b != null) {
+            return b;
+        }
+        return c;
+    }
+
+    function currentDateArray(config) {
+        var now = new Date();
+        if (config._useUTC) {
+            return [now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()];
+        }
+        return [now.getFullYear(), now.getMonth(), now.getDate()];
+    }
+
+    // convert an array to a date.
+    // the array should mirror the parameters below
+    // note: all values past the year are optional and will default to the lowest possible value.
+    // [year, month, day , hour, minute, second, millisecond]
+    function configFromArray (config) {
+        var i, date, input = [], currentDate, yearToUse;
+
+        if (config._d) {
+            return;
+        }
+
+        currentDate = currentDateArray(config);
+
+        //compute day of the year from weeks and weekdays
+        if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
+            dayOfYearFromWeekInfo(config);
+        }
+
+        //if the day of the year is set, figure out what it is
+        if (config._dayOfYear) {
+            yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
+
+            if (config._dayOfYear > daysInYear(yearToUse)) {
+                getParsingFlags(config)._overflowDayOfYear = true;
             }
+
+            date = createUTCDate(yearToUse, 0, config._dayOfYear);
+            config._a[MONTH] = date.getUTCMonth();
+            config._a[DATE] = date.getUTCDate();
         }
 
-        switch (match[5].length) {
-            case 2: // military
-                if (timezoneIndex === 0) {
-                    timezone = ' +0000';
-                } else {
-                    timezoneIndex = military.indexOf(match[5][1].toUpperCase()) - 12;
-                    timezone = ((timezoneIndex < 0) ? ' -' : ' +') +
-                        (('' + timezoneIndex).replace(/^-?/, '0')).match(/..$/)[0] + '00';
-                }
-                break;
-            case 4: // Zone
-                timezone = timezones[match[5]];
-                break;
-            default: // UT or +/-9999
-                timezone = timezones[' GMT'];
-        }
-        match[5] = timezone;
-        config._i = match.splice(1).join('');
-        tzFormat = ' ZZ';
-        config._f = dayFormat + dateFormat + timeFormat + tzFormat;
-        configFromStringAndFormat(config);
-        getParsingFlags(config).rfc2822 = true;
-    } else {
-        config._isValid = false;
-    }
-}
-
-// date from iso format or fallback
-function configFromString(config) {
-    var matched = aspNetJsonRegex.exec(config._i);
-
-    if (matched !== null) {
-        config._d = new Date(+matched[1]);
-        return;
-    }
-
-    configFromISO(config);
-    if (config._isValid === false) {
-        delete config._isValid;
-    } else {
-        return;
-    }
-
-    configFromRFC2822(config);
-    if (config._isValid === false) {
-        delete config._isValid;
-    } else {
-        return;
-    }
-
-    // Final attempt, use Input Fallback
-    hooks.createFromInputFallback(config);
-}
-
-hooks.createFromInputFallback = deprecate(
-    'value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), ' +
-    'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' +
-    'discouraged and will be removed in an upcoming major release. Please refer to ' +
-    'http://momentjs.com/guides/#/warnings/js-date/ for more info.',
-    function (config) {
-        config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
-    }
-);
-
-// Pick the first defined of two or three arguments.
-function defaults(a, b, c) {
-    if (a != null) {
-        return a;
-    }
-    if (b != null) {
-        return b;
-    }
-    return c;
-}
-
-function currentDateArray(config) {
-    // hooks is actually the exported moment object
-    var nowValue = new Date(hooks.now());
-    if (config._useUTC) {
-        return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
-    }
-    return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
-}
-
-// convert an array to a date.
-// the array should mirror the parameters below
-// note: all values past the year are optional and will default to the lowest possible value.
-// [year, month, day , hour, minute, second, millisecond]
-function configFromArray (config) {
-    var i, date, input = [], currentDate, yearToUse;
-
-    if (config._d) {
-        return;
-    }
-
-    currentDate = currentDateArray(config);
-
-    //compute day of the year from weeks and weekdays
-    if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
-        dayOfYearFromWeekInfo(config);
-    }
-
-    //if the day of the year is set, figure out what it is
-    if (config._dayOfYear != null) {
-        yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
-
-        if (config._dayOfYear > daysInYear(yearToUse) || config._dayOfYear === 0) {
-            getParsingFlags(config)._overflowDayOfYear = true;
+        // Default to current date.
+        // * if no year, month, day of month are given, default to today
+        // * if day of month is given, default month and year
+        // * if month is given, default only year
+        // * if year is given, don't default anything
+        for (i = 0; i < 3 && config._a[i] == null; ++i) {
+            config._a[i] = input[i] = currentDate[i];
         }
 
-        date = createUTCDate(yearToUse, 0, config._dayOfYear);
-        config._a[MONTH] = date.getUTCMonth();
-        config._a[DATE] = date.getUTCDate();
-    }
-
-    // Default to current date.
-    // * if no year, month, day of month are given, default to today
-    // * if day of month is given, default month and year
-    // * if month is given, default only year
-    // * if year is given, don't default anything
-    for (i = 0; i < 3 && config._a[i] == null; ++i) {
-        config._a[i] = input[i] = currentDate[i];
-    }
-
-    // Zero out whatever was not defaulted, including time
-    for (; i < 7; i++) {
-        config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
-    }
-
-    // Check for 24:00:00.000
-    if (config._a[HOUR] === 24 &&
-            config._a[MINUTE] === 0 &&
-            config._a[SECOND] === 0 &&
-            config._a[MILLISECOND] === 0) {
-        config._nextDay = true;
-        config._a[HOUR] = 0;
-    }
-
-    config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
-    // Apply timezone offset from input. The actual utcOffset can be changed
-    // with parseZone.
-    if (config._tzm != null) {
-        config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-    }
-
-    if (config._nextDay) {
-        config._a[HOUR] = 24;
-    }
-}
-
-function dayOfYearFromWeekInfo(config) {
-    var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
-
-    w = config._w;
-    if (w.GG != null || w.W != null || w.E != null) {
-        dow = 1;
-        doy = 4;
-
-        // TODO: We need to take the current isoWeekYear, but that depends on
-        // how we interpret now (local, utc, fixed offset). So create
-        // a now version of current config (take local/utc/offset flags, and
-        // create now).
-        weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(createLocal(), 1, 4).year);
-        week = defaults(w.W, 1);
-        weekday = defaults(w.E, 1);
-        if (weekday < 1 || weekday > 7) {
-            weekdayOverflow = true;
+        // Zero out whatever was not defaulted, including time
+        for (; i < 7; i++) {
+            config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
         }
-    } else {
-        dow = config._locale._week.dow;
-        doy = config._locale._week.doy;
 
-        var curWeek = weekOfYear(createLocal(), dow, doy);
+        // Check for 24:00:00.000
+        if (config._a[HOUR] === 24 &&
+                config._a[MINUTE] === 0 &&
+                config._a[SECOND] === 0 &&
+                config._a[MILLISECOND] === 0) {
+            config._nextDay = true;
+            config._a[HOUR] = 0;
+        }
 
-        weekYear = defaults(w.gg, config._a[YEAR], curWeek.year);
+        config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
+        // Apply timezone offset from input. The actual utcOffset can be changed
+        // with parseZone.
+        if (config._tzm != null) {
+            config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
+        }
 
-        // Default to current week.
-        week = defaults(w.w, curWeek.week);
+        if (config._nextDay) {
+            config._a[HOUR] = 24;
+        }
+    }
 
-        if (w.d != null) {
-            // weekday -- low day numbers are considered next week
-            weekday = w.d;
-            if (weekday < 0 || weekday > 6) {
-                weekdayOverflow = true;
-            }
-        } else if (w.e != null) {
-            // local weekday -- counting starts from begining of week
-            weekday = w.e + dow;
-            if (w.e < 0 || w.e > 6) {
-                weekdayOverflow = true;
-            }
+    function dayOfYearFromWeekInfo(config) {
+        var w, weekYear, week, weekday, dow, doy, temp;
+
+        w = config._w;
+        if (w.GG != null || w.W != null || w.E != null) {
+            dow = 1;
+            doy = 4;
+
+            // TODO: We need to take the current isoWeekYear, but that depends on
+            // how we interpret now (local, utc, fixed offset). So create
+            // a now version of current config (take local/utc/offset flags, and
+            // create now).
+            weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(local__createLocal(), 1, 4).year);
+            week = defaults(w.W, 1);
+            weekday = defaults(w.E, 1);
         } else {
-            // default to begining of week
-            weekday = dow;
+            dow = config._locale._week.dow;
+            doy = config._locale._week.doy;
+
+            weekYear = defaults(w.gg, config._a[YEAR], weekOfYear(local__createLocal(), dow, doy).year);
+            week = defaults(w.w, 1);
+
+            if (w.d != null) {
+                // weekday -- low day numbers are considered next week
+                weekday = w.d;
+                if (weekday < dow) {
+                    ++week;
+                }
+            } else if (w.e != null) {
+                // local weekday -- counting starts from begining of week
+                weekday = w.e + dow;
+            } else {
+                // default to begining of week
+                weekday = dow;
+            }
         }
-    }
-    if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
-        getParsingFlags(config)._overflowWeeks = true;
-    } else if (weekdayOverflow != null) {
-        getParsingFlags(config)._overflowWeekday = true;
-    } else {
-        temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
+        temp = dayOfYearFromWeeks(weekYear, week, weekday, doy, dow);
+
         config._a[YEAR] = temp.year;
         config._dayOfYear = temp.dayOfYear;
     }
-}
 
-// constant that refers to the ISO standard
-hooks.ISO_8601 = function () {};
+    utils_hooks__hooks.ISO_8601 = function () {};
 
-// constant that refers to the RFC 2822 form
-hooks.RFC_2822 = function () {};
-
-// date from string and format string
-function configFromStringAndFormat(config) {
-    // TODO: Move this to another part of the creation flow to prevent circular deps
-    if (config._f === hooks.ISO_8601) {
-        configFromISO(config);
-        return;
-    }
-    if (config._f === hooks.RFC_2822) {
-        configFromRFC2822(config);
-        return;
-    }
-    config._a = [];
-    getParsingFlags(config).empty = true;
-
-    // This array is used to make a Date, either with `new Date` or `Date.UTC`
-    var string = '' + config._i,
-        i, parsedInput, tokens, token, skipped,
-        stringLength = string.length,
-        totalParsedInputLength = 0;
-
-    tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
-
-    for (i = 0; i < tokens.length; i++) {
-        token = tokens[i];
-        parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
-        // console.log('token', token, 'parsedInput', parsedInput,
-        //         'regex', getParseRegexForToken(token, config));
-        if (parsedInput) {
-            skipped = string.substr(0, string.indexOf(parsedInput));
-            if (skipped.length > 0) {
-                getParsingFlags(config).unusedInput.push(skipped);
-            }
-            string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
-            totalParsedInputLength += parsedInput.length;
+    // date from string and format string
+    function configFromStringAndFormat(config) {
+        // TODO: Move this to another part of the creation flow to prevent circular deps
+        if (config._f === utils_hooks__hooks.ISO_8601) {
+            configFromISO(config);
+            return;
         }
-        // don't parse if it's not a known token
-        if (formatTokenFunctions[token]) {
+
+        config._a = [];
+        getParsingFlags(config).empty = true;
+
+        // This array is used to make a Date, either with `new Date` or `Date.UTC`
+        var string = '' + config._i,
+            i, parsedInput, tokens, token, skipped,
+            stringLength = string.length,
+            totalParsedInputLength = 0;
+
+        tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
+
+        for (i = 0; i < tokens.length; i++) {
+            token = tokens[i];
+            parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
             if (parsedInput) {
-                getParsingFlags(config).empty = false;
+                skipped = string.substr(0, string.indexOf(parsedInput));
+                if (skipped.length > 0) {
+                    getParsingFlags(config).unusedInput.push(skipped);
+                }
+                string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
+                totalParsedInputLength += parsedInput.length;
             }
-            else {
+            // don't parse if it's not a known token
+            if (formatTokenFunctions[token]) {
+                if (parsedInput) {
+                    getParsingFlags(config).empty = false;
+                }
+                else {
+                    getParsingFlags(config).unusedTokens.push(token);
+                }
+                addTimeToArrayFromToken(token, parsedInput, config);
+            }
+            else if (config._strict && !parsedInput) {
                 getParsingFlags(config).unusedTokens.push(token);
             }
-            addTimeToArrayFromToken(token, parsedInput, config);
-        }
-        else if (config._strict && !parsedInput) {
-            getParsingFlags(config).unusedTokens.push(token);
-        }
-    }
-
-    // add remaining unparsed input length to the string
-    getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
-    if (string.length > 0) {
-        getParsingFlags(config).unusedInput.push(string);
-    }
-
-    // clear _12h flag if hour is <= 12
-    if (config._a[HOUR] <= 12 &&
-        getParsingFlags(config).bigHour === true &&
-        config._a[HOUR] > 0) {
-        getParsingFlags(config).bigHour = undefined;
-    }
-
-    getParsingFlags(config).parsedDateParts = config._a.slice(0);
-    getParsingFlags(config).meridiem = config._meridiem;
-    // handle meridiem
-    config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
-
-    configFromArray(config);
-    checkOverflow(config);
-}
-
-
-function meridiemFixWrap (locale, hour, meridiem) {
-    var isPm;
-
-    if (meridiem == null) {
-        // nothing to do
-        return hour;
-    }
-    if (locale.meridiemHour != null) {
-        return locale.meridiemHour(hour, meridiem);
-    } else if (locale.isPM != null) {
-        // Fallback
-        isPm = locale.isPM(meridiem);
-        if (isPm && hour < 12) {
-            hour += 12;
-        }
-        if (!isPm && hour === 12) {
-            hour = 0;
-        }
-        return hour;
-    } else {
-        // this is not supposed to happen
-        return hour;
-    }
-}
-
-// date from string and array of format strings
-function configFromStringAndArray(config) {
-    var tempConfig,
-        bestMoment,
-
-        scoreToBeat,
-        i,
-        currentScore;
-
-    if (config._f.length === 0) {
-        getParsingFlags(config).invalidFormat = true;
-        config._d = new Date(NaN);
-        return;
-    }
-
-    for (i = 0; i < config._f.length; i++) {
-        currentScore = 0;
-        tempConfig = copyConfig({}, config);
-        if (config._useUTC != null) {
-            tempConfig._useUTC = config._useUTC;
-        }
-        tempConfig._f = config._f[i];
-        configFromStringAndFormat(tempConfig);
-
-        if (!isValid(tempConfig)) {
-            continue;
         }
 
-        // if there is any input that was not parsed add a penalty for that format
-        currentScore += getParsingFlags(tempConfig).charsLeftOver;
-
-        //or tokens
-        currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
-
-        getParsingFlags(tempConfig).score = currentScore;
-
-        if (scoreToBeat == null || currentScore < scoreToBeat) {
-            scoreToBeat = currentScore;
-            bestMoment = tempConfig;
+        // add remaining unparsed input length to the string
+        getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
+        if (string.length > 0) {
+            getParsingFlags(config).unusedInput.push(string);
         }
-    }
 
-    extend(config, bestMoment || tempConfig);
-}
+        // clear _12h flag if hour is <= 12
+        if (getParsingFlags(config).bigHour === true &&
+                config._a[HOUR] <= 12 &&
+                config._a[HOUR] > 0) {
+            getParsingFlags(config).bigHour = undefined;
+        }
+        // handle meridiem
+        config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
 
-function configFromObject(config) {
-    if (config._d) {
-        return;
-    }
-
-    var i = normalizeObjectUnits(config._i);
-    config._a = map([i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond], function (obj) {
-        return obj && parseInt(obj, 10);
-    });
-
-    configFromArray(config);
-}
-
-function createFromConfig (config) {
-    var res = new Moment(checkOverflow(prepareConfig(config)));
-    if (res._nextDay) {
-        // Adding is smart enough around DST
-        res.add(1, 'd');
-        res._nextDay = undefined;
-    }
-
-    return res;
-}
-
-function prepareConfig (config) {
-    var input = config._i,
-        format = config._f;
-
-    config._locale = config._locale || getLocale(config._l);
-
-    if (input === null || (format === undefined && input === '')) {
-        return createInvalid({nullInput: true});
-    }
-
-    if (typeof input === 'string') {
-        config._i = input = config._locale.preparse(input);
-    }
-
-    if (isMoment(input)) {
-        return new Moment(checkOverflow(input));
-    } else if (isDate(input)) {
-        config._d = input;
-    } else if (isArray(format)) {
-        configFromStringAndArray(config);
-    } else if (format) {
-        configFromStringAndFormat(config);
-    }  else {
-        configFromInput(config);
-    }
-
-    if (!isValid(config)) {
-        config._d = null;
-    }
-
-    return config;
-}
-
-function configFromInput(config) {
-    var input = config._i;
-    if (isUndefined(input)) {
-        config._d = new Date(hooks.now());
-    } else if (isDate(input)) {
-        config._d = new Date(input.valueOf());
-    } else if (typeof input === 'string') {
-        configFromString(config);
-    } else if (isArray(input)) {
-        config._a = map(input.slice(0), function (obj) {
-            return parseInt(obj, 10);
-        });
         configFromArray(config);
-    } else if (isObject(input)) {
-        configFromObject(config);
-    } else if (isNumber(input)) {
-        // from milliseconds
-        config._d = new Date(input);
-    } else {
-        hooks.createFromInputFallback(config);
-    }
-}
-
-function createLocalOrUTC (input, format, locale, strict, isUTC) {
-    var c = {};
-
-    if (locale === true || locale === false) {
-        strict = locale;
-        locale = undefined;
+        checkOverflow(config);
     }
 
-    if ((isObject(input) && isObjectEmpty(input)) ||
-            (isArray(input) && input.length === 0)) {
-        input = undefined;
-    }
-    // object construction must be done this way.
-    // https://github.com/moment/moment/issues/1423
-    c._isAMomentObject = true;
-    c._useUTC = c._isUTC = isUTC;
-    c._l = locale;
-    c._i = input;
-    c._f = format;
-    c._strict = strict;
 
-    return createFromConfig(c);
-}
+    function meridiemFixWrap (locale, hour, meridiem) {
+        var isPm;
 
-function createLocal (input, format, locale, strict) {
-    return createLocalOrUTC(input, format, locale, strict, false);
-}
-
-var prototypeMin = deprecate(
-    'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
-    function () {
-        var other = createLocal.apply(null, arguments);
-        if (this.isValid() && other.isValid()) {
-            return other < this ? this : other;
-        } else {
-            return createInvalid();
+        if (meridiem == null) {
+            // nothing to do
+            return hour;
         }
-    }
-);
-
-var prototypeMax = deprecate(
-    'moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/',
-    function () {
-        var other = createLocal.apply(null, arguments);
-        if (this.isValid() && other.isValid()) {
-            return other > this ? this : other;
-        } else {
-            return createInvalid();
-        }
-    }
-);
-
-// Pick a moment m from moments so that m[fn](other) is true for all
-// other. This relies on the function fn to be transitive.
-//
-// moments should either be an array of moment objects or an array, whose
-// first element is an array of moment objects.
-function pickBy(fn, moments) {
-    var res, i;
-    if (moments.length === 1 && isArray(moments[0])) {
-        moments = moments[0];
-    }
-    if (!moments.length) {
-        return createLocal();
-    }
-    res = moments[0];
-    for (i = 1; i < moments.length; ++i) {
-        if (!moments[i].isValid() || moments[i][fn](res)) {
-            res = moments[i];
-        }
-    }
-    return res;
-}
-
-// TODO: Use [].sort instead?
-function min () {
-    var args = [].slice.call(arguments, 0);
-
-    return pickBy('isBefore', args);
-}
-
-function max () {
-    var args = [].slice.call(arguments, 0);
-
-    return pickBy('isAfter', args);
-}
-
-var now = function () {
-    return Date.now ? Date.now() : +(new Date());
-};
-
-var ordering = ['year', 'quarter', 'month', 'week', 'day', 'hour', 'minute', 'second', 'millisecond'];
-
-function isDurationValid(m) {
-    for (var key in m) {
-        if (!(ordering.indexOf(key) !== -1 && (m[key] == null || !isNaN(m[key])))) {
-            return false;
-        }
-    }
-
-    var unitHasDecimal = false;
-    for (var i = 0; i < ordering.length; ++i) {
-        if (m[ordering[i]]) {
-            if (unitHasDecimal) {
-                return false; // only allow non-integers for smallest unit
+        if (locale.meridiemHour != null) {
+            return locale.meridiemHour(hour, meridiem);
+        } else if (locale.isPM != null) {
+            // Fallback
+            isPm = locale.isPM(meridiem);
+            if (isPm && hour < 12) {
+                hour += 12;
             }
-            if (parseFloat(m[ordering[i]]) !== toInt(m[ordering[i]])) {
-                unitHasDecimal = true;
+            if (!isPm && hour === 12) {
+                hour = 0;
+            }
+            return hour;
+        } else {
+            // this is not supposed to happen
+            return hour;
+        }
+    }
+
+    function configFromStringAndArray(config) {
+        var tempConfig,
+            bestMoment,
+
+            scoreToBeat,
+            i,
+            currentScore;
+
+        if (config._f.length === 0) {
+            getParsingFlags(config).invalidFormat = true;
+            config._d = new Date(NaN);
+            return;
+        }
+
+        for (i = 0; i < config._f.length; i++) {
+            currentScore = 0;
+            tempConfig = copyConfig({}, config);
+            if (config._useUTC != null) {
+                tempConfig._useUTC = config._useUTC;
+            }
+            tempConfig._f = config._f[i];
+            configFromStringAndFormat(tempConfig);
+
+            if (!valid__isValid(tempConfig)) {
+                continue;
+            }
+
+            // if there is any input that was not parsed add a penalty for that format
+            currentScore += getParsingFlags(tempConfig).charsLeftOver;
+
+            //or tokens
+            currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
+
+            getParsingFlags(tempConfig).score = currentScore;
+
+            if (scoreToBeat == null || currentScore < scoreToBeat) {
+                scoreToBeat = currentScore;
+                bestMoment = tempConfig;
             }
         }
+
+        extend(config, bestMoment || tempConfig);
     }
 
-    return true;
-}
-
-function isValid$1() {
-    return this._isValid;
-}
-
-function createInvalid$1() {
-    return createDuration(NaN);
-}
-
-function Duration (duration) {
-    var normalizedInput = normalizeObjectUnits(duration),
-        years = normalizedInput.year || 0,
-        quarters = normalizedInput.quarter || 0,
-        months = normalizedInput.month || 0,
-        weeks = normalizedInput.week || 0,
-        days = normalizedInput.day || 0,
-        hours = normalizedInput.hour || 0,
-        minutes = normalizedInput.minute || 0,
-        seconds = normalizedInput.second || 0,
-        milliseconds = normalizedInput.millisecond || 0;
-
-    this._isValid = isDurationValid(normalizedInput);
-
-    // representation for dateAddRemove
-    this._milliseconds = +milliseconds +
-        seconds * 1e3 + // 1000
-        minutes * 6e4 + // 1000 * 60
-        hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
-    // Because of dateAddRemove treats 24 hours as different from a
-    // day when working around DST, we need to store them separately
-    this._days = +days +
-        weeks * 7;
-    // It is impossible translate months into days without knowing
-    // which months you are are talking about, so we have to store
-    // it separately.
-    this._months = +months +
-        quarters * 3 +
-        years * 12;
-
-    this._data = {};
-
-    this._locale = getLocale();
-
-    this._bubble();
-}
-
-function isDuration (obj) {
-    return obj instanceof Duration;
-}
-
-function absRound (number) {
-    if (number < 0) {
-        return Math.round(-1 * number) * -1;
-    } else {
-        return Math.round(number);
-    }
-}
-
-// FORMATTING
-
-function offset (token, separator) {
-    addFormatToken(token, 0, 0, function () {
-        var offset = this.utcOffset();
-        var sign = '+';
-        if (offset < 0) {
-            offset = -offset;
-            sign = '-';
+    function configFromObject(config) {
+        if (config._d) {
+            return;
         }
-        return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
-    });
-}
 
-offset('Z', ':');
-offset('ZZ', '');
+        var i = normalizeObjectUnits(config._i);
+        config._a = [i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond];
 
-// PARSING
-
-addRegexToken('Z',  matchShortOffset);
-addRegexToken('ZZ', matchShortOffset);
-addParseToken(['Z', 'ZZ'], function (input, array, config) {
-    config._useUTC = true;
-    config._tzm = offsetFromString(matchShortOffset, input);
-});
-
-// HELPERS
-
-// timezone chunker
-// '+10:00' > ['10',  '00']
-// '-1530'  > ['-15', '30']
-var chunkOffset = /([\+\-]|\d\d)/gi;
-
-function offsetFromString(matcher, string) {
-    var matches = (string || '').match(matcher);
-
-    if (matches === null) {
-        return null;
+        configFromArray(config);
     }
 
-    var chunk   = matches[matches.length - 1] || [];
-    var parts   = (chunk + '').match(chunkOffset) || ['-', 0, 0];
-    var minutes = +(parts[1] * 60) + toInt(parts[2]);
+    function createFromConfig (config) {
+        var res = new Moment(checkOverflow(prepareConfig(config)));
+        if (res._nextDay) {
+            // Adding is smart enough around DST
+            res.add(1, 'd');
+            res._nextDay = undefined;
+        }
 
-    return minutes === 0 ?
-      0 :
-      parts[0] === '+' ? minutes : -minutes;
-}
-
-// Return a moment from input, that is local/utc/zone equivalent to model.
-function cloneWithOffset(input, model) {
-    var res, diff;
-    if (model._isUTC) {
-        res = model.clone();
-        diff = (isMoment(input) || isDate(input) ? input.valueOf() : createLocal(input).valueOf()) - res.valueOf();
-        // Use low-level api, because this fn is low-level api.
-        res._d.setTime(res._d.valueOf() + diff);
-        hooks.updateOffset(res, false);
         return res;
-    } else {
-        return createLocal(input).local();
     }
-}
 
-function getDateOffset (m) {
-    // On Firefox.24 Date#getTimezoneOffset returns a floating point.
-    // https://github.com/moment/moment/pull/1871
-    return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
-}
+    function prepareConfig (config) {
+        var input = config._i,
+            format = config._f;
 
-// HOOKS
+        config._locale = config._locale || locale_locales__getLocale(config._l);
 
-// This function will be called whenever a moment is mutated.
-// It is intended to keep the offset in sync with the timezone.
-hooks.updateOffset = function () {};
+        if (input === null || (format === undefined && input === '')) {
+            return valid__createInvalid({nullInput: true});
+        }
 
-// MOMENTS
-
-// keepLocalTime = true means only change the timezone, without
-// affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
-// 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
-// +0200, so we adjust the time as needed, to be valid.
-//
-// Keeping the time actually adds/subtracts (one hour)
-// from the actual represented time. That is why we call updateOffset
-// a second time. In case it wants us to change the offset again
-// _changeInProgress == true case, then we have to adjust, because
-// there is no such time in the given timezone.
-function getSetOffset (input, keepLocalTime, keepMinutes) {
-    var offset = this._offset || 0,
-        localAdjust;
-    if (!this.isValid()) {
-        return input != null ? this : NaN;
-    }
-    if (input != null) {
         if (typeof input === 'string') {
-            input = offsetFromString(matchShortOffset, input);
-            if (input === null) {
-                return this;
-            }
-        } else if (Math.abs(input) < 16 && !keepMinutes) {
-            input = input * 60;
+            config._i = input = config._locale.preparse(input);
         }
-        if (!this._isUTC && keepLocalTime) {
-            localAdjust = getDateOffset(this);
+
+        if (isMoment(input)) {
+            return new Moment(checkOverflow(input));
+        } else if (isArray(format)) {
+            configFromStringAndArray(config);
+        } else if (format) {
+            configFromStringAndFormat(config);
+        } else if (isDate(input)) {
+            config._d = input;
+        } else {
+            configFromInput(config);
         }
-        this._offset = input;
-        this._isUTC = true;
-        if (localAdjust != null) {
-            this.add(localAdjust, 'm');
-        }
-        if (offset !== input) {
-            if (!keepLocalTime || this._changeInProgress) {
-                addSubtract(this, createDuration(input - offset, 'm'), 1, false);
-            } else if (!this._changeInProgress) {
-                this._changeInProgress = true;
-                hooks.updateOffset(this, true);
-                this._changeInProgress = null;
-            }
-        }
-        return this;
-    } else {
-        return this._isUTC ? offset : getDateOffset(this);
+
+        return config;
     }
-}
 
-function getSetZone (input, keepLocalTime) {
-    if (input != null) {
-        if (typeof input !== 'string') {
-            input = -input;
-        }
-
-        this.utcOffset(input, keepLocalTime);
-
-        return this;
-    } else {
-        return -this.utcOffset();
-    }
-}
-
-function setOffsetToUTC (keepLocalTime) {
-    return this.utcOffset(0, keepLocalTime);
-}
-
-function setOffsetToLocal (keepLocalTime) {
-    if (this._isUTC) {
-        this.utcOffset(0, keepLocalTime);
-        this._isUTC = false;
-
-        if (keepLocalTime) {
-            this.subtract(getDateOffset(this), 'm');
+    function configFromInput(config) {
+        var input = config._i;
+        if (input === undefined) {
+            config._d = new Date();
+        } else if (isDate(input)) {
+            config._d = new Date(+input);
+        } else if (typeof input === 'string') {
+            configFromString(config);
+        } else if (isArray(input)) {
+            config._a = map(input.slice(0), function (obj) {
+                return parseInt(obj, 10);
+            });
+            configFromArray(config);
+        } else if (typeof(input) === 'object') {
+            configFromObject(config);
+        } else if (typeof(input) === 'number') {
+            // from milliseconds
+            config._d = new Date(input);
+        } else {
+            utils_hooks__hooks.createFromInputFallback(config);
         }
     }
-    return this;
-}
 
-function setOffsetToParsedOffset () {
-    if (this._tzm != null) {
-        this.utcOffset(this._tzm, false, true);
-    } else if (typeof this._i === 'string') {
-        var tZone = offsetFromString(matchOffset, this._i);
-        if (tZone != null) {
-            this.utcOffset(tZone);
+    function createLocalOrUTC (input, format, locale, strict, isUTC) {
+        var c = {};
+
+        if (typeof(locale) === 'boolean') {
+            strict = locale;
+            locale = undefined;
         }
-        else {
-            this.utcOffset(0, true);
+        // object construction must be done this way.
+        // https://github.com/moment/moment/issues/1423
+        c._isAMomentObject = true;
+        c._useUTC = c._isUTC = isUTC;
+        c._l = locale;
+        c._i = input;
+        c._f = format;
+        c._strict = strict;
+
+        return createFromConfig(c);
+    }
+
+    function local__createLocal (input, format, locale, strict) {
+        return createLocalOrUTC(input, format, locale, strict, false);
+    }
+
+    var prototypeMin = deprecate(
+         'moment().min is deprecated, use moment.min instead. https://github.com/moment/moment/issues/1548',
+         function () {
+             var other = local__createLocal.apply(null, arguments);
+             return other < this ? this : other;
+         }
+     );
+
+    var prototypeMax = deprecate(
+        'moment().max is deprecated, use moment.max instead. https://github.com/moment/moment/issues/1548',
+        function () {
+            var other = local__createLocal.apply(null, arguments);
+            return other > this ? this : other;
         }
-    }
-    return this;
-}
-
-function hasAlignedHourOffset (input) {
-    if (!this.isValid()) {
-        return false;
-    }
-    input = input ? createLocal(input).utcOffset() : 0;
-
-    return (this.utcOffset() - input) % 60 === 0;
-}
-
-function isDaylightSavingTime () {
-    return (
-        this.utcOffset() > this.clone().month(0).utcOffset() ||
-        this.utcOffset() > this.clone().month(5).utcOffset()
     );
-}
 
-function isDaylightSavingTimeShifted () {
-    if (!isUndefined(this._isDSTShifted)) {
+    // Pick a moment m from moments so that m[fn](other) is true for all
+    // other. This relies on the function fn to be transitive.
+    //
+    // moments should either be an array of moment objects or an array, whose
+    // first element is an array of moment objects.
+    function pickBy(fn, moments) {
+        var res, i;
+        if (moments.length === 1 && isArray(moments[0])) {
+            moments = moments[0];
+        }
+        if (!moments.length) {
+            return local__createLocal();
+        }
+        res = moments[0];
+        for (i = 1; i < moments.length; ++i) {
+            if (!moments[i].isValid() || moments[i][fn](res)) {
+                res = moments[i];
+            }
+        }
+        return res;
+    }
+
+    // TODO: Use [].sort instead?
+    function min () {
+        var args = [].slice.call(arguments, 0);
+
+        return pickBy('isBefore', args);
+    }
+
+    function max () {
+        var args = [].slice.call(arguments, 0);
+
+        return pickBy('isAfter', args);
+    }
+
+    function Duration (duration) {
+        var normalizedInput = normalizeObjectUnits(duration),
+            years = normalizedInput.year || 0,
+            quarters = normalizedInput.quarter || 0,
+            months = normalizedInput.month || 0,
+            weeks = normalizedInput.week || 0,
+            days = normalizedInput.day || 0,
+            hours = normalizedInput.hour || 0,
+            minutes = normalizedInput.minute || 0,
+            seconds = normalizedInput.second || 0,
+            milliseconds = normalizedInput.millisecond || 0;
+
+        // representation for dateAddRemove
+        this._milliseconds = +milliseconds +
+            seconds * 1e3 + // 1000
+            minutes * 6e4 + // 1000 * 60
+            hours * 36e5; // 1000 * 60 * 60
+        // Because of dateAddRemove treats 24 hours as different from a
+        // day when working around DST, we need to store them separately
+        this._days = +days +
+            weeks * 7;
+        // It is impossible translate months into days without knowing
+        // which months you are are talking about, so we have to store
+        // it separately.
+        this._months = +months +
+            quarters * 3 +
+            years * 12;
+
+        this._data = {};
+
+        this._locale = locale_locales__getLocale();
+
+        this._bubble();
+    }
+
+    function isDuration (obj) {
+        return obj instanceof Duration;
+    }
+
+    function offset (token, separator) {
+        addFormatToken(token, 0, 0, function () {
+            var offset = this.utcOffset();
+            var sign = '+';
+            if (offset < 0) {
+                offset = -offset;
+                sign = '-';
+            }
+            return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
+        });
+    }
+
+    offset('Z', ':');
+    offset('ZZ', '');
+
+    // PARSING
+
+    addRegexToken('Z',  matchOffset);
+    addRegexToken('ZZ', matchOffset);
+    addParseToken(['Z', 'ZZ'], function (input, array, config) {
+        config._useUTC = true;
+        config._tzm = offsetFromString(input);
+    });
+
+    // HELPERS
+
+    // timezone chunker
+    // '+10:00' > ['10',  '00']
+    // '-1530'  > ['-15', '30']
+    var chunkOffset = /([\+\-]|\d\d)/gi;
+
+    function offsetFromString(string) {
+        var matches = ((string || '').match(matchOffset) || []);
+        var chunk   = matches[matches.length - 1] || [];
+        var parts   = (chunk + '').match(chunkOffset) || ['-', 0, 0];
+        var minutes = +(parts[1] * 60) + toInt(parts[2]);
+
+        return parts[0] === '+' ? minutes : -minutes;
+    }
+
+    // Return a moment from input, that is local/utc/zone equivalent to model.
+    function cloneWithOffset(input, model) {
+        var res, diff;
+        if (model._isUTC) {
+            res = model.clone();
+            diff = (isMoment(input) || isDate(input) ? +input : +local__createLocal(input)) - (+res);
+            // Use low-level api, because this fn is low-level api.
+            res._d.setTime(+res._d + diff);
+            utils_hooks__hooks.updateOffset(res, false);
+            return res;
+        } else {
+            return local__createLocal(input).local();
+        }
+    }
+
+    function getDateOffset (m) {
+        // On Firefox.24 Date#getTimezoneOffset returns a floating point.
+        // https://github.com/moment/moment/pull/1871
+        return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
+    }
+
+    // HOOKS
+
+    // This function will be called whenever a moment is mutated.
+    // It is intended to keep the offset in sync with the timezone.
+    utils_hooks__hooks.updateOffset = function () {};
+
+    // MOMENTS
+
+    // keepLocalTime = true means only change the timezone, without
+    // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
+    // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
+    // +0200, so we adjust the time as needed, to be valid.
+    //
+    // Keeping the time actually adds/subtracts (one hour)
+    // from the actual represented time. That is why we call updateOffset
+    // a second time. In case it wants us to change the offset again
+    // _changeInProgress == true case, then we have to adjust, because
+    // there is no such time in the given timezone.
+    function getSetOffset (input, keepLocalTime) {
+        var offset = this._offset || 0,
+            localAdjust;
+        if (input != null) {
+            if (typeof input === 'string') {
+                input = offsetFromString(input);
+            }
+            if (Math.abs(input) < 16) {
+                input = input * 60;
+            }
+            if (!this._isUTC && keepLocalTime) {
+                localAdjust = getDateOffset(this);
+            }
+            this._offset = input;
+            this._isUTC = true;
+            if (localAdjust != null) {
+                this.add(localAdjust, 'm');
+            }
+            if (offset !== input) {
+                if (!keepLocalTime || this._changeInProgress) {
+                    add_subtract__addSubtract(this, create__createDuration(input - offset, 'm'), 1, false);
+                } else if (!this._changeInProgress) {
+                    this._changeInProgress = true;
+                    utils_hooks__hooks.updateOffset(this, true);
+                    this._changeInProgress = null;
+                }
+            }
+            return this;
+        } else {
+            return this._isUTC ? offset : getDateOffset(this);
+        }
+    }
+
+    function getSetZone (input, keepLocalTime) {
+        if (input != null) {
+            if (typeof input !== 'string') {
+                input = -input;
+            }
+
+            this.utcOffset(input, keepLocalTime);
+
+            return this;
+        } else {
+            return -this.utcOffset();
+        }
+    }
+
+    function setOffsetToUTC (keepLocalTime) {
+        return this.utcOffset(0, keepLocalTime);
+    }
+
+    function setOffsetToLocal (keepLocalTime) {
+        if (this._isUTC) {
+            this.utcOffset(0, keepLocalTime);
+            this._isUTC = false;
+
+            if (keepLocalTime) {
+                this.subtract(getDateOffset(this), 'm');
+            }
+        }
+        return this;
+    }
+
+    function setOffsetToParsedOffset () {
+        if (this._tzm) {
+            this.utcOffset(this._tzm);
+        } else if (typeof this._i === 'string') {
+            this.utcOffset(offsetFromString(this._i));
+        }
+        return this;
+    }
+
+    function hasAlignedHourOffset (input) {
+        input = input ? local__createLocal(input).utcOffset() : 0;
+
+        return (this.utcOffset() - input) % 60 === 0;
+    }
+
+    function isDaylightSavingTime () {
+        return (
+            this.utcOffset() > this.clone().month(0).utcOffset() ||
+            this.utcOffset() > this.clone().month(5).utcOffset()
+        );
+    }
+
+    function isDaylightSavingTimeShifted () {
+        if (typeof this._isDSTShifted !== 'undefined') {
+            return this._isDSTShifted;
+        }
+
+        var c = {};
+
+        copyConfig(c, this);
+        c = prepareConfig(c);
+
+        if (c._a) {
+            var other = c._isUTC ? create_utc__createUTC(c._a) : local__createLocal(c._a);
+            this._isDSTShifted = this.isValid() &&
+                compareArrays(c._a, other.toArray()) > 0;
+        } else {
+            this._isDSTShifted = false;
+        }
+
         return this._isDSTShifted;
     }
 
-    var c = {};
-
-    copyConfig(c, this);
-    c = prepareConfig(c);
-
-    if (c._a) {
-        var other = c._isUTC ? createUTC(c._a) : createLocal(c._a);
-        this._isDSTShifted = this.isValid() &&
-            compareArrays(c._a, other.toArray()) > 0;
-    } else {
-        this._isDSTShifted = false;
+    function isLocal () {
+        return !this._isUTC;
     }
 
-    return this._isDSTShifted;
-}
+    function isUtcOffset () {
+        return this._isUTC;
+    }
 
-function isLocal () {
-    return this.isValid() ? !this._isUTC : false;
-}
+    function isUtc () {
+        return this._isUTC && this._offset === 0;
+    }
 
-function isUtcOffset () {
-    return this.isValid() ? this._isUTC : false;
-}
+    var aspNetRegex = /(\-)?(?:(\d*)\.)?(\d+)\:(\d+)(?:\:(\d+)\.?(\d{3})?)?/;
 
-function isUtc () {
-    return this.isValid() ? this._isUTC && this._offset === 0 : false;
-}
+    // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
+    // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
+    var create__isoRegex = /^(-)?P(?:(?:([0-9,.]*)Y)?(?:([0-9,.]*)M)?(?:([0-9,.]*)D)?(?:T(?:([0-9,.]*)H)?(?:([0-9,.]*)M)?(?:([0-9,.]*)S)?)?|([0-9,.]*)W)$/;
 
-// ASP.NET json date format regex
-var aspNetRegex = /^(\-)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
+    function create__createDuration (input, key) {
+        var duration = input,
+            // matching against regexp is expensive, do it on demand
+            match = null,
+            sign,
+            ret,
+            diffRes;
 
-// from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
-// somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
-// and further modified to allow for strings containing both week and day
-var isoRegex = /^(-)?P(?:(-?[0-9,.]*)Y)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)W)?(?:(-?[0-9,.]*)D)?(?:T(?:(-?[0-9,.]*)H)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)S)?)?$/;
+        if (isDuration(input)) {
+            duration = {
+                ms : input._milliseconds,
+                d  : input._days,
+                M  : input._months
+            };
+        } else if (typeof input === 'number') {
+            duration = {};
+            if (key) {
+                duration[key] = input;
+            } else {
+                duration.milliseconds = input;
+            }
+        } else if (!!(match = aspNetRegex.exec(input))) {
+            sign = (match[1] === '-') ? -1 : 1;
+            duration = {
+                y  : 0,
+                d  : toInt(match[DATE])        * sign,
+                h  : toInt(match[HOUR])        * sign,
+                m  : toInt(match[MINUTE])      * sign,
+                s  : toInt(match[SECOND])      * sign,
+                ms : toInt(match[MILLISECOND]) * sign
+            };
+        } else if (!!(match = create__isoRegex.exec(input))) {
+            sign = (match[1] === '-') ? -1 : 1;
+            duration = {
+                y : parseIso(match[2], sign),
+                M : parseIso(match[3], sign),
+                d : parseIso(match[4], sign),
+                h : parseIso(match[5], sign),
+                m : parseIso(match[6], sign),
+                s : parseIso(match[7], sign),
+                w : parseIso(match[8], sign)
+            };
+        } else if (duration == null) {// checks for null or undefined
+            duration = {};
+        } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
+            diffRes = momentsDifference(local__createLocal(duration.from), local__createLocal(duration.to));
 
-function createDuration (input, key) {
-    var duration = input,
-        // matching against regexp is expensive, do it on demand
-        match = null,
-        sign,
-        ret,
-        diffRes;
+            duration = {};
+            duration.ms = diffRes.milliseconds;
+            duration.M = diffRes.months;
+        }
 
-    if (isDuration(input)) {
-        duration = {
-            ms : input._milliseconds,
-            d  : input._days,
-            M  : input._months
-        };
-    } else if (isNumber(input)) {
-        duration = {};
-        if (key) {
-            duration[key] = input;
+        ret = new Duration(duration);
+
+        if (isDuration(input) && hasOwnProp(input, '_locale')) {
+            ret._locale = input._locale;
+        }
+
+        return ret;
+    }
+
+    create__createDuration.fn = Duration.prototype;
+
+    function parseIso (inp, sign) {
+        // We'd normally use ~~inp for this, but unfortunately it also
+        // converts floats to ints.
+        // inp may be undefined, so careful calling replace on it.
+        var res = inp && parseFloat(inp.replace(',', '.'));
+        // apply sign while we're at it
+        return (isNaN(res) ? 0 : res) * sign;
+    }
+
+    function positiveMomentsDifference(base, other) {
+        var res = {milliseconds: 0, months: 0};
+
+        res.months = other.month() - base.month() +
+            (other.year() - base.year()) * 12;
+        if (base.clone().add(res.months, 'M').isAfter(other)) {
+            --res.months;
+        }
+
+        res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
+
+        return res;
+    }
+
+    function momentsDifference(base, other) {
+        var res;
+        other = cloneWithOffset(other, base);
+        if (base.isBefore(other)) {
+            res = positiveMomentsDifference(base, other);
         } else {
-            duration.milliseconds = input;
+            res = positiveMomentsDifference(other, base);
+            res.milliseconds = -res.milliseconds;
+            res.months = -res.months;
         }
-    } else if (!!(match = aspNetRegex.exec(input))) {
-        sign = (match[1] === '-') ? -1 : 1;
-        duration = {
-            y  : 0,
-            d  : toInt(match[DATE])                         * sign,
-            h  : toInt(match[HOUR])                         * sign,
-            m  : toInt(match[MINUTE])                       * sign,
-            s  : toInt(match[SECOND])                       * sign,
-            ms : toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
+
+        return res;
+    }
+
+    function createAdder(direction, name) {
+        return function (val, period) {
+            var dur, tmp;
+            //invert the arguments, but complain about it
+            if (period !== null && !isNaN(+period)) {
+                deprecateSimple(name, 'moment().' + name  + '(period, number) is deprecated. Please use moment().' + name + '(number, period).');
+                tmp = val; val = period; period = tmp;
+            }
+
+            val = typeof val === 'string' ? +val : val;
+            dur = create__createDuration(val, period);
+            add_subtract__addSubtract(this, dur, direction);
+            return this;
         };
-    } else if (!!(match = isoRegex.exec(input))) {
-        sign = (match[1] === '-') ? -1 : 1;
-        duration = {
-            y : parseIso(match[2], sign),
-            M : parseIso(match[3], sign),
-            w : parseIso(match[4], sign),
-            d : parseIso(match[5], sign),
-            h : parseIso(match[6], sign),
-            m : parseIso(match[7], sign),
-            s : parseIso(match[8], sign)
-        };
-    } else if (duration == null) {// checks for null or undefined
-        duration = {};
-    } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
-        diffRes = momentsDifference(createLocal(duration.from), createLocal(duration.to));
-
-        duration = {};
-        duration.ms = diffRes.milliseconds;
-        duration.M = diffRes.months;
     }
 
-    ret = new Duration(duration);
+    function add_subtract__addSubtract (mom, duration, isAdding, updateOffset) {
+        var milliseconds = duration._milliseconds,
+            days = duration._days,
+            months = duration._months;
+        updateOffset = updateOffset == null ? true : updateOffset;
 
-    if (isDuration(input) && hasOwnProp(input, '_locale')) {
-        ret._locale = input._locale;
+        if (milliseconds) {
+            mom._d.setTime(+mom._d + milliseconds * isAdding);
+        }
+        if (days) {
+            get_set__set(mom, 'Date', get_set__get(mom, 'Date') + days * isAdding);
+        }
+        if (months) {
+            setMonth(mom, get_set__get(mom, 'Month') + months * isAdding);
+        }
+        if (updateOffset) {
+            utils_hooks__hooks.updateOffset(mom, days || months);
+        }
     }
 
-    return ret;
-}
+    var add_subtract__add      = createAdder(1, 'add');
+    var add_subtract__subtract = createAdder(-1, 'subtract');
 
-createDuration.fn = Duration.prototype;
-createDuration.invalid = createInvalid$1;
-
-function parseIso (inp, sign) {
-    // We'd normally use ~~inp for this, but unfortunately it also
-    // converts floats to ints.
-    // inp may be undefined, so careful calling replace on it.
-    var res = inp && parseFloat(inp.replace(',', '.'));
-    // apply sign while we're at it
-    return (isNaN(res) ? 0 : res) * sign;
-}
-
-function positiveMomentsDifference(base, other) {
-    var res = {milliseconds: 0, months: 0};
-
-    res.months = other.month() - base.month() +
-        (other.year() - base.year()) * 12;
-    if (base.clone().add(res.months, 'M').isAfter(other)) {
-        --res.months;
+    function moment_calendar__calendar (time, formats) {
+        // We want to compare the start of today, vs this.
+        // Getting start-of-today depends on whether we're local/utc/offset or not.
+        var now = time || local__createLocal(),
+            sod = cloneWithOffset(now, this).startOf('day'),
+            diff = this.diff(sod, 'days', true),
+            format = diff < -6 ? 'sameElse' :
+                diff < -1 ? 'lastWeek' :
+                diff < 0 ? 'lastDay' :
+                diff < 1 ? 'sameDay' :
+                diff < 2 ? 'nextDay' :
+                diff < 7 ? 'nextWeek' : 'sameElse';
+        return this.format(formats && formats[format] || this.localeData().calendar(format, this, local__createLocal(now)));
     }
 
-    res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
-
-    return res;
-}
-
-function momentsDifference(base, other) {
-    var res;
-    if (!(base.isValid() && other.isValid())) {
-        return {milliseconds: 0, months: 0};
+    function clone () {
+        return new Moment(this);
     }
 
-    other = cloneWithOffset(other, base);
-    if (base.isBefore(other)) {
-        res = positiveMomentsDifference(base, other);
-    } else {
-        res = positiveMomentsDifference(other, base);
-        res.milliseconds = -res.milliseconds;
-        res.months = -res.months;
+    function isAfter (input, units) {
+        var inputMs;
+        units = normalizeUnits(typeof units !== 'undefined' ? units : 'millisecond');
+        if (units === 'millisecond') {
+            input = isMoment(input) ? input : local__createLocal(input);
+            return +this > +input;
+        } else {
+            inputMs = isMoment(input) ? +input : +local__createLocal(input);
+            return inputMs < +this.clone().startOf(units);
+        }
     }
 
-    return res;
-}
+    function isBefore (input, units) {
+        var inputMs;
+        units = normalizeUnits(typeof units !== 'undefined' ? units : 'millisecond');
+        if (units === 'millisecond') {
+            input = isMoment(input) ? input : local__createLocal(input);
+            return +this < +input;
+        } else {
+            inputMs = isMoment(input) ? +input : +local__createLocal(input);
+            return +this.clone().endOf(units) < inputMs;
+        }
+    }
 
-// TODO: remove 'name' arg after deprecation is removed
-function createAdder(direction, name) {
-    return function (val, period) {
-        var dur, tmp;
-        //invert the arguments, but complain about it
-        if (period !== null && !isNaN(+period)) {
-            deprecateSimple(name, 'moment().' + name  + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' +
-            'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
-            tmp = val; val = period; period = tmp;
+    function isBetween (from, to, units) {
+        return this.isAfter(from, units) && this.isBefore(to, units);
+    }
+
+    function isSame (input, units) {
+        var inputMs;
+        units = normalizeUnits(units || 'millisecond');
+        if (units === 'millisecond') {
+            input = isMoment(input) ? input : local__createLocal(input);
+            return +this === +input;
+        } else {
+            inputMs = +local__createLocal(input);
+            return +(this.clone().startOf(units)) <= inputMs && inputMs <= +(this.clone().endOf(units));
+        }
+    }
+
+    function diff (input, units, asFloat) {
+        var that = cloneWithOffset(input, this),
+            zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4,
+            delta, output;
+
+        units = normalizeUnits(units);
+
+        if (units === 'year' || units === 'month' || units === 'quarter') {
+            output = monthDiff(this, that);
+            if (units === 'quarter') {
+                output = output / 3;
+            } else if (units === 'year') {
+                output = output / 12;
+            }
+        } else {
+            delta = this - that;
+            output = units === 'second' ? delta / 1e3 : // 1000
+                units === 'minute' ? delta / 6e4 : // 1000 * 60
+                units === 'hour' ? delta / 36e5 : // 1000 * 60 * 60
+                units === 'day' ? (delta - zoneDelta) / 864e5 : // 1000 * 60 * 60 * 24, negate dst
+                units === 'week' ? (delta - zoneDelta) / 6048e5 : // 1000 * 60 * 60 * 24 * 7, negate dst
+                delta;
+        }
+        return asFloat ? output : absFloor(output);
+    }
+
+    function monthDiff (a, b) {
+        // difference in months
+        var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
+            // b is in (anchor - 1 month, anchor + 1 month)
+            anchor = a.clone().add(wholeMonthDiff, 'months'),
+            anchor2, adjust;
+
+        if (b - anchor < 0) {
+            anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
+            // linear across the month
+            adjust = (b - anchor) / (anchor - anchor2);
+        } else {
+            anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
+            // linear across the month
+            adjust = (b - anchor) / (anchor2 - anchor);
         }
 
-        val = typeof val === 'string' ? +val : val;
-        dur = createDuration(val, period);
-        addSubtract(this, dur, direction);
-        return this;
-    };
-}
-
-function addSubtract (mom, duration, isAdding, updateOffset) {
-    var milliseconds = duration._milliseconds,
-        days = absRound(duration._days),
-        months = absRound(duration._months);
-
-    if (!mom.isValid()) {
-        // No op
-        return;
+        return -(wholeMonthDiff + adjust);
     }
 
-    updateOffset = updateOffset == null ? true : updateOffset;
+    utils_hooks__hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
 
-    if (milliseconds) {
-        mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
-    }
-    if (days) {
-        set$1(mom, 'Date', get(mom, 'Date') + days * isAdding);
-    }
-    if (months) {
-        setMonth(mom, get(mom, 'Month') + months * isAdding);
-    }
-    if (updateOffset) {
-        hooks.updateOffset(mom, days || months);
-    }
-}
-
-var add      = createAdder(1, 'add');
-var subtract = createAdder(-1, 'subtract');
-
-function getCalendarFormat(myMoment, now) {
-    var diff = myMoment.diff(now, 'days', true);
-    return diff < -6 ? 'sameElse' :
-            diff < -1 ? 'lastWeek' :
-            diff < 0 ? 'lastDay' :
-            diff < 1 ? 'sameDay' :
-            diff < 2 ? 'nextDay' :
-            diff < 7 ? 'nextWeek' : 'sameElse';
-}
-
-function calendar$1 (time, formats) {
-    // We want to compare the start of today, vs this.
-    // Getting start-of-today depends on whether we're local/utc/offset or not.
-    var now = time || createLocal(),
-        sod = cloneWithOffset(now, this).startOf('day'),
-        format = hooks.calendarFormat(this, sod) || 'sameElse';
-
-    var output = formats && (isFunction(formats[format]) ? formats[format].call(this, now) : formats[format]);
-
-    return this.format(output || this.localeData().calendar(format, this, createLocal(now)));
-}
-
-function clone () {
-    return new Moment(this);
-}
-
-function isAfter (input, units) {
-    var localInput = isMoment(input) ? input : createLocal(input);
-    if (!(this.isValid() && localInput.isValid())) {
-        return false;
-    }
-    units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-    if (units === 'millisecond') {
-        return this.valueOf() > localInput.valueOf();
-    } else {
-        return localInput.valueOf() < this.clone().startOf(units).valueOf();
-    }
-}
-
-function isBefore (input, units) {
-    var localInput = isMoment(input) ? input : createLocal(input);
-    if (!(this.isValid() && localInput.isValid())) {
-        return false;
-    }
-    units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-    if (units === 'millisecond') {
-        return this.valueOf() < localInput.valueOf();
-    } else {
-        return this.clone().endOf(units).valueOf() < localInput.valueOf();
-    }
-}
-
-function isBetween (from, to, units, inclusivity) {
-    inclusivity = inclusivity || '()';
-    return (inclusivity[0] === '(' ? this.isAfter(from, units) : !this.isBefore(from, units)) &&
-        (inclusivity[1] === ')' ? this.isBefore(to, units) : !this.isAfter(to, units));
-}
-
-function isSame (input, units) {
-    var localInput = isMoment(input) ? input : createLocal(input),
-        inputMs;
-    if (!(this.isValid() && localInput.isValid())) {
-        return false;
-    }
-    units = normalizeUnits(units || 'millisecond');
-    if (units === 'millisecond') {
-        return this.valueOf() === localInput.valueOf();
-    } else {
-        inputMs = localInput.valueOf();
-        return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
-    }
-}
-
-function isSameOrAfter (input, units) {
-    return this.isSame(input, units) || this.isAfter(input,units);
-}
-
-function isSameOrBefore (input, units) {
-    return this.isSame(input, units) || this.isBefore(input,units);
-}
-
-function diff (input, units, asFloat) {
-    var that,
-        zoneDelta,
-        delta, output;
-
-    if (!this.isValid()) {
-        return NaN;
+    function toString () {
+        return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
     }
 
-    that = cloneWithOffset(input, this);
-
-    if (!that.isValid()) {
-        return NaN;
-    }
-
-    zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
-
-    units = normalizeUnits(units);
-
-    if (units === 'year' || units === 'month' || units === 'quarter') {
-        output = monthDiff(this, that);
-        if (units === 'quarter') {
-            output = output / 3;
-        } else if (units === 'year') {
-            output = output / 12;
+    function moment_format__toISOString () {
+        var m = this.clone().utc();
+        if (0 < m.year() && m.year() <= 9999) {
+            if ('function' === typeof Date.prototype.toISOString) {
+                // native implementation is ~50x faster, use it when we can
+                return this.toDate().toISOString();
+            } else {
+                return formatMoment(m, 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
+            }
+        } else {
+            return formatMoment(m, 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
         }
-    } else {
-        delta = this - that;
-        output = units === 'second' ? delta / 1e3 : // 1000
-            units === 'minute' ? delta / 6e4 : // 1000 * 60
-            units === 'hour' ? delta / 36e5 : // 1000 * 60 * 60
-            units === 'day' ? (delta - zoneDelta) / 864e5 : // 1000 * 60 * 60 * 24, negate dst
-            units === 'week' ? (delta - zoneDelta) / 6048e5 : // 1000 * 60 * 60 * 24 * 7, negate dst
-            delta;
-    }
-    return asFloat ? output : absFloor(output);
-}
-
-function monthDiff (a, b) {
-    // difference in months
-    var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
-        // b is in (anchor - 1 month, anchor + 1 month)
-        anchor = a.clone().add(wholeMonthDiff, 'months'),
-        anchor2, adjust;
-
-    if (b - anchor < 0) {
-        anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
-        // linear across the month
-        adjust = (b - anchor) / (anchor - anchor2);
-    } else {
-        anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
-        // linear across the month
-        adjust = (b - anchor) / (anchor2 - anchor);
     }
 
-    //check for negative zero, return zero if negative zero
-    return -(wholeMonthDiff + adjust) || 0;
-}
-
-hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
-hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
-
-function toString () {
-    return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
-}
-
-function toISOString() {
-    if (!this.isValid()) {
-        return null;
+    function format (inputString) {
+        var output = formatMoment(this, inputString || utils_hooks__hooks.defaultFormat);
+        return this.localeData().postformat(output);
     }
-    var m = this.clone().utc();
-    if (m.year() < 0 || m.year() > 9999) {
-        return formatMoment(m, 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
-    }
-    if (isFunction(Date.prototype.toISOString)) {
-        // native implementation is ~50x faster, use it when we can
-        return this.toDate().toISOString();
-    }
-    return formatMoment(m, 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
-}
 
-/**
- * Return a human readable representation of a moment that can
- * also be evaluated to get a new moment which is the same
- *
- * @link https://nodejs.org/dist/latest/docs/api/util.html#util_custom_inspect_function_on_objects
- */
-function inspect () {
-    if (!this.isValid()) {
-        return 'moment.invalid(/* ' + this._i + ' */)';
-    }
-    var func = 'moment';
-    var zone = '';
-    if (!this.isLocal()) {
-        func = this.utcOffset() === 0 ? 'moment.utc' : 'moment.parseZone';
-        zone = 'Z';
-    }
-    var prefix = '[' + func + '("]';
-    var year = (0 <= this.year() && this.year() <= 9999) ? 'YYYY' : 'YYYYYY';
-    var datetime = '-MM-DD[T]HH:mm:ss.SSS';
-    var suffix = zone + '[")]';
-
-    return this.format(prefix + year + datetime + suffix);
-}
-
-function format (inputString) {
-    if (!inputString) {
-        inputString = this.isUtc() ? hooks.defaultFormatUtc : hooks.defaultFormat;
-    }
-    var output = formatMoment(this, inputString);
-    return this.localeData().postformat(output);
-}
-
-function from (time, withoutSuffix) {
-    if (this.isValid() &&
-            ((isMoment(time) && time.isValid()) ||
-             createLocal(time).isValid())) {
-        return createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
-    } else {
-        return this.localeData().invalidDate();
-    }
-}
-
-function fromNow (withoutSuffix) {
-    return this.from(createLocal(), withoutSuffix);
-}
-
-function to (time, withoutSuffix) {
-    if (this.isValid() &&
-            ((isMoment(time) && time.isValid()) ||
-             createLocal(time).isValid())) {
-        return createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
-    } else {
-        return this.localeData().invalidDate();
-    }
-}
-
-function toNow (withoutSuffix) {
-    return this.to(createLocal(), withoutSuffix);
-}
-
-// If passed a locale key, it will set the locale for this
-// instance.  Otherwise, it will return the locale configuration
-// variables for this instance.
-function locale (key) {
-    var newLocaleData;
-
-    if (key === undefined) {
-        return this._locale._abbr;
-    } else {
-        newLocaleData = getLocale(key);
-        if (newLocaleData != null) {
-            this._locale = newLocaleData;
+    function from (time, withoutSuffix) {
+        if (!this.isValid()) {
+            return this.localeData().invalidDate();
         }
-        return this;
+        return create__createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
     }
-}
 
-var lang = deprecate(
-    'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
-    function (key) {
+    function fromNow (withoutSuffix) {
+        return this.from(local__createLocal(), withoutSuffix);
+    }
+
+    function to (time, withoutSuffix) {
+        if (!this.isValid()) {
+            return this.localeData().invalidDate();
+        }
+        return create__createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
+    }
+
+    function toNow (withoutSuffix) {
+        return this.to(local__createLocal(), withoutSuffix);
+    }
+
+    function locale (key) {
+        var newLocaleData;
+
         if (key === undefined) {
-            return this.localeData();
+            return this._locale._abbr;
         } else {
-            return this.locale(key);
+            newLocaleData = locale_locales__getLocale(key);
+            if (newLocaleData != null) {
+                this._locale = newLocaleData;
+            }
+            return this;
         }
     }
-);
 
-function localeData () {
-    return this._locale;
-}
+    var lang = deprecate(
+        'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
+        function (key) {
+            if (key === undefined) {
+                return this.localeData();
+            } else {
+                return this.locale(key);
+            }
+        }
+    );
 
-function startOf (units) {
-    units = normalizeUnits(units);
-    // the following switch intentionally omits break keywords
-    // to utilize falling through the cases.
-    switch (units) {
+    function localeData () {
+        return this._locale;
+    }
+
+    function startOf (units) {
+        units = normalizeUnits(units);
+        // the following switch intentionally omits break keywords
+        // to utilize falling through the cases.
+        switch (units) {
         case 'year':
             this.month(0);
             /* falls through */
@@ -55583,7 +53736,6 @@ function startOf (units) {
         case 'week':
         case 'isoWeek':
         case 'day':
-        case 'date':
             this.hours(0);
             /* falls through */
         case 'hour':
@@ -55594,1077 +53746,1173 @@ function startOf (units) {
             /* falls through */
         case 'second':
             this.milliseconds(0);
-    }
+        }
 
-    // weeks are a special case
-    if (units === 'week') {
-        this.weekday(0);
-    }
-    if (units === 'isoWeek') {
-        this.isoWeekday(1);
-    }
+        // weeks are a special case
+        if (units === 'week') {
+            this.weekday(0);
+        }
+        if (units === 'isoWeek') {
+            this.isoWeekday(1);
+        }
 
-    // quarters are also special
-    if (units === 'quarter') {
-        this.month(Math.floor(this.month() / 3) * 3);
-    }
+        // quarters are also special
+        if (units === 'quarter') {
+            this.month(Math.floor(this.month() / 3) * 3);
+        }
 
-    return this;
-}
-
-function endOf (units) {
-    units = normalizeUnits(units);
-    if (units === undefined || units === 'millisecond') {
         return this;
     }
 
-    // 'date' is an alias for 'day', so it should be considered as such.
-    if (units === 'date') {
-        units = 'day';
-    }
-
-    return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
-}
-
-function valueOf () {
-    return this._d.valueOf() - ((this._offset || 0) * 60000);
-}
-
-function unix () {
-    return Math.floor(this.valueOf() / 1000);
-}
-
-function toDate () {
-    return new Date(this.valueOf());
-}
-
-function toArray () {
-    var m = this;
-    return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
-}
-
-function toObject () {
-    var m = this;
-    return {
-        years: m.year(),
-        months: m.month(),
-        date: m.date(),
-        hours: m.hours(),
-        minutes: m.minutes(),
-        seconds: m.seconds(),
-        milliseconds: m.milliseconds()
-    };
-}
-
-function toJSON () {
-    // new Date(NaN).toJSON() === null
-    return this.isValid() ? this.toISOString() : null;
-}
-
-function isValid$2 () {
-    return isValid(this);
-}
-
-function parsingFlags () {
-    return extend({}, getParsingFlags(this));
-}
-
-function invalidAt () {
-    return getParsingFlags(this).overflow;
-}
-
-function creationData() {
-    return {
-        input: this._i,
-        format: this._f,
-        locale: this._locale,
-        isUTC: this._isUTC,
-        strict: this._strict
-    };
-}
-
-// FORMATTING
-
-addFormatToken(0, ['gg', 2], 0, function () {
-    return this.weekYear() % 100;
-});
-
-addFormatToken(0, ['GG', 2], 0, function () {
-    return this.isoWeekYear() % 100;
-});
-
-function addWeekYearFormatToken (token, getter) {
-    addFormatToken(0, [token, token.length], 0, getter);
-}
-
-addWeekYearFormatToken('gggg',     'weekYear');
-addWeekYearFormatToken('ggggg',    'weekYear');
-addWeekYearFormatToken('GGGG',  'isoWeekYear');
-addWeekYearFormatToken('GGGGG', 'isoWeekYear');
-
-// ALIASES
-
-addUnitAlias('weekYear', 'gg');
-addUnitAlias('isoWeekYear', 'GG');
-
-// PRIORITY
-
-addUnitPriority('weekYear', 1);
-addUnitPriority('isoWeekYear', 1);
-
-
-// PARSING
-
-addRegexToken('G',      matchSigned);
-addRegexToken('g',      matchSigned);
-addRegexToken('GG',     match1to2, match2);
-addRegexToken('gg',     match1to2, match2);
-addRegexToken('GGGG',   match1to4, match4);
-addRegexToken('gggg',   match1to4, match4);
-addRegexToken('GGGGG',  match1to6, match6);
-addRegexToken('ggggg',  match1to6, match6);
-
-addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
-    week[token.substr(0, 2)] = toInt(input);
-});
-
-addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
-    week[token] = hooks.parseTwoDigitYear(input);
-});
-
-// MOMENTS
-
-function getSetWeekYear (input) {
-    return getSetWeekYearHelper.call(this,
-            input,
-            this.week(),
-            this.weekday(),
-            this.localeData()._week.dow,
-            this.localeData()._week.doy);
-}
-
-function getSetISOWeekYear (input) {
-    return getSetWeekYearHelper.call(this,
-            input, this.isoWeek(), this.isoWeekday(), 1, 4);
-}
-
-function getISOWeeksInYear () {
-    return weeksInYear(this.year(), 1, 4);
-}
-
-function getWeeksInYear () {
-    var weekInfo = this.localeData()._week;
-    return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
-}
-
-function getSetWeekYearHelper(input, week, weekday, dow, doy) {
-    var weeksTarget;
-    if (input == null) {
-        return weekOfYear(this, dow, doy).year;
-    } else {
-        weeksTarget = weeksInYear(input, dow, doy);
-        if (week > weeksTarget) {
-            week = weeksTarget;
+    function endOf (units) {
+        units = normalizeUnits(units);
+        if (units === undefined || units === 'millisecond') {
+            return this;
         }
-        return setWeekAll.call(this, input, week, weekday, dow, doy);
-    }
-}
-
-function setWeekAll(weekYear, week, weekday, dow, doy) {
-    var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy),
-        date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
-
-    this.year(date.getUTCFullYear());
-    this.month(date.getUTCMonth());
-    this.date(date.getUTCDate());
-    return this;
-}
-
-// FORMATTING
-
-addFormatToken('Q', 0, 'Qo', 'quarter');
-
-// ALIASES
-
-addUnitAlias('quarter', 'Q');
-
-// PRIORITY
-
-addUnitPriority('quarter', 7);
-
-// PARSING
-
-addRegexToken('Q', match1);
-addParseToken('Q', function (input, array) {
-    array[MONTH] = (toInt(input) - 1) * 3;
-});
-
-// MOMENTS
-
-function getSetQuarter (input) {
-    return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
-}
-
-// FORMATTING
-
-addFormatToken('D', ['DD', 2], 'Do', 'date');
-
-// ALIASES
-
-addUnitAlias('date', 'D');
-
-// PRIOROITY
-addUnitPriority('date', 9);
-
-// PARSING
-
-addRegexToken('D',  match1to2);
-addRegexToken('DD', match1to2, match2);
-addRegexToken('Do', function (isStrict, locale) {
-    // TODO: Remove "ordinalParse" fallback in next major release.
-    return isStrict ?
-      (locale._dayOfMonthOrdinalParse || locale._ordinalParse) :
-      locale._dayOfMonthOrdinalParseLenient;
-});
-
-addParseToken(['D', 'DD'], DATE);
-addParseToken('Do', function (input, array) {
-    array[DATE] = toInt(input.match(match1to2)[0], 10);
-});
-
-// MOMENTS
-
-var getSetDayOfMonth = makeGetSet('Date', true);
-
-// FORMATTING
-
-addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
-
-// ALIASES
-
-addUnitAlias('dayOfYear', 'DDD');
-
-// PRIORITY
-addUnitPriority('dayOfYear', 4);
-
-// PARSING
-
-addRegexToken('DDD',  match1to3);
-addRegexToken('DDDD', match3);
-addParseToken(['DDD', 'DDDD'], function (input, array, config) {
-    config._dayOfYear = toInt(input);
-});
-
-// HELPERS
-
-// MOMENTS
-
-function getSetDayOfYear (input) {
-    var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
-    return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
-}
-
-// FORMATTING
-
-addFormatToken('m', ['mm', 2], 0, 'minute');
-
-// ALIASES
-
-addUnitAlias('minute', 'm');
-
-// PRIORITY
-
-addUnitPriority('minute', 14);
-
-// PARSING
-
-addRegexToken('m',  match1to2);
-addRegexToken('mm', match1to2, match2);
-addParseToken(['m', 'mm'], MINUTE);
-
-// MOMENTS
-
-var getSetMinute = makeGetSet('Minutes', false);
-
-// FORMATTING
-
-addFormatToken('s', ['ss', 2], 0, 'second');
-
-// ALIASES
-
-addUnitAlias('second', 's');
-
-// PRIORITY
-
-addUnitPriority('second', 15);
-
-// PARSING
-
-addRegexToken('s',  match1to2);
-addRegexToken('ss', match1to2, match2);
-addParseToken(['s', 'ss'], SECOND);
-
-// MOMENTS
-
-var getSetSecond = makeGetSet('Seconds', false);
-
-// FORMATTING
-
-addFormatToken('S', 0, 0, function () {
-    return ~~(this.millisecond() / 100);
-});
-
-addFormatToken(0, ['SS', 2], 0, function () {
-    return ~~(this.millisecond() / 10);
-});
-
-addFormatToken(0, ['SSS', 3], 0, 'millisecond');
-addFormatToken(0, ['SSSS', 4], 0, function () {
-    return this.millisecond() * 10;
-});
-addFormatToken(0, ['SSSSS', 5], 0, function () {
-    return this.millisecond() * 100;
-});
-addFormatToken(0, ['SSSSSS', 6], 0, function () {
-    return this.millisecond() * 1000;
-});
-addFormatToken(0, ['SSSSSSS', 7], 0, function () {
-    return this.millisecond() * 10000;
-});
-addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
-    return this.millisecond() * 100000;
-});
-addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
-    return this.millisecond() * 1000000;
-});
-
-
-// ALIASES
-
-addUnitAlias('millisecond', 'ms');
-
-// PRIORITY
-
-addUnitPriority('millisecond', 16);
-
-// PARSING
-
-addRegexToken('S',    match1to3, match1);
-addRegexToken('SS',   match1to3, match2);
-addRegexToken('SSS',  match1to3, match3);
-
-var token;
-for (token = 'SSSS'; token.length <= 9; token += 'S') {
-    addRegexToken(token, matchUnsigned);
-}
-
-function parseMs(input, array) {
-    array[MILLISECOND] = toInt(('0.' + input) * 1000);
-}
-
-for (token = 'S'; token.length <= 9; token += 'S') {
-    addParseToken(token, parseMs);
-}
-// MOMENTS
-
-var getSetMillisecond = makeGetSet('Milliseconds', false);
-
-// FORMATTING
-
-addFormatToken('z',  0, 0, 'zoneAbbr');
-addFormatToken('zz', 0, 0, 'zoneName');
-
-// MOMENTS
-
-function getZoneAbbr () {
-    return this._isUTC ? 'UTC' : '';
-}
-
-function getZoneName () {
-    return this._isUTC ? 'Coordinated Universal Time' : '';
-}
-
-var proto = Moment.prototype;
-
-proto.add               = add;
-proto.calendar          = calendar$1;
-proto.clone             = clone;
-proto.diff              = diff;
-proto.endOf             = endOf;
-proto.format            = format;
-proto.from              = from;
-proto.fromNow           = fromNow;
-proto.to                = to;
-proto.toNow             = toNow;
-proto.get               = stringGet;
-proto.invalidAt         = invalidAt;
-proto.isAfter           = isAfter;
-proto.isBefore          = isBefore;
-proto.isBetween         = isBetween;
-proto.isSame            = isSame;
-proto.isSameOrAfter     = isSameOrAfter;
-proto.isSameOrBefore    = isSameOrBefore;
-proto.isValid           = isValid$2;
-proto.lang              = lang;
-proto.locale            = locale;
-proto.localeData        = localeData;
-proto.max               = prototypeMax;
-proto.min               = prototypeMin;
-proto.parsingFlags      = parsingFlags;
-proto.set               = stringSet;
-proto.startOf           = startOf;
-proto.subtract          = subtract;
-proto.toArray           = toArray;
-proto.toObject          = toObject;
-proto.toDate            = toDate;
-proto.toISOString       = toISOString;
-proto.inspect           = inspect;
-proto.toJSON            = toJSON;
-proto.toString          = toString;
-proto.unix              = unix;
-proto.valueOf           = valueOf;
-proto.creationData      = creationData;
-
-// Year
-proto.year       = getSetYear;
-proto.isLeapYear = getIsLeapYear;
-
-// Week Year
-proto.weekYear    = getSetWeekYear;
-proto.isoWeekYear = getSetISOWeekYear;
-
-// Quarter
-proto.quarter = proto.quarters = getSetQuarter;
-
-// Month
-proto.month       = getSetMonth;
-proto.daysInMonth = getDaysInMonth;
-
-// Week
-proto.week           = proto.weeks        = getSetWeek;
-proto.isoWeek        = proto.isoWeeks     = getSetISOWeek;
-proto.weeksInYear    = getWeeksInYear;
-proto.isoWeeksInYear = getISOWeeksInYear;
-
-// Day
-proto.date       = getSetDayOfMonth;
-proto.day        = proto.days             = getSetDayOfWeek;
-proto.weekday    = getSetLocaleDayOfWeek;
-proto.isoWeekday = getSetISODayOfWeek;
-proto.dayOfYear  = getSetDayOfYear;
-
-// Hour
-proto.hour = proto.hours = getSetHour;
-
-// Minute
-proto.minute = proto.minutes = getSetMinute;
-
-// Second
-proto.second = proto.seconds = getSetSecond;
-
-// Millisecond
-proto.millisecond = proto.milliseconds = getSetMillisecond;
-
-// Offset
-proto.utcOffset            = getSetOffset;
-proto.utc                  = setOffsetToUTC;
-proto.local                = setOffsetToLocal;
-proto.parseZone            = setOffsetToParsedOffset;
-proto.hasAlignedHourOffset = hasAlignedHourOffset;
-proto.isDST                = isDaylightSavingTime;
-proto.isLocal              = isLocal;
-proto.isUtcOffset          = isUtcOffset;
-proto.isUtc                = isUtc;
-proto.isUTC                = isUtc;
-
-// Timezone
-proto.zoneAbbr = getZoneAbbr;
-proto.zoneName = getZoneName;
-
-// Deprecations
-proto.dates  = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
-proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
-proto.years  = deprecate('years accessor is deprecated. Use year instead', getSetYear);
-proto.zone   = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
-proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
-
-function createUnix (input) {
-    return createLocal(input * 1000);
-}
-
-function createInZone () {
-    return createLocal.apply(null, arguments).parseZone();
-}
-
-function preParsePostFormat (string) {
-    return string;
-}
-
-var proto$1 = Locale.prototype;
-
-proto$1.calendar        = calendar;
-proto$1.longDateFormat  = longDateFormat;
-proto$1.invalidDate     = invalidDate;
-proto$1.ordinal         = ordinal;
-proto$1.preparse        = preParsePostFormat;
-proto$1.postformat      = preParsePostFormat;
-proto$1.relativeTime    = relativeTime;
-proto$1.pastFuture      = pastFuture;
-proto$1.set             = set;
-
-// Month
-proto$1.months            =        localeMonths;
-proto$1.monthsShort       =        localeMonthsShort;
-proto$1.monthsParse       =        localeMonthsParse;
-proto$1.monthsRegex       = monthsRegex;
-proto$1.monthsShortRegex  = monthsShortRegex;
-
-// Week
-proto$1.week = localeWeek;
-proto$1.firstDayOfYear = localeFirstDayOfYear;
-proto$1.firstDayOfWeek = localeFirstDayOfWeek;
-
-// Day of Week
-proto$1.weekdays       =        localeWeekdays;
-proto$1.weekdaysMin    =        localeWeekdaysMin;
-proto$1.weekdaysShort  =        localeWeekdaysShort;
-proto$1.weekdaysParse  =        localeWeekdaysParse;
-
-proto$1.weekdaysRegex       =        weekdaysRegex;
-proto$1.weekdaysShortRegex  =        weekdaysShortRegex;
-proto$1.weekdaysMinRegex    =        weekdaysMinRegex;
-
-// Hours
-proto$1.isPM = localeIsPM;
-proto$1.meridiem = localeMeridiem;
-
-function get$1 (format, index, field, setter) {
-    var locale = getLocale();
-    var utc = createUTC().set(setter, index);
-    return locale[field](utc, format);
-}
-
-function listMonthsImpl (format, index, field) {
-    if (isNumber(format)) {
-        index = format;
-        format = undefined;
+        return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
     }
 
-    format = format || '';
-
-    if (index != null) {
-        return get$1(format, index, field, 'month');
+    function to_type__valueOf () {
+        return +this._d - ((this._offset || 0) * 60000);
     }
 
-    var i;
-    var out = [];
-    for (i = 0; i < 12; i++) {
-        out[i] = get$1(format, i, field, 'month');
+    function unix () {
+        return Math.floor(+this / 1000);
     }
-    return out;
-}
 
-// ()
-// (5)
-// (fmt, 5)
-// (fmt)
-// (true)
-// (true, 5)
-// (true, fmt, 5)
-// (true, fmt)
-function listWeekdaysImpl (localeSorted, format, index, field) {
-    if (typeof localeSorted === 'boolean') {
-        if (isNumber(format)) {
+    function toDate () {
+        return this._offset ? new Date(+this) : this._d;
+    }
+
+    function toArray () {
+        var m = this;
+        return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
+    }
+
+    function toObject () {
+        var m = this;
+        return {
+            years: m.year(),
+            months: m.month(),
+            date: m.date(),
+            hours: m.hours(),
+            minutes: m.minutes(),
+            seconds: m.seconds(),
+            milliseconds: m.milliseconds()
+        };
+    }
+
+    function moment_valid__isValid () {
+        return valid__isValid(this);
+    }
+
+    function parsingFlags () {
+        return extend({}, getParsingFlags(this));
+    }
+
+    function invalidAt () {
+        return getParsingFlags(this).overflow;
+    }
+
+    addFormatToken(0, ['gg', 2], 0, function () {
+        return this.weekYear() % 100;
+    });
+
+    addFormatToken(0, ['GG', 2], 0, function () {
+        return this.isoWeekYear() % 100;
+    });
+
+    function addWeekYearFormatToken (token, getter) {
+        addFormatToken(0, [token, token.length], 0, getter);
+    }
+
+    addWeekYearFormatToken('gggg',     'weekYear');
+    addWeekYearFormatToken('ggggg',    'weekYear');
+    addWeekYearFormatToken('GGGG',  'isoWeekYear');
+    addWeekYearFormatToken('GGGGG', 'isoWeekYear');
+
+    // ALIASES
+
+    addUnitAlias('weekYear', 'gg');
+    addUnitAlias('isoWeekYear', 'GG');
+
+    // PARSING
+
+    addRegexToken('G',      matchSigned);
+    addRegexToken('g',      matchSigned);
+    addRegexToken('GG',     match1to2, match2);
+    addRegexToken('gg',     match1to2, match2);
+    addRegexToken('GGGG',   match1to4, match4);
+    addRegexToken('gggg',   match1to4, match4);
+    addRegexToken('GGGGG',  match1to6, match6);
+    addRegexToken('ggggg',  match1to6, match6);
+
+    addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
+        week[token.substr(0, 2)] = toInt(input);
+    });
+
+    addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
+        week[token] = utils_hooks__hooks.parseTwoDigitYear(input);
+    });
+
+    // HELPERS
+
+    function weeksInYear(year, dow, doy) {
+        return weekOfYear(local__createLocal([year, 11, 31 + dow - doy]), dow, doy).week;
+    }
+
+    // MOMENTS
+
+    function getSetWeekYear (input) {
+        var year = weekOfYear(this, this.localeData()._week.dow, this.localeData()._week.doy).year;
+        return input == null ? year : this.add((input - year), 'y');
+    }
+
+    function getSetISOWeekYear (input) {
+        var year = weekOfYear(this, 1, 4).year;
+        return input == null ? year : this.add((input - year), 'y');
+    }
+
+    function getISOWeeksInYear () {
+        return weeksInYear(this.year(), 1, 4);
+    }
+
+    function getWeeksInYear () {
+        var weekInfo = this.localeData()._week;
+        return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
+    }
+
+    addFormatToken('Q', 0, 0, 'quarter');
+
+    // ALIASES
+
+    addUnitAlias('quarter', 'Q');
+
+    // PARSING
+
+    addRegexToken('Q', match1);
+    addParseToken('Q', function (input, array) {
+        array[MONTH] = (toInt(input) - 1) * 3;
+    });
+
+    // MOMENTS
+
+    function getSetQuarter (input) {
+        return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
+    }
+
+    addFormatToken('D', ['DD', 2], 'Do', 'date');
+
+    // ALIASES
+
+    addUnitAlias('date', 'D');
+
+    // PARSING
+
+    addRegexToken('D',  match1to2);
+    addRegexToken('DD', match1to2, match2);
+    addRegexToken('Do', function (isStrict, locale) {
+        return isStrict ? locale._ordinalParse : locale._ordinalParseLenient;
+    });
+
+    addParseToken(['D', 'DD'], DATE);
+    addParseToken('Do', function (input, array) {
+        array[DATE] = toInt(input.match(match1to2)[0], 10);
+    });
+
+    // MOMENTS
+
+    var getSetDayOfMonth = makeGetSet('Date', true);
+
+    addFormatToken('d', 0, 'do', 'day');
+
+    addFormatToken('dd', 0, 0, function (format) {
+        return this.localeData().weekdaysMin(this, format);
+    });
+
+    addFormatToken('ddd', 0, 0, function (format) {
+        return this.localeData().weekdaysShort(this, format);
+    });
+
+    addFormatToken('dddd', 0, 0, function (format) {
+        return this.localeData().weekdays(this, format);
+    });
+
+    addFormatToken('e', 0, 0, 'weekday');
+    addFormatToken('E', 0, 0, 'isoWeekday');
+
+    // ALIASES
+
+    addUnitAlias('day', 'd');
+    addUnitAlias('weekday', 'e');
+    addUnitAlias('isoWeekday', 'E');
+
+    // PARSING
+
+    addRegexToken('d',    match1to2);
+    addRegexToken('e',    match1to2);
+    addRegexToken('E',    match1to2);
+    addRegexToken('dd',   matchWord);
+    addRegexToken('ddd',  matchWord);
+    addRegexToken('dddd', matchWord);
+
+    addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config) {
+        var weekday = config._locale.weekdaysParse(input);
+        // if we didn't get a weekday name, mark the date as invalid
+        if (weekday != null) {
+            week.d = weekday;
+        } else {
+            getParsingFlags(config).invalidWeekday = input;
+        }
+    });
+
+    addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
+        week[token] = toInt(input);
+    });
+
+    // HELPERS
+
+    function parseWeekday(input, locale) {
+        if (typeof input !== 'string') {
+            return input;
+        }
+
+        if (!isNaN(input)) {
+            return parseInt(input, 10);
+        }
+
+        input = locale.weekdaysParse(input);
+        if (typeof input === 'number') {
+            return input;
+        }
+
+        return null;
+    }
+
+    // LOCALES
+
+    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
+    function localeWeekdays (m) {
+        return this._weekdays[m.day()];
+    }
+
+    var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
+    function localeWeekdaysShort (m) {
+        return this._weekdaysShort[m.day()];
+    }
+
+    var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
+    function localeWeekdaysMin (m) {
+        return this._weekdaysMin[m.day()];
+    }
+
+    function localeWeekdaysParse (weekdayName) {
+        var i, mom, regex;
+
+        this._weekdaysParse = this._weekdaysParse || [];
+
+        for (i = 0; i < 7; i++) {
+            // make the regex if we don't have it already
+            if (!this._weekdaysParse[i]) {
+                mom = local__createLocal([2000, 1]).day(i);
+                regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
+                this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
+            }
+            // test the regex
+            if (this._weekdaysParse[i].test(weekdayName)) {
+                return i;
+            }
+        }
+    }
+
+    // MOMENTS
+
+    function getSetDayOfWeek (input) {
+        var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+        if (input != null) {
+            input = parseWeekday(input, this.localeData());
+            return this.add(input - day, 'd');
+        } else {
+            return day;
+        }
+    }
+
+    function getSetLocaleDayOfWeek (input) {
+        var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
+        return input == null ? weekday : this.add(input - weekday, 'd');
+    }
+
+    function getSetISODayOfWeek (input) {
+        // behaves the same as moment#day except
+        // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
+        // as a setter, sunday should belong to the previous week.
+        return input == null ? this.day() || 7 : this.day(this.day() % 7 ? input : input - 7);
+    }
+
+    addFormatToken('H', ['HH', 2], 0, 'hour');
+    addFormatToken('h', ['hh', 2], 0, function () {
+        return this.hours() % 12 || 12;
+    });
+
+    function meridiem (token, lowercase) {
+        addFormatToken(token, 0, 0, function () {
+            return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
+        });
+    }
+
+    meridiem('a', true);
+    meridiem('A', false);
+
+    // ALIASES
+
+    addUnitAlias('hour', 'h');
+
+    // PARSING
+
+    function matchMeridiem (isStrict, locale) {
+        return locale._meridiemParse;
+    }
+
+    addRegexToken('a',  matchMeridiem);
+    addRegexToken('A',  matchMeridiem);
+    addRegexToken('H',  match1to2);
+    addRegexToken('h',  match1to2);
+    addRegexToken('HH', match1to2, match2);
+    addRegexToken('hh', match1to2, match2);
+
+    addParseToken(['H', 'HH'], HOUR);
+    addParseToken(['a', 'A'], function (input, array, config) {
+        config._isPm = config._locale.isPM(input);
+        config._meridiem = input;
+    });
+    addParseToken(['h', 'hh'], function (input, array, config) {
+        array[HOUR] = toInt(input);
+        getParsingFlags(config).bigHour = true;
+    });
+
+    // LOCALES
+
+    function localeIsPM (input) {
+        // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
+        // Using charAt should be more compatible.
+        return ((input + '').toLowerCase().charAt(0) === 'p');
+    }
+
+    var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
+    function localeMeridiem (hours, minutes, isLower) {
+        if (hours > 11) {
+            return isLower ? 'pm' : 'PM';
+        } else {
+            return isLower ? 'am' : 'AM';
+        }
+    }
+
+
+    // MOMENTS
+
+    // Setting the hour should keep the time, because the user explicitly
+    // specified which hour he wants. So trying to maintain the same hour (in
+    // a new timezone) makes sense. Adding/subtracting hours does not follow
+    // this rule.
+    var getSetHour = makeGetSet('Hours', true);
+
+    addFormatToken('m', ['mm', 2], 0, 'minute');
+
+    // ALIASES
+
+    addUnitAlias('minute', 'm');
+
+    // PARSING
+
+    addRegexToken('m',  match1to2);
+    addRegexToken('mm', match1to2, match2);
+    addParseToken(['m', 'mm'], MINUTE);
+
+    // MOMENTS
+
+    var getSetMinute = makeGetSet('Minutes', false);
+
+    addFormatToken('s', ['ss', 2], 0, 'second');
+
+    // ALIASES
+
+    addUnitAlias('second', 's');
+
+    // PARSING
+
+    addRegexToken('s',  match1to2);
+    addRegexToken('ss', match1to2, match2);
+    addParseToken(['s', 'ss'], SECOND);
+
+    // MOMENTS
+
+    var getSetSecond = makeGetSet('Seconds', false);
+
+    addFormatToken('S', 0, 0, function () {
+        return ~~(this.millisecond() / 100);
+    });
+
+    addFormatToken(0, ['SS', 2], 0, function () {
+        return ~~(this.millisecond() / 10);
+    });
+
+    addFormatToken(0, ['SSS', 3], 0, 'millisecond');
+    addFormatToken(0, ['SSSS', 4], 0, function () {
+        return this.millisecond() * 10;
+    });
+    addFormatToken(0, ['SSSSS', 5], 0, function () {
+        return this.millisecond() * 100;
+    });
+    addFormatToken(0, ['SSSSSS', 6], 0, function () {
+        return this.millisecond() * 1000;
+    });
+    addFormatToken(0, ['SSSSSSS', 7], 0, function () {
+        return this.millisecond() * 10000;
+    });
+    addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
+        return this.millisecond() * 100000;
+    });
+    addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
+        return this.millisecond() * 1000000;
+    });
+
+
+    // ALIASES
+
+    addUnitAlias('millisecond', 'ms');
+
+    // PARSING
+
+    addRegexToken('S',    match1to3, match1);
+    addRegexToken('SS',   match1to3, match2);
+    addRegexToken('SSS',  match1to3, match3);
+
+    var token;
+    for (token = 'SSSS'; token.length <= 9; token += 'S') {
+        addRegexToken(token, matchUnsigned);
+    }
+
+    function parseMs(input, array) {
+        array[MILLISECOND] = toInt(('0.' + input) * 1000);
+    }
+
+    for (token = 'S'; token.length <= 9; token += 'S') {
+        addParseToken(token, parseMs);
+    }
+    // MOMENTS
+
+    var getSetMillisecond = makeGetSet('Milliseconds', false);
+
+    addFormatToken('z',  0, 0, 'zoneAbbr');
+    addFormatToken('zz', 0, 0, 'zoneName');
+
+    // MOMENTS
+
+    function getZoneAbbr () {
+        return this._isUTC ? 'UTC' : '';
+    }
+
+    function getZoneName () {
+        return this._isUTC ? 'Coordinated Universal Time' : '';
+    }
+
+    var momentPrototype__proto = Moment.prototype;
+
+    momentPrototype__proto.add          = add_subtract__add;
+    momentPrototype__proto.calendar     = moment_calendar__calendar;
+    momentPrototype__proto.clone        = clone;
+    momentPrototype__proto.diff         = diff;
+    momentPrototype__proto.endOf        = endOf;
+    momentPrototype__proto.format       = format;
+    momentPrototype__proto.from         = from;
+    momentPrototype__proto.fromNow      = fromNow;
+    momentPrototype__proto.to           = to;
+    momentPrototype__proto.toNow        = toNow;
+    momentPrototype__proto.get          = getSet;
+    momentPrototype__proto.invalidAt    = invalidAt;
+    momentPrototype__proto.isAfter      = isAfter;
+    momentPrototype__proto.isBefore     = isBefore;
+    momentPrototype__proto.isBetween    = isBetween;
+    momentPrototype__proto.isSame       = isSame;
+    momentPrototype__proto.isValid      = moment_valid__isValid;
+    momentPrototype__proto.lang         = lang;
+    momentPrototype__proto.locale       = locale;
+    momentPrototype__proto.localeData   = localeData;
+    momentPrototype__proto.max          = prototypeMax;
+    momentPrototype__proto.min          = prototypeMin;
+    momentPrototype__proto.parsingFlags = parsingFlags;
+    momentPrototype__proto.set          = getSet;
+    momentPrototype__proto.startOf      = startOf;
+    momentPrototype__proto.subtract     = add_subtract__subtract;
+    momentPrototype__proto.toArray      = toArray;
+    momentPrototype__proto.toObject     = toObject;
+    momentPrototype__proto.toDate       = toDate;
+    momentPrototype__proto.toISOString  = moment_format__toISOString;
+    momentPrototype__proto.toJSON       = moment_format__toISOString;
+    momentPrototype__proto.toString     = toString;
+    momentPrototype__proto.unix         = unix;
+    momentPrototype__proto.valueOf      = to_type__valueOf;
+
+    // Year
+    momentPrototype__proto.year       = getSetYear;
+    momentPrototype__proto.isLeapYear = getIsLeapYear;
+
+    // Week Year
+    momentPrototype__proto.weekYear    = getSetWeekYear;
+    momentPrototype__proto.isoWeekYear = getSetISOWeekYear;
+
+    // Quarter
+    momentPrototype__proto.quarter = momentPrototype__proto.quarters = getSetQuarter;
+
+    // Month
+    momentPrototype__proto.month       = getSetMonth;
+    momentPrototype__proto.daysInMonth = getDaysInMonth;
+
+    // Week
+    momentPrototype__proto.week           = momentPrototype__proto.weeks        = getSetWeek;
+    momentPrototype__proto.isoWeek        = momentPrototype__proto.isoWeeks     = getSetISOWeek;
+    momentPrototype__proto.weeksInYear    = getWeeksInYear;
+    momentPrototype__proto.isoWeeksInYear = getISOWeeksInYear;
+
+    // Day
+    momentPrototype__proto.date       = getSetDayOfMonth;
+    momentPrototype__proto.day        = momentPrototype__proto.days             = getSetDayOfWeek;
+    momentPrototype__proto.weekday    = getSetLocaleDayOfWeek;
+    momentPrototype__proto.isoWeekday = getSetISODayOfWeek;
+    momentPrototype__proto.dayOfYear  = getSetDayOfYear;
+
+    // Hour
+    momentPrototype__proto.hour = momentPrototype__proto.hours = getSetHour;
+
+    // Minute
+    momentPrototype__proto.minute = momentPrototype__proto.minutes = getSetMinute;
+
+    // Second
+    momentPrototype__proto.second = momentPrototype__proto.seconds = getSetSecond;
+
+    // Millisecond
+    momentPrototype__proto.millisecond = momentPrototype__proto.milliseconds = getSetMillisecond;
+
+    // Offset
+    momentPrototype__proto.utcOffset            = getSetOffset;
+    momentPrototype__proto.utc                  = setOffsetToUTC;
+    momentPrototype__proto.local                = setOffsetToLocal;
+    momentPrototype__proto.parseZone            = setOffsetToParsedOffset;
+    momentPrototype__proto.hasAlignedHourOffset = hasAlignedHourOffset;
+    momentPrototype__proto.isDST                = isDaylightSavingTime;
+    momentPrototype__proto.isDSTShifted         = isDaylightSavingTimeShifted;
+    momentPrototype__proto.isLocal              = isLocal;
+    momentPrototype__proto.isUtcOffset          = isUtcOffset;
+    momentPrototype__proto.isUtc                = isUtc;
+    momentPrototype__proto.isUTC                = isUtc;
+
+    // Timezone
+    momentPrototype__proto.zoneAbbr = getZoneAbbr;
+    momentPrototype__proto.zoneName = getZoneName;
+
+    // Deprecations
+    momentPrototype__proto.dates  = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
+    momentPrototype__proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
+    momentPrototype__proto.years  = deprecate('years accessor is deprecated. Use year instead', getSetYear);
+    momentPrototype__proto.zone   = deprecate('moment().zone is deprecated, use moment().utcOffset instead. https://github.com/moment/moment/issues/1779', getSetZone);
+
+    var momentPrototype = momentPrototype__proto;
+
+    function moment__createUnix (input) {
+        return local__createLocal(input * 1000);
+    }
+
+    function moment__createInZone () {
+        return local__createLocal.apply(null, arguments).parseZone();
+    }
+
+    var defaultCalendar = {
+        sameDay : '[Today at] LT',
+        nextDay : '[Tomorrow at] LT',
+        nextWeek : 'dddd [at] LT',
+        lastDay : '[Yesterday at] LT',
+        lastWeek : '[Last] dddd [at] LT',
+        sameElse : 'L'
+    };
+
+    function locale_calendar__calendar (key, mom, now) {
+        var output = this._calendar[key];
+        return typeof output === 'function' ? output.call(mom, now) : output;
+    }
+
+    var defaultLongDateFormat = {
+        LTS  : 'h:mm:ss A',
+        LT   : 'h:mm A',
+        L    : 'MM/DD/YYYY',
+        LL   : 'MMMM D, YYYY',
+        LLL  : 'MMMM D, YYYY h:mm A',
+        LLLL : 'dddd, MMMM D, YYYY h:mm A'
+    };
+
+    function longDateFormat (key) {
+        var format = this._longDateFormat[key],
+            formatUpper = this._longDateFormat[key.toUpperCase()];
+
+        if (format || !formatUpper) {
+            return format;
+        }
+
+        this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
+            return val.slice(1);
+        });
+
+        return this._longDateFormat[key];
+    }
+
+    var defaultInvalidDate = 'Invalid date';
+
+    function invalidDate () {
+        return this._invalidDate;
+    }
+
+    var defaultOrdinal = '%d';
+    var defaultOrdinalParse = /\d{1,2}/;
+
+    function ordinal (number) {
+        return this._ordinal.replace('%d', number);
+    }
+
+    function preParsePostFormat (string) {
+        return string;
+    }
+
+    var defaultRelativeTime = {
+        future : 'in %s',
+        past   : '%s ago',
+        s  : 'a few seconds',
+        m  : 'a minute',
+        mm : '%d minutes',
+        h  : 'an hour',
+        hh : '%d hours',
+        d  : 'a day',
+        dd : '%d days',
+        M  : 'a month',
+        MM : '%d months',
+        y  : 'a year',
+        yy : '%d years'
+    };
+
+    function relative__relativeTime (number, withoutSuffix, string, isFuture) {
+        var output = this._relativeTime[string];
+        return (typeof output === 'function') ?
+            output(number, withoutSuffix, string, isFuture) :
+            output.replace(/%d/i, number);
+    }
+
+    function pastFuture (diff, output) {
+        var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
+        return typeof format === 'function' ? format(output) : format.replace(/%s/i, output);
+    }
+
+    function locale_set__set (config) {
+        var prop, i;
+        for (i in config) {
+            prop = config[i];
+            if (typeof prop === 'function') {
+                this[i] = prop;
+            } else {
+                this['_' + i] = prop;
+            }
+        }
+        // Lenient ordinal parsing accepts just a number in addition to
+        // number + (possibly) stuff coming from _ordinalParseLenient.
+        this._ordinalParseLenient = new RegExp(this._ordinalParse.source + '|' + (/\d{1,2}/).source);
+    }
+
+    var prototype__proto = Locale.prototype;
+
+    prototype__proto._calendar       = defaultCalendar;
+    prototype__proto.calendar        = locale_calendar__calendar;
+    prototype__proto._longDateFormat = defaultLongDateFormat;
+    prototype__proto.longDateFormat  = longDateFormat;
+    prototype__proto._invalidDate    = defaultInvalidDate;
+    prototype__proto.invalidDate     = invalidDate;
+    prototype__proto._ordinal        = defaultOrdinal;
+    prototype__proto.ordinal         = ordinal;
+    prototype__proto._ordinalParse   = defaultOrdinalParse;
+    prototype__proto.preparse        = preParsePostFormat;
+    prototype__proto.postformat      = preParsePostFormat;
+    prototype__proto._relativeTime   = defaultRelativeTime;
+    prototype__proto.relativeTime    = relative__relativeTime;
+    prototype__proto.pastFuture      = pastFuture;
+    prototype__proto.set             = locale_set__set;
+
+    // Month
+    prototype__proto.months       =        localeMonths;
+    prototype__proto._months      = defaultLocaleMonths;
+    prototype__proto.monthsShort  =        localeMonthsShort;
+    prototype__proto._monthsShort = defaultLocaleMonthsShort;
+    prototype__proto.monthsParse  =        localeMonthsParse;
+
+    // Week
+    prototype__proto.week = localeWeek;
+    prototype__proto._week = defaultLocaleWeek;
+    prototype__proto.firstDayOfYear = localeFirstDayOfYear;
+    prototype__proto.firstDayOfWeek = localeFirstDayOfWeek;
+
+    // Day of Week
+    prototype__proto.weekdays       =        localeWeekdays;
+    prototype__proto._weekdays      = defaultLocaleWeekdays;
+    prototype__proto.weekdaysMin    =        localeWeekdaysMin;
+    prototype__proto._weekdaysMin   = defaultLocaleWeekdaysMin;
+    prototype__proto.weekdaysShort  =        localeWeekdaysShort;
+    prototype__proto._weekdaysShort = defaultLocaleWeekdaysShort;
+    prototype__proto.weekdaysParse  =        localeWeekdaysParse;
+
+    // Hours
+    prototype__proto.isPM = localeIsPM;
+    prototype__proto._meridiemParse = defaultLocaleMeridiemParse;
+    prototype__proto.meridiem = localeMeridiem;
+
+    function lists__get (format, index, field, setter) {
+        var locale = locale_locales__getLocale();
+        var utc = create_utc__createUTC().set(setter, index);
+        return locale[field](utc, format);
+    }
+
+    function list (format, index, field, count, setter) {
+        if (typeof format === 'number') {
             index = format;
             format = undefined;
         }
 
         format = format || '';
-    } else {
-        format = localeSorted;
-        index = format;
-        localeSorted = false;
 
-        if (isNumber(format)) {
-            index = format;
-            format = undefined;
+        if (index != null) {
+            return lists__get(format, index, field, setter);
         }
 
-        format = format || '';
+        var i;
+        var out = [];
+        for (i = 0; i < count; i++) {
+            out[i] = lists__get(format, i, field, setter);
+        }
+        return out;
     }
 
-    var locale = getLocale(),
-        shift = localeSorted ? locale._week.dow : 0;
-
-    if (index != null) {
-        return get$1(format, (index + shift) % 7, field, 'day');
+    function lists__listMonths (format, index) {
+        return list(format, index, 'months', 12, 'month');
     }
 
-    var i;
-    var out = [];
-    for (i = 0; i < 7; i++) {
-        out[i] = get$1(format, (i + shift) % 7, field, 'day');
-    }
-    return out;
-}
-
-function listMonths (format, index) {
-    return listMonthsImpl(format, index, 'months');
-}
-
-function listMonthsShort (format, index) {
-    return listMonthsImpl(format, index, 'monthsShort');
-}
-
-function listWeekdays (localeSorted, format, index) {
-    return listWeekdaysImpl(localeSorted, format, index, 'weekdays');
-}
-
-function listWeekdaysShort (localeSorted, format, index) {
-    return listWeekdaysImpl(localeSorted, format, index, 'weekdaysShort');
-}
-
-function listWeekdaysMin (localeSorted, format, index) {
-    return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
-}
-
-getSetGlobalLocale('en', {
-    dayOfMonthOrdinalParse: /\d{1,2}(th|st|nd|rd)/,
-    ordinal : function (number) {
-        var b = number % 10,
-            output = (toInt(number % 100 / 10) === 1) ? 'th' :
-            (b === 1) ? 'st' :
-            (b === 2) ? 'nd' :
-            (b === 3) ? 'rd' : 'th';
-        return number + output;
-    }
-});
-
-// Side effect imports
-hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', getSetGlobalLocale);
-hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', getLocale);
-
-var mathAbs = Math.abs;
-
-function abs () {
-    var data           = this._data;
-
-    this._milliseconds = mathAbs(this._milliseconds);
-    this._days         = mathAbs(this._days);
-    this._months       = mathAbs(this._months);
-
-    data.milliseconds  = mathAbs(data.milliseconds);
-    data.seconds       = mathAbs(data.seconds);
-    data.minutes       = mathAbs(data.minutes);
-    data.hours         = mathAbs(data.hours);
-    data.months        = mathAbs(data.months);
-    data.years         = mathAbs(data.years);
-
-    return this;
-}
-
-function addSubtract$1 (duration, input, value, direction) {
-    var other = createDuration(input, value);
-
-    duration._milliseconds += direction * other._milliseconds;
-    duration._days         += direction * other._days;
-    duration._months       += direction * other._months;
-
-    return duration._bubble();
-}
-
-// supports only 2.0-style add(1, 's') or add(duration)
-function add$1 (input, value) {
-    return addSubtract$1(this, input, value, 1);
-}
-
-// supports only 2.0-style subtract(1, 's') or subtract(duration)
-function subtract$1 (input, value) {
-    return addSubtract$1(this, input, value, -1);
-}
-
-function absCeil (number) {
-    if (number < 0) {
-        return Math.floor(number);
-    } else {
-        return Math.ceil(number);
-    }
-}
-
-function bubble () {
-    var milliseconds = this._milliseconds;
-    var days         = this._days;
-    var months       = this._months;
-    var data         = this._data;
-    var seconds, minutes, hours, years, monthsFromDays;
-
-    // if we have a mix of positive and negative values, bubble down first
-    // check: https://github.com/moment/moment/issues/2166
-    if (!((milliseconds >= 0 && days >= 0 && months >= 0) ||
-            (milliseconds <= 0 && days <= 0 && months <= 0))) {
-        milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
-        days = 0;
-        months = 0;
+    function lists__listMonthsShort (format, index) {
+        return list(format, index, 'monthsShort', 12, 'month');
     }
 
-    // The following code bubbles up values, see the tests for
-    // examples of what that means.
-    data.milliseconds = milliseconds % 1000;
-
-    seconds           = absFloor(milliseconds / 1000);
-    data.seconds      = seconds % 60;
-
-    minutes           = absFloor(seconds / 60);
-    data.minutes      = minutes % 60;
-
-    hours             = absFloor(minutes / 60);
-    data.hours        = hours % 24;
-
-    days += absFloor(hours / 24);
-
-    // convert days to months
-    monthsFromDays = absFloor(daysToMonths(days));
-    months += monthsFromDays;
-    days -= absCeil(monthsToDays(monthsFromDays));
-
-    // 12 months -> 1 year
-    years = absFloor(months / 12);
-    months %= 12;
-
-    data.days   = days;
-    data.months = months;
-    data.years  = years;
-
-    return this;
-}
-
-function daysToMonths (days) {
-    // 400 years have 146097 days (taking into account leap year rules)
-    // 400 years have 12 months === 4800
-    return days * 4800 / 146097;
-}
-
-function monthsToDays (months) {
-    // the reverse of daysToMonths
-    return months * 146097 / 4800;
-}
-
-function as (units) {
-    if (!this.isValid()) {
-        return NaN;
+    function lists__listWeekdays (format, index) {
+        return list(format, index, 'weekdays', 7, 'day');
     }
-    var days;
-    var months;
-    var milliseconds = this._milliseconds;
 
-    units = normalizeUnits(units);
+    function lists__listWeekdaysShort (format, index) {
+        return list(format, index, 'weekdaysShort', 7, 'day');
+    }
 
-    if (units === 'month' || units === 'year') {
-        days   = this._days   + milliseconds / 864e5;
-        months = this._months + daysToMonths(days);
-        return units === 'month' ? months : months / 12;
-    } else {
-        // handle milliseconds separately because of floating point math errors (issue #1867)
-        days = this._days + Math.round(monthsToDays(this._months));
-        switch (units) {
-            case 'week'   : return days / 7     + milliseconds / 6048e5;
-            case 'day'    : return days         + milliseconds / 864e5;
-            case 'hour'   : return days * 24    + milliseconds / 36e5;
-            case 'minute' : return days * 1440  + milliseconds / 6e4;
-            case 'second' : return days * 86400 + milliseconds / 1000;
-            // Math.floor prevents floating point math errors here
-            case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
-            default: throw new Error('Unknown unit ' + units);
+    function lists__listWeekdaysMin (format, index) {
+        return list(format, index, 'weekdaysMin', 7, 'day');
+    }
+
+    locale_locales__getSetGlobalLocale('en', {
+        ordinalParse: /\d{1,2}(th|st|nd|rd)/,
+        ordinal : function (number) {
+            var b = number % 10,
+                output = (toInt(number % 100 / 10) === 1) ? 'th' :
+                (b === 1) ? 'st' :
+                (b === 2) ? 'nd' :
+                (b === 3) ? 'rd' : 'th';
+            return number + output;
+        }
+    });
+
+    // Side effect imports
+    utils_hooks__hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', locale_locales__getSetGlobalLocale);
+    utils_hooks__hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', locale_locales__getLocale);
+
+    var mathAbs = Math.abs;
+
+    function duration_abs__abs () {
+        var data           = this._data;
+
+        this._milliseconds = mathAbs(this._milliseconds);
+        this._days         = mathAbs(this._days);
+        this._months       = mathAbs(this._months);
+
+        data.milliseconds  = mathAbs(data.milliseconds);
+        data.seconds       = mathAbs(data.seconds);
+        data.minutes       = mathAbs(data.minutes);
+        data.hours         = mathAbs(data.hours);
+        data.months        = mathAbs(data.months);
+        data.years         = mathAbs(data.years);
+
+        return this;
+    }
+
+    function duration_add_subtract__addSubtract (duration, input, value, direction) {
+        var other = create__createDuration(input, value);
+
+        duration._milliseconds += direction * other._milliseconds;
+        duration._days         += direction * other._days;
+        duration._months       += direction * other._months;
+
+        return duration._bubble();
+    }
+
+    // supports only 2.0-style add(1, 's') or add(duration)
+    function duration_add_subtract__add (input, value) {
+        return duration_add_subtract__addSubtract(this, input, value, 1);
+    }
+
+    // supports only 2.0-style subtract(1, 's') or subtract(duration)
+    function duration_add_subtract__subtract (input, value) {
+        return duration_add_subtract__addSubtract(this, input, value, -1);
+    }
+
+    function absCeil (number) {
+        if (number < 0) {
+            return Math.floor(number);
+        } else {
+            return Math.ceil(number);
         }
     }
-}
 
-// TODO: Use this.as('ms')?
-function valueOf$1 () {
-    if (!this.isValid()) {
-        return NaN;
+    function bubble () {
+        var milliseconds = this._milliseconds;
+        var days         = this._days;
+        var months       = this._months;
+        var data         = this._data;
+        var seconds, minutes, hours, years, monthsFromDays;
+
+        // if we have a mix of positive and negative values, bubble down first
+        // check: https://github.com/moment/moment/issues/2166
+        if (!((milliseconds >= 0 && days >= 0 && months >= 0) ||
+                (milliseconds <= 0 && days <= 0 && months <= 0))) {
+            milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
+            days = 0;
+            months = 0;
+        }
+
+        // The following code bubbles up values, see the tests for
+        // examples of what that means.
+        data.milliseconds = milliseconds % 1000;
+
+        seconds           = absFloor(milliseconds / 1000);
+        data.seconds      = seconds % 60;
+
+        minutes           = absFloor(seconds / 60);
+        data.minutes      = minutes % 60;
+
+        hours             = absFloor(minutes / 60);
+        data.hours        = hours % 24;
+
+        days += absFloor(hours / 24);
+
+        // convert days to months
+        monthsFromDays = absFloor(daysToMonths(days));
+        months += monthsFromDays;
+        days -= absCeil(monthsToDays(monthsFromDays));
+
+        // 12 months -> 1 year
+        years = absFloor(months / 12);
+        months %= 12;
+
+        data.days   = days;
+        data.months = months;
+        data.years  = years;
+
+        return this;
     }
-    return (
-        this._milliseconds +
-        this._days * 864e5 +
-        (this._months % 12) * 2592e6 +
-        toInt(this._months / 12) * 31536e6
-    );
-}
 
-function makeAs (alias) {
-    return function () {
-        return this.as(alias);
-    };
-}
-
-var asMilliseconds = makeAs('ms');
-var asSeconds      = makeAs('s');
-var asMinutes      = makeAs('m');
-var asHours        = makeAs('h');
-var asDays         = makeAs('d');
-var asWeeks        = makeAs('w');
-var asMonths       = makeAs('M');
-var asYears        = makeAs('y');
-
-function get$2 (units) {
-    units = normalizeUnits(units);
-    return this.isValid() ? this[units + 's']() : NaN;
-}
-
-function makeGetter(name) {
-    return function () {
-        return this.isValid() ? this._data[name] : NaN;
-    };
-}
-
-var milliseconds = makeGetter('milliseconds');
-var seconds      = makeGetter('seconds');
-var minutes      = makeGetter('minutes');
-var hours        = makeGetter('hours');
-var days         = makeGetter('days');
-var months       = makeGetter('months');
-var years        = makeGetter('years');
-
-function weeks () {
-    return absFloor(this.days() / 7);
-}
-
-var round = Math.round;
-var thresholds = {
-    ss: 44,         // a few seconds to seconds
-    s : 45,         // seconds to minute
-    m : 45,         // minutes to hour
-    h : 22,         // hours to day
-    d : 26,         // days to month
-    M : 11          // months to year
-};
-
-// helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
-function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
-    return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
-}
-
-function relativeTime$1 (posNegDuration, withoutSuffix, locale) {
-    var duration = createDuration(posNegDuration).abs();
-    var seconds  = round(duration.as('s'));
-    var minutes  = round(duration.as('m'));
-    var hours    = round(duration.as('h'));
-    var days     = round(duration.as('d'));
-    var months   = round(duration.as('M'));
-    var years    = round(duration.as('y'));
-
-    var a = seconds <= thresholds.ss && ['s', seconds]  ||
-            seconds < thresholds.s   && ['ss', seconds] ||
-            minutes <= 1             && ['m']           ||
-            minutes < thresholds.m   && ['mm', minutes] ||
-            hours   <= 1             && ['h']           ||
-            hours   < thresholds.h   && ['hh', hours]   ||
-            days    <= 1             && ['d']           ||
-            days    < thresholds.d   && ['dd', days]    ||
-            months  <= 1             && ['M']           ||
-            months  < thresholds.M   && ['MM', months]  ||
-            years   <= 1             && ['y']           || ['yy', years];
-
-    a[2] = withoutSuffix;
-    a[3] = +posNegDuration > 0;
-    a[4] = locale;
-    return substituteTimeAgo.apply(null, a);
-}
-
-// This function allows you to set the rounding function for relative time strings
-function getSetRelativeTimeRounding (roundingFunction) {
-    if (roundingFunction === undefined) {
-        return round;
+    function daysToMonths (days) {
+        // 400 years have 146097 days (taking into account leap year rules)
+        // 400 years have 12 months === 4800
+        return days * 4800 / 146097;
     }
-    if (typeof(roundingFunction) === 'function') {
-        round = roundingFunction;
+
+    function monthsToDays (months) {
+        // the reverse of daysToMonths
+        return months * 146097 / 4800;
+    }
+
+    function as (units) {
+        var days;
+        var months;
+        var milliseconds = this._milliseconds;
+
+        units = normalizeUnits(units);
+
+        if (units === 'month' || units === 'year') {
+            days   = this._days   + milliseconds / 864e5;
+            months = this._months + daysToMonths(days);
+            return units === 'month' ? months : months / 12;
+        } else {
+            // handle milliseconds separately because of floating point math errors (issue #1867)
+            days = this._days + Math.round(monthsToDays(this._months));
+            switch (units) {
+                case 'week'   : return days / 7     + milliseconds / 6048e5;
+                case 'day'    : return days         + milliseconds / 864e5;
+                case 'hour'   : return days * 24    + milliseconds / 36e5;
+                case 'minute' : return days * 1440  + milliseconds / 6e4;
+                case 'second' : return days * 86400 + milliseconds / 1000;
+                // Math.floor prevents floating point math errors here
+                case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
+                default: throw new Error('Unknown unit ' + units);
+            }
+        }
+    }
+
+    // TODO: Use this.as('ms')?
+    function duration_as__valueOf () {
+        return (
+            this._milliseconds +
+            this._days * 864e5 +
+            (this._months % 12) * 2592e6 +
+            toInt(this._months / 12) * 31536e6
+        );
+    }
+
+    function makeAs (alias) {
+        return function () {
+            return this.as(alias);
+        };
+    }
+
+    var asMilliseconds = makeAs('ms');
+    var asSeconds      = makeAs('s');
+    var asMinutes      = makeAs('m');
+    var asHours        = makeAs('h');
+    var asDays         = makeAs('d');
+    var asWeeks        = makeAs('w');
+    var asMonths       = makeAs('M');
+    var asYears        = makeAs('y');
+
+    function duration_get__get (units) {
+        units = normalizeUnits(units);
+        return this[units + 's']();
+    }
+
+    function makeGetter(name) {
+        return function () {
+            return this._data[name];
+        };
+    }
+
+    var milliseconds = makeGetter('milliseconds');
+    var seconds      = makeGetter('seconds');
+    var minutes      = makeGetter('minutes');
+    var hours        = makeGetter('hours');
+    var days         = makeGetter('days');
+    var months       = makeGetter('months');
+    var years        = makeGetter('years');
+
+    function weeks () {
+        return absFloor(this.days() / 7);
+    }
+
+    var round = Math.round;
+    var thresholds = {
+        s: 45,  // seconds to minute
+        m: 45,  // minutes to hour
+        h: 22,  // hours to day
+        d: 26,  // days to month
+        M: 11   // months to year
+    };
+
+    // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
+    function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
+        return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
+    }
+
+    function duration_humanize__relativeTime (posNegDuration, withoutSuffix, locale) {
+        var duration = create__createDuration(posNegDuration).abs();
+        var seconds  = round(duration.as('s'));
+        var minutes  = round(duration.as('m'));
+        var hours    = round(duration.as('h'));
+        var days     = round(duration.as('d'));
+        var months   = round(duration.as('M'));
+        var years    = round(duration.as('y'));
+
+        var a = seconds < thresholds.s && ['s', seconds]  ||
+                minutes === 1          && ['m']           ||
+                minutes < thresholds.m && ['mm', minutes] ||
+                hours   === 1          && ['h']           ||
+                hours   < thresholds.h && ['hh', hours]   ||
+                days    === 1          && ['d']           ||
+                days    < thresholds.d && ['dd', days]    ||
+                months  === 1          && ['M']           ||
+                months  < thresholds.M && ['MM', months]  ||
+                years   === 1          && ['y']           || ['yy', years];
+
+        a[2] = withoutSuffix;
+        a[3] = +posNegDuration > 0;
+        a[4] = locale;
+        return substituteTimeAgo.apply(null, a);
+    }
+
+    // This function allows you to set a threshold for relative time strings
+    function duration_humanize__getSetRelativeTimeThreshold (threshold, limit) {
+        if (thresholds[threshold] === undefined) {
+            return false;
+        }
+        if (limit === undefined) {
+            return thresholds[threshold];
+        }
+        thresholds[threshold] = limit;
         return true;
     }
-    return false;
-}
 
-// This function allows you to set a threshold for relative time strings
-function getSetRelativeTimeThreshold (threshold, limit) {
-    if (thresholds[threshold] === undefined) {
-        return false;
-    }
-    if (limit === undefined) {
-        return thresholds[threshold];
-    }
-    thresholds[threshold] = limit;
-    if (threshold === 's') {
-        thresholds.ss = limit - 1;
-    }
-    return true;
-}
+    function humanize (withSuffix) {
+        var locale = this.localeData();
+        var output = duration_humanize__relativeTime(this, !withSuffix, locale);
 
-function humanize (withSuffix) {
-    if (!this.isValid()) {
-        return this.localeData().invalidDate();
+        if (withSuffix) {
+            output = locale.pastFuture(+this, output);
+        }
+
+        return locale.postformat(output);
     }
 
-    var locale = this.localeData();
-    var output = relativeTime$1(this, !withSuffix, locale);
+    var iso_string__abs = Math.abs;
 
-    if (withSuffix) {
-        output = locale.pastFuture(+this, output);
+    function iso_string__toISOString() {
+        // for ISO strings we do not use the normal bubbling rules:
+        //  * milliseconds bubble up until they become hours
+        //  * days do not bubble at all
+        //  * months bubble up until they become years
+        // This is because there is no context-free conversion between hours and days
+        // (think of clock changes)
+        // and also not between days and months (28-31 days per month)
+        var seconds = iso_string__abs(this._milliseconds) / 1000;
+        var days         = iso_string__abs(this._days);
+        var months       = iso_string__abs(this._months);
+        var minutes, hours, years;
+
+        // 3600 seconds -> 60 minutes -> 1 hour
+        minutes           = absFloor(seconds / 60);
+        hours             = absFloor(minutes / 60);
+        seconds %= 60;
+        minutes %= 60;
+
+        // 12 months -> 1 year
+        years  = absFloor(months / 12);
+        months %= 12;
+
+
+        // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
+        var Y = years;
+        var M = months;
+        var D = days;
+        var h = hours;
+        var m = minutes;
+        var s = seconds;
+        var total = this.asSeconds();
+
+        if (!total) {
+            // this is the same as C#'s (Noda) and python (isodate)...
+            // but not other JS (goog.date)
+            return 'P0D';
+        }
+
+        return (total < 0 ? '-' : '') +
+            'P' +
+            (Y ? Y + 'Y' : '') +
+            (M ? M + 'M' : '') +
+            (D ? D + 'D' : '') +
+            ((h || m || s) ? 'T' : '') +
+            (h ? h + 'H' : '') +
+            (m ? m + 'M' : '') +
+            (s ? s + 'S' : '');
     }
 
-    return locale.postformat(output);
-}
+    var duration_prototype__proto = Duration.prototype;
 
-var abs$1 = Math.abs;
+    duration_prototype__proto.abs            = duration_abs__abs;
+    duration_prototype__proto.add            = duration_add_subtract__add;
+    duration_prototype__proto.subtract       = duration_add_subtract__subtract;
+    duration_prototype__proto.as             = as;
+    duration_prototype__proto.asMilliseconds = asMilliseconds;
+    duration_prototype__proto.asSeconds      = asSeconds;
+    duration_prototype__proto.asMinutes      = asMinutes;
+    duration_prototype__proto.asHours        = asHours;
+    duration_prototype__proto.asDays         = asDays;
+    duration_prototype__proto.asWeeks        = asWeeks;
+    duration_prototype__proto.asMonths       = asMonths;
+    duration_prototype__proto.asYears        = asYears;
+    duration_prototype__proto.valueOf        = duration_as__valueOf;
+    duration_prototype__proto._bubble        = bubble;
+    duration_prototype__proto.get            = duration_get__get;
+    duration_prototype__proto.milliseconds   = milliseconds;
+    duration_prototype__proto.seconds        = seconds;
+    duration_prototype__proto.minutes        = minutes;
+    duration_prototype__proto.hours          = hours;
+    duration_prototype__proto.days           = days;
+    duration_prototype__proto.weeks          = weeks;
+    duration_prototype__proto.months         = months;
+    duration_prototype__proto.years          = years;
+    duration_prototype__proto.humanize       = humanize;
+    duration_prototype__proto.toISOString    = iso_string__toISOString;
+    duration_prototype__proto.toString       = iso_string__toISOString;
+    duration_prototype__proto.toJSON         = iso_string__toISOString;
+    duration_prototype__proto.locale         = locale;
+    duration_prototype__proto.localeData     = localeData;
 
-function toISOString$1() {
-    // for ISO strings we do not use the normal bubbling rules:
-    //  * milliseconds bubble up until they become hours
-    //  * days do not bubble at all
-    //  * months bubble up until they become years
-    // This is because there is no context-free conversion between hours and days
-    // (think of clock changes)
-    // and also not between days and months (28-31 days per month)
-    if (!this.isValid()) {
-        return this.localeData().invalidDate();
-    }
+    // Deprecations
+    duration_prototype__proto.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', iso_string__toISOString);
+    duration_prototype__proto.lang = lang;
 
-    var seconds = abs$1(this._milliseconds) / 1000;
-    var days         = abs$1(this._days);
-    var months       = abs$1(this._months);
-    var minutes, hours, years;
+    // Side effect imports
 
-    // 3600 seconds -> 60 minutes -> 1 hour
-    minutes           = absFloor(seconds / 60);
-    hours             = absFloor(minutes / 60);
-    seconds %= 60;
-    minutes %= 60;
+    addFormatToken('X', 0, 0, 'unix');
+    addFormatToken('x', 0, 0, 'valueOf');
 
-    // 12 months -> 1 year
-    years  = absFloor(months / 12);
-    months %= 12;
+    // PARSING
 
+    addRegexToken('x', matchSigned);
+    addRegexToken('X', matchTimestamp);
+    addParseToken('X', function (input, array, config) {
+        config._d = new Date(parseFloat(input, 10) * 1000);
+    });
+    addParseToken('x', function (input, array, config) {
+        config._d = new Date(toInt(input));
+    });
 
-    // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
-    var Y = years;
-    var M = months;
-    var D = days;
-    var h = hours;
-    var m = minutes;
-    var s = seconds;
-    var total = this.asSeconds();
-
-    if (!total) {
-        // this is the same as C#'s (Noda) and python (isodate)...
-        // but not other JS (goog.date)
-        return 'P0D';
-    }
-
-    return (total < 0 ? '-' : '') +
-        'P' +
-        (Y ? Y + 'Y' : '') +
-        (M ? M + 'M' : '') +
-        (D ? D + 'D' : '') +
-        ((h || m || s) ? 'T' : '') +
-        (h ? h + 'H' : '') +
-        (m ? m + 'M' : '') +
-        (s ? s + 'S' : '');
-}
-
-var proto$2 = Duration.prototype;
-
-proto$2.isValid        = isValid$1;
-proto$2.abs            = abs;
-proto$2.add            = add$1;
-proto$2.subtract       = subtract$1;
-proto$2.as             = as;
-proto$2.asMilliseconds = asMilliseconds;
-proto$2.asSeconds      = asSeconds;
-proto$2.asMinutes      = asMinutes;
-proto$2.asHours        = asHours;
-proto$2.asDays         = asDays;
-proto$2.asWeeks        = asWeeks;
-proto$2.asMonths       = asMonths;
-proto$2.asYears        = asYears;
-proto$2.valueOf        = valueOf$1;
-proto$2._bubble        = bubble;
-proto$2.get            = get$2;
-proto$2.milliseconds   = milliseconds;
-proto$2.seconds        = seconds;
-proto$2.minutes        = minutes;
-proto$2.hours          = hours;
-proto$2.days           = days;
-proto$2.weeks          = weeks;
-proto$2.months         = months;
-proto$2.years          = years;
-proto$2.humanize       = humanize;
-proto$2.toISOString    = toISOString$1;
-proto$2.toString       = toISOString$1;
-proto$2.toJSON         = toISOString$1;
-proto$2.locale         = locale;
-proto$2.localeData     = localeData;
-
-// Deprecations
-proto$2.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', toISOString$1);
-proto$2.lang = lang;
-
-// Side effect imports
-
-// FORMATTING
-
-addFormatToken('X', 0, 0, 'unix');
-addFormatToken('x', 0, 0, 'valueOf');
-
-// PARSING
-
-addRegexToken('x', matchSigned);
-addRegexToken('X', matchTimestamp);
-addParseToken('X', function (input, array, config) {
-    config._d = new Date(parseFloat(input, 10) * 1000);
-});
-addParseToken('x', function (input, array, config) {
-    config._d = new Date(toInt(input));
-});
-
-// Side effect imports
+    // Side effect imports
 
 
-hooks.version = '2.18.1';
+    utils_hooks__hooks.version = '2.10.6';
 
-setHookCallback(createLocal);
+    setHookCallback(local__createLocal);
 
-hooks.fn                    = proto;
-hooks.min                   = min;
-hooks.max                   = max;
-hooks.now                   = now;
-hooks.utc                   = createUTC;
-hooks.unix                  = createUnix;
-hooks.months                = listMonths;
-hooks.isDate                = isDate;
-hooks.locale                = getSetGlobalLocale;
-hooks.invalid               = createInvalid;
-hooks.duration              = createDuration;
-hooks.isMoment              = isMoment;
-hooks.weekdays              = listWeekdays;
-hooks.parseZone             = createInZone;
-hooks.localeData            = getLocale;
-hooks.isDuration            = isDuration;
-hooks.monthsShort           = listMonthsShort;
-hooks.weekdaysMin           = listWeekdaysMin;
-hooks.defineLocale          = defineLocale;
-hooks.updateLocale          = updateLocale;
-hooks.locales               = listLocales;
-hooks.weekdaysShort         = listWeekdaysShort;
-hooks.normalizeUnits        = normalizeUnits;
-hooks.relativeTimeRounding = getSetRelativeTimeRounding;
-hooks.relativeTimeThreshold = getSetRelativeTimeThreshold;
-hooks.calendarFormat        = getCalendarFormat;
-hooks.prototype             = proto;
+    utils_hooks__hooks.fn                    = momentPrototype;
+    utils_hooks__hooks.min                   = min;
+    utils_hooks__hooks.max                   = max;
+    utils_hooks__hooks.utc                   = create_utc__createUTC;
+    utils_hooks__hooks.unix                  = moment__createUnix;
+    utils_hooks__hooks.months                = lists__listMonths;
+    utils_hooks__hooks.isDate                = isDate;
+    utils_hooks__hooks.locale                = locale_locales__getSetGlobalLocale;
+    utils_hooks__hooks.invalid               = valid__createInvalid;
+    utils_hooks__hooks.duration              = create__createDuration;
+    utils_hooks__hooks.isMoment              = isMoment;
+    utils_hooks__hooks.weekdays              = lists__listWeekdays;
+    utils_hooks__hooks.parseZone             = moment__createInZone;
+    utils_hooks__hooks.localeData            = locale_locales__getLocale;
+    utils_hooks__hooks.isDuration            = isDuration;
+    utils_hooks__hooks.monthsShort           = lists__listMonthsShort;
+    utils_hooks__hooks.weekdaysMin           = lists__listWeekdaysMin;
+    utils_hooks__hooks.defineLocale          = defineLocale;
+    utils_hooks__hooks.weekdaysShort         = lists__listWeekdaysShort;
+    utils_hooks__hooks.normalizeUnits        = normalizeUnits;
+    utils_hooks__hooks.relativeTimeThreshold = duration_humanize__getSetRelativeTimeThreshold;
 
-return hooks;
+    var _moment = utils_hooks__hooks;
 
-})));
+    return _moment;
 
-},{}],238:[function(require,module,exports){
+}));
+},{}],237:[function(require,module,exports){
 var crypto = require('crypto')
   , qs = require('querystring')
   ;
@@ -56802,7 +55050,7 @@ exports.rfc3986 = rfc3986
 exports.generateBase = generateBase
 
 
-},{"crypto":159,"querystring":262}],239:[function(require,module,exports){
+},{"crypto":113,"querystring":261}],238:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -56816,7 +55064,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],240:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 'use strict'
@@ -56940,7 +55188,7 @@ exports.signature = asn1.define('signature', function () {
   )
 })
 
-},{"./certificate":241,"asn1.js":42}],241:[function(require,module,exports){
+},{"./certificate":240,"asn1.js":42}],240:[function(require,module,exports){
 // from https://github.com/Rantanen/node-dtls/blob/25a7dc861bda38cfeac93a723500eea4f0ac2e86/Certificate.js
 // thanks to @Rantanen
 
@@ -57030,7 +55278,7 @@ var X509Certificate = asn.define('X509Certificate', function () {
 
 module.exports = X509Certificate
 
-},{"asn1.js":42}],242:[function(require,module,exports){
+},{"asn1.js":42}],241:[function(require,module,exports){
 (function (Buffer){
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED\n\r?DEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\n\r?\n\r?([0-9A-z\n\r\+\/\=]+)\n\r?/m
@@ -57064,7 +55312,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"browserify-aes":74,"buffer":158,"evp_bytestokey":145}],243:[function(require,module,exports){
+},{"browserify-aes":74,"buffer":169,"evp_bytestokey":145}],242:[function(require,module,exports){
 (function (Buffer){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -57174,7 +55422,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":239,"./asn1":240,"./fixProc":242,"browserify-aes":74,"buffer":158,"pbkdf2":245}],244:[function(require,module,exports){
+},{"./aesid.json":238,"./asn1":239,"./fixProc":241,"browserify-aes":74,"buffer":169,"pbkdf2":244}],243:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -57402,13 +55650,13 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":252}],245:[function(require,module,exports){
+},{"_process":251}],244:[function(require,module,exports){
 
 exports.pbkdf2 = require('./lib/async')
 
 exports.pbkdf2Sync = require('./lib/sync')
 
-},{"./lib/async":246,"./lib/sync":249}],246:[function(require,module,exports){
+},{"./lib/async":245,"./lib/sync":248}],245:[function(require,module,exports){
 (function (process,global){
 var checkParameters = require('./precondition')
 var defaultEncoding = require('./default-encoding')
@@ -57510,7 +55758,7 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./default-encoding":247,"./precondition":248,"./sync":249,"_process":252,"safe-buffer":337}],247:[function(require,module,exports){
+},{"./default-encoding":246,"./precondition":247,"./sync":248,"_process":251,"safe-buffer":335}],246:[function(require,module,exports){
 (function (process){
 var defaultEncoding
 /* istanbul ignore next */
@@ -57524,7 +55772,7 @@ if (process.browser) {
 module.exports = defaultEncoding
 
 }).call(this,require('_process'))
-},{"_process":252}],248:[function(require,module,exports){
+},{"_process":251}],247:[function(require,module,exports){
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
 module.exports = function (iterations, keylen) {
   if (typeof iterations !== 'number') {
@@ -57544,7 +55792,7 @@ module.exports = function (iterations, keylen) {
   }
 }
 
-},{}],249:[function(require,module,exports){
+},{}],248:[function(require,module,exports){
 var md5 = require('create-hash/md5')
 var rmd160 = require('ripemd160')
 var sha = require('sha.js')
@@ -57647,7 +55895,7 @@ function pbkdf2 (password, salt, iterations, keylen, digest) {
 
 module.exports = pbkdf2
 
-},{"./default-encoding":247,"./precondition":248,"create-hash/md5":111,"ripemd160":336,"safe-buffer":337,"sha.js":339}],250:[function(require,module,exports){
+},{"./default-encoding":246,"./precondition":247,"create-hash/md5":110,"ripemd160":334,"safe-buffer":335,"sha.js":337}],249:[function(require,module,exports){
 (function (process){
 // Generated by CoffeeScript 1.12.2
 (function() {
@@ -57687,7 +55935,7 @@ module.exports = pbkdf2
 
 
 }).call(this,require('_process'))
-},{"_process":252}],251:[function(require,module,exports){
+},{"_process":251}],250:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -57734,7 +55982,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":252}],252:[function(require,module,exports){
+},{"_process":251}],251:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -57920,7 +56168,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],253:[function(require,module,exports){
+},{}],252:[function(require,module,exports){
 exports.publicEncrypt = require('./publicEncrypt');
 exports.privateDecrypt = require('./privateDecrypt');
 
@@ -57931,7 +56179,7 @@ exports.privateEncrypt = function privateEncrypt(key, buf) {
 exports.publicDecrypt = function publicDecrypt(key, buf) {
   return exports.privateDecrypt(key, buf, true);
 };
-},{"./privateDecrypt":255,"./publicEncrypt":256}],254:[function(require,module,exports){
+},{"./privateDecrypt":254,"./publicEncrypt":255}],253:[function(require,module,exports){
 (function (Buffer){
 var createHash = require('create-hash');
 module.exports = function (seed, len) {
@@ -57950,7 +56198,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"create-hash":109}],255:[function(require,module,exports){
+},{"buffer":169,"create-hash":108}],254:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -58061,7 +56309,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":254,"./withPublic":257,"./xor":258,"bn.js":69,"browserify-rsa":92,"buffer":158,"create-hash":109,"parse-asn1":243}],256:[function(require,module,exports){
+},{"./mgf":253,"./withPublic":256,"./xor":257,"bn.js":69,"browserify-rsa":92,"buffer":169,"create-hash":108,"parse-asn1":242}],255:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var randomBytes = require('randombytes');
@@ -58159,7 +56407,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":254,"./withPublic":257,"./xor":258,"bn.js":69,"browserify-rsa":92,"buffer":158,"create-hash":109,"parse-asn1":243,"randombytes":263}],257:[function(require,module,exports){
+},{"./mgf":253,"./withPublic":256,"./xor":257,"bn.js":69,"browserify-rsa":92,"buffer":169,"create-hash":108,"parse-asn1":242,"randombytes":262}],256:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 function withPublic(paddedMsg, key) {
@@ -58172,7 +56420,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,require("buffer").Buffer)
-},{"bn.js":69,"buffer":158}],258:[function(require,module,exports){
+},{"bn.js":69,"buffer":169}],257:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -58181,7 +56429,7 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],259:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -58718,7 +56966,7 @@ module.exports = function xor(a, b) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],260:[function(require,module,exports){
+},{}],259:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -58804,7 +57052,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],261:[function(require,module,exports){
+},{}],260:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -58891,13 +57139,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],262:[function(require,module,exports){
+},{}],261:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":260,"./encode":261}],263:[function(require,module,exports){
+},{"./decode":259,"./encode":260}],262:[function(require,module,exports){
 (function (process,global){
 'use strict'
 
@@ -58939,122 +57187,10 @@ function randomBytes (size, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":252,"safe-buffer":337}],264:[function(require,module,exports){
-(function (process,global){
-'use strict'
-
-function oldBrowser () {
-  throw new Error('secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11')
-}
-var safeBuffer = require('safe-buffer')
-var randombytes = require('randombytes')
-var Buffer = safeBuffer.Buffer
-var kBufferMaxLength = safeBuffer.kMaxLength
-var crypto = global.crypto || global.msCrypto
-var kMaxUint32 = Math.pow(2, 32) - 1
-function assertOffset (offset, length) {
-  if (typeof offset !== 'number' || offset !== offset) { // eslint-disable-line no-self-compare
-    throw new TypeError('offset must be a number')
-  }
-
-  if (offset > kMaxUint32 || offset < 0) {
-    throw new TypeError('offset must be a uint32')
-  }
-
-  if (offset > kBufferMaxLength || offset > length) {
-    throw new RangeError('offset out of range')
-  }
-}
-
-function assertSize (size, offset, length) {
-  if (typeof size !== 'number' || size !== size) { // eslint-disable-line no-self-compare
-    throw new TypeError('size must be a number')
-  }
-
-  if (size > kMaxUint32 || size < 0) {
-    throw new TypeError('size must be a uint32')
-  }
-
-  if (size + offset > length || size > kBufferMaxLength) {
-    throw new RangeError('buffer too small')
-  }
-}
-if ((crypto && crypto.getRandomValues) || !process.browser) {
-  exports.randomFill = randomFill
-  exports.randomFillSync = randomFillSync
-} else {
-  exports.randomFill = oldBrowser
-  exports.randomFillSync = oldBrowser
-}
-function randomFill (buf, offset, size, cb) {
-  if (!Buffer.isBuffer(buf) && !(buf instanceof global.Uint8Array)) {
-    throw new TypeError('"buf" argument must be a Buffer or Uint8Array')
-  }
-
-  if (typeof offset === 'function') {
-    cb = offset
-    offset = 0
-    size = buf.length
-  } else if (typeof size === 'function') {
-    cb = size
-    size = buf.length - offset
-  } else if (typeof cb !== 'function') {
-    throw new TypeError('"cb" argument must be a function')
-  }
-  assertOffset(offset, buf.length)
-  assertSize(size, offset, buf.length)
-  return actualFill(buf, offset, size, cb)
-}
-
-function actualFill (buf, offset, size, cb) {
-  if (process.browser) {
-    var ourBuf = buf.buffer
-    var uint = new Uint8Array(ourBuf, offset, size)
-    crypto.getRandomValues(uint)
-    if (cb) {
-      process.nextTick(function () {
-        cb(null, buf)
-      })
-      return
-    }
-    return buf
-  }
-  if (cb) {
-    randombytes(size, function (err, bytes) {
-      if (err) {
-        return cb(err)
-      }
-      bytes.copy(buf, offset)
-      cb(null, buf)
-    })
-    return
-  }
-  var bytes = randombytes(size)
-  bytes.copy(buf, offset)
-  return buf
-}
-function randomFillSync (buf, offset, size) {
-  if (typeof offset === 'undefined') {
-    offset = 0
-  }
-  if (!Buffer.isBuffer(buf) && !(buf instanceof global.Uint8Array)) {
-    throw new TypeError('"buf" argument must be a Buffer or Uint8Array')
-  }
-
-  assertOffset(offset, buf.length)
-
-  if (size === undefined) size = buf.length - offset
-
-  assertSize(size, offset, buf.length)
-
-  return actualFill(buf, offset, size)
-}
-
-}).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":252,"randombytes":263,"safe-buffer":337}],265:[function(require,module,exports){
+},{"_process":251,"safe-buffer":335}],263:[function(require,module,exports){
 module.exports = require('./lib/_stream_duplex.js');
 
-},{"./lib/_stream_duplex.js":266}],266:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":264}],264:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -59179,7 +57315,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":268,"./_stream_writable":270,"core-util-is":107,"inherits":216,"process-nextick-args":251}],267:[function(require,module,exports){
+},{"./_stream_readable":266,"./_stream_writable":268,"core-util-is":106,"inherits":215,"process-nextick-args":250}],265:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -59227,7 +57363,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":269,"core-util-is":107,"inherits":216}],268:[function(require,module,exports){
+},{"./_stream_transform":267,"core-util-is":106,"inherits":215}],266:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -60237,7 +58373,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./_stream_duplex":266,"./internal/streams/BufferList":271,"./internal/streams/destroy":272,"./internal/streams/stream":273,"_process":252,"core-util-is":107,"events":144,"inherits":216,"isarray":274,"process-nextick-args":251,"safe-buffer":337,"string_decoder/":275,"util":71}],269:[function(require,module,exports){
+},{"./_stream_duplex":264,"./internal/streams/BufferList":269,"./internal/streams/destroy":270,"./internal/streams/stream":271,"_process":251,"core-util-is":106,"events":144,"inherits":215,"isarray":272,"process-nextick-args":250,"safe-buffer":335,"string_decoder/":273,"util":71}],267:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -60452,7 +58588,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":266,"core-util-is":107,"inherits":216}],270:[function(require,module,exports){
+},{"./_stream_duplex":264,"core-util-is":106,"inherits":215}],268:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -61119,7 +59255,7 @@ Writable.prototype._destroy = function (err, cb) {
   cb(err);
 };
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./_stream_duplex":266,"./internal/streams/destroy":272,"./internal/streams/stream":273,"_process":252,"core-util-is":107,"inherits":216,"process-nextick-args":251,"safe-buffer":337,"util-deprecate":387}],271:[function(require,module,exports){
+},{"./_stream_duplex":264,"./internal/streams/destroy":270,"./internal/streams/stream":271,"_process":251,"core-util-is":106,"inherits":215,"process-nextick-args":250,"safe-buffer":335,"util-deprecate":386}],269:[function(require,module,exports){
 'use strict';
 
 /*<replacement>*/
@@ -61194,7 +59330,7 @@ module.exports = function () {
 
   return BufferList;
 }();
-},{"safe-buffer":337}],272:[function(require,module,exports){
+},{"safe-buffer":335}],270:[function(require,module,exports){
 'use strict';
 
 /*<replacement>*/
@@ -61267,22 +59403,22 @@ module.exports = {
   destroy: destroy,
   undestroy: undestroy
 };
-},{"process-nextick-args":251}],273:[function(require,module,exports){
+},{"process-nextick-args":250}],271:[function(require,module,exports){
 module.exports = require('events').EventEmitter;
 
-},{"events":144}],274:[function(require,module,exports){
+},{"events":144}],272:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],275:[function(require,module,exports){
-arguments[4][172][0].apply(exports,arguments)
-},{"dup":172,"safe-buffer":337}],276:[function(require,module,exports){
+},{}],273:[function(require,module,exports){
+arguments[4][171][0].apply(exports,arguments)
+},{"dup":171,"safe-buffer":335}],274:[function(require,module,exports){
 module.exports = require('./readable').PassThrough
 
-},{"./readable":277}],277:[function(require,module,exports){
+},{"./readable":275}],275:[function(require,module,exports){
 exports = module.exports = require('./lib/_stream_readable.js');
 exports.Stream = exports;
 exports.Readable = exports;
@@ -61291,13 +59427,13 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":266,"./lib/_stream_passthrough.js":267,"./lib/_stream_readable.js":268,"./lib/_stream_transform.js":269,"./lib/_stream_writable.js":270}],278:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":264,"./lib/_stream_passthrough.js":265,"./lib/_stream_readable.js":266,"./lib/_stream_transform.js":267,"./lib/_stream_writable.js":268}],276:[function(require,module,exports){
 module.exports = require('./readable').Transform
 
-},{"./readable":277}],279:[function(require,module,exports){
+},{"./readable":275}],277:[function(require,module,exports){
 module.exports = require('./lib/_stream_writable.js');
 
-},{"./lib/_stream_writable.js":270}],280:[function(require,module,exports){
+},{"./lib/_stream_writable.js":268}],278:[function(require,module,exports){
 'use strict';
 
 
@@ -61336,7 +59472,7 @@ module.exports = {
     StatusCodeError: StatusCodeError
 };
 
-},{}],281:[function(require,module,exports){
+},{}],279:[function(require,module,exports){
 'use strict';
 
 var Bluebird = require('bluebird'),
@@ -61495,7 +59631,7 @@ request.bindCLS = function RP$bindCLS(ns) {
 
 module.exports = request;
 
-},{"./errors.js":280,"bluebird":68,"cls-bluebird":104,"lodash/collection/forEach":282,"lodash/lang/isFunction":309,"lodash/lang/isPlainObject":312,"lodash/lang/isString":313,"lodash/lang/isUndefined":314,"lodash/object/assign":315,"lodash/object/keys":316,"request":319}],282:[function(require,module,exports){
+},{"./errors.js":278,"bluebird":68,"cls-bluebird":103,"lodash/collection/forEach":280,"lodash/lang/isFunction":307,"lodash/lang/isPlainObject":310,"lodash/lang/isString":311,"lodash/lang/isUndefined":312,"lodash/object/assign":313,"lodash/object/keys":314,"request":317}],280:[function(require,module,exports){
 var arrayEach = require('../internal/arrayEach'),
     baseEach = require('../internal/baseEach'),
     createForEach = require('../internal/createForEach');
@@ -61534,7 +59670,7 @@ var forEach = createForEach(arrayEach, baseEach);
 
 module.exports = forEach;
 
-},{"../internal/arrayEach":284,"../internal/baseEach":288,"../internal/createForEach":297}],283:[function(require,module,exports){
+},{"../internal/arrayEach":282,"../internal/baseEach":286,"../internal/createForEach":295}],281:[function(require,module,exports){
 /** Used as the `TypeError` message for "Functions" methods. */
 var FUNC_ERROR_TEXT = 'Expected a function';
 
@@ -61594,7 +59730,7 @@ function restParam(func, start) {
 
 module.exports = restParam;
 
-},{}],284:[function(require,module,exports){
+},{}],282:[function(require,module,exports){
 /**
  * A specialized version of `_.forEach` for arrays without support for callback
  * shorthands and `this` binding.
@@ -61618,7 +59754,7 @@ function arrayEach(array, iteratee) {
 
 module.exports = arrayEach;
 
-},{}],285:[function(require,module,exports){
+},{}],283:[function(require,module,exports){
 var keys = require('../object/keys');
 
 /**
@@ -61652,7 +59788,7 @@ function assignWith(object, source, customizer) {
 
 module.exports = assignWith;
 
-},{"../object/keys":316}],286:[function(require,module,exports){
+},{"../object/keys":314}],284:[function(require,module,exports){
 var baseCopy = require('./baseCopy'),
     keys = require('../object/keys');
 
@@ -61673,7 +59809,7 @@ function baseAssign(object, source) {
 
 module.exports = baseAssign;
 
-},{"../object/keys":316,"./baseCopy":287}],287:[function(require,module,exports){
+},{"../object/keys":314,"./baseCopy":285}],285:[function(require,module,exports){
 /**
  * Copies properties of `source` to `object`.
  *
@@ -61698,7 +59834,7 @@ function baseCopy(source, props, object) {
 
 module.exports = baseCopy;
 
-},{}],288:[function(require,module,exports){
+},{}],286:[function(require,module,exports){
 var baseForOwn = require('./baseForOwn'),
     createBaseEach = require('./createBaseEach');
 
@@ -61715,7 +59851,7 @@ var baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
 
-},{"./baseForOwn":291,"./createBaseEach":295}],289:[function(require,module,exports){
+},{"./baseForOwn":289,"./createBaseEach":293}],287:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -61734,7 +59870,7 @@ var baseFor = createBaseFor();
 
 module.exports = baseFor;
 
-},{"./createBaseFor":296}],290:[function(require,module,exports){
+},{"./createBaseFor":294}],288:[function(require,module,exports){
 var baseFor = require('./baseFor'),
     keysIn = require('../object/keysIn');
 
@@ -61753,7 +59889,7 @@ function baseForIn(object, iteratee) {
 
 module.exports = baseForIn;
 
-},{"../object/keysIn":317,"./baseFor":289}],291:[function(require,module,exports){
+},{"../object/keysIn":315,"./baseFor":287}],289:[function(require,module,exports){
 var baseFor = require('./baseFor'),
     keys = require('../object/keys');
 
@@ -61772,7 +59908,7 @@ function baseForOwn(object, iteratee) {
 
 module.exports = baseForOwn;
 
-},{"../object/keys":316,"./baseFor":289}],292:[function(require,module,exports){
+},{"../object/keys":314,"./baseFor":287}],290:[function(require,module,exports){
 /**
  * The base implementation of `_.property` without support for deep paths.
  *
@@ -61788,7 +59924,7 @@ function baseProperty(key) {
 
 module.exports = baseProperty;
 
-},{}],293:[function(require,module,exports){
+},{}],291:[function(require,module,exports){
 var identity = require('../utility/identity');
 
 /**
@@ -61829,7 +59965,7 @@ function bindCallback(func, thisArg, argCount) {
 
 module.exports = bindCallback;
 
-},{"../utility/identity":318}],294:[function(require,module,exports){
+},{"../utility/identity":316}],292:[function(require,module,exports){
 var bindCallback = require('./bindCallback'),
     isIterateeCall = require('./isIterateeCall'),
     restParam = require('../function/restParam');
@@ -61872,7 +60008,7 @@ function createAssigner(assigner) {
 
 module.exports = createAssigner;
 
-},{"../function/restParam":283,"./bindCallback":293,"./isIterateeCall":302}],295:[function(require,module,exports){
+},{"../function/restParam":281,"./bindCallback":291,"./isIterateeCall":300}],293:[function(require,module,exports){
 var getLength = require('./getLength'),
     isLength = require('./isLength'),
     toObject = require('./toObject');
@@ -61905,7 +60041,7 @@ function createBaseEach(eachFunc, fromRight) {
 
 module.exports = createBaseEach;
 
-},{"./getLength":298,"./isLength":303,"./toObject":306}],296:[function(require,module,exports){
+},{"./getLength":296,"./isLength":301,"./toObject":304}],294:[function(require,module,exports){
 var toObject = require('./toObject');
 
 /**
@@ -61934,7 +60070,7 @@ function createBaseFor(fromRight) {
 
 module.exports = createBaseFor;
 
-},{"./toObject":306}],297:[function(require,module,exports){
+},{"./toObject":304}],295:[function(require,module,exports){
 var bindCallback = require('./bindCallback'),
     isArray = require('../lang/isArray');
 
@@ -61956,7 +60092,7 @@ function createForEach(arrayFunc, eachFunc) {
 
 module.exports = createForEach;
 
-},{"../lang/isArray":308,"./bindCallback":293}],298:[function(require,module,exports){
+},{"../lang/isArray":306,"./bindCallback":291}],296:[function(require,module,exports){
 var baseProperty = require('./baseProperty');
 
 /**
@@ -61973,7 +60109,7 @@ var getLength = baseProperty('length');
 
 module.exports = getLength;
 
-},{"./baseProperty":292}],299:[function(require,module,exports){
+},{"./baseProperty":290}],297:[function(require,module,exports){
 var isNative = require('../lang/isNative');
 
 /**
@@ -61991,7 +60127,7 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-},{"../lang/isNative":310}],300:[function(require,module,exports){
+},{"../lang/isNative":308}],298:[function(require,module,exports){
 var getLength = require('./getLength'),
     isLength = require('./isLength');
 
@@ -62008,7 +60144,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./getLength":298,"./isLength":303}],301:[function(require,module,exports){
+},{"./getLength":296,"./isLength":301}],299:[function(require,module,exports){
 /** Used to detect unsigned integer values. */
 var reIsUint = /^\d+$/;
 
@@ -62034,7 +60170,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],302:[function(require,module,exports){
+},{}],300:[function(require,module,exports){
 var isArrayLike = require('./isArrayLike'),
     isIndex = require('./isIndex'),
     isObject = require('../lang/isObject');
@@ -62064,7 +60200,7 @@ function isIterateeCall(value, index, object) {
 
 module.exports = isIterateeCall;
 
-},{"../lang/isObject":311,"./isArrayLike":300,"./isIndex":301}],303:[function(require,module,exports){
+},{"../lang/isObject":309,"./isArrayLike":298,"./isIndex":299}],301:[function(require,module,exports){
 /**
  * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
  * of an array-like value.
@@ -62086,7 +60222,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],304:[function(require,module,exports){
+},{}],302:[function(require,module,exports){
 /**
  * Checks if `value` is object-like.
  *
@@ -62100,7 +60236,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],305:[function(require,module,exports){
+},{}],303:[function(require,module,exports){
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('./isIndex'),
@@ -62143,7 +60279,7 @@ function shimKeys(object) {
 
 module.exports = shimKeys;
 
-},{"../lang/isArguments":307,"../lang/isArray":308,"../object/keysIn":317,"./isIndex":301,"./isLength":303}],306:[function(require,module,exports){
+},{"../lang/isArguments":305,"../lang/isArray":306,"../object/keysIn":315,"./isIndex":299,"./isLength":301}],304:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -62159,7 +60295,7 @@ function toObject(value) {
 
 module.exports = toObject;
 
-},{"../lang/isObject":311}],307:[function(require,module,exports){
+},{"../lang/isObject":309}],305:[function(require,module,exports){
 var isArrayLike = require('../internal/isArrayLike'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -62195,7 +60331,7 @@ function isArguments(value) {
 
 module.exports = isArguments;
 
-},{"../internal/isArrayLike":300,"../internal/isObjectLike":304}],308:[function(require,module,exports){
+},{"../internal/isArrayLike":298,"../internal/isObjectLike":302}],306:[function(require,module,exports){
 var getNative = require('../internal/getNative'),
     isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
@@ -62237,7 +60373,7 @@ var isArray = nativeIsArray || function(value) {
 
 module.exports = isArray;
 
-},{"../internal/getNative":299,"../internal/isLength":303,"../internal/isObjectLike":304}],309:[function(require,module,exports){
+},{"../internal/getNative":297,"../internal/isLength":301,"../internal/isObjectLike":302}],307:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /** `Object#toString` result references. */
@@ -62277,7 +60413,7 @@ function isFunction(value) {
 
 module.exports = isFunction;
 
-},{"./isObject":311}],310:[function(require,module,exports){
+},{"./isObject":309}],308:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -62327,7 +60463,7 @@ function isNative(value) {
 
 module.exports = isNative;
 
-},{"../internal/isObjectLike":304,"./isFunction":309}],311:[function(require,module,exports){
+},{"../internal/isObjectLike":302,"./isFunction":307}],309:[function(require,module,exports){
 /**
  * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -62357,7 +60493,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],312:[function(require,module,exports){
+},{}],310:[function(require,module,exports){
 var baseForIn = require('../internal/baseForIn'),
     isArguments = require('./isArguments'),
     isObjectLike = require('../internal/isObjectLike');
@@ -62430,7 +60566,7 @@ function isPlainObject(value) {
 
 module.exports = isPlainObject;
 
-},{"../internal/baseForIn":290,"../internal/isObjectLike":304,"./isArguments":307}],313:[function(require,module,exports){
+},{"../internal/baseForIn":288,"../internal/isObjectLike":302,"./isArguments":305}],311:[function(require,module,exports){
 var isObjectLike = require('../internal/isObjectLike');
 
 /** `Object#toString` result references. */
@@ -62467,7 +60603,7 @@ function isString(value) {
 
 module.exports = isString;
 
-},{"../internal/isObjectLike":304}],314:[function(require,module,exports){
+},{"../internal/isObjectLike":302}],312:[function(require,module,exports){
 /**
  * Checks if `value` is `undefined`.
  *
@@ -62490,7 +60626,7 @@ function isUndefined(value) {
 
 module.exports = isUndefined;
 
-},{}],315:[function(require,module,exports){
+},{}],313:[function(require,module,exports){
 var assignWith = require('../internal/assignWith'),
     baseAssign = require('../internal/baseAssign'),
     createAssigner = require('../internal/createAssigner');
@@ -62535,7 +60671,7 @@ var assign = createAssigner(function(object, source, customizer) {
 
 module.exports = assign;
 
-},{"../internal/assignWith":285,"../internal/baseAssign":286,"../internal/createAssigner":294}],316:[function(require,module,exports){
+},{"../internal/assignWith":283,"../internal/baseAssign":284,"../internal/createAssigner":292}],314:[function(require,module,exports){
 var getNative = require('../internal/getNative'),
     isArrayLike = require('../internal/isArrayLike'),
     isObject = require('../lang/isObject'),
@@ -62582,7 +60718,7 @@ var keys = !nativeKeys ? shimKeys : function(object) {
 
 module.exports = keys;
 
-},{"../internal/getNative":299,"../internal/isArrayLike":300,"../internal/shimKeys":305,"../lang/isObject":311}],317:[function(require,module,exports){
+},{"../internal/getNative":297,"../internal/isArrayLike":298,"../internal/shimKeys":303,"../lang/isObject":309}],315:[function(require,module,exports){
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('../internal/isIndex'),
@@ -62648,7 +60784,7 @@ function keysIn(object) {
 
 module.exports = keysIn;
 
-},{"../internal/isIndex":301,"../internal/isLength":303,"../lang/isArguments":307,"../lang/isArray":308,"../lang/isObject":311}],318:[function(require,module,exports){
+},{"../internal/isIndex":299,"../internal/isLength":301,"../lang/isArguments":305,"../lang/isArray":306,"../lang/isObject":309}],316:[function(require,module,exports){
 /**
  * This method returns the first argument provided to it.
  *
@@ -62670,7 +60806,7 @@ function identity(value) {
 
 module.exports = identity;
 
-},{}],319:[function(require,module,exports){
+},{}],317:[function(require,module,exports){
 // Copyright 2010-2012 Mikeal Rogers
 //
 //    Licensed under the Apache License, Version 2.0 (the "License");
@@ -62827,7 +60963,7 @@ Object.defineProperty(request, 'debug', {
   }
 })
 
-},{"./lib/cookies":321,"./lib/helpers":324,"./request":335,"extend":146}],320:[function(require,module,exports){
+},{"./lib/cookies":319,"./lib/helpers":322,"./request":333,"extend":146}],318:[function(require,module,exports){
 'use strict'
 
 var caseless = require('caseless')
@@ -62996,7 +61132,7 @@ Auth.prototype.onResponse = function (response) {
 
 exports.Auth = Auth
 
-},{"./helpers":324,"caseless":101,"uuid":391}],321:[function(require,module,exports){
+},{"./helpers":322,"caseless":101,"uuid":390}],319:[function(require,module,exports){
 'use strict'
 
 var tough = require('tough-cookie')
@@ -63036,7 +61172,7 @@ exports.jar = function (store) {
   return new RequestJar(store)
 }
 
-},{"tough-cookie":376}],322:[function(require,module,exports){
+},{"tough-cookie":375}],320:[function(require,module,exports){
 (function (process){
 'use strict'
 
@@ -63119,7 +61255,7 @@ function getProxyFromURI (uri) {
 module.exports = getProxyFromURI
 
 }).call(this,require('_process'))
-},{"_process":252}],323:[function(require,module,exports){
+},{"_process":251}],321:[function(require,module,exports){
 'use strict'
 
 var fs = require('fs')
@@ -63326,7 +61462,7 @@ Har.prototype.options = function (options) {
 
 exports.Har = Har
 
-},{"extend":146,"fs":157,"har-validator":193,"querystring":262}],324:[function(require,module,exports){
+},{"extend":146,"fs":155,"har-validator":192,"querystring":261}],322:[function(require,module,exports){
 (function (process){
 'use strict'
 
@@ -63396,7 +61532,7 @@ exports.version = version
 exports.defer = defer
 
 }).call(this,require('_process'))
-},{"_process":252,"crypto":159,"json-stringify-safe":224,"safe-buffer":337}],325:[function(require,module,exports){
+},{"_process":251,"crypto":113,"json-stringify-safe":223,"safe-buffer":335}],323:[function(require,module,exports){
 'use strict'
 
 var uuid = require('uuid')
@@ -63510,7 +61646,7 @@ Multipart.prototype.onRequest = function (options) {
 
 exports.Multipart = Multipart
 
-},{"combined-stream":106,"isstream":220,"safe-buffer":337,"uuid":391}],326:[function(require,module,exports){
+},{"combined-stream":105,"isstream":219,"safe-buffer":335,"uuid":390}],324:[function(require,module,exports){
 'use strict'
 
 var url = require('url')
@@ -63660,7 +61796,7 @@ OAuth.prototype.onRequest = function (_oauth) {
 
 exports.OAuth = OAuth
 
-},{"caseless":101,"crypto":159,"oauth-sign":238,"qs":331,"safe-buffer":337,"url":385,"uuid":391}],327:[function(require,module,exports){
+},{"caseless":101,"crypto":113,"oauth-sign":237,"qs":329,"safe-buffer":335,"url":384,"uuid":390}],325:[function(require,module,exports){
 'use strict'
 
 var qs = require('qs')
@@ -63712,7 +61848,7 @@ Querystring.prototype.unescape = querystring.unescape
 
 exports.Querystring = Querystring
 
-},{"qs":331,"querystring":262}],328:[function(require,module,exports){
+},{"qs":329,"querystring":261}],326:[function(require,module,exports){
 'use strict'
 
 var url = require('url')
@@ -63868,7 +62004,7 @@ Redirect.prototype.onResponse = function (response) {
 
 exports.Redirect = Redirect
 
-},{"url":385}],329:[function(require,module,exports){
+},{"url":384}],327:[function(require,module,exports){
 'use strict'
 
 var url = require('url')
@@ -64045,7 +62181,7 @@ Tunnel.defaultProxyHeaderWhiteList = defaultProxyHeaderWhiteList
 Tunnel.defaultProxyHeaderExclusiveList = defaultProxyHeaderExclusiveList
 exports.Tunnel = Tunnel
 
-},{"tunnel-agent":383,"url":385}],330:[function(require,module,exports){
+},{"tunnel-agent":382,"url":384}],328:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -64065,7 +62201,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],331:[function(require,module,exports){
+},{}],329:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -64078,7 +62214,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":330,"./parse":332,"./stringify":333}],332:[function(require,module,exports){
+},{"./formats":328,"./parse":330,"./stringify":331}],330:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -64254,7 +62390,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":334}],333:[function(require,module,exports){
+},{"./utils":332}],331:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -64466,7 +62602,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":330,"./utils":334}],334:[function(require,module,exports){
+},{"./formats":328,"./utils":332}],332:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -64670,7 +62806,7 @@ exports.isBuffer = function isBuffer(obj) {
     return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
 };
 
-},{}],335:[function(require,module,exports){
+},{}],333:[function(require,module,exports){
 (function (process){
 'use strict'
 
@@ -66226,7 +64362,7 @@ Request.prototype.toJSON = requestToJSON
 module.exports = Request
 
 }).call(this,require('_process'))
-},{"./lib/auth":320,"./lib/cookies":321,"./lib/getProxyFromURI":322,"./lib/har":323,"./lib/helpers":324,"./lib/multipart":325,"./lib/oauth":326,"./lib/querystring":327,"./lib/redirect":328,"./lib/tunnel":329,"_process":252,"aws-sign2":63,"aws4":64,"caseless":101,"extend":146,"forever-agent":149,"form-data":150,"hawk":207,"http":370,"http-signature":209,"https":160,"is-typedarray":219,"isstream":220,"mime-types":234,"performance-now":250,"safe-buffer":337,"stream":369,"stringstream":374,"url":385,"util":390,"zlib":156}],336:[function(require,module,exports){
+},{"./lib/auth":318,"./lib/cookies":319,"./lib/getProxyFromURI":320,"./lib/har":321,"./lib/helpers":322,"./lib/multipart":323,"./lib/oauth":324,"./lib/querystring":325,"./lib/redirect":326,"./lib/tunnel":327,"_process":251,"aws-sign2":63,"aws4":64,"caseless":101,"extend":146,"forever-agent":149,"form-data":150,"hawk":206,"http":369,"http-signature":208,"https":170,"is-typedarray":218,"isstream":219,"mime-types":233,"performance-now":249,"safe-buffer":335,"stream":368,"stringstream":373,"url":384,"util":389,"zlib":157}],334:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -66521,7 +64657,7 @@ function fn5 (a, b, c, d, e, m, k, s) {
 module.exports = RIPEMD160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"hash-base":194,"inherits":216}],337:[function(require,module,exports){
+},{"buffer":169,"hash-base":193,"inherits":215}],335:[function(require,module,exports){
 /* eslint-disable node/no-deprecated-api */
 var buffer = require('buffer')
 var Buffer = buffer.Buffer
@@ -66585,7 +64721,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
   return buffer.SlowBuffer(size)
 }
 
-},{"buffer":158}],338:[function(require,module,exports){
+},{"buffer":169}],336:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 
 // prototype class for hash functions
@@ -66668,7 +64804,7 @@ Hash.prototype._update = function () {
 
 module.exports = Hash
 
-},{"safe-buffer":337}],339:[function(require,module,exports){
+},{"safe-buffer":335}],337:[function(require,module,exports){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
 
@@ -66685,7 +64821,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha":340,"./sha1":341,"./sha224":342,"./sha256":343,"./sha384":344,"./sha512":345}],340:[function(require,module,exports){
+},{"./sha":338,"./sha1":339,"./sha224":340,"./sha256":341,"./sha384":342,"./sha512":343}],338:[function(require,module,exports){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
  * in FIPS PUB 180-1
@@ -66781,7 +64917,7 @@ Sha.prototype._hash = function () {
 
 module.exports = Sha
 
-},{"./hash":338,"inherits":216,"safe-buffer":337}],341:[function(require,module,exports){
+},{"./hash":336,"inherits":215,"safe-buffer":335}],339:[function(require,module,exports){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
  * in FIPS PUB 180-1
@@ -66882,7 +65018,7 @@ Sha1.prototype._hash = function () {
 
 module.exports = Sha1
 
-},{"./hash":338,"inherits":216,"safe-buffer":337}],342:[function(require,module,exports){
+},{"./hash":336,"inherits":215,"safe-buffer":335}],340:[function(require,module,exports){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
  * in FIPS 180-2
@@ -66937,7 +65073,7 @@ Sha224.prototype._hash = function () {
 
 module.exports = Sha224
 
-},{"./hash":338,"./sha256":343,"inherits":216,"safe-buffer":337}],343:[function(require,module,exports){
+},{"./hash":336,"./sha256":341,"inherits":215,"safe-buffer":335}],341:[function(require,module,exports){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
  * in FIPS 180-2
@@ -67074,7 +65210,7 @@ Sha256.prototype._hash = function () {
 
 module.exports = Sha256
 
-},{"./hash":338,"inherits":216,"safe-buffer":337}],344:[function(require,module,exports){
+},{"./hash":336,"inherits":215,"safe-buffer":335}],342:[function(require,module,exports){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
 var Hash = require('./hash')
@@ -67133,7 +65269,7 @@ Sha384.prototype._hash = function () {
 
 module.exports = Sha384
 
-},{"./hash":338,"./sha512":345,"inherits":216,"safe-buffer":337}],345:[function(require,module,exports){
+},{"./hash":336,"./sha512":343,"inherits":215,"safe-buffer":335}],343:[function(require,module,exports){
 var inherits = require('inherits')
 var Hash = require('./hash')
 var Buffer = require('safe-buffer').Buffer
@@ -67395,7 +65531,97 @@ Sha512.prototype._hash = function () {
 
 module.exports = Sha512
 
-},{"./hash":338,"inherits":216,"safe-buffer":337}],346:[function(require,module,exports){
+},{"./hash":336,"inherits":215,"safe-buffer":335}],344:[function(require,module,exports){
+'use strict'
+
+function isFunction (funktion) {
+  return funktion && {}.toString.call(funktion) === '[object Function]'
+}
+
+// Default to complaining loudly when things don't go according to plan.
+var logger = console.error.bind(console)
+
+// Keep initialization idempotent.
+function shimmer (options) {
+  if (options && options.logger) {
+    if (!isFunction(options.logger)) logger("new logger isn't a function, not replacing")
+    else logger = options.logger
+  }
+}
+
+function wrap (nodule, name, wrapper) {
+  if (!nodule || !nodule[name]) {
+    logger('no original function ' + name + ' to wrap')
+    return
+  }
+
+  if (!wrapper) {
+    logger('no wrapper function')
+    logger((new Error()).stack)
+    return
+  }
+
+  if (!isFunction(nodule[name]) || !isFunction(wrapper)) {
+    logger('original object and wrapper must be functions')
+    return
+  }
+
+  var original = nodule[name]
+  var wrapped = wrapper(original, name)
+
+  wrapped.__original = original
+  wrapped.__unwrap = function () {
+    if (nodule[name] === wrapped) nodule[name] = original
+  }
+  wrapped.__wrapped = true
+
+  nodule[name] = wrapped
+
+  return wrapped
+}
+
+function massWrap (nodules, names, wrapper) {
+  if (!nodules) {
+    logger('must provide one or more modules to patch')
+    logger((new Error()).stack)
+    return
+  } else if (!Array.isArray(nodules)) {
+    nodules = [nodules]
+  }
+
+  if (!(names && Array.isArray(names))) {
+    logger('must provide one or more functions to wrap on modules')
+    return
+  }
+
+  nodules.forEach(function (nodule) {
+    names.forEach(function (name) {
+      wrap(nodule, name, wrapper)
+    })
+  })
+}
+
+function unwrap (nodule, name) {
+  if (!nodule || !nodule[name]) {
+    logger('no function to unwrap.')
+    logger((new Error()).stack)
+    return
+  }
+
+  if (!nodule[name].__unwrap) {
+    logger('no original to unwrap to -- has ' + name + ' already been unwrapped?')
+  } else {
+    return nodule[name].__unwrap()
+  }
+}
+
+shimmer.wrap = wrap
+shimmer.massWrap = massWrap
+shimmer.unwrap = unwrap
+
+module.exports = shimmer
+
+},{}],345:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -67567,7 +65793,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158}],347:[function(require,module,exports){
+},{"buffer":169}],346:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2016 Joyent, Inc.
 
@@ -67948,7 +66174,7 @@ Certificate._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":346,"./errors":350,"./fingerprint":351,"./formats/openssh-cert":353,"./formats/x509":361,"./formats/x509-pem":360,"./identity":362,"./key":364,"./private-key":365,"./signature":366,"./utils":368,"assert-plus":62,"buffer":158,"crypto":159,"util":390}],348:[function(require,module,exports){
+},{"./algs":345,"./errors":349,"./fingerprint":350,"./formats/openssh-cert":352,"./formats/x509":360,"./formats/x509-pem":359,"./identity":361,"./key":363,"./private-key":364,"./signature":365,"./utils":367,"assert-plus":62,"buffer":169,"crypto":113,"util":389}],347:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -68363,7 +66589,7 @@ function generateECDSA(curve) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":346,"./key":364,"./private-key":365,"./utils":368,"assert-plus":62,"buffer":158,"crypto":159,"ecc-jsbn":125,"ecc-jsbn/lib/ec":126,"jsbn":221,"tweetnacl":384}],349:[function(require,module,exports){
+},{"./algs":345,"./key":363,"./private-key":364,"./utils":367,"assert-plus":62,"buffer":169,"crypto":113,"ecc-jsbn":125,"ecc-jsbn/lib/ec":126,"jsbn":220,"tweetnacl":383}],348:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -68463,7 +66689,7 @@ Signer.prototype.sign = function () {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./signature":366,"assert-plus":62,"buffer":158,"stream":369,"tweetnacl":384,"util":390}],350:[function(require,module,exports){
+},{"./signature":365,"assert-plus":62,"buffer":169,"stream":368,"tweetnacl":383,"util":389}],349:[function(require,module,exports){
 // Copyright 2015 Joyent, Inc.
 
 var assert = require('assert-plus');
@@ -68549,7 +66775,7 @@ module.exports = {
 	CertificateParseError: CertificateParseError
 };
 
-},{"assert-plus":62,"util":390}],351:[function(require,module,exports){
+},{"assert-plus":62,"util":389}],350:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -68714,7 +66940,7 @@ Fingerprint._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":346,"./certificate":347,"./errors":350,"./key":364,"./utils":368,"assert-plus":62,"buffer":158,"crypto":159}],352:[function(require,module,exports){
+},{"./algs":345,"./certificate":346,"./errors":349,"./key":363,"./utils":367,"assert-plus":62,"buffer":169,"crypto":113}],351:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -68791,7 +67017,7 @@ function write(key, options) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../key":364,"../private-key":365,"../utils":368,"./pem":354,"./rfc4253":357,"./ssh":359,"assert-plus":62,"buffer":158}],353:[function(require,module,exports){
+},{"../key":363,"../private-key":364,"../utils":367,"./pem":353,"./rfc4253":356,"./ssh":358,"assert-plus":62,"buffer":169}],352:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -69117,7 +67343,7 @@ function getCertType(key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../certificate":347,"../identity":362,"../key":364,"../private-key":365,"../signature":366,"../ssh-buffer":367,"../utils":368,"./rfc4253":357,"assert-plus":62,"buffer":158,"crypto":159}],354:[function(require,module,exports){
+},{"../algs":345,"../certificate":346,"../identity":361,"../key":363,"../private-key":364,"../signature":365,"../ssh-buffer":366,"../utils":367,"./rfc4253":356,"assert-plus":62,"buffer":169,"crypto":113}],353:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -69307,7 +67533,7 @@ function write(key, options, type) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../errors":350,"../key":364,"../private-key":365,"../utils":368,"./pkcs1":355,"./pkcs8":356,"./rfc4253":357,"./ssh-private":358,"asn1":61,"assert-plus":62,"buffer":158,"crypto":159}],355:[function(require,module,exports){
+},{"../algs":345,"../errors":349,"../key":363,"../private-key":364,"../utils":367,"./pkcs1":354,"./pkcs8":355,"./rfc4253":356,"./ssh-private":357,"asn1":61,"assert-plus":62,"buffer":169,"crypto":113}],354:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -69631,7 +67857,7 @@ function writePkcs1ECDSAPrivate(der, key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../key":364,"../private-key":365,"../utils":368,"./pem":354,"./pkcs8":356,"asn1":61,"assert-plus":62,"buffer":158}],356:[function(require,module,exports){
+},{"../algs":345,"../key":363,"../private-key":364,"../utils":367,"./pem":353,"./pkcs8":355,"asn1":61,"assert-plus":62,"buffer":169}],355:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -70140,7 +68366,7 @@ function writePkcs8ECDSAPrivate(key, der) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../key":364,"../private-key":365,"../utils":368,"./pem":354,"asn1":61,"assert-plus":62,"buffer":158}],357:[function(require,module,exports){
+},{"../algs":345,"../key":363,"../private-key":364,"../utils":367,"./pem":353,"asn1":61,"assert-plus":62,"buffer":169}],356:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -70290,7 +68516,7 @@ function write(key, options) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../key":364,"../private-key":365,"../ssh-buffer":367,"../utils":368,"assert-plus":62,"buffer":158}],358:[function(require,module,exports){
+},{"../algs":345,"../key":363,"../private-key":364,"../ssh-buffer":366,"../utils":367,"assert-plus":62,"buffer":169}],357:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -70555,7 +68781,7 @@ function write(key, options) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../errors":350,"../key":364,"../private-key":365,"../ssh-buffer":367,"../utils":368,"./pem":354,"./rfc4253":357,"asn1":61,"assert-plus":62,"bcrypt-pbkdf":67,"buffer":158,"crypto":159}],359:[function(require,module,exports){
+},{"../algs":345,"../errors":349,"../key":363,"../private-key":364,"../ssh-buffer":366,"../utils":367,"./pem":353,"./rfc4253":356,"asn1":61,"assert-plus":62,"bcrypt-pbkdf":67,"buffer":169,"crypto":113}],358:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -70673,7 +68899,7 @@ function write(key, options) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../key":364,"../private-key":365,"../utils":368,"./rfc4253":357,"./ssh-private":358,"assert-plus":62,"buffer":158}],360:[function(require,module,exports){
+},{"../key":363,"../private-key":364,"../utils":367,"./rfc4253":356,"./ssh-private":357,"assert-plus":62,"buffer":169}],359:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2016 Joyent, Inc.
 
@@ -70754,7 +68980,7 @@ function write(cert, options) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../certificate":347,"../identity":362,"../key":364,"../private-key":365,"../signature":366,"../utils":368,"./pem":354,"./x509":361,"asn1":61,"assert-plus":62,"buffer":158}],361:[function(require,module,exports){
+},{"../algs":345,"../certificate":346,"../identity":361,"../key":363,"../private-key":364,"../signature":365,"../utils":367,"./pem":353,"./x509":360,"asn1":61,"assert-plus":62,"buffer":169}],360:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -71484,7 +69710,7 @@ function writeBitField(setBits, bitIndex) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":346,"../certificate":347,"../identity":362,"../key":364,"../private-key":365,"../signature":366,"../utils":368,"./pem":354,"./pkcs8":356,"asn1":61,"assert-plus":62,"buffer":158}],362:[function(require,module,exports){
+},{"../algs":345,"../certificate":346,"../identity":361,"../key":363,"../private-key":364,"../signature":365,"../utils":367,"./pem":353,"./pkcs8":355,"asn1":61,"assert-plus":62,"buffer":169}],361:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -71765,7 +69991,7 @@ Identity._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":346,"./errors":350,"./fingerprint":351,"./signature":366,"./utils":368,"asn1":61,"assert-plus":62,"buffer":158,"crypto":159,"util":390}],363:[function(require,module,exports){
+},{"./algs":345,"./errors":349,"./fingerprint":350,"./signature":365,"./utils":367,"asn1":61,"assert-plus":62,"buffer":169,"crypto":113,"util":389}],362:[function(require,module,exports){
 // Copyright 2015 Joyent, Inc.
 
 var Key = require('./key');
@@ -71806,7 +70032,7 @@ module.exports = {
 	CertificateParseError: errs.CertificateParseError
 };
 
-},{"./certificate":347,"./errors":350,"./fingerprint":351,"./identity":362,"./key":364,"./private-key":365,"./signature":366}],364:[function(require,module,exports){
+},{"./certificate":346,"./errors":349,"./fingerprint":350,"./identity":361,"./key":363,"./private-key":364,"./signature":365}],363:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -72084,7 +70310,7 @@ Key._oldVersionDetect = function (obj) {
 };
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":218,"./algs":346,"./dhe":348,"./ed-compat":349,"./errors":350,"./fingerprint":351,"./formats/auto":352,"./formats/pem":354,"./formats/pkcs1":355,"./formats/pkcs8":356,"./formats/rfc4253":357,"./formats/ssh":359,"./formats/ssh-private":358,"./private-key":365,"./signature":366,"./utils":368,"assert-plus":62,"crypto":159}],365:[function(require,module,exports){
+},{"../../is-buffer/index.js":217,"./algs":345,"./dhe":347,"./ed-compat":348,"./errors":349,"./fingerprint":350,"./formats/auto":351,"./formats/pem":353,"./formats/pkcs1":354,"./formats/pkcs8":355,"./formats/rfc4253":356,"./formats/ssh":358,"./formats/ssh-private":357,"./private-key":364,"./signature":365,"./utils":367,"assert-plus":62,"crypto":113}],364:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2017 Joyent, Inc.
 
@@ -72342,7 +70568,7 @@ PrivateKey._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":346,"./dhe":348,"./ed-compat":349,"./errors":350,"./fingerprint":351,"./formats/auto":352,"./formats/pem":354,"./formats/pkcs1":355,"./formats/pkcs8":356,"./formats/rfc4253":357,"./formats/ssh-private":358,"./key":364,"./signature":366,"./utils":368,"assert-plus":62,"buffer":158,"crypto":159,"tweetnacl":384,"util":390}],366:[function(require,module,exports){
+},{"./algs":345,"./dhe":347,"./ed-compat":348,"./errors":349,"./fingerprint":350,"./formats/auto":351,"./formats/pem":353,"./formats/pkcs1":354,"./formats/pkcs8":355,"./formats/rfc4253":356,"./formats/ssh-private":357,"./key":363,"./signature":365,"./utils":367,"assert-plus":62,"buffer":169,"crypto":113,"tweetnacl":383,"util":389}],365:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -72659,7 +70885,7 @@ Signature._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":346,"./errors":350,"./ssh-buffer":367,"./utils":368,"asn1":61,"assert-plus":62,"buffer":158,"crypto":159}],367:[function(require,module,exports){
+},{"./algs":345,"./errors":349,"./ssh-buffer":366,"./utils":367,"asn1":61,"assert-plus":62,"buffer":169,"crypto":113}],366:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -72811,7 +71037,7 @@ SSHBuffer.prototype.write = function (buf) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"assert-plus":62,"buffer":158}],368:[function(require,module,exports){
+},{"assert-plus":62,"buffer":169}],367:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -73103,7 +71329,7 @@ function opensshCipherInfo(cipher) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./private-key":365,"assert-plus":62,"buffer":158,"crypto":159,"jsbn":221}],369:[function(require,module,exports){
+},{"./private-key":364,"assert-plus":62,"buffer":169,"crypto":113,"jsbn":220}],368:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -73232,7 +71458,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":144,"inherits":216,"readable-stream/duplex.js":265,"readable-stream/passthrough.js":276,"readable-stream/readable.js":277,"readable-stream/transform.js":278,"readable-stream/writable.js":279}],370:[function(require,module,exports){
+},{"events":144,"inherits":215,"readable-stream/duplex.js":263,"readable-stream/passthrough.js":274,"readable-stream/readable.js":275,"readable-stream/transform.js":276,"readable-stream/writable.js":277}],369:[function(require,module,exports){
 (function (global){
 var ClientRequest = require('./lib/request')
 var extend = require('xtend')
@@ -73314,7 +71540,7 @@ http.METHODS = [
 	'UNSUBSCRIBE'
 ]
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./lib/request":372,"builtin-status-codes":100,"url":385,"xtend":398}],371:[function(require,module,exports){
+},{"./lib/request":371,"builtin-status-codes":100,"url":384,"xtend":397}],370:[function(require,module,exports){
 (function (global){
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableStream)
 
@@ -73387,7 +71613,7 @@ function isFunction (value) {
 xhr = null // Help gc
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],372:[function(require,module,exports){
+},{}],371:[function(require,module,exports){
 (function (process,global,Buffer){
 var capability = require('./capability')
 var inherits = require('inherits')
@@ -73697,7 +71923,7 @@ var unsafeHeaders = [
 ]
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./capability":371,"./response":373,"_process":252,"buffer":158,"inherits":216,"readable-stream":277,"to-arraybuffer":375}],373:[function(require,module,exports){
+},{"./capability":370,"./response":372,"_process":251,"buffer":169,"inherits":215,"readable-stream":275,"to-arraybuffer":374}],372:[function(require,module,exports){
 (function (process,global,Buffer){
 var capability = require('./capability')
 var inherits = require('inherits')
@@ -73883,7 +72109,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./capability":371,"_process":252,"buffer":158,"inherits":216,"readable-stream":277}],374:[function(require,module,exports){
+},{"./capability":370,"_process":251,"buffer":169,"inherits":215,"readable-stream":275}],373:[function(require,module,exports){
 (function (Buffer){
 var util = require('util')
 var Stream = require('stream')
@@ -73989,7 +72215,7 @@ function alignedWrite(buffer) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":158,"stream":369,"string_decoder":172,"util":390}],375:[function(require,module,exports){
+},{"buffer":169,"stream":368,"string_decoder":171,"util":389}],374:[function(require,module,exports){
 var Buffer = require('buffer').Buffer
 
 module.exports = function (buf) {
@@ -74018,7 +72244,7 @@ module.exports = function (buf) {
 	}
 }
 
-},{"buffer":158}],376:[function(require,module,exports){
+},{"buffer":169}],375:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -75361,7 +73587,7 @@ module.exports = {
   canonicalDomain: canonicalDomain
 };
 
-},{"../package.json":382,"./memstore":377,"./pathMatch":378,"./permuteDomain":379,"./pubsuffix":380,"./store":381,"net":157,"punycode":259,"url":385}],377:[function(require,module,exports){
+},{"../package.json":381,"./memstore":376,"./pathMatch":377,"./permuteDomain":378,"./pubsuffix":379,"./store":380,"net":155,"punycode":258,"url":384}],376:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -75533,7 +73759,7 @@ MemoryCookieStore.prototype.getAllCookies = function(cb) {
   cb(null, cookies);
 };
 
-},{"./pathMatch":378,"./permuteDomain":379,"./store":381,"util":390}],378:[function(require,module,exports){
+},{"./pathMatch":377,"./permuteDomain":378,"./store":380,"util":389}],377:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -75596,7 +73822,7 @@ function pathMatch (reqPath, cookiePath) {
 
 exports.pathMatch = pathMatch;
 
-},{}],379:[function(require,module,exports){
+},{}],378:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -75654,7 +73880,7 @@ function permuteDomain (domain) {
 
 exports.permuteDomain = permuteDomain;
 
-},{"./pubsuffix":380}],380:[function(require,module,exports){
+},{"./pubsuffix":379}],379:[function(require,module,exports){
 /****************************************************
  * AUTOMATICALLY GENERATED by generate-pubsuffix.js *
  *                  DO NOT EDIT!                    *
@@ -75754,7 +73980,7 @@ var index = module.exports.index = Object.freeze(
 
 // END of automatically generated file
 
-},{"punycode":259}],381:[function(require,module,exports){
+},{"punycode":258}],380:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -75827,7 +74053,7 @@ Store.prototype.getAllCookies = function(cb) {
   throw new Error('getAllCookies is not implemented (therefore jar cannot be serialized)');
 };
 
-},{}],382:[function(require,module,exports){
+},{}],381:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -75964,7 +74190,7 @@ module.exports={
   "version": "2.3.3"
 }
 
-},{}],383:[function(require,module,exports){
+},{}],382:[function(require,module,exports){
 (function (process){
 'use strict'
 
@@ -76212,7 +74438,7 @@ if (process.env.NODE_DEBUG && /\btunnel\b/.test(process.env.NODE_DEBUG)) {
 exports.debug = debug // for test
 
 }).call(this,require('_process'))
-},{"_process":252,"assert":154,"events":144,"http":370,"https":160,"net":157,"safe-buffer":337,"tls":157,"util":390}],384:[function(require,module,exports){
+},{"_process":251,"assert":154,"events":144,"http":369,"https":170,"net":155,"safe-buffer":335,"tls":155,"util":389}],383:[function(require,module,exports){
 (function(nacl) {
 'use strict';
 
@@ -78602,7 +76828,7 @@ nacl.setPRNG = function(fn) {
 
 })(typeof module !== 'undefined' && module.exports ? module.exports : (self.nacl = self.nacl || {}));
 
-},{"crypto":71}],385:[function(require,module,exports){
+},{"crypto":71}],384:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -79336,7 +77562,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"./util":386,"punycode":259,"querystring":262}],386:[function(require,module,exports){
+},{"./util":385,"punycode":258,"querystring":261}],385:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -79354,7 +77580,7 @@ module.exports = {
   }
 };
 
-},{}],387:[function(require,module,exports){
+},{}],386:[function(require,module,exports){
 (function (global){
 
 /**
@@ -79425,16 +77651,16 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],388:[function(require,module,exports){
-arguments[4][216][0].apply(exports,arguments)
-},{"dup":216}],389:[function(require,module,exports){
+},{}],387:[function(require,module,exports){
+arguments[4][215][0].apply(exports,arguments)
+},{"dup":215}],388:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],390:[function(require,module,exports){
+},{}],389:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -80024,7 +78250,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":389,"_process":252,"inherits":388}],391:[function(require,module,exports){
+},{"./support/isBuffer":388,"_process":251,"inherits":387}],390:[function(require,module,exports){
 var v1 = require('./v1');
 var v4 = require('./v4');
 
@@ -80034,7 +78260,7 @@ uuid.v4 = v4;
 
 module.exports = uuid;
 
-},{"./v1":394,"./v4":395}],392:[function(require,module,exports){
+},{"./v1":393,"./v4":394}],391:[function(require,module,exports){
 /**
  * Convert array of 16 byte values to UUID string format of the form:
  * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
@@ -80059,7 +78285,7 @@ function bytesToUuid(buf, offset) {
 
 module.exports = bytesToUuid;
 
-},{}],393:[function(require,module,exports){
+},{}],392:[function(require,module,exports){
 (function (global){
 // Unique ID creation requires a high quality random # generator.  In the
 // browser this is a little complicated due to unknown quality of Math.random()
@@ -80096,7 +78322,7 @@ if (!rng) {
 module.exports = rng;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],394:[function(require,module,exports){
+},{}],393:[function(require,module,exports){
 var rng = require('./lib/rng');
 var bytesToUuid = require('./lib/bytesToUuid');
 
@@ -80198,7 +78424,7 @@ function v1(options, buf, offset) {
 
 module.exports = v1;
 
-},{"./lib/bytesToUuid":392,"./lib/rng":393}],395:[function(require,module,exports){
+},{"./lib/bytesToUuid":391,"./lib/rng":392}],394:[function(require,module,exports){
 var rng = require('./lib/rng');
 var bytesToUuid = require('./lib/bytesToUuid');
 
@@ -80229,7 +78455,7 @@ function v4(options, buf, offset) {
 
 module.exports = v4;
 
-},{"./lib/bytesToUuid":392,"./lib/rng":393}],396:[function(require,module,exports){
+},{"./lib/bytesToUuid":391,"./lib/rng":392}],395:[function(require,module,exports){
 /*
  * verror.js: richer JavaScript errors
  */
@@ -80682,7 +78908,7 @@ WError.prototype.cause = function we_cause(c)
 	return (this.jse_cause);
 };
 
-},{"assert-plus":62,"core-util-is":107,"extsprintf":147,"util":390}],397:[function(require,module,exports){
+},{"assert-plus":62,"core-util-is":106,"extsprintf":147,"util":389}],396:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -80822,7 +79048,7 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":215}],398:[function(require,module,exports){
+},{"indexof":214}],397:[function(require,module,exports){
 module.exports = extend
 
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -80843,7 +79069,7 @@ function extend() {
     return target
 }
 
-},{}],399:[function(require,module,exports){
+},{}],398:[function(require,module,exports){
 // view-source:http://www.chartjs.org/samples/latest/charts/bar/vertical.html
 function generateChart(args) {
 
@@ -80896,7 +79122,7 @@ function generateChart(args) {
 
 module.exports = generateChart;
 
-},{}],400:[function(require,module,exports){
+},{}],399:[function(require,module,exports){
 CommunityToolbox = function CommunityToolbox(org, repo) {
 
   var SimpleApi = require("github-api-simple")
@@ -80926,7 +79152,14 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
 
   function getIssuesForOrg(_org, _options) {
     _options = _options || options;
-    var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org + "+label%3A" + _options.qs.labels;
+    var _url;
+    if (_options.qs.labels == 'all') {
+	var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org;
+    } else if (_options.qs.labels == 'nolabel') {
+	var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org + "+no%3Alabel";
+    } else {
+        var _url = "https://api.github.com/search/issues?q=is%3Aopen+org%3A" + _org + "+label%3A" + _options.qs.labels;
+    }
     return requestP({ uri: _url });
   }
 
@@ -80973,7 +79206,7 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
 
 module.exports = CommunityToolbox;
 
-},{"./chart":399,"./ui":401,"github-api-simple":152,"request-promise":281}],401:[function(require,module,exports){
+},{"./chart":398,"./ui":400,"github-api-simple":152,"request-promise":279}],400:[function(require,module,exports){
 var moment = require('moment');
 
 function generateIssueHtml(title, body, githubUrl, repo) {
@@ -81009,4 +79242,4 @@ module.exports = {
   insertIssue: insertIssue
 };
 
-},{"moment":237}]},{},[400]);
+},{"moment":236}]},{},[399]);
