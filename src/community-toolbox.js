@@ -58,7 +58,7 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
   }
 
   function getOrgRepoContributors(_org, _repo) {
-    var _url = "https://api.github.com/repos/" + _org + "/" + _repo + "/contributors?per_page=100";
+    var _url = "https://api.github.com/repos/" + _org + "/" + _repo + "/contributors?per_page=30";
     return requestP({ uri: _url });
   }
 

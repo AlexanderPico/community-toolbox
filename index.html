@@ -119,11 +119,9 @@
                  .then(displayIssues('.unlabeled-issues'));
 
 
-		 console.log("check")
         toolbox.getOrgContributors(org)
 	  .then(function(repos){
 		repos = JSON.parse(repos);
-		if(repos.message) $('.contributors').append(repos.message);
 		for (i=0;i<repos.length;i++){
 		      if(!repos[i].fork){
 			  getRepoInfo(org,repos[i].name,repos[i].html_url);
