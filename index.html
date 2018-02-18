@@ -37,7 +37,7 @@
 
       <div class="row">
 	<ul>
-		<li>If you're new, and looking to get involved, you're in the right place. Check out <a href="https://github.com/cytoscape/cytoscape/wiki">our developer wiki</a> to get started.</li>
+		<li>If you're new, and looking to get involved, you're in the right place. Also check out <a href="https://github.com/cytoscape/cytoscape/wiki">our developer wiki</a>.</li>
 
           <li>If you're new to GitHub, using branches, or opening pull requests, <a href="https://guides.github.com/activities/hello-world/">read here for an introduction</a>.</li>
 
@@ -104,12 +104,10 @@
       (function() {
 
         var org = urlHash().getUrlHashParameter('o') || 'cytoscape';
-        var repo = urlHash().getUrlHashParameter('r') || 'all';
         var urlLabel = urlHash().getUrlHashParameter('l') || '"good first issue"'; // takes 'all', 'nolabel', or any actual label
     
-        toolbox = CommunityToolbox(org, repo);
+        toolbox = CommunityToolbox(org, 'all');
 
-	if (repo === 'all') {
 
       	  toolbox.getIssuesForOrg(org, { qs: { labels: urlLabel } })
                  .then(displayIssues('.good-first-issue'));
@@ -121,33 +119,29 @@
                  .then(displayIssues('.unlabeled-issues'));
 
 
-	} else {
+        toolbox.getOrgContributors(org)
+	  .then(function(repos){
+		repos = JSON.parse(repos);
+		//$('.contributors').append(repos.length + " original repos: ");
+		for (i=0;i<repos.length;i++){
+		      if(!repos[i].fork){
+			  getRepoInfo(org,repos[i].name,repos[i].html_url);
+		      }
+		   }
+	  });
 
-          toolbox.api.Issues
-                 .getIssuesForRepo(org, repo, { qs: { labels: urlLabel } })
-                 .then(displayIssues('.good-first-issue'));
-
-          toolbox.getIssuesForOrg(org, repo, { qs: { labels: 'all' } })
-                 .then(displayIssues('.all-issues'));
-
-          toolbox.getIssuesForOrg(org, repo, { qs: { labels: 'nolabel' } })
-                 .then(displayIssues('.unlabeled-issues'));
-	}
-        // compile and display all contributors for given org:
-        toolbox.api.Repositories
-                 .getRepoContributors(org, { qs: { sort: 'pushed', direction: 'desc', per_page: 100 } })
-                 .then(function(contributors) {
-                   var usernames = contributors.map(function(c) { 
-                     return '<a href="https://github.com/' + c.login + '">@' + c.login + '</a>';
-                   });
-                   var avatars = contributors.map(function(c) { 
-                     return '<a href="https://github.com/' + c.login + '"><img width="100px" src="' + c.avatar_url + '"></a>';
-                   });
-                   $('.contributors').html(usernames.join(', '));
-                   $('.contributors').append('<hr />');
-                   $('.contributors').append(avatars.join());
-                 });
-
+	  function getRepoInfo(org,repo_name, repo_link){                          
+		  toolbox.getOrgRepoContributors(org, repo_name)
+                          .then(function(contributors) {
+                                        contributors = JSON.parse(contributors);
+					$('.contributors').append('<a href="' + repo_link + '"><h4>'+ repo_name + '</h4></a>');
+                                        contributors.forEach(function(c){
+                                               // $('.contributors').append(c.login + " ");
+					        avatar = '<a href="https://github.com/' + c.login + '" title="' +  c.login + '"><img width="100px" src="' + c.avatar_url + '"></a>';
+						$('.contributors').append(avatar);
+                                  });
+          });
+	  }
 
         function displayIssues(selector) {
           return function displayIssues(issues) {

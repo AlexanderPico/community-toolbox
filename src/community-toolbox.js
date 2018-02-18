@@ -10,7 +10,7 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
     'qs': {
       'sort': 'pushed',
       'direction': 'desc', // optional, GitHub API uses 'desc' by default for 'pushed' 
-      'per_page': 100
+      'per_page': 100 //max is 100
     }
   }
 
@@ -52,6 +52,16 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
        .then(callback);
   }
 
+  function getOrgContributors(_org) {
+    var _url = "https://api.github.com/orgs/" + _org + "/repos?per_page=100";
+    return requestP({ uri: _url });
+  }
+
+  function getOrgRepoContributors(_org, _repo) {
+    var _url = "https://api.github.com/repos/" + _org + "/" + _repo + "/contributors?per_page=100";
+    return requestP({ uri: _url });
+  }
+
   function displayIssuesForRepo(org, repo, label, selector) {
     toolbox.api.Issues
            .getIssuesForRepo(org, repo, { qs: { labels: label } })
@@ -74,6 +84,8 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
     getIssuesForOrg: getIssuesForOrg,
     getCommitsForRepo: getCommitsForRepo,
     getRepoContributors: getRepoContributors,
+    getOrgContributors: getOrgContributors,
+    getOrgRepoContributors: getOrgRepoContributors,
     displayIssuesForRepo: displayIssuesForRepo
   }
 
