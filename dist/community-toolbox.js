@@ -79178,7 +79178,7 @@ CommunityToolbox = function CommunityToolbox(org, repo) {
   }
 
   function getOrgContributors(_org) {
-    var _url = "https://api.github.com/orgs/" + _org + "/repos?per_page=100";
+    var _url = "https://api.github.com/orgs/" + _org + "/repos?per_page=30";
     return requestP({ uri: _url });
   }
 
