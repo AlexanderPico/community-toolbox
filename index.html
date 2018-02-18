@@ -48,8 +48,8 @@
 	<h3>Sections</h3>
 	<ol>
 		<li><a href="#first">Good first issues</a></li>
-		<li><a href="#all">All issues</a></li>
-		<li><a href="#triage">Issues to triage</a></li>
+<!--		<li><a href="#all">All issues</a></li>
+-->		<li><a href="#triage">Issues to triage</a></li>
 		<li><a href="#contributors">Contributors</a></li>
 	</ol>
       </div>
@@ -64,12 +64,12 @@
 
       <p>No issues left? Feel free to check other lists, open new issues or check in on <a href="http://groups.google.com/group/cytoscape-app-dev">our developer forum</a>.</p>
 
-      <h2 id="all">All issues</h2>
+<!--      <h2 id="all">All issues</h2>
 
       <div class="row all-issues"></div>
 
       <p>No issues left? Feel free to check other lists, open new issues or check in on <a href="http://groups.google.com/group/cytoscape-app-dev">our developer forum</a>.</p>
-
+-->
       <h2 id="triage">New issues to triage</h2>
 
       <p>These are issues we haven't looked at yet. We'll vet and label them properly soon. In the meantime, beware!</p> 
@@ -112,8 +112,8 @@
       	  toolbox.getIssuesForOrg(org, { qs: { labels: urlLabel } })
                  .then(displayIssues('.good-first-issue'));
 
-          toolbox.getIssuesForOrg(org, { qs: { labels: 'all' } })
-                 .then(displayIssues('.all-issues'));
+ //         toolbox.getIssuesForOrg(org, { qs: { labels: 'all' } })
+ //               .then(displayIssues('.all-issues'));
 
           toolbox.getIssuesForOrg(org, { qs: { labels: 'nolabel' } })
                  .then(displayIssues('.unlabeled-issues'));
